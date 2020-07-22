@@ -1,0 +1,54 @@
+$menu-item-active-bg-color: $color-sunglow;
+$menu-item-active-font-color: $color-rich-black-fogra-39;
+
+.navbar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: px2rem(10);
+
+    &__toggler {
+        display: block;
+    }
+
+    @include media-query(netbook) {
+        flex-flow: row nowrap;
+
+        &__toggler {
+            display: none;
+        }
+    }
+
+    
+}
+
+.main-nav {
+    align-items: center;
+    flex-basis: 100%;
+    flex-grow: 1;
+
+    @include media-query(netbook) {
+        display: flex;
+        flex-basis: auto;
+        flex-grow: initial;
+        margin: px2rem(10);
+
+        &__item {
+            font-family: $third-font-family;
+            font-size: px2rem(10);
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1;
+            margin: 0 px2rem(5);
+            padding: px2rem(5) px2rem(10);
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $menu-item-active-bg-color;
+                border-radius: px2rem(20);
+                color: $menu-item-active-font-color;
+            }
+        }
+    }
+}

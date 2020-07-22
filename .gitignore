@@ -1,0 +1,5 @@
+# dist/
+dist/
+
+# Dependency directories
+node_modules/

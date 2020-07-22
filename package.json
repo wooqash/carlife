@@ -1,0 +1,89 @@
+{
+    "name": "webpack-ts-starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "sideEffects": false,
+    "scripts": {
+        "dev": "webpack --mode development",
+        "start": "webpack-dev-server --mode development --open",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "pretty-quick --check",
+        "format:fix": "pretty-quick",
+        "lint": "npm run lint:js & npm run lint:scss",
+        "lint:fix": "npm run lint:js:fix & npm run lint:scss:fix",
+        "lint:scss": "stylelint ./src/**/*.{scss,sass}",
+        "lint:scss:fix": "npm run lint:scss --fix",
+        "lint:js": "eslint ./src/ --ext .js,.jsx,.ts,.tsx",
+        "lint:js:fix": "npm run lint:js --fix",
+        "build": "npm run lint:fix && webpack --mode production"
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx}": [
+            "npm run lint:js:fix"
+        ],
+        "src/**/*.{scss,sass}": [
+            "npm run lint:scss:fix"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "env FORCE_COLOR=1 node ./node_modules/lint-staged/bin/lint-staged && pretty-quick --staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "@commitlint/cli": "^9.0.1",
+        "@commitlint/config-conventional": "^9.0.1",
+        "@typescript-eslint/eslint-plugin": "^3.6.0",
+        "@typescript-eslint/parser": "^3.6.0",
+        "autoprefixer": "^9.8.4",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.0.3",
+        "css-loader": "^3.6.0",
+        "cssnano": "^4.1.10",
+        "dart-sass": "^1.25.0",
+        "eslint": "^7.4.0",
+        "eslint-config-airbnb-typescript": "^8.0.2",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "favicons-webpack-plugin": "^3.0.1",
+        "fibers": "^5.0.0",
+        "file-loader": "^6.0.0",
+        "fork-ts-checker-webpack-plugin": "^5.0.7",
+        "html-webpack-plugin": "^4.3.0",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.11",
+        "mini-css-extract-plugin": "^0.9.0",
+        "postcss-loader": "^3.0.0",
+        "precss": "^4.0.0",
+        "preload-webpack-plugin": "^3.0.0-beta.4",
+        "prettier": "^2.0.5",
+        "pretty-quick": "^2.0.1",
+        "resolve-url-loader": "^3.1.1",
+        "sass": "^1.26.10",
+        "sass-loader": "^9.0.1",
+        "script-ext-html-webpack-plugin": "^2.1.4",
+        "style-loader": "^1.2.1",
+        "stylelint": "^13.6.1",
+        "stylelint-config-sass-guidelines": "^7.0.0",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-order": "^4.1.0",
+        "stylelint-scss": "^3.18.0",
+        "ts-loader": "^7.0.5",
+        "typescript": "^3.9.6",
+        "url-loader": "^4.1.0",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-manifest-plugin": "^2.2.0"
+    }
+}

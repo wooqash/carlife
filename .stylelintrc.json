@@ -1,0 +1,11 @@
+{
+    "plugins": ["stylelint-scss", "stylelint-order"],
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+        "indentation": 4,
+        "order/order": [
+			"custom-properties",
+			"declarations"
+		]
+    }
+}

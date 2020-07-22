@@ -1,0 +1,22 @@
+// Color names
+$color-black-coffee: #342e37;
+$color-rich-black-fogra-39: #030300;
+$color-sunglow: #fcc62c;
+$color-saffron: #f9c700;
+$color-yellow-pantone: #ffe11d;
+$color-marigold: #eaa001;
+$color-fulvous: #db8300;
+$color-baby-powder: #fafffd;
+
+
+
+//Fonts
+$fonts-dir: './assets/fonts';
+$font-name: 'Roboto';
+$font-regular: $font-name + ',  Arial,Helvetica Neue,Helvetica,sans-serif';
+
+
+
+$rem-base: 10;
+$breakpoint-base: 320;
+$breakpoints: (mobile: 320, iphone: 414, tablet: 768, netbook: 1024, desktop: 1440, full-hd: 1920);

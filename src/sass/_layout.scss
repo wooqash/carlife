@@ -1,0 +1,24 @@
+$body-bg-color: $color-black-coffee;
+$header-bg-color: $color-rich-black-fogra-39;
+$header-font-color: $color-baby-powder;
+$container-max-width: (tablet: 720px, netbook: 960px, desktop: 1140px);
+
+body {
+    background-color: $body-bg-color;
+}
+
+.container {
+    // background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    @each $br, $size in (tablet, netbook, desktop) {
+        @include media-query(#{$br}) {
+            max-width: map-get($container-max-width, #{$br});
+        }
+    }
+}
+
+.header {
+    background-color: $header-bg-color;
+    color: $header-font-color;
+}

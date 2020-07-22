@@ -1,0 +1,228 @@
+@mixin font-face($name, $type: null) {
+    $font-name: $name;
+    $font-path: $fonts-base + $name;
+    @if $type != null {
+        $font-name: $font-name + $type;
+        $font-path: $font-path + '-' + $type;
+    }
+    @font-face {
+        font-family: $name;
+        src: url($font-path + '.eot');
+        src: url($font-path + '.eot?#iefix') format('embedded-opentype'), url($font-path + '.woff2') format('woff2'),
+            url($font-path + '.woff') format('woff'), url($font-path + '.ttf') format('truetype'),
+            url($font-path + '.svg#' + $font-name) format('svg');
+        @if (map-has-key($font-weights, $type)) {
+            font-weight: #{map-get($font-weights, $type)};
+        }
+    }
+}
+
+@mixin media-query($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-base: map-get($breakpoints, $breakpoint) !global;
+        $base-v-size: $breakpoint-base !global;
+        @media (min-width: #{$breakpoint-base + 'px'}) {
+            @content;
+        }
+    } @else {
+        $breakpoint-base: $breakpoint / ($breakpoint * 0 + 1) !global;
+        $base-v-size: $breakpoint-base !global;
+        @media (min-width: #{$breakpoint}) {
+            @content;
+        }
+    }
+}
+
+@mixin media-query-range($from, $to) {
+    @if map-has-key($breakpoints, $from) {
+        $from: #{map-get($breakpoints, $from) + 'px'};
+    }
+    @if map-has-key($breakpoints, $to) {
+        $to: #{(map-get($breakpoints, $to) - 1) + 'px'};
+    }
+    @media (min-width: #{$from}) and (max-width: #{$to}) {
+        @content;
+    }
+}
+
+@mixin bg-img($name, $multiplier: 1, $extension: $def-retina-img-ext) {
+    @if $multiplier == 1 {
+        $multiplier: '';
+    } @else {
+        $multiplier: '@' + $multiplier + 'x';
+    }
+    background-image: url($img-base + $name + $multiplier + '.' + $extension);
+}
+
+@mixin bg-image($name, $breakpoint, $extension: $def-retina-img-ext, $secondary-extension: $def-retina-img-ext) {
+    $viewport-width: #{map-get($breakpoints, $breakpoint)};
+    $img-name: $name + '_' + $viewport-width;
+    $multiplier: 1;
+    @include bg-img($img-name, $multiplier, $extension);
+    $multiplier: $multiplier + 1;
+    background-size: cover;
+    @media (-webkit-min-device-pixel-ratio: #{$multiplier}), (min-resolution: #{96 * $multiplier + dpi}) {
+        @include bg-img($img-name, $multiplier, $secondary-extension);
+    }
+}
+
+@mixin delay-sequence($elements, $delay, $main-delay: 0s, $type: transition) {
+    @for $i from 1 through length($elements) {
+        #{nth($elements, $i)} {
+            #{$type + '-delay'}: #{$main-delay + ($delay * $i)};
+        }
+    }
+}
+
+@function my-round($value) {
+    @return round($value * 100) / 100;
+}
+
+@function calc-vw($size, $base) {
+    @return #{my-round(($size / $base) * 100) + 'vw'};
+}
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function px2vw($sizes, $base: $breakpoint-base) {
+    $count: length($sizes);
+    @if $count == 1 {
+        @return calc-vw($sizes, $base);
+    }
+
+    $return: ();
+    @for $i from 1 through $count {
+        $return: append($return, px2vw(strip-unit(nth($sizes, $i))));
+    }
+    @warn $return;
+
+    @return $return;
+}
+
+@function px2rem($sizes) {
+    $count: length($sizes);
+    @if $count == 1 {
+        @return #{$sizes / $rem-base + 'rem'};
+    }
+
+    $return: ();
+    @for $i from 1 through $count {
+        $return: append($return, px2rem(strip-unit(nth($sizes, $i))));
+    }
+    @warn $return;
+
+    @return $return;
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+// $config: (
+//   mobile: (
+//     cta-font-size: 24,
+//     cta-width: 176,
+//     cta-height: 48,
+//     cta-padding-side: 25,
+//   ),
+//   iphone: (
+//     cta-font-size: 24,
+//     cta-width: 176,
+//     cta-height: 48,
+//     cta-padding-side: 25,
+//   ),
+//   tablet: (
+//     cta-font-size: 28,
+//     cta-width: 221.5,
+//     cta-height: 60,
+//     cta-padding-side: 25,
+//   ),
+//   netbook: (
+//     cta-font-size: 28,
+//     cta-width: 221.5,
+//     cta-height: 60,
+//     cta-padding-side: 25,
+//   ),
+//   desktop: (
+//     cta-font-size: 35,
+//     cta-width: 264,
+//     cta-height: 72,
+//     cta-padding-side: 25,
+//   ),
+//   full-hd: (
+//     cta-font-size: 35,
+//     cta-width: 264,
+//     cta-height: 72,
+//     cta-padding-side: 25,
+//   ),
+// );
+
+// %join-cta-button {
+//   position: relative;
+//   height: px2rem(map-deep-get($config, mobile, cta-height));
+//   padding: 0 px2rem(map-deep-get($config, mobile, cta-padding-side));
+//   margin-top: 20px;
+//   font-size: px2rem(map-deep-get($config, mobile, cta-font-size));
+//   line-height: px2rem(map-deep-get($config, mobile, cta-height));
+//   letter-spacing: 0.06rem;
+//   font-family: $font-regular;
+//   font-weight: 900;
+//   text-align: center;
+//   color: $cta-btn-fg-color;
+//   box-shadow: 0 1rem 2rem 0 rgba(0, 38, 114, 0.09);
+//   border-radius: 0.2rem;
+//   border: none;
+//   background-color: $cta-btn-bg-color;
+//   overflow: hidden;
+//   cursor: pointer;
+//   &::after {
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: -100%;
+//     width: 150%;
+//     height: 100%;
+//     content: "";
+//     background: radial-gradient(circle, #fff 0%, transparent 100%);
+//     opacity: 0.7;
+//     animation: button 3.6s infinite;
+//   }
+
+//   @each $br, $size in $breakpoints {
+//     @if ($br == full-hd) {
+//       @include media-query($br) {
+//         // width: px2rem(map-deep-get($config, $br, cta-width));
+//         height: px2rem(map-deep-get($config, $br, cta-height));
+//         padding: 0 px2rem(map-deep-get($config, $br, cta-padding-side));
+//         font-size: px2rem(map-deep-get($config, $br, cta-font-size));
+//         line-height: px2rem(map-deep-get($config, $br, cta-height));
+//       }
+//     } @else {
+//       @include media-query($br) {
+//         // width: px2vw(map-deep-get($config, $br, cta-width));
+//         height: px2vw(map-deep-get($config, $br, cta-height));
+//         padding: 0 px2vw(map-deep-get($config, $br, cta-padding-side));
+//         font-size: px2vw(map-deep-get($config, $br, cta-font-size));
+//         line-height: px2vw(map-deep-get($config, $br, cta-height));
+//       }
+//     }
+//   }
+// }
+
+// %close-button {
+//   display: inline-block;
+//   height: 3.4rem;
+//   width: 3.4rem;
+//   font-family: $font-regular;
+//   font-size: 2.6rem;
+//   line-height: 3.4rem;
+//   background: rgb(215, 227, 255);
+//   border-radius: 50%;
+//   color: black;
+//   cursor: pointer;
+// }
