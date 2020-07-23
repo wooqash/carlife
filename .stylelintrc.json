@@ -6,6 +6,6 @@
         "order/order": [
 			"custom-properties",
 			"declarations"
-		]
+        ]
     }
 }

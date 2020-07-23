@@ -1,5 +1,7 @@
-$menu-item-active-bg-color: $color-sunglow;
-$menu-item-active-font-color: $color-rich-black-fogra-39;
+$menu-link-active-bg-color: $color-sunglow;
+$menu-link-active-font-color: $color-rich-black-fogra-39;
+$menu-link-active-hover-font-color: $color-rich-black-fogra-39;
+$menu-link-hover-font-color: $color-sunglow;
 
 .navbar {
     align-items: center;
@@ -44,10 +46,22 @@ $menu-item-active-font-color: $color-rich-black-fogra-39;
             padding: px2rem(5) px2rem(10);
             text-transform: uppercase;
 
-            &:hover {
-                background-color: $menu-item-active-bg-color;
+            &.active {
+                background-color: $menu-link-active-bg-color;
                 border-radius: px2rem(20);
-                color: $menu-item-active-font-color;
+                color: $menu-link-active-font-color;
+
+                .main-nav {
+                    &__link:hover {
+                        color: $menu-link-active-hover-font-color;
+                    }
+                }
+            }
+        }
+
+        &__link {
+            &:hover {
+                color: $menu-link-hover-font-color;
             }
         }
     }
