@@ -1,0 +1,45 @@
+$scroll-to-top-button-bg-color: $section-bg-color1;
+$scroll-to-top-button-hover-bg-color: $section-bg-color3;
+
+$scroll-to-top-icon-color: $section-bg-color3;
+$scroll-to-top-icon-hover-color: $section-bg-color2;
+
+$scroll-to-top-button-size: 30px;
+
+.scroll-to-top-button {
+    align-items: center;
+    background-color: $scroll-to-top-button-bg-color;
+    border-radius: $scroll-to-top-button-size;
+    bottom: 20px;
+    display: flex;
+    height: $scroll-to-top-button-size;
+    justify-content: center;
+    opacity: 1;
+    position: fixed;
+    right: 20px;
+    transition: all 0.8s;
+    visibility: visible;
+    width: $scroll-to-top-button-size;
+
+    &::before {
+        color: $scroll-to-top-icon-color;
+        content: '\f102';
+        display: inline-block;
+        font-family: $font-icons;
+        font-size: 1.53846rem;
+    }
+
+    &:hover {
+        background-color: $scroll-to-top-button-hover-bg-color;
+
+        &::before {
+            color: $scroll-to-top-icon-hover-color;
+        }
+    }
+
+    &.hide {
+        // height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
