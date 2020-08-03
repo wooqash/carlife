@@ -18,27 +18,32 @@
         <title>Car Life - mechanika pojazdów i pomoc drogowa</title>
     </head>
     <body>
-        <header class="header">
+        <header id="Header" class="header">
             <div class="container">
                 <nav class="navbar">
                     <a class="navbar__logo" href="#">Car Life</a>
                     <button
-                        class="navbar__toggler"
+                        id="MainMenuToggler"
+                        class="navbar__toggler hamburger hamburger--spin"
                         type="button"
                         aria-expanded="false"
-                        aria-label="Otwórz/Zamknij nawigację"
+                        aria-label="Menu"
                         aria-controls="MainMenu"
                     >
-                        <span class="toggler__icon">Menu</span>
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
                     </button>
-                    <ul id="MainMenu" class="main-nav">
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Start</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">O firmie</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Oferta</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Galeria</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">FAQ</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Kontakt</a></li>
-                    </ul>
+                    <div id="MainMenu" class="navbar__menu-wrapper navbar__menu-wrapper--collapse">
+                        <ul class="main-nav">
+                            <li class="main-nav__item"><a href="#Home" class="main-nav__link">Start</a></li>
+                            <li class="main-nav__item"><a href="#About" class="main-nav__link">O firmie</a></li>
+                            <li class="main-nav__item"><a href="#Offer" class="main-nav__link">Oferta</a></li>
+                            <li class="main-nav__item"><a href="#Gallery" class="main-nav__link">Galeria</a></li>
+                            <li class="main-nav__item"><a href="#FAQ" class="main-nav__link">FAQ</a></li>
+                            <li class="main-nav__item"><a href="#Contact" class="main-nav__link">Kontakt</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </header>

@@ -1,3 +1,4 @@
+// $navbar-bg-color: $color-rich-black-fogra-39;
 $menu-link-active-bg-color: $color-sunglow;
 $menu-link-active-font-color: $color-rich-black-fogra-39;
 $menu-link-active-hover-font-color: $color-rich-black-fogra-39;
@@ -5,6 +6,7 @@ $menu-link-hover-font-color: $color-sunglow;
 
 .navbar {
     align-items: center;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -14,21 +16,63 @@ $menu-link-hover-font-color: $color-sunglow;
         display: block;
     }
 
+    &__menu-wrapper {
+        align-items: center;
+        flex-basis: 100%;
+        flex-grow: 1;
+        height: 214px;
+        overflow: hidden;
+        transition: height 0.35s ease;
+    }
+
+    &__menu-wrapper--collapse:not(.show) {
+        height: 0;
+    }
+
     @include media-query(netbook) {
         flex-flow: row nowrap;
 
         &__toggler {
             display: none;
         }
-    }
 
-    
+        &__menu-wrapper {
+            display: flex;
+            flex-basis: auto;
+            flex-grow: initial;
+            height: auto;
+        }
+
+        &__menu-wrapper--collapse:not(.show) {
+            display: flex;
+            height: auto;
+        }
+    }
 }
 
 .main-nav {
     align-items: center;
     flex-basis: 100%;
     flex-grow: 1;
+
+    &__item {
+        padding: px2rem(10) px2rem(0);
+        text-align: center;
+    }
+
+    &__item.active {
+        background-color: $menu-link-active-bg-color;
+        
+        color: $menu-link-active-font-color;
+        
+        .main-nav__link:hover {
+            color: $menu-link-active-hover-font-color;
+        }
+    }
+
+    &__link:hover {
+        color: $menu-link-hover-font-color;
+    }
 
     @include media-query(netbook) {
         display: flex;
@@ -44,24 +88,11 @@ $menu-link-hover-font-color: $color-sunglow;
             line-height: 1;
             margin: 0 px2rem(5);
             padding: px2rem(5) px2rem(10);
+            text-align: left;
             text-transform: uppercase;
 
             &.active {
-                background-color: $menu-link-active-bg-color;
                 border-radius: px2rem(20);
-                color: $menu-link-active-font-color;
-
-                .main-nav {
-                    &__link:hover {
-                        color: $menu-link-active-hover-font-color;
-                    }
-                }
-            }
-        }
-
-        &__link {
-            &:hover {
-                color: $menu-link-hover-font-color;
             }
         }
     }
