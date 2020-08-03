@@ -1,7 +1,15 @@
-$body-bg-color: $color-black-coffee;
+$body-bg-color: $color-baby-powder;
 $header-bg-color: $color-rich-black-fogra-39;
 $header-font-color: $color-baby-powder;
 $container-max-width: (tablet: 720px, netbook: 960px, desktop: 1140px);
+
+$section-bg-color1: $color-sunglow;
+$section-bg-color2: $color-baby-powder;
+$section-bg-color3: $color-black-coffee;
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: $body-bg-color;
@@ -19,6 +27,22 @@ body {
 }
 
 .header {
-    background-color: $header-bg-color;
+    background-color: rgba($header-bg-color, 0.8);
     color: $header-font-color;
+    position: fixed;
+    top: 0;
+    transition: top 0.8s;
+    width: 100%;
+
+    &.hide {
+        top: -100%;
+    }
 }
+
+.section {
+    height: 100vh;
+    &--color1 { background-color: $section-bg-color1;}
+    &--color2 { background-color: $section-bg-color2;}
+    &--color3 { background-color: $section-bg-color3;}
+}
+
