@@ -1,5 +1,7 @@
 import './sass/styles.scss';
 // import * as test from './scripts/test-module';
+import handleView from './scripts/spy-menu';
+
 let prevScrollPos = window.pageYOffset;
 
 const removeActiveClassFromMenu = (items: HTMLCollection): void => {
@@ -42,7 +44,10 @@ const showHideElementsOnScroll = (): void => {
 const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElement;
 const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
 
-Array.from(menuLinks).forEach((link: HTMLAnchorElement) => link.addEventListener('click', handleMenuLinks));
+Array.from(menuLinks).forEach((link: HTMLAnchorElement) => {
+    handleView(link);
+    link.addEventListener('click', handleMenuLinks);
+});
 menuToggler.addEventListener('click', toggleMainMenu);
 
 window.addEventListener('scroll', showHideElementsOnScroll);
