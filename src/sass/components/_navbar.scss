@@ -1,12 +1,11 @@
 // $navbar-bg-color: $color-rich-black-fogra-39;
-$menu-link-active-bg-color: $color-sunglow;
-$menu-link-active-font-color: $color-rich-black-fogra-39;
-$menu-link-active-hover-font-color: $color-rich-black-fogra-39;
-$menu-link-hover-font-color: $color-sunglow;
+$menu-link-active-bg-color: $color-android-green;
+$menu-link-active-font-color: $color-phthalo-green;
+$menu-link-active-hover-font-color: $color-phthalo-green;
+$menu-link-hover-font-color: $color-android-green;
 
 .navbar {
     align-items: center;
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
