@@ -2,28 +2,35 @@ import './sass/styles.scss';
 // import * as test from './scripts/test-module';
 import handleView from './scripts/spy-menu';
 
+import * as utils from './scripts/classes/utils';
+
 let prevScrollPos = window.pageYOffset;
+const mainMenu = document.getElementById('MainMenu') as HTMLDivElement;
+const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElement;
+const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
 
 const removeActiveClassFromMenu = (items: HTMLCollection): void => {
     Array.from(items).forEach((item: Element) => item.classList.remove('active'));
 };
 
+const toggleMainMenu = (): void => {
+    menuToggler.classList.toggle('is-active');
+    mainMenu.classList.toggle('show');
+};
+
 const handleMenuLinks = (event: Event): void => {
-    // event.preventDefault();
     const link = event.target as HTMLAnchorElement;
+    const menuItem = link ? link.parentElement : null;
     const menuItems = link.parentElement?.parentElement?.children;
+
     if (menuItems) {
         removeActiveClassFromMenu(menuItems);
     }
-    link.parentElement?.classList.add('active');
-};
+    if (menuItem) {
+        utils.default.addClass(menuItem, 'active');
+    }
 
-const toggleMainMenu = (event: Event): void => {
-    event.preventDefault();
-    const button = event.currentTarget as HTMLButtonElement;
-    const mainMenu = document.getElementById('MainMenu') as HTMLDivElement;
-    button.classList.toggle('is-active');
-    mainMenu.classList.toggle('show');
+    toggleMainMenu();
 };
 
 const showHideElementsOnScroll = (): void => {
@@ -32,22 +39,20 @@ const showHideElementsOnScroll = (): void => {
     const scrollTopButton = document.getElementById('ScrollTop') as HTMLButtonElement;
 
     if (prevScrollPos > currentScrollPos) {
-        header.classList.remove('hide');
-        scrollTopButton.classList.add('hide');
+        utils.default.removeClass(header, 'hide');
+        utils.default.addClass(scrollTopButton, 'hide');
     } else {
-        header.classList.add('hide');
-        scrollTopButton.classList.remove('hide');
+        utils.default.addClass(header, 'hide');
+        utils.default.removeClass(scrollTopButton, 'hide');
     }
     prevScrollPos = currentScrollPos;
 };
-
-const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElement;
-const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
 
 Array.from(menuLinks).forEach((link: HTMLAnchorElement) => {
     handleView(link);
     link.addEventListener('click', handleMenuLinks);
 });
+
 menuToggler.addEventListener('click', toggleMainMenu);
 
 window.addEventListener('scroll', showHideElementsOnScroll);
