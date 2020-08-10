@@ -52,14 +52,20 @@ const config = {
                         loader: 'css-loader',
                         options: {
                             url: false,
+                            sourceMap: true,
                         },
                     },
-                    'postcss-loader',
-                    'resolve-url-loader',
+                    {   loader: 'postcss-loader',
+                        options: { sourceMap: true },
+                    },                    
+                    {   loader: 'resolve-url-loader',
+                        options: { sourceMap: true },
+                    },
                     {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
+                            sourceMap: true,
                         },
                     },
                 ],
@@ -156,7 +162,7 @@ const config = {
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production';
-    config.devtool = isProduction ? 'none' : 'inline-cheap-source-map';
+    config.devtool = isProduction ? 'none' : 'inline-source-map';
     config.output.filename = isProduction ? '[name].[chunkhash].bundle.js' : '[name].bundle.js';
     config.output.pathinfo = isProduction ? false : true;
     config.optimization.flagIncludedChunks = isProduction ? true : false;
