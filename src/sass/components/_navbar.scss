@@ -10,6 +10,7 @@ $menu-link-hover-font-color: $color-android-green;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: px2rem(10);
+    width: 100%;
 
     &__toggler {
         display: block;

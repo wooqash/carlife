@@ -15,17 +15,6 @@ body {
     background-color: $body-bg-color;
 }
 
-.container {
-    // background-color: #fff;
-    margin: 0 auto;
-    width: 100%;
-    @each $br, $size in (tablet, netbook, desktop) {
-        @include media-query(#{$br}) {
-            max-width: map-get($container-max-width, #{$br});
-        }
-    }
-}
-
 .header {
     background-color: rgba($header-bg-color, 0.8);
     color: $header-font-color;
@@ -40,9 +29,177 @@ body {
 }
 
 .section {
-    height: 100vh;
-    &--color1 { background-color: $section-bg-color1;}
-    &--color2 { background-color: $section-bg-color2;}
-    &--color3 { background-color: $section-bg-color3;}
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    padding: px2vw(200) 0;
+    // &--color1 { background-color: $section-bg-color1;}
+    // &--color2 { background-color: $section-bg-color2;}
+    // &--color3 { background-color: $section-bg-color3;}
+    @include media-query (netbook) {
+        padding: 100px 0;
+    }
+
+    &:nth-child(3n+1) {
+        background-color: $section-bg-color1;
+    }
+
+    &:nth-child(3n+2) {
+        background-color: $section-bg-color2;
+    }
+
+    &:nth-child(3n+3) {
+        background-color: $section-bg-color3;
+    }
+
+    &-title {
+        margin-bottom: 2rem;
+        position: relative;
+
+        &::after {
+            background-color: $color-apple-green;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            top: px2rem(-10);
+            width: 80%;            
+        }
+    }
+
+    &-sub-title {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    &-list {
+        border-top: 1px solid rgba($color-apple-green, 0.3);
+        margin: px2rem(20) 0;
+
+        &-item {
+            border-bottom: 1px solid rgba($color-apple-green, 0.3);
+            // margin: px2rem(5) 0;
+            padding: px2rem(10) 0;
+            position: relative;
+
+            &::before {
+                color: $color-apple-green;
+                content: '\f0ad';
+                display: inline-block;
+                font-family: $font-icons;
+                font-size: px2rem(10);
+                margin-right: px2rem(10);
+            }
+
+            // &::after {
+            //     background-color: rgba($color-apple-green, 0.2);
+            //     bottom: px2rem(-5);
+            //     content: '';
+            //     height: 1px;
+            //     left: 0;
+            //     position: absolute;
+            //     width: 100%;
+            // }
+        }
+        
+    }
+
+    &-picture {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+
+        &__image {
+            max-width: 100%;
+        }
+    }
+
+    &--about {
+        .row {
+            .col-6:nth-child(1) {
+                order: 1;
+            }
+
+            .col-6:nth-child(2) {
+                order: 0;
+            }
+        }
+
+        @include media-query(netbook) {
+            .row .col-6:nth-child(1) {
+                order: 0;
+            }
+    
+            .row .col-6:nth-child(2) {
+                order: 1;
+            }
+        }
+    }
+
+    &--offer {
+        .container {
+            flex-direction: column;
+        }
+
+        .row:nth-child(1) {
+            justify-content: center;
+        }
+
+        .row:nth-child(2) {
+            flex-wrap: wrap;
+        }
+
+        .col {
+            text-align: center;
+        }
+
+        .section-title {
+            margin: 0 auto px2rem(20);
+        }
+    }
 }
 
+.container {
+    // background-color: #fff;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    @each $br, $size in (netbook, desktop) {
+        @include media-query(#{$br}) {
+            max-width: map-get($container-max-width, #{$br});
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include media-query(netbook) {
+        flex-direction: row;
+    }
+}
+
+.col {
+    padding: px2vw(40);
+    width: 100%;
+    @include media-query(netbook) {
+        padding: 40px;
+    }
+}
+
+.col--4 {
+    @include media-query(netbook) {
+        width: 33%;
+    }
+}
+
+.col--6 {
+    @include media-query(netbook) {
+        width: 50%;
+    }
+}
