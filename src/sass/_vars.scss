@@ -1,18 +1,43 @@
 // Color names
-$color-black-coffee: #342e37;
-$color-rich-black-fogra-39: #030300;
-$color-sunglow: #fcc62c;
-$color-saffron: #f9c700;
-$color-yellow-pantone: #ffe11d;
-$color-marigold: #eaa001;
-$color-fulvous: #db8300;
-$color-baby-powder: #fafffd;
 
-$color-android-green: #ac0;
+$color-sheen-green: #64dd17;
+$color-french-lime: #b2ff59;
+$color-maximum-green: #007F5F;//#14C8CC;//#558b2f;
+
+$color-electric-lime: #c6ff00;
+$color-laser-lemon: #fdff58;
+$color-sheen-green: #90cc00;
+
+$color-white: #fff;
+$color-black: #000;
+$color-upsdell-red: #b00020;
+
+$color-android-green: #abcc01;
+$color-alabaster: #f0f2e6;
+$color-gamboge: #e69900;
+
 $color-apple-green: #80b918;
 $color-hunter-green: #355834;
 $color-charcoal: #233d4d;
 $color-phthalo-green: #14281d;
+
+
+$primary-color: $color-electric-lime;//$color-android-green;// $color-android-green;
+$primary-light-color: $color-laser-lemon;
+$primary-dark-color: $color-sheen-green;
+// $primary-variant-color: $color-maximum-green;
+$background-color: $color-white;
+$surface-color: $color-white;
+$error-color: $color-upsdell-red;
+
+$on-primary-color: $color-black;
+$on-primary-light-color: $color-black;
+$on-primary-dark-color: $color-black;
+// $on-primary-variant-color: $color-white;
+$on-background-color: $color-black;
+$on-surface-color: $color-black;
+$on-error-color: $color-white;
+
 
 //Fonts
 $fonts-dir: './assets/fonts';
