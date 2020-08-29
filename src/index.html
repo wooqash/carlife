@@ -139,16 +139,314 @@
                 </div>
             </section>
             <section id="Offer" class="section section--offer">
-                <div class="container">
-                    <h2 class="section-title">Oferta <span class="section-sub-title">Lorem ipsum</span></h2>
-                    <div class="row">
-                        <div class="col col--4">1</div>
-                        <div class="col col--4">2</div>
+                <div class="section__container">
+                    <h2 class="section__title">Oferta <span class="subtitle">Lorem ipsum</span></h2>
+                    <div class="grid-container">
+                        <div class="offer-card">
+                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <h3 class="offer-card__title">Holowanie</h3>
+                            <p class="offer-card__intro">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
+                                vel tempus metus gravida at.
+                            </p>
+                            <a
+                                href="#Towing"
+                                class="offer-card__more-link"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="Towing"
+                                data-dialog="dialog"
+                                >więcej...</a
+                            >
+                            <div id="Towing" class="dialog" role="presentation" aria-hidden="true">
+                                <div class="dialog__container">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                        <div class="dialog__content-header">
+                                            <h4 id="DialogTitle" class="dialog__title">Holowanie</h4>
+                                            <button
+                                                class="dialog__close-btn"
+                                                type="button"
+                                                tabindex="0"
+                                                aria-label="zamknij"
+                                            >
+                                                <i class="fas fa-times-circle"></i>
+                                            </button>
+                                        </div>
+                                        <div class="dialog__content-main">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
+                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
+                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
+                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
+                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
+                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
+                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
+                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-card">
+                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <h3 class="offer-card__title">Naprawa mechaniki</h3>
+                            <p class="offer-card__intro">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
+                                vel tempus metus gravida at.
+                            </p>
+                            <a
+                                href="#RepairOfMechanics"
+                                class="offer-card__more-link"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="RepairOfMechanics"
+                                data-dialog="dialog"
+                                >więcej...</a
+                            >
+                            <div id="RepairOfMechanics" class="dialog" role="presentation" aria-hidden="true">
+                                <div class="dialog__container">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                        <div class="dialog__content-header">
+                                            <h4 id="DialogTitle" class="dialog__title">Naprawa mechaniki</h4>
+                                            <button
+                                                class="dialog__close-btn"
+                                                type="button"
+                                                tabindex="0"
+                                                aria-label="zamknij"
+                                            >
+                                                <i class="fas fa-times-circle"></i>
+                                            </button>
+                                        </div>
+                                        <div class="dialog__content-main">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
+                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
+                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
+                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
+                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
+                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
+                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
+                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-card">
+                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <h3 class="offer-card__title">Naprawa elektryki i elektroniki</h3>
+                            <p class="offer-card__intro">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
+                                vel tempus metus gravida at.
+                            </p>
+                            <a
+                                href="#RepairOfElectrics"
+                                class="offer-card__more-link"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="RepairOfElectrics"
+                                data-dialog="dialog"
+                                >więcej...</a
+                            >
+                            <div id="RepairOfElectrics" class="dialog" role="presentation" aria-hidden="true">
+                                <div class="dialog__container">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                        <div class="dialog__content-header">
+                                            <h4 id="DialogTitle" class="dialog__title">
+                                                Naprawa elektryki i elektroniki
+                                            </h4>
+                                            <button
+                                                class="dialog__close-btn"
+                                                type="button"
+                                                tabindex="0"
+                                                aria-label="zamknij"
+                                            >
+                                                <i class="fas fa-times-circle"></i>
+                                            </button>
+                                        </div>
+                                        <div class="dialog__content-main">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
+                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
+                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
+                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
+                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
+                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
+                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
+                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-card">
+                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <h3 class="offer-card__title">Serwis i naprawa klimatyzacji</h3>
+                            <p class="offer-card__intro">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
+                                vel tempus metus gravida at.
+                            </p>
+                            <a
+                                href="#AirConditioningService"
+                                class="offer-card__more-link"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="AirConditioningService"
+                                data-dialog="dialog"
+                                >więcej...</a
+                            >
+                            <div id="AirConditioningService" class="dialog" role="presentation" aria-hidden="true">
+                                <div class="dialog__container">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                        <div class="dialog__content-header">
+                                            <h4 id="DialogTitle" class="dialog__title">
+                                                Serwis i naprawa klimatyzacji
+                                            </h4>
+                                            <button
+                                                class="dialog__close-btn"
+                                                type="button"
+                                                tabindex="0"
+                                                aria-label="zamknij"
+                                            >
+                                                <i class="fas fa-times-circle"></i>
+                                            </button>
+                                        </div>
+                                        <div class="dialog__content-main">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
+                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
+                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
+                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
+                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
+                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
+                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
+                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-card">
+                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <h3 class="offer-card__title">Serwis opon</h3>
+                            <p class="offer-card__intro">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
+                                vel tempus metus gravida at.
+                            </p>
+                            <a
+                                href="#TireService"
+                                class="offer-card__more-link"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="TireService"
+                                data-dialog="dialog"
+                                >więcej...</a
+                            >
+                            <div id="TireService" class="dialog" role="presentation" aria-hidden="true">
+                                <div class="dialog__container">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                        <div class="dialog__content-header">
+                                            <h4 id="DialogTitle" class="dialog__title">Serwis opon</h4>
+                                            <button
+                                                class="dialog__close-btn"
+                                                type="button"
+                                                tabindex="0"
+                                                aria-label="zamknij"
+                                            >
+                                                <i class="fas fa-times-circle"></i>
+                                            </button>
+                                        </div>
+                                        <div class="dialog__content-main">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
+                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
+                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
+                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
+                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
+                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
+                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
+                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-card">
+                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <h3 class="offer-card__title">Przegląd aut przed zakupem</h3>
+                            <p class="offer-card__intro">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
+                                vel tempus metus gravida at.
+                            </p>
+                            <a
+                                href="#CarAudit"
+                                class="offer-card__more-link"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="CarAudit"
+                                data-dialog="dialog"
+                                >więcej...</a
+                            >
+                            <div id="CarAudit" class="dialog" role="presentation" aria-hidden="true">
+                                <div class="dialog__container">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                        <div class="dialog__content-header">
+                                            <h4 id="DialogTitle" class="dialog__title">Przegląd aut przed zakupem</h4>
+                                            <button
+                                                class="dialog__close-btn"
+                                                type="button"
+                                                tabindex="0"
+                                                aria-label="zamknij"
+                                            >
+                                                <i class="fas fa-times-circle"></i>
+                                            </button>
+                                        </div>
+                                        <div class="dialog__content-main">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
+                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
+                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
+                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
+                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
+                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
+                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
+                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col col--4">
+                            <div class="offer-card">
+                                <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>                                
+                                <h3 class="offer-card__title">Holowanie</h3>
+                                <p class="offer-card__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel tempus metus gravida at.</p>
+                                <a href="#Towing" class="offer-card__more-link" role="button" aria-expanded="false" aria-controls="Towing" data-toggle="collapse">więcej...</a>
+                                <div id="Towing" class="offer-card__details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui porttitor interdum. Donec feugiat euismod diam eu consectetur. Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa, scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam mattis justo placerat auctor. Sed malesuada vulputate varius.</div>
+                            </div>
+                        </div>
+                        <div class="col col--4">
+                            <div class="offer-card">
+                                <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>                                
+                                <h3 class="offer-card__title">Naprawa mechaniki</h3>
+                                <p class="offer-card__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel tempus metus gravida at.</p>
+                                <a href="#RepairOfMechanics" class="offer-card__more-link" role="button" aria-expanded="false" aria-controls="RepairOfMechanics" data-toggle="collapse">więcej...</a>
+                                <div id="RepairOfMechanics" class="offer-card__details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui porttitor interdum. Donec feugiat euismod diam eu consectetur. Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa, scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam mattis justo placerat auctor. Sed malesuada vulputate varius.</div>
+                            </div>
+                        </div>
                         <div class="col col--4">3</div>
                         <div class="col col--4">4</div>
                         <div class="col col--4">5</div>
                         <div class="col col--4">6</div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
             <section id="Gallery" class="section section--color1">
