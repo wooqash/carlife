@@ -1,8 +1,8 @@
 // $navbar-bg-color: $color-rich-black-fogra-39;
-$menu-link-active-bg-color: $color-android-green;
-$menu-link-active-font-color: $color-phthalo-green;
-$menu-link-active-hover-font-color: $color-phthalo-green;
-$menu-link-hover-font-color: $color-android-green;
+$menu-link-active-bg-color: $primary-dark-color;
+$menu-link-active-font-color: $on-primary-dark-color;
+$menu-link-active-hover-font-color: $on-primary-dark-color;
+$menu-link-hover-font-color: $primary-dark-color;
 
 .navbar {
     align-items: center;
@@ -12,8 +12,12 @@ $menu-link-hover-font-color: $color-android-green;
     padding: px2rem(10);
     width: 100%;
 
+    &__logo {
+        display: flex;
+    }
+
     &__toggler {
-        display: block;
+        display: flex;
     }
 
     &__menu-wrapper {
@@ -56,22 +60,30 @@ $menu-link-hover-font-color: $color-android-green;
     flex-grow: 1;
 
     &__item {
+        font-family: $secondary-font-family;
+        font-weight: 700;
+        letter-spacing: 2px;
         padding: px2rem(10) px2rem(0);
         text-align: center;
+        text-transform: uppercase;
     }
 
     &__item.active {
         background-color: $menu-link-active-bg-color;
-        
         color: $menu-link-active-font-color;
+        font-weight: bold;
         
         .main-nav__link:hover {
-            color: $menu-link-active-hover-font-color;
+            color: rgba($menu-link-active-hover-font-color, 0.7);
         }
     }
 
-    &__link:hover {
-        color: $menu-link-hover-font-color;
+    &__link {
+        display: block;
+
+        &:hover {
+            color: $menu-link-hover-font-color;
+        }
     }
 
     @include media-query(netbook) {
@@ -84,12 +96,11 @@ $menu-link-hover-font-color: $color-android-green;
             font-family: $third-font-family;
             font-size: px2rem(10);
             font-weight: 900;
-            letter-spacing: 1px;
             line-height: 1;
             margin: 0 px2rem(5);
             padding: px2rem(5) px2rem(10);
             text-align: left;
-            text-transform: uppercase;
+            
 
             &.active {
                 border-radius: px2rem(20);

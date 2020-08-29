@@ -24,10 +24,10 @@ $breakpoint-base: 320;
 $breakpoints: (mobile: 320, iphone: 414, tablet: 768, netbook: 1024, desktop: 1440, full-hd: 1920);
 
 //Hamburger settings
-$hamburger-layer-color: $color-baby-powder;
+$hamburger-layer-color: $on-primary-color;
 $hamburger-layer-width: 30px;
 $hamburger-layer-height: 4px;
 $hamburger-layer-spacing: 6px;
-$hamburger-active-layer-color: $color-android-green;
+$hamburger-active-layer-color: $on-primary-color;
 $hamburger-padding-x: 10px;
 $hamburger-padding-y: 10px;

@@ -14,8 +14,8 @@ const removeActiveClassFromMenu = (items: HTMLCollection): void => {
 };
 
 const toggleMainMenu = (): void => {
-    menuToggler.classList.toggle('is-active');
-    mainMenu.classList.toggle('show');
+    Utils.toggleClass(menuToggler, 'is-active');
+    Utils.toggleClass(mainMenu, 'show');
 };
 
 const handleMenuLinks = (event: Event): void => {
@@ -27,7 +27,7 @@ const handleMenuLinks = (event: Event): void => {
         removeActiveClassFromMenu(menuItems);
     }
     if (menuItem) {
-        utils.default.addClass(menuItem, 'active');
+        Utils.addClass(menuItem, 'active');
     }
 
     toggleMainMenu();
