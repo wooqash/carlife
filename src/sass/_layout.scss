@@ -214,32 +214,54 @@ body {
     }
 }
 
-.row {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.offer-card {
+    &__icon {
+        color: $primary-dark-color;
+        font-size: px2rem(40);
+        margin-bottom: px2rem(10);
 
-    @include media-query(netbook) {
-        flex-direction: row;
+        i::before {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
     }
-}
 
-.col {
-    padding: px2vw(40);
-    width: 100%;
-    @include media-query(netbook) {
-        padding: 40px;
+    &__title {
+        align-items: center;
+        display: flex;
+        font-size: px2rem(22);
+        justify-content: center;
+        letter-spacing: px2rem(2);
+        min-height: px2rem(70);
+        text-transform: initial;
     }
-}
 
-.col--4 {
-    @include media-query(netbook) {
-        width: 33%;
+    &__intro {
+        margin: px2rem(20) auto;
     }
-}
 
-.col--6 {
-    @include media-query(netbook) {
-        width: 50%;
+    &__more-link {
+        font-size: px2rem(12);
+    }
+
+    &__details {
+        align-items: center;
+        background-color: $color-apple-green;
+        color: $color-hunter-green;
+        flex-direction: column;
+        left: 0;
+        margin: px2rem(20) auto;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: px2rem(40);
+        position: absolute;
+        top: 0;
+        transition: all 0.7s ease-out;
+
+        &--show {
+            display: flex;
+            opacity: 1;
+        }
     }
 }
