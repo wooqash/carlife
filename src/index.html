@@ -68,9 +68,36 @@
             </div>
         </header>
         <main>
-            <section id="Home" class="section section--color1">
-                <div class="container">
-                    <h1>Title h1</h1>
+            <section id="Home" class="section section--start">
+                <div class="section__container">
+                    <div class="main-title">
+                        <h1 class="main-title__lead">
+                            Lead Title <span class="main-title__mark">Lead title mark</span>
+                        </h1>
+                        <p class="main-title__additional-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel
+                            tempus metus gravida at.
+                        </p>
+                    </div>
+                    <picture class="tow-car">
+                        <source
+                            type="image/webp"
+                            srcset="
+                                ./assets/img/main-bg-tow-car-alt.webp    1x,
+                                ./assets/img/main-bg-tow-car-alt@2x.webp 2x
+                            "
+                        />
+                        <source
+                            type="image/png"
+                            srcset="./assets/img/main-bg-tow-car-alt.png 1x, ./assets/img/main-bg-tow-car-alt@2x.png 2x"
+                        />
+                        <img
+                            class="tow-car__image"
+                            srcset="./assets/img/main-bg-tow-car-alt.png 1x, ./assets/img/main-bg-tow-car-alt@2x.png 2x"
+                            src="./assets/img/main-bg-tow-car-alt.png"
+                            alt="Laweta CarLife"
+                        />
+                    </picture>
                 </div>
             </section>
             <section id="About" class="section section--about">

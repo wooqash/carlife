@@ -106,16 +106,18 @@ body {
         
     }
 
-    &-picture {
-        align-items: center;
-        display: flex;
-        height: 100%;
-        justify-content: center;
+    &--start {
+        background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+            /*url('../assets/img/main-bg-tow-car.png') bottom 25% left 50%/contain no-repeat,*/
+                url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
+        position: relative;
 
-        &__image {
-            max-width: 100%;
+        @include media-query(netbook) {
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+                /*url('../assets/img/main-bg-tow-car.png') bottom 15% left 50%/824px 500px no-repeat,*/
+                    url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
+            min-height: 961px;
         }
-    }
 
     &--about {
         .row {
