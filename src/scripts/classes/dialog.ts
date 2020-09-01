@@ -8,8 +8,8 @@ export default class Dialog {
     static open = (event: Event): void => {
         event.preventDefault();
         event.stopPropagation();
-        const link = event.target as HTMLAnchorElement;
-        const dialogId = link ? link.hash.substr(1) : null;
+        const link = event.target as HTMLElement;
+        const dialogId = link && link.getAttribute('aria-controls') ? link.getAttribute('aria-controls') : null;
         const dialogElem = dialogId ? document.getElementById(dialogId) : null;
 
         if (dialogElem) {

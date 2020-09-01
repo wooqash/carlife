@@ -12,7 +12,7 @@ const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElem
 const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
 
 const collapseButtons = document.querySelectorAll('[data-toggle="collapse"]') as NodeListOf<HTMLAnchorElement>;
-const dialogOpenButtons = document.querySelectorAll('[data-dialog="dialog"]') as NodeListOf<HTMLAnchorElement>;
+const dialogOpenButtons = document.querySelectorAll('[data-dialog="dialog"]') as NodeListOf<HTMLElement>;
 const dialogContainers = document.querySelectorAll('.dialog__content') as NodeListOf<HTMLElement>;
 
 const removeActiveClassFromMenu = (items: HTMLCollection): void => {
@@ -91,7 +91,7 @@ window.addEventListener('scroll', showHideElementsOnScroll);
 // Dialog
 body.addEventListener('click', Dialog.close);
 
-Array.from(dialogOpenButtons).forEach((link: HTMLAnchorElement) => {
+Array.from(dialogOpenButtons).forEach((link: HTMLElement) => {
     link.addEventListener('click', Dialog.open);
 });
 
