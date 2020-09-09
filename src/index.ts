@@ -1,9 +1,17 @@
 import './sass/styles.scss';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'layout-grid/dist/css/layout-grid.css';
 // import * as test from './scripts/test-module';
+import Swiper, { Navigation, Pagination } from 'swiper';
 import handleView from './scripts/spy-menu';
 
 import Utils from './scripts/classes/utils';
 import Dialog from './scripts/classes/dialog';
+import Gallery from './scripts/classes/gallery';
+
+Swiper.use([Navigation, Pagination]);
 
 let prevScrollPos = window.pageYOffset;
 const body = document.body as HTMLBodyElement;
@@ -14,6 +22,9 @@ const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTM
 const collapseButtons = document.querySelectorAll('[data-toggle="collapse"]') as NodeListOf<HTMLAnchorElement>;
 const dialogOpenButtons = document.querySelectorAll('[data-dialog="dialog"]') as NodeListOf<HTMLElement>;
 const dialogContainers = document.querySelectorAll('.dialog__content') as NodeListOf<HTMLElement>;
+
+const showMoreGalleryBtn = document.getElementById('GalleryShowMore') as HTMLButtonElement;
+const mainGalleryElem = document.getElementById('MainGallery') as HTMLElement;
 
 const removeActiveClassFromMenu = (items: HTMLCollection): void => {
     Array.from(items).forEach((item: Element) => item.classList.remove('active'));
@@ -98,3 +109,28 @@ Array.from(dialogOpenButtons).forEach((link: HTMLElement) => {
 Array.from(dialogContainers).forEach((container: HTMLElement) => {
     container.addEventListener('click', Dialog.handleCloseBtn);
 });
+
+// Gallery
+const mainGallery = new Gallery(mainGalleryElem, showMoreGalleryBtn);
+mainGallery.init();
+
+// const gallerySlider = new Swiper('.gallery-slider', {
+//     cssMode: true,
+//     loop: true,
+//     lazy: true,
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//     },
+// });
+
+showMoreGalleryBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    mainGallery.showMore();
+});
+
+// gallerySlider
