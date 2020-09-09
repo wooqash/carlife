@@ -31,7 +31,7 @@ body {
 
 .header {
     background-color: $header-bg-color;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 4px rgba($on-primary-color, 0.3);
     color: $header-font-color;
     position: fixed;
     top: 0;
@@ -82,7 +82,7 @@ body {
     &__title {
         margin-bottom: 4rem;
         position: relative;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
         z-index: 0;
 
         &::after {
@@ -125,7 +125,7 @@ body {
                 left: 0;
                 margin-right: 15px;
                 position: absolute;
-                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
                 top: 50%;
                 transform: translateY(-50%);
             }
@@ -133,15 +133,13 @@ body {
     }
 
     &--start {
-        background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-            /*url('../assets/img/main-bg-tow-car.png') bottom 25% left 50%/contain no-repeat,*/
-                url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
+        background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
+            url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
         position: relative;
 
         @include media-query(netbook) {
-            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-                /*url('../assets/img/main-bg-tow-car.png') bottom 15% left 50%/824px 500px no-repeat,*/
-                    url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
+            background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
+                url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
             min-height: 961px;
         }
 
@@ -290,7 +288,7 @@ body {
         margin-bottom: px2rem(10);
 
         i::before {
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
         }
     }
 
@@ -344,6 +342,7 @@ body {
     font-weight: 700;
     line-height: 1;
     margin: 15px 40px;
+    outline: 0;
     padding: 12px 40px 10px;
     position: relative;
     text-transform: uppercase;
@@ -374,13 +373,19 @@ body {
         right: -5px;
     }
 
-    &:hover {
-        // color: $primary-color;
-    }
-
+    &:focus::before,
+    &:focus::after,
     &:hover::before,
     &:hover::after {
         height: 100%;
         width: 100%;
+    }
+
+    &__label {
+        display: none;
+
+        &--show {
+            display: inline-block;
+        }
     }
 }
