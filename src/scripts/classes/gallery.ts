@@ -76,5 +76,5 @@ export default class Gallery {
             Utils.toggleClass(this.moreLabel, this.clasess.buttonLabelShow);
             Utils.toggleClass(this.lessLabel, this.clasess.buttonLabelShow);
         }
-    }
+    };
 }
