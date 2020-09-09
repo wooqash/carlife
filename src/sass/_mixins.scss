@@ -6,6 +6,7 @@
         $font-path: $font-path + '-' + $type;
     }
     @font-face {
+        /* stylelint-disable function-url-quotes */
         font-family: $name;
         src: url($font-path + '.eot');
         src: url($font-path + '.eot?#iefix') format('embedded-opentype'), url($font-path + '.woff2') format('woff2'),
@@ -14,7 +15,7 @@
         @if (map-has-key($font-weights, $type)) {
             font-weight: #{map-get($font-weights, $type)};
         }
-    }
+    } /* stylelint-enable function-url-quotes*/
 }
 
 @mixin media-query($breakpoint) {
@@ -61,7 +62,7 @@
     @include bg-img($img-name, $multiplier, $extension);
     $multiplier: $multiplier + 1;
     background-size: cover;
-    @media (-webkit-min-device-pixel-ratio: #{$multiplier}), (min-resolution: #{96 * $multiplier + dpi}) {
+    @media (min-resolution: #{$multiplier}), (min-resolution: #{96 * $multiplier + dpi}) {
         @include bg-img($img-name, $multiplier, $secondary-extension);
     }
 }
