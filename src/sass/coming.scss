@@ -1,0 +1,261 @@
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/solid';
+@import 'fontawesome/brands';
+@import 'vars';
+@import 'mixins';
+@import 'resets/resets';
+
+$button-bg-color: $primary-dark-color;
+$button-font-color: $on-primary-dark-color;
+
+$config: (
+    mobile: (
+        h1-font-size: 32,
+        h2-font-size: 32,
+        h3-font-size: 22,
+        h4-font-size: 19,
+        h5-font-size: 16,
+        h6-font-size: 13,
+        main-text-font-size: 13,
+        social-links-font-size: 20,
+        address-font-size: 13,
+    ),
+    iphone: (
+        h1-font-size: 40,
+        h2-font-size: 40,
+        h3-font-size: 22,
+        h4-font-size: 19,
+        h5-font-size: 16,
+        h6-font-size: 13,
+        main-text-font-size: 13,
+        social-links-font-size: 20,
+        address-font-size: 13,
+    ),
+    tablet: (
+        h1-font-size: 70,
+        h2-font-size: 70,
+        h3-font-size: 26,
+        h4-font-size: 22,
+        h5-font-size: 18,
+        h6-font-size: 14,
+        main-text-font-size: 16,
+        social-links-font-size: 40,
+        address-font-size: 16,
+    ),
+    netbook: (
+        h1-font-size: 74,
+        h2-font-size: 50,
+        h3-font-size: 28,
+        h4-font-size: 24,
+        h5-font-size: 20,
+        h6-font-size: 16,
+        main-text-font-size: 16,
+        social-links-font-size: 40,
+        address-font-size: 16,
+    ),
+    desktop: (
+        h1-font-size: 80,
+        h2-font-size: 50,
+        h3-font-size: 28,
+        h4-font-size: 24,
+        h5-font-size: 20,
+        h6-font-size: 16,
+        main-text-font-size: 16,
+        social-links-font-size: 40,
+        address-font-size: 16,
+    ),
+    full-hd: (
+        h1-font-size: 84,
+        h2-font-size: 50,
+        h3-font-size: 28,
+        h4-font-size: 24,
+        h5-font-size: 20,
+        h6-font-size: 16,
+        main-text-font-size: 16,
+        social-links-font-size: 40,
+        address-font-size: 16,
+    ),
+);
+
+body {
+    align-items: center;
+    background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
+        url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
+    background-attachment: fixed;
+    color: $color-white;
+    padding: 20px;
+
+    @include media-query(tablet) {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+}
+
+.page-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-query(tablet) {
+        max-width: 670px;
+    }
+}
+
+h1,
+h2,
+h3 {
+    display: block;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-family: $secondary-font-family;
+        font-weight: 700;
+        text-transform: uppercase;
+        @each $br, $size in $breakpoints {
+            @include media-query($br) {
+                font-size: px2rem(map-deep-get($config, $br, h#{$i}-font-size));
+            }
+        }
+    }
+}
+
+.main-logo {
+    img {
+        max-width: 100%;
+    }
+}
+
+.main-title {
+    color: $primary-color;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 4px 4px 10px rgba($primary-color, 0.5);
+}
+
+.main-text {
+    @each $br, $size in $breakpoints {
+        @include media-query($br) {
+            font-size: px2rem(map-deep-get($config, $br, main-text-font-size));
+        }
+    }
+    margin: px2rem(15) auto;
+    text-align: center;
+
+    @include media-query(tablet) {
+        margin: px2rem(30) auto;
+    }
+}
+
+.button {
+    background-color: $button-bg-color;
+    border: 0;
+    color: $button-font-color;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1;
+    margin: 15px 20px;
+    outline: 0;
+    padding: 12px 16px 10px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+        border: 0 solid transparent;
+        content: '';
+        height: 24px;
+        position: absolute;
+        transition: all 0.25s;
+        width: 24px;
+    }
+
+    &::after {
+        border-bottom-width: 2px;
+        border-color: $button-bg-color;
+        border-right-width: 2px;
+        bottom: -5px;
+        right: -5px;
+    }
+
+    &::before {
+        border-color: $button-bg-color;
+        border-left-width: 2px;
+        border-top-width: 2px;
+        left: -5px;
+        top: -5px;
+    }
+
+    &:focus::before,
+    &:focus::after,
+    &:hover::before,
+    &:hover::after {
+        height: 100%;
+        width: 100%;
+    }
+
+    &--more {
+        padding: 12px 16px 12px 12px;
+    }
+
+    &__label {
+        display: none;
+
+        &--show {
+            display: inline-block;
+        }
+    }
+
+    &__icon {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+}
+
+.cta-buttons {
+    text-align: center;
+}
+
+.page-footer {
+    margin-top: px2rem(30);
+    text-align: center;
+
+    @include media-query(tablet) {
+        margin-top: px2rem(60);
+    }
+}
+
+.social-link {
+    @each $br, $size in $breakpoints {
+        @include media-query($br) {
+            font-size: px2rem(map-deep-get($config, $br, social-links-font-size));
+        }
+    }
+    transition: color 0.1s linear;
+
+    &:hover {
+        color: $primary-color;
+        text-shadow: 4px 4px 10px rgba($primary-color, 0.5);
+    }
+}
+
+.address {
+    color: $primary-color;
+    @each $br, $size in $breakpoints {
+        @include media-query($br) {
+            font-size: px2rem(map-deep-get($config, $br, address-font-size));
+        }
+    }
+    font-style: normal;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-shadow: 4px 4px 10px rgba($primary-color, 0.5);
+
+    &__icon {
+        margin-right: px2rem(10);
+    }
+}

@@ -18,7 +18,7 @@ const BUILD_DIR = path.resolve(__dirname, './dist');
 const config = {
     entry: {
         app: './src/index.ts',
-        main: './src/main.js',
+        coming: './src/coming.ts',
     },
     devServer: {
         contentBase: BUILD_DIR,
@@ -55,12 +55,8 @@ const config = {
                             sourceMap: true,
                         },
                     },
-                    {   loader: 'postcss-loader',
-                        options: { sourceMap: true },
-                    },                    
-                    {   loader: 'resolve-url-loader',
-                        options: { sourceMap: true },
-                    },
+                    { loader: 'postcss-loader', options: { sourceMap: true } },
+                    { loader: 'resolve-url-loader', options: { sourceMap: true } },
                     {
                         loader: 'sass-loader',
                         options: {
@@ -120,7 +116,14 @@ const config = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: path.resolve(__dirname, 'src', 'index.html'),
+            chunks: ['app'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'coming-soon.html',
+            template: path.resolve(__dirname, 'src', 'coming-soon.html'),
+            chunks: ['coming'],
         }),
         new FaviconsWebpackPlugin({
             logo: APP_DIR + '/assets/icons/logo.png',
@@ -157,6 +160,7 @@ const config = {
     ],
     output: {
         path: BUILD_DIR,
+        filename: '[name].bundle.js',
     },
 };
 
