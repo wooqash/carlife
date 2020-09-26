@@ -1,5 +1,7 @@
+import { Swiper, Navigation, Pagination, Lazy, SwiperOptions } from 'swiper';
 import Utils from './utils';
 
+Swiper.use([Navigation, Pagination, Lazy]);
 export default class Gallery {
     private minImgVisible = {
         mobile: 2,
@@ -23,8 +25,38 @@ export default class Gallery {
             ? (this.showMoreButton?.children[1] as HTMLElement)
             : null;
 
+    private swiperParams: SwiperOptions = {
+        a11y: {
+            prevSlideMessage: 'poprzedni slajd',
+            nextSlideMessage: 'następny slajd',
+            firstSlideMessage: 'pierwszy slajd',
+            lastSlideMessage: 'ostatni slajd',
+            paginationBulletMessage: 'idź do slajdu nr {{index}}',
+        },
+        autoHeight: false,
+        cssMode: true,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+            pageUpDown: true,
+        },
+        loop: true,
+        lazy: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+    };
+
+    private slider = new Swiper('.gallery-slider', this.swiperParams);
+
     private clasess = {
-        galleryItemShow: 'gallery__item--show',
+        galleryItemShow: 'gallery-item--show',
         buttonLabelShow: 'button__label--show',
     };
 
@@ -36,7 +68,7 @@ export default class Gallery {
     };
 
     showMore = (): void => {
-        const hiddenImages = document.querySelectorAll('.gallery__item:not(.gallery__item--show)');
+        const hiddenImages = document.querySelectorAll('.gallery-item:not(.gallery-item--show)');
         const imageToShowInNextStep = hiddenImages.length - this.getMinImageVisible();
         Array.from(hiddenImages).forEach((image, index) => {
             if (index < this.getMinImageVisible()) {
@@ -60,6 +92,8 @@ export default class Gallery {
             }
         });
     };
+
+    getSlider = (): Swiper => this.slider;
 
     private getMinImageVisible = (): number => {
         let device = 'desktop';

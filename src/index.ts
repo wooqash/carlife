@@ -2,16 +2,12 @@ import './sass/styles.scss';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
-import 'layout-grid/dist/css/layout-grid.css';
-// import * as test from './scripts/test-module';
-import Swiper, { Navigation, Pagination } from 'swiper';
+
 import handleView from './scripts/spy-menu';
 
 import Utils from './scripts/classes/utils';
 import Dialog from './scripts/classes/dialog';
 import Gallery from './scripts/classes/gallery';
-
-Swiper.use([Navigation, Pagination]);
 
 let prevScrollPos = window.pageYOffset;
 const body = document.body as HTMLBodyElement;
@@ -20,11 +16,13 @@ const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElem
 const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
 
 const collapseButtons = document.querySelectorAll('[data-toggle="collapse"]') as NodeListOf<HTMLAnchorElement>;
-const dialogOpenButtons = document.querySelectorAll('[data-dialog="dialog"]') as NodeListOf<HTMLElement>;
+const dialogOpenMoreOfferButtons = document.querySelectorAll('.button--more') as NodeListOf<HTMLElement>;
+const dialogOpenGalleryButtons = document.querySelectorAll('.gallery-item') as NodeListOf<HTMLElement>;
 const dialogContainers = document.querySelectorAll('.dialog__content') as NodeListOf<HTMLElement>;
 
 const showMoreGalleryBtn = document.getElementById('GalleryShowMore') as HTMLButtonElement;
 const mainGalleryElem = document.getElementById('MainGallery') as HTMLElement;
+const mainGallery = new Gallery(mainGalleryElem, showMoreGalleryBtn);
 
 const removeActiveClassFromMenu = (items: HTMLCollection): void => {
     Array.from(items).forEach((item: Element) => item.classList.remove('active'));
@@ -100,33 +98,30 @@ menuToggler.addEventListener('click', toggleMainMenu);
 window.addEventListener('scroll', showHideElementsOnScroll);
 
 // Dialog
+const offerDialog = new Dialog();
+const galleryDialog = new Dialog();
 body.addEventListener('click', Dialog.close);
 
-Array.from(dialogOpenButtons).forEach((link: HTMLElement) => {
-    link.addEventListener('click', Dialog.open);
+Array.from(dialogOpenMoreOfferButtons).forEach((link: HTMLElement) => {
+    link.addEventListener('click', offerDialog.open);
+});
+
+Array.from(dialogOpenGalleryButtons).forEach((picture: HTMLElement, index: number) => {
+    picture.addEventListener('click', (e) => {
+        galleryDialog.open(e);
+        console.log(index);
+        const slider = mainGallery.getSlider();
+        slider.slideTo(index + 1);
+    });
 });
 
 Array.from(dialogContainers).forEach((container: HTMLElement) => {
-    container.addEventListener('click', Dialog.handleCloseBtn);
+    container.addEventListener('click', offerDialog.handleCloseBtn, false);
 });
 
 // Gallery
-const mainGallery = new Gallery(mainGalleryElem, showMoreGalleryBtn);
-mainGallery.init();
 
-// const gallerySlider = new Swiper('.gallery-slider', {
-//     cssMode: true,
-//     loop: true,
-//     lazy: true,
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
-// });
+mainGallery.init();
 
 showMoreGalleryBtn.addEventListener('click', (e) => {
     e.preventDefault();

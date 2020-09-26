@@ -1,3 +1,8 @@
+$gallery-swiper-btn-color: $primary-dark-color;
+$gallery-swiper-btn-color-hover: $primary-color;
+$gallery-slide-caption-bg-color: $primary-dark-color;
+$gallery-slide-caption-font-color: $on-primary-dark-color;
+
 .gallery {
     display: grid;
     grid-gap: 20px;
@@ -5,9 +10,9 @@
     margin-bottom: 20px;
     padding: 0 20px;
 
-    .gallery__item {
+    .gallery-item {
         align-items: center;
-        background-color: $on-primary-color;
+        //
         box-shadow: 1px 5px 10px rgba($on-primary-color, 0.45);
         clip: rect(0 0 0 0); //
         cursor: pointer;
@@ -30,30 +35,18 @@
             width: auto; //
         }
 
-        img {
-            max-width: 100%;
-        }
+        &__image {
+            background-color: $on-primary-color;
+            display: flex;
+            overflow: hidden;
 
-        &:hover {
             img {
-                filter: grayscale(50%);
-                opacity: 0.6;
-                transform: scale(1.2);
-                transition-duration: 0.3s;
-            }
-
-            .image__title,
-            .image__text {
-                clip: auto;
-                height: auto;
-                opacity: 1;
-                transition: all 0.6 ease-in;
-                width: auto;
+                max-width: 100%;
             }
         }
 
-        .image__title,
-        .image__text {
+        &__title,
+        &__text {
             clip: rect(0 0 0 0);
             color: #fff;
             cursor: pointer;
@@ -69,38 +62,108 @@
             width: 0;
         }
 
-        .image__title {
+        &__title {
             font-size: px2rem(22);
             font-weight: bold;
             top: 55%;
         }
 
-        .image__text {
+        &__text {
             font-size: px2rem(16);
             max-width: 80%;
             top: 70%;
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(50%);
+                opacity: 0.6;
+                transform: scale(1.2);
+                transition-duration: 0.3s;
+            }
+
+            .gallery-item__title,
+            .gallery-item__text {
+                clip: auto;
+                height: auto;
+                opacity: 1;
+                transition: all 0.6 ease-in;
+                width: auto;
+            }
         }
     }
 }
 
 .gallery-slider {
-    height: 600px;
-    width: 100%;
-
-    .swiper-slide {
-        background: #fff;
-        font-size: 18px;
-        text-align: center;
+    &.swiper-container {
+        height: auto;
+        max-width: 1000px;
+        padding-bottom: 50px;
+        width: 100%;
     }
 
-    .swiper-slide img {
-        height: auto;
+    .swiper-wrapper {
+        align-items: center;
+    }
+
+    .swiper-slide {
+        align-items: center;
+        background: #fff;
+        display: flex;
+        font-size: 18px;
+        justify-content: center;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .swiper-pagination-bullets {
+        bottom: 15px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $gallery-swiper-btn-color;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        bottom: 0;
+        top: auto;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        color: $gallery-swiper-btn-color;
+        font-family: $font-icons;
+        font-size: 2.5rem;
+
+        &:hover {
+            color: $gallery-swiper-btn-color-hover;
+        }
+    }
+
+    .swiper-button-prev::after {
+        content: '';
+    }
+
+    .swiper-button-next::after {
+        content: '';
+    }
+
+    .slide-caption {
+        background-color: $gallery-slide-caption-bg-color;
+        color: $gallery-slide-caption-font-color;
         left: 50%;
-        max-height: 100%;
-        max-width: 100%;
+        padding: 20px;
         position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: auto;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .slide-image__title,
+    .slide-image__text {
+        position: absolute;
     }
 }

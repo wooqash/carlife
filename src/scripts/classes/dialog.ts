@@ -5,11 +5,12 @@ export default class Dialog {
 
     static visibilityClass = 'dialog--show';
 
-    static open = (event: Event): void => {
+    open = (event: Event): void => {
         event.preventDefault();
         event.stopPropagation();
-        const link = event.target as HTMLElement;
-        const dialogId = link && link.getAttribute('aria-controls') ? link.getAttribute('aria-controls') : null;
+        console.log(event, event.target, event.currentTarget);
+        const link = event.currentTarget as HTMLElement;
+        const dialogId = link && link.hasAttribute('aria-controls') ? link.getAttribute('aria-controls') : null;
         const dialogElem = dialogId ? document.getElementById(dialogId) : null;
 
         if (dialogElem) {
@@ -25,7 +26,7 @@ export default class Dialog {
         }
     };
 
-    static handleCloseBtn = (e: Event): void => {
+    handleCloseBtn = (e: Event): void => {
         const target = e.target as HTMLElement;
         const isCloseBtn =
             Utils.hasClass(target as HTMLButtonElement, Dialog.closeBtnClass) ||

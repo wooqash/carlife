@@ -7,12 +7,13 @@
             name="description"
             content="Auto holowanie oraz naprawa mechaniki, elektryki i elektroniki samochodów osobowych. Serwisujemy klimatyzacje samochodowe oraz ustawiamy geometrię zawieszania."
         />
-        <link rel="preload"
+        <link
+            rel="preload"
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&family=Roboto:wght@300;400;700;900&family=Lato:wght@300;400;500;700;900&display=swap"
             as="font"
             onload="this.onload=null;this.rel='stylesheet'"
         />
-        <noscript>  
+        <noscript>
             <link
                 href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&family=Roboto:wght@300;400;700;900&family=Lato:wght@300;400;500;700;900&display=swap"
                 rel="stylesheet"
@@ -137,27 +138,31 @@
                             <li class="list-item">Rzetelność, sumienność i zaangażowanie</li>
                             <li class="list-item">Konkurencyjne ceny</li>
                             <li class="list-item">Ubezpieczenie OC warsztatu i mienia holowanego</li>
+                            <li class="list-item">Wystawiamy faktury VAT</li>
+                            <li class="list-item">Przyjmujemy płatności gotówką oraz kartą</li>
                         </ul>
                     </div>
                 </div>
             </section>
             <section id="Offer" class="section section--offer">
                 <div class="section__container">
-                    <h2 class="section__title">Oferta <span class="subtitle">Lorem ipsum</span></h2>
+                    <h2 class="section__title">Oferta <span class="subtitle">Sprawdź nasze usługi</span></h2>
                     <div class="grid-container">
                         <div class="offer-card">
-                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <div class="offer-card__icon"><span class="fas fa-wrench" aria-hidden="true"></span></div>
                             <h3 class="offer-card__title">Holowanie</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
-                            <button class="button" aria-controls="Towing" data-dialog="dialog">pokaż więcej</button>
+                            <button class="button button--more" aria-controls="Towing" data-dialog="dialog">
+                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                            </button>
                             <div id="Towing" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTowing">
                                         <div class="dialog__content-header">
-                                            <h4 id="DialogTitle" class="dialog__title">Holowanie</h4>
+                                            <h4 id="DialogTowing" class="dialog__title">Holowanie</h4>
                                             <button
                                                 class="dialog__close-btn"
                                                 type="button"
@@ -190,14 +195,20 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
-                            <button class="button" aria-controls="RepairOfMechanics" data-dialog="dialog">
-                                pokaż więcej
+                            <button class="button button--more" aria-controls="RepairOfMechanics" data-dialog="dialog">
+                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
                             </button>
                             <div id="RepairOfMechanics" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                    <div
+                                        class="dialog__content"
+                                        role="dialog"
+                                        aria-labelledby="DialogRepairOfMechanics"
+                                    >
                                         <div class="dialog__content-header">
-                                            <h4 id="DialogTitle" class="dialog__title">Naprawa mechaniki</h4>
+                                            <h4 id="DialogRepairOfMechanics" class="dialog__title">
+                                                Naprawa mechaniki
+                                            </h4>
                                             <button
                                                 class="dialog__close-btn"
                                                 type="button"
@@ -225,19 +236,23 @@
                         </div>
                         <div class="offer-card">
                             <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
-                            <h3 class="offer-card__title">Naprawa elektryki i elektroniki</h3>
+                            <h3 class="offer-card__title">Naprawa elektryki<br />i elektroniki</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
-                            <button class="button" aria-controls="RepairOfElectrics" data-dialog="dialog">
-                                pokaż więcej
+                            <button class="button button--more" aria-controls="RepairOfElectrics" data-dialog="dialog">
+                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
                             </button>
                             <div id="RepairOfElectrics" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                    <div
+                                        class="dialog__content"
+                                        role="dialog"
+                                        aria-labelledby="DialogRepairOfElectrics"
+                                    >
                                         <div class="dialog__content-header">
-                                            <h4 id="DialogTitle" class="dialog__title">
+                                            <h4 id="DialogRepairOfElectrics" class="dialog__title">
                                                 Naprawa elektryki i elektroniki
                                             </h4>
                                             <button
@@ -272,14 +287,22 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
-                            <button class="button" aria-controls="AirConditioningService" data-dialog="dialog">
-                                pokaż więcej
+                            <button
+                                class="button button--more"
+                                aria-controls="AirConditioningService"
+                                data-dialog="dialog"
+                            >
+                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
                             </button>
                             <div id="AirConditioningService" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                    <div
+                                        class="dialog__content"
+                                        role="dialog"
+                                        aria-labelledby="DialogAirConditioningService"
+                                    >
                                         <div class="dialog__content-header">
-                                            <h4 id="DialogTitle" class="dialog__title">
+                                            <h4 id="DialogAirConditioningService" class="dialog__title">
                                                 Serwis i naprawa klimatyzacji
                                             </h4>
                                             <button
@@ -309,19 +332,19 @@
                         </div>
                         <div class="offer-card">
                             <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
-                            <h3 class="offer-card__title">Serwis opon</h3>
+                            <h3 class="offer-card__title">Serwis opon<br />i geometria kół</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
-                            <button class="button" aria-controls="TireService" data-dialog="dialog">
-                                pokaż więcej
+                            <button class="button button--more" aria-controls="TireService" data-dialog="dialog">
+                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
                             </button>
                             <div id="TireService" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTireService">
                                         <div class="dialog__content-header">
-                                            <h4 id="DialogTitle" class="dialog__title">Serwis opon</h4>
+                                            <h4 id="DialogTireService" class="dialog__title">Serwis opon</h4>
                                             <button
                                                 class="dialog__close-btn"
                                                 type="button"
@@ -354,12 +377,16 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
-                            <button class="button" aria-controls="CarAudit" data-dialog="dialog">pokaż więcej</button>
+                            <button class="button button--more" aria-controls="CarAudit" data-dialog="dialog">
+                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                            </button>
                             <div id="CarAudit" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogCarAudit">
                                         <div class="dialog__content-header">
-                                            <h4 id="DialogTitle" class="dialog__title">Przegląd aut przed zakupem</h4>
+                                            <h4 id="DialogCarAudit" class="dialog__title">
+                                                Przegląd aut przed zakupem
+                                            </h4>
                                             <button
                                                 class="dialog__close-btn"
                                                 type="button"
@@ -392,270 +419,533 @@
                 <div class="section__container">
                     <h2 class="section__title">Galeria <span class="subtitle">Lorem ipsum</span></h2>
                     <div id="MainGallery" class="gallery">
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego przodu auta"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Mercedes Sprinter 906</span>
-                            <span class="image__text">lewy profil</span>
-                        </picture>
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok prawego przodu auta"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Mercedes Sprinter 906</span>
-                            <span class="image__text">prawy profil</span>
-                        </picture>
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego tyłu auta"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Mercedes Sprinter 906</span>
-                            <span class="image__text">tył z najazdem</span>
-                        </picture>
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z boku"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Holowanie</span>
-                            <span class="image__text">Opel Astra III GTC</span>
-                        </picture>
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life z załadunkiem typu Alfa Romeo Giulietta - widok z boku"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Holowanie</span>
-                            <span class="image__text">Alfa Romeo Giulietta</span>
-                        </picture>
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life z załadunkiem typu BMW E46 - widok z boku"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Holowanie</span>
-                            <span class="image__text">BMW E46</span>
-                        </picture>
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok tyłu auta"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Mercedes Sprinter 906</span>
-                            <span class="image__text">tył auta</span>
-                        </picture>
-                        <picture class="gallery__item gallery__item--show">
-                            <source
-                                type="image/webp"
-                                srcset="
-                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.webp    1x,
-                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.webp 2x
-                                "
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="
-                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
-                                "
-                            />
-                            <img
-                                srcset="
-                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
-                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
-                                "
-                                src="./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg"
-                                alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z tyłu"
-                                loading="lazy"
-                            />
-                            <span class="image__title">Holowanie</span>
-                            <span class="image__text">Opel Astra III GTC</span>
-                        </picture>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="0"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego przodu auta"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
+                            <span class="gallery-item__text">lewy bok</span>
+                        </div>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="1"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok prawego przodu auta"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
+                            <span class="gallery-item__text">prawy bok</span>
+                        </div>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="2"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego tyłu auta"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
+                            <span class="gallery-item__text">tył z najazdem</span>
+                        </div>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="3"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z boku"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Holowanie</span>
+                            <span class="gallery-item__text">Opel Astra III GTC</span>
+                        </div>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="4"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life z załadunkiem typu Alfa Romeo Giulietta - widok z boku"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Holowanie</span>
+                            <span class="gallery-item__text">Alfa Romeo Giulietta</span>
+                        </div>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="5"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life z załadunkiem typu BMW E46 - widok z boku"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Holowanie</span>
+                            <span class="gallery-item__text">BMW E46</span>
+                        </div>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="6"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok tyłu auta"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
+                            <span class="gallery-item__text">tył auta</span>
+                        </div>
+                        <div
+                            class="gallery-item gallery-item--show"
+                            aria-controls="GalleryDialog"
+                            data-dialog="dialog"
+                            data-dialog-index="7"
+                        >
+                            <picture class="gallery-item__image">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.webp    1x,
+                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
+                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
+                                    "
+                                    src="./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg"
+                                    alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z tyłu"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span class="gallery-item__title">Holowanie</span>
+                            <span class="gallery-item__text">Opel Astra III GTC</span>
+                        </div>
                     </div>
                     <button id="GalleryShowMore" class="button">
-                        pokaż <span class="more button__label button__label--show">więcej</span
-                        ><span class="less button__label">mniej</span>
+                        <span class="more button__label button__label--show"
+                            ><i class="button__icon fas fa-chevron-circle-down"></i>więcej zdjęć</span
+                        ><span class="less button__label"
+                            ><i class="button__icon fas fa-chevron-circle-up"></i>mniej zdjęć</span
+                        >
                     </button>
-
-                    <div class="gallery-slider swiper-container">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source
-                                        type="image/webp"
-                                        srcset="
-                                            ./assets/img/gallery/laweta-lewy-przod__thumb.webp    1x,
-                                            ./assets/img/gallery/laweta-lewy-przod__thumb@2x.webp 2x
-                                        "
-                                    />
-                                    <source
-                                        type="image/jpeg"
-                                        srcset="
-                                            ./assets/img/gallery/laweta-lewy-przod__thumb.jpg    1x,
-                                            ./assets/img/gallery/laweta-lewy-przod__thumb@2x.jpg 2x
-                                        "
-                                    />
-                                    <img
-                                        srcset="
-                                            ./assets/img/gallery/laweta-lewy-przod__thumb.jpg    1x,
-                                            ./assets/img/gallery/laweta-lewy-przod__thumb@2x.jpg 2x
-                                        "
-                                        src="./assets/img/gallery/laweta-lewy-przod__thumb.jpg"
-                                        alt="Laweta Car Life z załadunkiem"
-                                        class="swiper-lazy"
-                                    />
-                                </picture>
-                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <div id="GalleryDialog" class="dialog" role="presentation" aria-hidden="true">
+                        <div class="dialog__container">
+                            <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
+                                <div class="dialog__content-header">
+                                    <h4 id="DialogTitle" class="dialog__title">Galeria</h4>
+                                    <button class="dialog__close-btn" type="button" tabindex="0" aria-label="zamknij">
+                                        <i class="fas fa-times-circle"></i>
+                                    </button>
+                                </div>
+                                <div class="dialog__content-main">
+                                    <div class="gallery-slider swiper-container">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod.webp    1x,
+                                                            ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod.jpg    1x,
+                                                            ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod.jpg    1x,
+                                                            ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod.jpg"
+                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego przodu auta"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Mercedes Sprinter 906 - lewy bok
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod.webp    1x,
+                                                            ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod.jpg    1x,
+                                                            ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod.jpg    1x,
+                                                            ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod.jpg"
+                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok prawego przodu auta"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Mercedes Sprinter 906 - prawy bok
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl.webp    1x,
+                                                            ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl.jpg    1x,
+                                                            ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl.jpg    1x,
+                                                            ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl.jpg"
+                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego tyłu auta"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Mercedes Sprinter 906 - tył z najazdem
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.webp    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg"
+                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z boku"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Holowanie - Opel Astra III GTC
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture class="swiper-slide">
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.webp 1x"
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg 1x"
+                                                    />
+                                                    <img
+                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg 1x"
+                                                        src="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg"
+                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu Alfa Romeo Giulietta - widok z boku"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Holowanie - Alfa Romeo Giulietta
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.webp 1x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg 1x"
+                                                    />
+                                                    <img
+                                                        srcset="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg 1x"
+                                                        src="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg"
+                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu BMW E46 - widok z boku"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Holowanie - BMW E46
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-tyl/laweta-tyl.webp    1x,
+                                                            ./assets/img/gallery/laweta-tyl/laweta-tyl@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-tyl/laweta-tyl.jpg    1x,
+                                                            ./assets/img/gallery/laweta-tyl/laweta-tyl@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta-tyl/laweta-tyl.jpg    1x,
+                                                            ./assets/img/gallery/laweta-tyl/laweta-tyl@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/laweta-tyl/laweta-tyl.jpg"
+                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok tyłu auta"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Mercedes Sprinter 906 - tył auta
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra.webp    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra.jpg    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra.jpg    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra.jpg"
+                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z tyłu"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    Holowanie - Opel Astra III GTC
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <!-- If we need pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- If we need navigation buttons -->
+                                        <button class="swiper-button-prev"></button>
+                                        <button class="swiper-button-next"></button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            ...
                         </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </section>
