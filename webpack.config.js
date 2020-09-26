@@ -9,7 +9,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const PreloadWebpackPlugin = require('preload-webpack-plugin');
-// const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const path = require('path');
 
 const APP_DIR = path.resolve(__dirname, './src');
@@ -124,6 +124,10 @@ const config = {
             filename: 'coming-soon.html',
             template: path.resolve(__dirname, 'src', 'coming-soon.html'),
             chunks: ['coming'],
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defer: ['app', 'coming'],
+            module: ['vendor'],
         }),
         new FaviconsWebpackPlugin({
             logo: APP_DIR + '/assets/icons/logo.png',
