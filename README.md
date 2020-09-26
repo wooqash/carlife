@@ -24,3 +24,7 @@ https://www.valentinog.com/blog/webpack/
 https://www.youtube.com/watch?v=jHr4vh2K2eg&list=PL4cUxeGkcC9hOkGbwzgYFmaxB0WiduYJC&index=7
 https://khalilstemmler.com/blogs/typescript/eslint-for-typescript/
 https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project
+
+pure css accordion - https://codepen.io/raubaca/pen/PZzpVe
+
+https://www.pexels.com/pl-pl/zdjecie/neon-narzedzia-naprawiac-naprawa-4488660/
