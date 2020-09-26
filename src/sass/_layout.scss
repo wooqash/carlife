@@ -138,8 +138,6 @@ body {
         position: relative;
 
         @include media-query(netbook) {
-            background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
-                url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
             min-height: 961px;
         }
 
@@ -310,27 +308,27 @@ body {
         font-size: px2rem(12);
     }
 
-    &__details {
-        align-items: center;
-        background-color: $color-apple-green;
-        color: $color-hunter-green;
-        flex-direction: column;
-        left: 0;
-        margin: px2rem(20) auto;
-        max-height: 0;
-        max-width: 0;
-        opacity: 0;
-        overflow: hidden;
-        padding: px2rem(40);
-        position: absolute;
-        top: 0;
-        transition: all 0.7s ease-out;
+    // &__details {
+    //     align-items: center;
+    //     background-color: $color-apple-green;
+    //     color: $color-hunter-green;
+    //     flex-direction: column;
+    //     left: 0;
+    //     margin: px2rem(20) auto;
+    //     max-height: 0;
+    //     max-width: 0;
+    //     opacity: 0;
+    //     overflow: hidden;
+    //     padding: px2rem(40);
+    //     position: absolute;
+    //     top: 0;
+    //     transition: all 0.7s ease-out;
 
-        &--show {
-            display: flex;
-            opacity: 1;
-        }
-    }
+    //     &--show {
+    //         display: flex;
+    //         opacity: 1;
+    //     }
+    // }
 }
 
 .button {
