@@ -10,6 +10,8 @@ $section-about-font-color: $on-primary-color;
 $button-bg-color: $primary-dark-color;
 $button-font-color: $on-primary-dark-color;
 
+$section-reservation-bg-color: $primary-color;
+
 $container-max-width: (
     netbook: 960px,
     desktop: 1140px,
@@ -259,6 +261,22 @@ body {
         .section-title {
             margin: 0 auto px2rem(20);
             text-align: center;
+        }
+    }
+
+    &--reservation {
+        background-color: $section-reservation-bg-color;
+
+        .content-wrapper {
+            display: flex;
+
+            .section__text {
+                width: 40%;
+            }
+
+            .section__form {
+                width: 60%;
+            }
         }
     }
 }
