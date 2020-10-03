@@ -13,13 +13,15 @@
             as="font"
             onload="this.onload=null;this.rel='stylesheet'"
         />
+        <link rel="preload" href="./assets/icons/svg/symbol-defs.svg" as="image" />
+        <link rel="preload" href="./assets/icons/svg/symbol-defs-car-service.svg" as="image" />
         <noscript>
             <link
                 href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&family=Roboto:wght@300;400;700;900&family=Lato:wght@300;400;500;700;900&display=swap"
                 rel="stylesheet"
             />
         </noscript>
-        <title>Car Life - mechanika pojazdów i pomoc drogowa</title>
+        <title>Mechanika pojazdów i pomoc drogowa - Car Life</title>
         <script>
             document.documentElement.classList.remove('no-js');
         </script>
@@ -28,24 +30,35 @@
         <header id="Header" class="header">
             <div class="header__container">
                 <nav class="navbar">
-                    <a class="navbar__logo-link" href="#">
-                        <picture class="navbar__logo">
-                            <source
-                                type="image/webp"
-                                srcset="./assets/img/logo-carlife-alt.webp 1x, ./assets/img/logo-carlife-alt@2x.webp 2x"
-                            />
-                            <source
-                                type="image/jpeg"
-                                srcset="./assets/img/logo-carlife-alt.jpg 1x, ./assets/img/logo-carlife-alt@2x.jpg 2x"
-                            />
-                            <img
-                                srcset="./assets/img/logo-carlife-alt.png 1x, ./assets/img/logo-carlife-alt@2x.png 2x"
-                                src="./assets/img/logo-carlife-alt.png"
-                                alt="Logo firmy Car Life Piotr Cygulski"
-                                loading="lazy"
-                            />
-                        </picture>
-                    </a>
+                    <h1>
+                        <a class="navbar__logo-link" href="#">
+                            <picture class="navbar__logo">
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ./assets/img/logo-carlife-alt.webp    1x,
+                                        ./assets/img/logo-carlife-alt@2x.webp 2x
+                                    "
+                                />
+                                <source
+                                    type="image/jpeg"
+                                    srcset="
+                                        ./assets/img/logo-carlife-alt.jpg    1x,
+                                        ./assets/img/logo-carlife-alt@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    srcset="
+                                        ./assets/img/logo-carlife-alt.png    1x,
+                                        ./assets/img/logo-carlife-alt@2x.png 2x
+                                    "
+                                    src="./assets/img/logo-carlife-alt.png"
+                                    alt="Logo firmy Car Life Piotr Cygulski"
+                                    loading="lazy"
+                                />
+                            </picture>
+                        </a>
+                    </h1>
                     <button
                         id="MainMenuToggler"
                         class="navbar__toggler hamburger hamburger--spin"
@@ -74,11 +87,9 @@
         <main>
             <section id="Home" class="section section--start">
                 <div class="section__container">
-                    <div class="main-title">
-                        <h1 class="main-title__lead">
-                            Lead Title <span class="main-title__mark">Lead title mark</span>
-                        </h1>
-                        <p class="main-title__additional-text">
+                    <div class="section__header">
+                        <h2 class="section__title">Lead Title <span class="title__mark">Lead title mark</span></h2>
+                        <p class="section__subtitle">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel
                             tempus metus gravida at.
                         </p>
@@ -106,7 +117,10 @@
             </section>
             <section id="About" class="section section--about">
                 <div class="section__container">
-                    <h2 class="section__title">O firmie <span class="subtitle">Lorem ipsum</span></h2>
+                    <header class="section__header">
+                        <h2 class="section__title">O firmie</h2>
+                        <p class="section__subtitle">Lorem ipsum</p>
+                    </header>
                     <div class="section__content-wrapper">
                         <picture class="section__picture">
                             <source
@@ -133,30 +147,76 @@
                             nulla. Cras hendrerit quam mattis justo placerat auctor. Sed malesuada vulputate varius.
                         </p>
                         <ul class="section__list">
-                            <li class="list-item">20 lat doświadczenia na rynku w zakresie mechaniki</li>
-                            <li class="list-item">Indywiduwalne podejście do klienta</li>
-                            <li class="list-item">Rzetelność, sumienność i zaangażowanie</li>
-                            <li class="list-item">Konkurencyjne ceny</li>
-                            <li class="list-item">Ubezpieczenie OC warsztatu i mienia holowanego</li>
-                            <li class="list-item">Wystawiamy faktury VAT</li>
-                            <li class="list-item">Przyjmujemy płatności gotówką oraz kartą</li>
+                            <li class="list-item">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-stopwatch-20"></use>
+                                </svg>
+                                20 lat doświadczenia na rynku w zakresie mechaniki
+                            </li>
+                            <li class="list-item">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-hands-helping"></use>
+                                </svg>
+                                Indywiduwalne podejście do klienta
+                            </li>
+                            <li class="list-item">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-people-carry"></use>
+                                </svg>
+                                Rzetelność, sumienność i zaangażowanie
+                            </li>
+                            <li class="list-item">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-coins"></use>
+                                </svg>
+                                Konkurencyjne ceny
+                            </li>
+                            <li class="list-item">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-shield-alt"></use>
+                                </svg>
+                                Ubezpieczenie OC warsztatu i mienia holowanego
+                            </li>
+                            <li class="list-item">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-file-invoice-dollar"></use>
+                                </svg>
+                                Wystawiamy faktury VAT
+                            </li>
+                            <li class="list-item">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-wallet"></use>
+                                </svg>
+                                Przyjmujemy płatności gotówką oraz kartą
+                            </li>
                         </ul>
                     </div>
                 </div>
             </section>
             <section id="Offer" class="section section--offer">
                 <div class="section__container">
-                    <h2 class="section__title">Oferta <span class="subtitle">Sprawdź nasze usługi</span></h2>
+                    <header class="section__header">
+                        <h2 class="section__title">Oferta</h2>
+                        <p class="section__subtitle">Sprawdź nasze usługi</p>
+                    </header>
                     <div class="grid-container">
                         <div class="offer-card">
-                            <div class="offer-card__icon"><span class="fas fa-wrench" aria-hidden="true"></span></div>
+                            <div class="offer-card__icon">
+                                <svg class="icon icon--car-towing" aria-hidden="true" focusable="false">
+                                    <use
+                                        xlink:href="./assets/icons/svg/symbol-defs-car-service.svg#icon-car-towing"
+                                    ></use>
+                                </svg>
+                            </div>
                             <h3 class="offer-card__title">Holowanie</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
                             <button class="button button--more" aria-controls="Towing" data-dialog="dialog">
-                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                                <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
+                                ><span>pokaż więcej</span>
                             </button>
                             <div id="Towing" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -189,14 +249,22 @@
                             </div>
                         </div>
                         <div class="offer-card">
-                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <div class="offer-card__icon">
+                                <svg class="icon icon--car-service" aria-hidden="true" focusable="false">
+                                    <use
+                                        xlink:href="./assets/icons/svg/symbol-defs-car-service.svg#icon-car-service"
+                                    ></use>
+                                </svg>
+                            </div>
                             <h3 class="offer-card__title">Naprawa mechaniki</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
                             <button class="button button--more" aria-controls="RepairOfMechanics" data-dialog="dialog">
-                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                                <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
+                                ><span>pokaż więcej</span>
                             </button>
                             <div id="RepairOfMechanics" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -235,14 +303,20 @@
                             </div>
                         </div>
                         <div class="offer-card">
-                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <div class="offer-card__icon">
+                                <svg class="icon icon---battery" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs-car-service.svg#icon-battery"></use>
+                                </svg>
+                            </div>
                             <h3 class="offer-card__title">Naprawa elektryki<br />i elektroniki</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
                             <button class="button button--more" aria-controls="RepairOfElectrics" data-dialog="dialog">
-                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                                <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
+                                ><span>pokaż więcej</span>
                             </button>
                             <div id="RepairOfElectrics" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -281,7 +355,11 @@
                             </div>
                         </div>
                         <div class="offer-card">
-                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <div class="offer-card__icon">
+                                <svg class="icon icon--car-fan" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs-car-service.svg#icon-car-fan"></use>
+                                </svg>
+                            </div>
                             <h3 class="offer-card__title">Serwis i naprawa klimatyzacji</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
@@ -292,7 +370,9 @@
                                 aria-controls="AirConditioningService"
                                 data-dialog="dialog"
                             >
-                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                                <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
+                                ><span>pokaż więcej</span>
                             </button>
                             <div id="AirConditioningService" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -331,14 +411,22 @@
                             </div>
                         </div>
                         <div class="offer-card">
-                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <div class="offer-card__icon">
+                                <svg class="icon icon--tire-service" aria-hidden="true" focusable="false">
+                                    <use
+                                        xlink:href="./assets/icons/svg/symbol-defs-car-service.svg#icon-tire-service"
+                                    ></use>
+                                </svg>
+                            </div>
                             <h3 class="offer-card__title">Serwis opon<br />i geometria kół</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
                             <button class="button button--more" aria-controls="TireService" data-dialog="dialog">
-                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                                <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
+                                ><span>pokaż więcej</span>
                             </button>
                             <div id="TireService" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -371,14 +459,22 @@
                             </div>
                         </div>
                         <div class="offer-card">
-                            <div class="offer-card__icon"><i class="fas fa-wrench"></i></div>
+                            <div class="offer-card__icon">
+                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                    <use
+                                        xlink:href="./assets/icons/svg/symbol-defs-car-service.svg#icon-car-check-2"
+                                    ></use>
+                                </svg>
+                            </div>
                             <h3 class="offer-card__title">Przegląd aut przed zakupem</h3>
                             <p class="offer-card__intro">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
                                 vel tempus metus gravida at.
                             </p>
                             <button class="button button--more" aria-controls="CarAudit" data-dialog="dialog">
-                                <i class="button__icon fas fa-plus-circle"></i>pokaż więcej
+                                <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
+                                ><span>pokaż więcej</span>
                             </button>
                             <div id="CarAudit" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -417,7 +513,10 @@
             </section>
             <section id="Reservation" class="section section--reservation">
                 <div class="section__container">
-                    <h2 class="section__title">Rezerwacje <span class="subtitle">Umów się na wizytę</span></h2>
+                    <header class="section__header">
+                        <h2 class="section__title">Rezerwacje</h2>
+                        <p class="section__subtitle">Umów się na wizytę</p>
+                    </header>
                     <div class="content-wrapper">
                         <div class="section__text">
                             <h5>Drogi kliencie!</h5>
@@ -531,7 +630,10 @@
             </section>
             <section id="Gallery" class="section section--gallery">
                 <div class="section__container">
-                    <h2 class="section__title">Galeria <span class="subtitle">Lorem ipsum</span></h2>
+                    <header class="section__header">
+                        <h2 class="section__title">Galeria</h2>
+                        <p class="section__subtitle">Lorem ipsum</p>
+                    </header>
                     <div id="MainGallery" class="gallery">
                         <div
                             class="gallery-item gallery-item--show"
@@ -808,9 +910,15 @@
                     </div>
                     <button id="GalleryShowMore" class="button">
                         <span class="more button__label button__label--show"
-                            ><i class="button__icon fas fa-chevron-circle-down"></i>więcej zdjęć</span
+                            ><svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                <use
+                                    xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-circle-down"
+                                ></use></svg
+                            >więcej zdjęć</span
                         ><span class="less button__label"
-                            ><i class="button__icon fas fa-chevron-circle-up"></i>mniej zdjęć</span
+                            ><svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-circle-up"></use></svg
+                            >mniej zdjęć</span
                         >
                     </button>
                     <div id="GalleryDialog" class="dialog" role="presentation" aria-hidden="true">
@@ -1063,23 +1171,42 @@
                     </div>
                 </div>
             </section>
-            <section id="FAQ" class="section section--color2">
+            <section id="FAQ" class="section section--faq">
                 <div class="section__container">
-                    <h2 class="section__title">FAQ <span class="subtitle">Najczęściej zadawane pytania</span></h2>
+                    <header class="section__header">
+                        <h2 class="section__title">FAQ</h2>
+                        <p class="section__subtitle">Najczęściej zadawane pytania</p>
+                    </header>
                     <div class="grid-container">
                         <div class="accordion-wrapper">
                             <div class="accordion">
                                 <h4 class="accordion__title">Holowanie</h4>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc1Tab1" name="Acc1Tab" />
-                                    <label class="tab__label" for="Acc1Tab1">Ile osób mogę zabrać holując auto?</label>
+                                    <label class="tab__label" for="Acc1Tab1"
+                                        >Ile osób mogę zabrać holując auto?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" />
-                                    <label class="tab__label" for="Acc1Tab2">Czy mogę holować auta powypadkowe?</label>
+                                    <label class="tab__label" for="Acc1Tab2"
+                                        >Czy mogę holować auta powypadkowe?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1087,8 +1214,11 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc1Tab0" name="Acc1Tab" />
                                     <label for="Acc1Tab0" class="tab__close"
-                                        >zwiń wszystko z sekcji <span>HOLOWANIE</span> &times;</label
-                                    >
+                                        >zwiń wszystko z sekcji <span>HOLOWANIE</span>
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
+                                        </svg>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1098,8 +1228,14 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab1" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab1"
-                                        >Jak często zaleca się wymianę oleju?</label
-                                    >
+                                        >Jak często zaleca się wymianę oleju?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
                                     </div>
@@ -1107,8 +1243,14 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab2" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab2"
-                                        >Jak często zaleca sie wymianę płynu hamulcowego?</label
-                                    >
+                                        >Jak często zaleca sie wymianę płynu hamulcowego?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1116,8 +1258,14 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab3" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab3"
-                                        >Jak często zaleca sie wymianę płynu chłodniczego?</label
-                                    >
+                                        >Jak często zaleca sie wymianę płynu chłodniczego?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1125,8 +1273,14 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab4" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab4"
-                                        >Jak często zaleca się wymianę świec zapłonowych?</label
-                                    >
+                                        >Jak często zaleca się wymianę świec zapłonowych?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1134,8 +1288,14 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab5" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab5"
-                                        >Czy po wymianie turbiny trzeba wymienić olej?</label
-                                    >
+                                        >Czy po wymianie turbiny trzeba wymienić olej?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1143,8 +1303,14 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab6" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab6"
-                                        >Czy po wymianie wtrysków trzeba wymienić filtr paliwa?</label
-                                    >
+                                        >Czy po wymianie wtrysków trzeba wymienić filtr paliwa?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1152,8 +1318,11 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab0" name="Acc2Tab" />
                                     <label for="Acc2Tab0" class="tab__close"
-                                        >zwiń wszystko z sekcji <span>MECHANIKA</span> &times;</label
-                                    >
+                                        >zwiń wszystko z sekcji <span>MECHANIKA</span>
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
+                                        </svg>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1162,14 +1331,30 @@
                                 <h4 class="accordion__title">Elektryka i elektronika</h4>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc3Tab1" name="Acc3Tab" />
-                                    <label class="tab__label" for="Acc3Tab1">Item 1</label>
+                                    <label class="tab__label" for="Acc3Tab1"
+                                        >Item 1
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc3Tab2" name="Acc3Tab" />
-                                    <label class="tab__label" for="Acc3Tab2">Item 2</label>
+                                    <label class="tab__label" for="Acc3Tab2"
+                                        >Item 2
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1177,8 +1362,11 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc3Tab0" name="Acc3Tab" />
                                     <label for="Acc3Tab0" class="tab__close"
-                                        >zwiń wszystko z sekcji <span>ELEKTRYKA I ELEKTRONIKA</span> &times;</label
-                                    >
+                                        >zwiń wszystko z sekcji <span>ELEKTRYKA I ELEKTRONIKA</span>
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
+                                        </svg>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1188,7 +1376,13 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc4Tab1" name="Acc4Tab" />
                                     <label class="tab__label" for="Acc4Tab1"
-                                        >Jak często zaleca się serwis klimatyzacji?</label
+                                        >Jak często zaleca się serwis klimatyzacji?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
@@ -1197,7 +1391,13 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc4Tab2" name="Acc4Tab" />
                                     <label class="tab__label" for="Acc4Tab2"
-                                        >Jak często zaleca się odgrzybianie klimatyzacji?</label
+                                        >Jak często zaleca się odgrzybianie klimatyzacji?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
@@ -1206,18 +1406,26 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc4Tab3" name="Acc4Tab" />
                                     <label class="tab__label" for="Acc4Tab3"
-                                        >Czy po wymianie kompresora klimatyzacji należy wypłukać układ
-                                        klimatyzacji?</label
+                                        >Czy po wymianie kompresora klimatyzacji należy wypłukać układ klimatyzacji?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc4Tab3" name="Acc4Tab" />
-                                    <label for="Acc4Tab3" class="tab__close"
-                                        >zwiń wszystko z sekcji <span>KLIMATYZACJA</span> &times;</label
-                                    >
+                                    <input class="tab__input" type="radio" id="Acc4Tab0" name="Acc4Tab" />
+                                    <label for="Acc4Tab0" class="tab__close"
+                                        >zwiń wszystko z sekcji <span>KLIMATYZACJA</span>
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
+                                        </svg>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1226,7 +1434,15 @@
                                 <h4 class="accordion__title">Opony i koła</h4>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc5Tab1" name="Acc5Tab" />
-                                    <label class="tab__label" for="Acc5Tab1">Kiedy warto zmienić opony?</label>
+                                    <label class="tab__label" for="Acc5Tab1"
+                                        >Kiedy warto zmienić opony?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
                                     </div>
@@ -1234,7 +1450,13 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc5Tab2" name="Acc5Tab" />
                                     <label class="tab__label" for="Acc5Tab2"
-                                        >Kiedy należy wymienić opony na nowe (przy jakich uszkodzeniach)?</label
+                                        >Kiedy należy wymienić opony na nowe (przy jakich uszkodzeniach)?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
@@ -1243,8 +1465,11 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc5Tab3" name="Acc5Tab" />
                                     <label for="Acc5Tab3" class="tab__close"
-                                        >zwiń wszystko z sekcji <span>OPONY I KOŁA</span> &times;</label
-                                    >
+                                        >zwiń wszystko z sekcji <span>OPONY I KOŁA</span>
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
+                                        </svg>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1253,14 +1478,30 @@
                                 <h4 class="accordion__title">Pomoc przy zakupie</h4>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc6Tab1" name="Acc6Tab" />
-                                    <label class="tab__label" for="Acc6Tab1">Item 1</label>
+                                    <label class="tab__label" for="Acc6Tab1"
+                                        >Item 1
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc6Tab2" name="Acc6Tab" />
-                                    <label class="tab__label" for="Acc6Tab2">Item 2</label>
+                                    <label class="tab__label" for="Acc6Tab2"
+                                        >Item 2
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
                                     <div class="tab__content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
                                     </div>
@@ -1268,20 +1509,29 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc6Tab3" name="Acc6Tab" />
                                     <label for="Acc6Tab3" class="tab__close"
-                                        >zwiń wszystko z sekcji <span>POMOC PRZY ZAKUPIE</span> &times;</label
-                                    >
+                                        >zwiń wszystko z sekcji <span>POMOC PRZY ZAKUPIE</span>
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
+                                        </svg>
+                                    </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="Contact" class="section section--color3">
-                <div class="section__container">
-                    <h6>Title h6</h6>
-                </div>
+            <section id="Contact" class="section section--contact">
+                <header class="section__header">
+                    <h2 class="section__title">Kontakt</h2>
+                    <p class="section__subtitle">Lorem ipsum</p>
+                </header>
             </section>
-            <a id="ScrollTop" class="scroll-to-top-button" href="#Home"></a>
+            <a id="ScrollTop" class="scroll-to-top-button" href="#Home">
+                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-angle-up"></use>
+                </svg>
+                <span class="access-label">skroluj do góry</span>
+            </a>
         </main>
         <footer></footer>
     </body>

@@ -28,6 +28,7 @@ $accordion-tab-close-bg: $primary-light-color;
     width: 100%;
 
     &__label {
+        align-items: center;
         background: $accordion-tab-bg;
         border-bottom: 1px solid $accordion-tab-border-color;
         cursor: pointer;
@@ -41,12 +42,8 @@ $accordion-tab-close-bg: $primary-light-color;
             background: $accordion-tab-bg-hover;
         }
 
-        &::after {
-            content: '\276F';
-            height: 1em;
-            text-align: center;
+        .icon {
             transition: all 0.35s;
-            width: 1em;
         }
     }
 
@@ -58,6 +55,7 @@ $accordion-tab-close-bg: $primary-light-color;
     }
 
     &__close {
+        align-items: flex-start;
         background: $accordion-tab-close-bg;
         cursor: pointer;
         display: flex;
@@ -69,6 +67,11 @@ $accordion-tab-close-bg: $primary-light-color;
             display: inline-block;
             font-weight: 700;
             margin-left: 4px;
+        }
+
+        .icon {
+            font-size: 1.4rem;
+            margin-left: 10px;
         }
     }
 }
@@ -83,7 +86,7 @@ $accordion-tab-close-bg: $primary-light-color;
         + .tab__label {
             background: $accordion-tab-bg-hover;
 
-            &::after {
+            .icon {
                 transform: rotate(90deg);
             }
         }

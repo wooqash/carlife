@@ -21,18 +21,10 @@ $scroll-to-top-button-size: 30px;
     visibility: visible;
     width: $scroll-to-top-button-size;
 
-    &::before {
-        color: $scroll-to-top-icon-color;
-        content: '\f102';
-        display: inline-block;
-        font-family: $font-icons;
-        font-size: 1.53846rem;
-    }
-
     &:hover {
         background-color: $scroll-to-top-button-hover-bg-color;
 
-        &::before {
+        .icon {
             color: $scroll-to-top-icon-hover-color;
         }
     }
@@ -41,5 +33,10 @@ $scroll-to-top-button-size: 30px;
         // height: 0;
         opacity: 0;
         visibility: hidden;
+    }
+
+    .icon {
+        color: $scroll-to-top-icon-color;
+        font-size: 2rem;
     }
 }
