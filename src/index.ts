@@ -7,125 +7,133 @@ import handleView from './scripts/spy-menu';
 
 import Utils from './scripts/classes/utils';
 import Dialog from './scripts/classes/dialog';
+import Form from './scripts/classes/form';
 import Gallery from './scripts/classes/gallery';
 
-let prevScrollPos = window.pageYOffset;
-const body = document.body as HTMLBodyElement;
-const mainMenu = document.getElementById('MainMenu') as HTMLDivElement;
-const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElement;
-const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
+document.addEventListener('DOMContentLoaded', () => {
+    let prevScrollPos = window.pageYOffset;
+    const body = document.body as HTMLBodyElement;
+    const mainMenu = document.getElementById('MainMenu') as HTMLDivElement;
+    const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElement;
+    const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
 
-const collapseButtons = document.querySelectorAll('[data-toggle="collapse"]') as NodeListOf<HTMLAnchorElement>;
-const dialogOpenMoreOfferButtons = document.querySelectorAll('.button--more') as NodeListOf<HTMLElement>;
-const dialogOpenGalleryButtons = document.querySelectorAll('.gallery-item') as NodeListOf<HTMLElement>;
-const dialogContainers = document.querySelectorAll('.dialog__content') as NodeListOf<HTMLElement>;
+    const collapseButtons = document.querySelectorAll('[data-toggle="collapse"]') as NodeListOf<HTMLAnchorElement>;
+    const dialogOpenMoreOfferButtons = document.querySelectorAll('.button--more') as NodeListOf<HTMLElement>;
+    const dialogOpenGalleryButtons = document.querySelectorAll('.gallery-item') as NodeListOf<HTMLElement>;
+    const dialogContainers = document.querySelectorAll('.dialog__content') as NodeListOf<HTMLElement>;
 
-const showMoreGalleryBtn = document.getElementById('GalleryShowMore') as HTMLButtonElement;
-const mainGalleryElem = document.getElementById('MainGallery') as HTMLElement;
-const mainGallery = new Gallery(mainGalleryElem, showMoreGalleryBtn);
+    const showMoreGalleryBtn = document.getElementById('GalleryShowMore') as HTMLButtonElement;
+    const mainGalleryElem = document.getElementById('MainGallery') as HTMLElement;
+    const mainGallery = new Gallery(mainGalleryElem, showMoreGalleryBtn);
 
-const removeActiveClassFromMenu = (items: HTMLCollection): void => {
-    Array.from(items).forEach((item: Element) => item.classList.remove('active'));
-};
+    const reservationFormElem = document.getElementById('ReservationForm') as HTMLFormElement;
+    const reservationForm = new Form(reservationFormElem);
 
-const toggleMainMenu = (): void => {
-    Utils.toggleClass(menuToggler, 'is-active');
-    Utils.toggleClass(mainMenu, 'show');
-};
+    const removeActiveClassFromMenu = (items: HTMLCollection): void => {
+        Array.from(items).forEach((item: Element) => item.classList.remove('active'));
+    };
 
-const handleMenuLinks = (event: Event): void => {
-    const link = event.target as HTMLAnchorElement;
-    const menuItem = link ? link.parentElement : null;
-    const menuItems = link.parentElement?.parentElement?.children;
+    const toggleMainMenu = (): void => {
+        Utils.toggleClass(menuToggler, 'is-active');
+        Utils.toggleClass(mainMenu, 'show');
+    };
 
-    if (menuItems) {
-        removeActiveClassFromMenu(menuItems);
-    }
-    if (menuItem) {
-        Utils.addClass(menuItem, 'active');
-    }
+    const handleMenuLinks = (event: Event): void => {
+        const link = event.target as HTMLAnchorElement;
+        const menuItem = link ? link.parentElement : null;
+        const menuItems = link.parentElement?.parentElement?.children;
 
-    toggleMainMenu();
-};
+        if (menuItems) {
+            removeActiveClassFromMenu(menuItems);
+        }
+        if (menuItem) {
+            Utils.addClass(menuItem, 'active');
+        }
 
-const showHideElementsOnScroll = (): void => {
-    const currentScrollPos = window.pageYOffset;
-    const header = document.getElementById('Header') as HTMLHeadingElement;
-    const scrollTopButton = document.getElementById('ScrollTop') as HTMLButtonElement;
+        toggleMainMenu();
+    };
 
-    if (prevScrollPos > currentScrollPos) {
-        Utils.removeClass(header, 'hide');
-        Utils.addClass(scrollTopButton, 'hide');
-    } else {
-        Utils.addClass(header, 'hide');
-        Utils.removeClass(scrollTopButton, 'hide');
-    }
-    prevScrollPos = currentScrollPos;
-};
+    const showHideElementsOnScroll = (): void => {
+        const currentScrollPos = window.pageYOffset;
+        const header = document.getElementById('Header') as HTMLHeadingElement;
+        const scrollTopButton = document.getElementById('ScrollTop') as HTMLButtonElement;
 
-const handleCollapse = (event: Event): void => {
-    event.preventDefault();
-    const link = event.target as HTMLAnchorElement;
-    const collapseId = link ? link.hash.substr(1) : null;
-    const collapseElem = collapseId ? document.getElementById(collapseId) : null;
+        if (prevScrollPos > currentScrollPos) {
+            Utils.removeClass(header, 'hide');
+            Utils.addClass(scrollTopButton, 'hide');
+        } else {
+            Utils.addClass(header, 'hide');
+            Utils.removeClass(scrollTopButton, 'hide');
+        }
+        prevScrollPos = currentScrollPos;
+    };
 
-    if (collapseElem && collapseElem.style) {
-        collapseElem.style.maxHeight =
-            !collapseElem.style.maxHeight || collapseElem.style.maxHeight === '0px'
-                ? `${collapseElem.scrollHeight}px`
-                : '0';
+    const handleCollapse = (event: Event): void => {
+        event.preventDefault();
+        const link = event.target as HTMLAnchorElement;
+        const collapseId = link ? link.hash.substr(1) : null;
+        const collapseElem = collapseId ? document.getElementById(collapseId) : null;
 
-        collapseElem.style.maxWidth =
-            !collapseElem.style.maxWidth || collapseElem.style.maxWidth === '0px' ? '100%' : '0';
+        if (collapseElem && collapseElem.style) {
+            collapseElem.style.maxHeight =
+                !collapseElem.style.maxHeight || collapseElem.style.maxHeight === '0px'
+                    ? `${collapseElem.scrollHeight}px`
+                    : '0';
 
-        Utils.toggleClass(collapseElem, 'offer-card__details--show');
-    }
+            collapseElem.style.maxWidth =
+                !collapseElem.style.maxWidth || collapseElem.style.maxWidth === '0px' ? '100%' : '0';
 
-    console.log(event, link);
-};
+            Utils.toggleClass(collapseElem, 'offer-card__details--show');
+        }
 
-Array.from(menuLinks).forEach((link: HTMLAnchorElement) => {
-    handleView(link);
-    link.addEventListener('click', handleMenuLinks);
-});
+        // console.log(event, link);
+    };
 
-Array.from(collapseButtons).forEach((link: HTMLAnchorElement) => {
-    link.addEventListener('click', handleCollapse);
-});
-
-menuToggler.addEventListener('click', toggleMainMenu);
-
-window.addEventListener('scroll', showHideElementsOnScroll);
-
-// Dialog
-const offerDialog = new Dialog();
-const galleryDialog = new Dialog();
-body.addEventListener('click', Dialog.close);
-
-Array.from(dialogOpenMoreOfferButtons).forEach((link: HTMLElement) => {
-    link.addEventListener('click', offerDialog.open);
-});
-
-Array.from(dialogOpenGalleryButtons).forEach((picture: HTMLElement, index: number) => {
-    picture.addEventListener('click', (e) => {
-        galleryDialog.open(e);
-        console.log(index);
-        const slider = mainGallery.getSlider();
-        slider.slideTo(index + 1);
+    Array.from(menuLinks).forEach((link: HTMLAnchorElement) => {
+        handleView(link);
+        link.addEventListener('click', handleMenuLinks);
     });
-});
 
-Array.from(dialogContainers).forEach((container: HTMLElement) => {
-    container.addEventListener('click', offerDialog.handleCloseBtn, false);
-});
+    Array.from(collapseButtons).forEach((link: HTMLAnchorElement) => {
+        link.addEventListener('click', handleCollapse);
+    });
 
-// Gallery
+    menuToggler.addEventListener('click', toggleMainMenu);
 
-mainGallery.init();
+    window.addEventListener('scroll', showHideElementsOnScroll);
+
+    // Dialog
+    const offerDialog = new Dialog();
+    const galleryDialog = new Dialog();
+    body.addEventListener('click', Dialog.close);
+
+    Array.from(dialogOpenMoreOfferButtons).forEach((link: HTMLElement) => {
+        link.addEventListener('click', offerDialog.open);
+    });
+
+    Array.from(dialogOpenGalleryButtons).forEach((picture: HTMLElement, index: number) => {
+        picture.addEventListener('click', (e) => {
+            galleryDialog.open(e);
+            // console.log(index);
+            const slider = mainGallery.getSlider();
+            slider.slideTo(index + 1);
+        });
+    });
+
+    Array.from(dialogContainers).forEach((container: HTMLElement) => {
+        container.addEventListener('click', offerDialog.handleCloseBtn, false);
+    });
+
+    // Gallery
+
+    mainGallery.init();
+
+    showMoreGalleryBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        mainGallery.showMore();
+    });
 
 showMoreGalleryBtn.addEventListener('click', (e) => {
     e.preventDefault();
     mainGallery.showMore();
 });
-
-// gallerySlider
