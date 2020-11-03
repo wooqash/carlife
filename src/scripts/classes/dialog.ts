@@ -8,7 +8,7 @@ export default class Dialog {
     open = (event: Event): void => {
         event.preventDefault();
         event.stopPropagation();
-        console.log(event, event.target, event.currentTarget);
+        // console.log(event, event.target, event.currentTarget);
         const link = event.currentTarget as HTMLElement;
         const dialogId = link && link.hasAttribute('aria-controls') ? link.getAttribute('aria-controls') : null;
         const dialogElem = dialogId ? document.getElementById(dialogId) : null;
@@ -20,7 +20,7 @@ export default class Dialog {
 
     static close = (): void => {
         const activeDialogBox = document.querySelector(`.${Dialog.visibilityClass}`) as HTMLElement;
-        console.log(activeDialogBox);
+        // console.log(activeDialogBox);
         if (activeDialogBox && Utils.hasClass(activeDialogBox, Dialog.visibilityClass)) {
             Utils.removeClass(activeDialogBox, Dialog.visibilityClass);
         }
