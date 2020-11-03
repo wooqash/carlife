@@ -154,7 +154,10 @@ const config = {
         // }),
         new MiniCssExtractPlugin(),
         new CopyWebpackPlugin({
-            patterns: [{ from: './src/assets/', to: './assets/' }],
+            patterns: [
+                { from: './src/assets/', to: './assets/' },
+                { from: './src/php/', to: './php/' },
+            ],
         }),
         new ForkTsCheckerWebpackPlugin({
             eslint: {
