@@ -3,13 +3,13 @@ import Utils from './utils';
 
 Swiper.use([Navigation, Pagination, Lazy]);
 export default class Gallery {
-    private minImgVisible = {
+    private minImgVisible: { [key: string]: number } = {
         mobile: 2,
         tablet: 2,
         desktop: 3,
     };
 
-    private imagesCount = 0;
+    // private imagesCount = 0;
 
     private isMobile = Utils.isMobile();
 
@@ -63,7 +63,7 @@ export default class Gallery {
     constructor(private gallery: HTMLElement, private showMoreButton?: HTMLButtonElement) {}
 
     init = (): void => {
-        this.imagesCount = this.gallery.children.length;
+        // this.imagesCount = this.gallery.children.length;
         this.showLess();
     };
 
@@ -102,7 +102,8 @@ export default class Gallery {
         } else if (this.isMobile && this.screenWidth >= 768 && this.screenWidth < 1024) {
             device = 'tablet';
         }
-        return this.minImgVisible[device];
+        const getKeyValue = <T extends Record<string, unknown>, U extends keyof T>(obj: T) => (key: U) => obj[key];
+        return getKeyValue(this.minImgVisible)(device);
     };
 
     private toogleMoreLessLabel = (): void => {
