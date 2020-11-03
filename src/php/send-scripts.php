@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $consent = $_POST['res_consent'];
     $token = $_POST['res_token'];
     $reservationDate = date("d-m-Y H:i:s");
+    $antiSpam = $_POST["honey"];
 
     $errors = array();
     $return = array();
@@ -39,130 +40,134 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($token)) {
         array_push($errors, 'token');
     }
-
-    if (count($errors) > 0) {
-        $return['errors'] = $errors;
-    } else {
-        $data = array('secret' => $secret, 'response' => $token);
-        $json = CallAPI('POST', $reCaptchaUrl, $data);
-
-        $obj = json_decode($json);
-
-        // print_r($obj);
-
-        if ($obj->{'code'} == '1') {
-            $processed = true;
+    if (empty($antiSpam)) {
+        if (count($errors) > 0) {
+            $return['errors'] = $errors;
         } else {
-            $ERROR_MESSAGE = $obj->{'data'};
-        }
-
-        // echo $ERROR_MESSAGE;
-
-        if (!$processed && $ERROR_MESSAGE != '') {
-            // echo $ERROR_MESSAGE;
-            $return['status'] = 'error';
-        } else {
-            $headers = 'MIME-Version: 1.0' . "\r\n";
-            $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-            $headers .= 'From: ' . $email . "\r\n";
-            $headers .= 'Reply-to: ' . $email;
-            $message = "
-                <html>
-                    <head>
-                        <meta charset=\"utf-8\">
-                    </head>
-                    <style type='text/css'>
-                        body {font-family:sans-serif; color:#000000; padding:20px;}
-                        div {margin-bottom:10px;}
-                        .msg-title {margin-top:30px;}
-                        table {
-                            border-collapse: collapse;
-                        }
-                        
-                        tr:nth-child(odd) {
-                            background: #90cc00;
-                        }
-                        
-                        tr:nth-child(even) {
-                            background: #c6ff00;
-                        }
-                        
-                        td, th {
-                            border: 2px solid #000;
-                            padding: 15px;
-                            text-align: left;
-                        }
-                        
-                        td:nth-child(1) {
-                            font-size: 12px;
-                            font-weight: bold;
-                            text-transform: uppercase;
-                        }
-                        
-                        td:nth-child(2) {
-                            font-size: 14px;
-                        }
-                        a { text-decoration: underline; color: #000000; }
-                    </style>
-                    <body>
-                        <table>
-                            <tr>
-                                <td>Data wysłania zapytania</td>
-                                <td>$reservationDate</td>
-                            </tr>
-                            <tr>
-                                <td>Klient</td>
-                                <td>$username</td>
-                            </tr>
-                            <tr>
-                                <td>Telefon</td>
-                                <td>$phoneNo</td>
-                            </tr>
-                            ".($email ? "
-                            <tr>
-                                <td>Email</td>
-                                <td><a href=\"mailto:$email\">$email</a></td>
-                            </tr>
-                            " : "")."
-                            <tr>
-                                <td>Rodzaj usługi</td>
-                                <td>$service</td>
-                            </tr>
-                            ".($towingFrom ? "
-                            <tr>
-                                <td>Adres odbioru pojazdu</td>
-                                <td>$towingFrom</td>
-                            </tr>
-                            " : "")."
-                            ".($towingTo ? "
-                            <tr>
-                                <td>Adres dostarczenia pojazdu</td>
-                                <td>$towingTo</td>
-                            </tr>
-                            " : "")."
-                            ".($date ? "
-                            <tr>
-                                <td>Preferowany termin wykonania usługi</td>
-                                <td>$date</td>
-                            </tr>
-                            " : "")."
-                            ".($fault ? "
-                            <tr>
-                                <td>Opis usterki</td>
-                                <td>$fault</td>
-                            </tr>
-                            " : "")."
-                        </table>
-                    </body>
-                </html>";
-
-            if (mail($mailToSend,   $service .' - zapytanie o rezerwację terminu', $message, $headers)) {
-                $return['status'] = 'ok';
+            $data = array('secret' => $secret, 'response' => $token);
+            $json = CallAPI('POST', $reCaptchaUrl, $data);
+    
+            $obj = json_decode($json);
+    
+            // print_r($obj);
+    
+            if ($obj->{'code'} == '1') {
+                $processed = true;
             } else {
+                $ERROR_MESSAGE = $obj->{'data'};
+            }
+    
+            // echo $ERROR_MESSAGE;
+    
+            if (!$processed && $ERROR_MESSAGE != '') {
+                // echo $ERROR_MESSAGE;
                 $return['status'] = 'error';
+            } else {
+                $headers = 'MIME-Version: 1.0' . "\r\n";
+                $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+                $headers .= 'From: ' . $email . "\r\n";
+                $headers .= 'Reply-to: ' . $email;
+                $message = "
+                    <html>
+                        <head>
+                            <meta charset=\"utf-8\">
+                        </head>
+                        <style type='text/css'>
+                            body {font-family:sans-serif; color:#000000; padding:20px;}
+                            div {margin-bottom:10px;}
+                            .msg-title {margin-top:30px;}
+                            table {
+                                border-collapse: collapse;
+                            }
+                            
+                            tr:nth-child(odd) {
+                                background: #90cc00;
+                            }
+                            
+                            tr:nth-child(even) {
+                                background: #c6ff00;
+                            }
+                            
+                            td, th {
+                                border: 2px solid #000;
+                                padding: 15px;
+                                text-align: left;
+                            }
+                            
+                            td:nth-child(1) {
+                                font-size: 12px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                            }
+                            
+                            td:nth-child(2) {
+                                font-size: 14px;
+                            }
+                            a { text-decoration: underline; color: #000000; }
+                        </style>
+                        <body>
+                            <table>
+                                <tr>
+                                    <td>Data wysłania zapytania</td>
+                                    <td>$reservationDate</td>
+                                </tr>
+                                <tr>
+                                    <td>Klient</td>
+                                    <td>$username</td>
+                                </tr>
+                                <tr>
+                                    <td>Telefon</td>
+                                    <td>$phoneNo</td>
+                                </tr>
+                                ".($email ? "
+                                <tr>
+                                    <td>Email</td>
+                                    <td><a href=\"mailto:$email\">$email</a></td>
+                                </tr>
+                                " : "")."
+                                <tr>
+                                    <td>Rodzaj usługi</td>
+                                    <td>$service</td>
+                                </tr>
+                                ".($towingFrom ? "
+                                <tr>
+                                    <td>Adres odbioru pojazdu</td>
+                                    <td>$towingFrom</td>
+                                </tr>
+                                " : "")."
+                                ".($towingTo ? "
+                                <tr>
+                                    <td>Adres dostarczenia pojazdu</td>
+                                    <td>$towingTo</td>
+                                </tr>
+                                " : "")."
+                                ".($date ? "
+                                <tr>
+                                    <td>Preferowany termin wykonania usługi</td>
+                                    <td>$date</td>
+                                </tr>
+                                " : "")."
+                                ".($fault ? "
+                                <tr>
+                                    <td>Opis usterki</td>
+                                    <td>$fault</td>
+                                </tr>
+                                " : "")."
+                            </table>
+                        </body>
+                    </html>";
+    
+                if (mail($mailToSend,   $service .' - zapytanie o rezerwację terminu', $message, $headers)) {
+                    $return['status'] = 'ok';
+                } else {
+                    $return['status'] = 'error';
+                }
             }
         }
+    } else {
+        $return["status"] = "ok";
     }
+    
 
     header('Content-Type: application/json');
     // echo json_encode($return);

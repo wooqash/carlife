@@ -266,8 +266,9 @@
                             </p>
                             <button class="button button--more" aria-controls="RepairOfMechanics" data-dialog="dialog">
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
-                                ><span>pokaż więcej</span>
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
+                                </svg>
+                                <span>pokaż więcej</span>
                             </button>
                             <div id="RepairOfMechanics" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -318,8 +319,9 @@
                             </p>
                             <button class="button button--more" aria-controls="RepairOfElectrics" data-dialog="dialog">
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
-                                ><span>pokaż więcej</span>
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
+                                </svg>
+                                <span>pokaż więcej</span>
                             </button>
                             <div id="RepairOfElectrics" class="dialog" role="presentation" aria-hidden="true">
                                 <div class="dialog__container">
@@ -541,12 +543,15 @@
                         <div class="content-wrapper__child section__form">
                             <form id="ReservationForm" class="form" method="post" action="./php/send-scripts.php">
                                 <fieldset class="form__fieldset">
-                                    <!-- <legend class="form__legend">Informacje kontaktowe</legend> -->
                                     <div class="form__status">
                                         <p class="status__error-text">
                                             Upps! Coś poszło nie tak.<br />Za chwilę spróbuj wysłać to zapytanie jeszcze
                                             raz.
                                         </p>
+                                    </div>
+                                    <div class="form__control form__control--hidden">
+                                        <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
+                                        <input type="text" name="honey" />
                                     </div>
                                     <div class="form__control">
                                         <label for="ClientName" class="form__label"
@@ -602,9 +607,6 @@
                                             >Podaj prawidłowy adres email</span
                                         >
                                     </div>
-                                    <!-- </fieldset>
-                            <fieldset class="form__fieldset"> -->
-                                    <!-- <legend class="form__legend">Informacje podstawowe</legend> -->
                                     <div class="form__control">
                                         <label for="Services" class="form__label"
                                             >Rodzaj usługi:
@@ -619,7 +621,7 @@
                                             <option value="">-- wybierz rodzaj usługi --</option>
                                             <option value="Holowanie">Holowanie</option>
                                             <option value="Naprawa mechaniki">Naprawa mechaniki</option>
-                                            <option value="rNaprawa elektryki lub elektroniki"
+                                            <option value="Naprawa elektryki lub elektroniki"
                                                 >Naprawa elektryki lub elektroniki</option
                                             >
                                             <option value="Serwis klimatyzacji">Serwis klimatyzacji</option>
