@@ -133,7 +133,26 @@ document.addEventListener('DOMContentLoaded', () => {
         mainGallery.showMore();
     });
 
-showMoreGalleryBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    mainGallery.showMore();
+    // form
+    if (reservationForm) {
+        const serviceTypeCtrl = document.getElementById('Services');
+        const hiddenFields: HTMLElement[] = Array.from(document.querySelectorAll('.form__control--hidden'));
+
+        if (serviceTypeCtrl) {
+            serviceTypeCtrl.addEventListener('change', (e: Event) => {
+                const target = e.target as HTMLSelectElement;
+                if (target.value === 'Holowanie') {
+                    hiddenFields.forEach((field) => Utils.removeClass(field, 'form__control--hidden'));
+                } else {
+                    hiddenFields.forEach((field) => Utils.addClass(field, 'form__control--hidden'));
+                }
+
+                if (target.value) {
+                    Utils.removeClass(serviceTypeCtrl, 'not-touched');
+                } else {
+                    Utils.addClass(serviceTypeCtrl, 'not-touched');
+                }
+            });
+        }
+    }
 });
