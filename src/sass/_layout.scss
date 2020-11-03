@@ -8,9 +8,11 @@ $section-about-bg-color: $primary-color;
 $section-about-font-color: $on-primary-color;
 
 $button-bg-color: $primary-dark-color;
+$button-active-bg-color: $on-primary-dark-color;
 $button-font-color: $on-primary-dark-color;
+$button-active-font-color: $on-primary-color;
 
-$section-reservation-bg-color: $primary-color;
+$section-reservation-bg-color: $primary-dark-color;
 
 $container-max-width: (
     netbook: 960px,
@@ -302,15 +304,48 @@ body {
     &--reservation {
         background-color: $section-reservation-bg-color;
 
+        .section__title::after {
+            background-color: $primary-color;
+        }
+
+        .section__text {
+            p {
+                margin: 10px 0;
+            }
+        }
+
         .content-wrapper {
             display: flex;
+            flex-direction: column;
+            margin: 40px;
 
-            .section__text {
-                width: 40%;
+            &__child {
+                padding: 2rem 0;
             }
 
-            .section__form {
-                width: 60%;
+            .section__form,
+            .section__text {
+                position: relative;
+            }
+
+            @include media-query(netbook) {
+                flex-direction: row;
+
+                &__child {
+                    padding: 2rem;
+                }
+
+                .section__form,
+                .section__text {
+                    width: 50%;
+                }
+
+                .section__form,
+                .section__text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
         }
     }
