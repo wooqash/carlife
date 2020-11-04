@@ -3,12 +3,15 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 
+import { Swiper, Navigation, Pagination } from 'swiper';
 import handleView from './scripts/spy-menu';
 
 import Utils from './scripts/classes/utils';
 import Dialog from './scripts/classes/dialog';
 import Form from './scripts/classes/form';
 import Gallery from './scripts/classes/gallery';
+
+Swiper.use([Navigation, Pagination]);
 
 document.addEventListener('DOMContentLoaded', () => {
     let prevScrollPos = window.pageYOffset;
@@ -28,6 +31,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const reservationFormElem = document.getElementById('ReservationForm') as HTMLFormElement;
     const reservationForm = new Form(reservationFormElem);
+
+    const recommendationElem = document.getElementById('RecommendationContainer') as HTMLElement;
+    const recommendation: Swiper | null = recommendationElem
+        ? new Swiper(recommendationElem, {
+              a11y: {
+                  paginationBulletMessage: 'pokaż rekomendację nr {{index}}',
+              },
+              autoHeight: false,
+              cssMode: true,
+              keyboard: {
+                  enabled: true,
+                  onlyInViewport: false,
+                  pageUpDown: true,
+              },
+              loop: true,
+              pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+              },
+          })
+        : null;
 
     const removeActiveClassFromMenu = (items: HTMLCollection): void => {
         Array.from(items).forEach((item: Element) => item.classList.remove('active'));
