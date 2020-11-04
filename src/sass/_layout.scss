@@ -359,6 +359,13 @@ body {
             margin-right: auto;
         }
     }
+
+    &--recommendation {
+        background: linear-gradient(rgba($on-primary-color, 0.85), rgba($on-primary-color, 0.95)),
+            url('../assets/img/recommendations-bg.jpg') 50% / cover no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+    }
 }
 
 .grid-container {

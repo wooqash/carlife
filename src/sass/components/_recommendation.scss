@@ -1,0 +1,28 @@
+.recommendation-container {
+    &.swiper-container {
+        height: auto;
+        max-width: 1000px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+
+    .swiper-pagination-bullet {
+        background: $primary-color;
+        border: 1px solid $on-primary-color;
+        height: 10px;
+        opacity: 0.5;
+        width: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $primary-light-color;
+        opacity: 1;
+    }
+}
+
+.recommendation {
+    &-author,
+    &-text {
+        margin: 10px 0;
+    }
+}
