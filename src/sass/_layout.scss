@@ -8,11 +8,11 @@ $section-about-bg-color: $primary-color;
 $section-about-font-color: $on-primary-color;
 
 $button-bg-color: $primary-dark-color;
-$button-active-bg-color: $on-primary-dark-color;
+$button-active-bg-color: $primary-color;
 $button-font-color: $on-primary-dark-color;
-$button-active-font-color: $on-primary-color;
+$button-active-font-color: $primary-color;
 
-$section-reservation-bg-color: $primary-dark-color;
+$section-reservation-bg-color: $color-erie-black;
 
 $container-max-width: (
     netbook: 960px,
@@ -160,7 +160,8 @@ body {
 
     &--start {
         background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
-            url('../assets/img/main-bg.jpg') 50% / cover no-repeat;
+            url('../assets/img/bg/main-bg.jpg') 50% / cover no-repeat;
+        background-attachment: fixed;
         position: relative;
 
         @include media-query(netbook) {
@@ -302,11 +303,11 @@ body {
     }
 
     &--reservation {
-        background-color: $section-reservation-bg-color;
-
-        .section__title::after {
-            background-color: $primary-color;
-        }
+        // background-color: $section-reservation-bg-color;
+        background: linear-gradient(rgba($on-primary-color, 0.8), rgba($on-primary-color, 0.85)),
+            url('../assets/img/bg/reservation_org.jpg') 50% / cover no-repeat;
+        background-attachment: fixed;
+        color: $color-white;
 
         .section__text {
             p {
@@ -361,10 +362,114 @@ body {
     }
 
     &--recommendation {
-        background: linear-gradient(rgba($on-primary-color, 0.85), rgba($on-primary-color, 0.95)),
-            url('../assets/img/recommendations-bg.jpg') 50% / cover no-repeat;
+        background: linear-gradient(rgba($on-primary-color, 0.8), rgba($on-primary-color, 0.85)),
+            url('../assets/img/bg/recommendations-bg.jpg') 50% / cover no-repeat;
         background-attachment: fixed;
         color: #fff;
+    }
+
+    &--contact {
+        // background: $section-reservation-bg-color;
+        background: linear-gradient(rgba($on-primary-color, 0.7), rgba($on-primary-color, 0.7)),
+            url('../assets/img/bg/main-bg.jpg') 50% / cover no-repeat;
+        background-attachment: fixed;
+        color: $color-white;
+
+        @include media-query(netbook) {
+            .contact-info {
+                order: 2;
+            }
+
+            .contact-map {
+                order: 1;
+            }
+        }
+
+        .grid-container {
+            margin: 36px auto 0;
+        }
+
+        .contact-map {
+            &__map {
+                position: relative;
+
+                &::before,
+                &::after {
+                    border: 0 solid transparent;
+                    content: '';
+                    height: 24px;
+                    position: absolute;
+                    transition: all 0.25s;
+                    width: 24px;
+                }
+
+                &::before {
+                    border-color: $primary-dark-color;
+                    border-left-width: 2px;
+                    border-top-width: 2px;
+                    left: -5px;
+                    top: -5px;
+                }
+
+                &::after {
+                    border-bottom-width: 2px;
+                    border-color: $primary-dark-color;
+                    border-right-width: 2px;
+                    bottom: 0;
+                    right: -5px;
+                }
+
+                iframe {
+                    border: 10px solid $primary-dark-color;
+                }
+            }
+        }
+
+        .contact-info {
+            background: rgba($on-primary-color, 0.5);
+            margin-top: -56px;
+            padding: 56px 20px;
+
+            a:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+
+            &__box {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                font-style: normal;
+                margin-bottom: 12px;
+                padding: 10px 0;
+            }
+
+            &__icon {
+                height: 2rem;
+                margin: -5px 10px 0 0;
+                width: 2rem;
+            }
+
+            &__title {
+                color: $primary-dark-color;
+                font-size: 2rem;
+                line-height: 1;
+                margin-bottom: 10px;
+                text-shadow: 4px 4px 10px rgba($primary-dark-color, 0.5);
+            }
+
+            @include media-query(netbook) {
+                &__box {
+                    align-items: flex-start;
+                    margin: 0 20px 12px;
+                }
+
+                &__text {
+                    margin-left: 30px;
+                    text-align: left;
+                }
+            }
+        }
     }
 }
 
@@ -449,6 +554,7 @@ body {
     color: $button-font-color;
     cursor: pointer;
     display: inline-block;
+    font-family: $secondary-font-family;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1;
@@ -456,11 +562,11 @@ body {
     outline: 0;
     padding: 12px 16px 10px;
     position: relative;
-    text-transform: uppercase;
 
     &:focus,
     &:hover {
         color: $button-active-font-color;
+        text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
     }
 
     &::before,
@@ -511,8 +617,7 @@ body {
     }
 
     .icon {
-        margin-right: 5px;
-        margin-top: -2px;
+        margin-right: 8px;
         vertical-align: top;
     }
 }
