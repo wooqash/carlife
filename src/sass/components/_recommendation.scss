@@ -7,7 +7,7 @@
     }
 
     .swiper-pagination-bullet {
-        background: $primary-color;
+        background: $primary-dark-color;
         border: 1px solid $on-primary-color;
         height: 10px;
         opacity: 0.5;
@@ -15,7 +15,7 @@
     }
 
     .swiper-pagination-bullet-active {
-        background: $primary-light-color;
+        background: $primary-color;
         opacity: 1;
     }
 }
