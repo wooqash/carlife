@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
           })
         : null;
 
+    const emailAddressElem = document.getElementById('EmailAddress');
+
     const removeActiveClassFromMenu = (items: HTMLCollection): void => {
         Array.from(items).forEach((item: Element) => item.classList.remove('active'));
     };
@@ -179,4 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // Email protector
+    const emailUser = 'biuro';
+    const domain = 'carlifecygulski.pl';
+    const emailLink = document.createElement('a');
+    const emailLinkText = document.createTextNode(`${emailUser} at ${domain}`);
+    emailLink.appendChild(emailLinkText);
+    emailLink.setAttribute('href', `mailto:${emailUser}@${domain}`);
+    emailAddressElem?.appendChild(emailLink);
 });
