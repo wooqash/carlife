@@ -25,4 +25,16 @@
     &-text {
         margin: 10px 0;
     }
+
+    &-author {
+        color: $primary-dark-color;
+
+        &__internship {
+            color: $color-white;
+            display: block;
+            font-size: 0.4em;
+            letter-spacing: 1px;
+            text-transform: none;
+        }
+    }
 }
