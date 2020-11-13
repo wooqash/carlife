@@ -88,6 +88,14 @@ const config = {
                     },
                 ],
             },
+            {
+                test: /\.modernizrrc.js$/,
+                use: ['modernizr-loader'],
+            },
+            {
+                test: /\.modernizrrc(\.json)?$/,
+                use: ['modernizr-loader', 'json-loader'],
+            },
         ],
     },
     optimization: {
@@ -110,6 +118,9 @@ const config = {
         },
     },
     resolve: {
+        alias: {
+            modernizr$: path.resolve(__dirname, '.modernizrrc'),
+        },
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
         symlinks: false,
     },

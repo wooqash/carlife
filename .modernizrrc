@@ -1,0 +1,13 @@
+{
+  "minify": true,
+  "options": [
+    "html5shiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/input",
+    "test/inputtypes",
+    "test/svg",
+    "test/img/webp"
+  ]
+}

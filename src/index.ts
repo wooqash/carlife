@@ -4,6 +4,7 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 
 import { Swiper, Navigation, Pagination } from 'swiper';
+import Modernizr from 'modernizr';
 import handleView from './scripts/spy-menu';
 
 import Utils from './scripts/classes/utils';
@@ -52,6 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
               },
           })
         : null;
+
+    Modernizr.on('webp', (result) => {
+        if (result) {
+            // supported
+            console.log('webp');
+        } else {
+            // not-supported
+            console.log('no-webp');
+        }
+    });
+    console.log(recommendation);
 
     const emailAddressElem = document.getElementById('EmailAddress');
 
