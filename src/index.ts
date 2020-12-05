@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gallery
 
-    mainGallery.init();
+    // mainGallery.init();
 
     showMoreGalleryBtn.addEventListener('click', (e) => {
         e.preventDefault();

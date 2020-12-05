@@ -5,11 +5,13 @@ Swiper.use([Navigation, Pagination, Lazy]);
 export default class Gallery {
     private minImgVisible: { [key: string]: number } = {
         mobile: 2,
-        tablet: 2,
-        desktop: 3,
+        tablet: 4,
+        desktop: 8,
     };
 
-    // private imagesCount = 0;
+    private imageToShowInNextStep = 0;
+
+    private hiddenImages: NodeListOf<Element>;
 
     private isMobile = Utils.isMobile();
 
@@ -58,29 +60,32 @@ export default class Gallery {
     private clasess = {
         galleryItemShow: 'gallery-item--show',
         buttonLabelShow: 'button__label--show',
+        buttonHidden: 'button--hidden',
     };
 
-    constructor(private gallery: HTMLElement, private showMoreButton?: HTMLButtonElement) {}
-
-    init = (): void => {
-        // this.imagesCount = this.gallery.children.length;
+    constructor(private gallery: HTMLElement, private showMoreButton?: HTMLButtonElement) {
         this.showLess();
-    };
+        this.hiddenImages = document.querySelectorAll('.gallery-item:not(.gallery-item--show)');
+        this.imageToShowInNextStep = this.hiddenImages.length - this.getMinImageVisible();
+
+        if (this.hiddenImages.length === 0) {
+            this.hideShowMoreButton();
+        }
+    }
 
     showMore = (): void => {
-        const hiddenImages = document.querySelectorAll('.gallery-item:not(.gallery-item--show)');
-        const imageToShowInNextStep = hiddenImages.length - this.getMinImageVisible();
-        Array.from(hiddenImages).forEach((image, index) => {
+        Array.from(this.hiddenImages).forEach((image, index) => {
             if (index < this.getMinImageVisible()) {
                 Utils.addClass(image as HTMLElement, this.clasess.galleryItemShow);
             }
         });
 
-        if (imageToShowInNextStep < 1) {
+        if (this.imageToShowInNextStep < 1) {
             this.toogleMoreLessLabel();
+            this.hideShowMoreButton();
         }
 
-        if (hiddenImages.length === 0) {
+        if (this.hiddenImages.length === 0) {
             this.showLess();
         }
     };
@@ -94,6 +99,10 @@ export default class Gallery {
     };
 
     getSlider = (): Swiper => this.slider;
+
+    private hideShowMoreButton = (): void => {
+        Utils.addClass(this.showMoreButton as HTMLElement, this.clasess.buttonHidden);
+    };
 
     private getMinImageVisible = (): number => {
         let device = 'desktop';
