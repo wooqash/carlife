@@ -158,9 +158,31 @@ body {
         }
     }
 
+    .no-webp & {
+        &--start {
+            background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
+                url('../assets/img/bg/main-bg.jpg') 50% / cover no-repeat;
+        }
+
+        &--reservation {
+            background: linear-gradient(rgba($on-primary-color, 0.8), rgba($on-primary-color, 0.85)),
+                url('../assets/img/bg/reservation_org.jpg') 50% / cover no-repeat;
+        }
+
+        &--recommendation {
+            background: linear-gradient(rgba($on-primary-color, 0.8), rgba($on-primary-color, 0.85)),
+                url('../assets/img/bg/recommendations-bg.jpg') 50% / cover no-repeat;
+        }
+
+        &--contact {
+            background: linear-gradient(rgba($on-primary-color, 0.7), rgba($on-primary-color, 0.7)),
+                url('../assets/img/bg/main-bg.jpg') 50% / cover no-repeat;
+        }
+    }
+
     &--start {
         background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
-            url('../assets/img/bg/main-bg.jpg') 50% / cover no-repeat;
+            url('../assets/img/bg/main-bg.webp') 50% / cover no-repeat;
         background-attachment: fixed;
         position: relative;
 
@@ -303,9 +325,8 @@ body {
     }
 
     &--reservation {
-        // background-color: $section-reservation-bg-color;
         background: linear-gradient(rgba($on-primary-color, 0.8), rgba($on-primary-color, 0.85)),
-            url('../assets/img/bg/reservation_org.jpg') 50% / cover no-repeat;
+            url('../assets/img/bg/reservation_org.webp') 50% / cover no-repeat;
         background-attachment: fixed;
         color: $color-white;
 
@@ -363,15 +384,14 @@ body {
 
     &--recommendation {
         background: linear-gradient(rgba($on-primary-color, 0.8), rgba($on-primary-color, 0.85)),
-            url('../assets/img/bg/recommendations-bg.jpg') 50% / cover no-repeat;
+            url('../assets/img/bg/recommendations-bg.webp') 50% / cover no-repeat;
         background-attachment: fixed;
         color: #fff;
     }
 
     &--contact {
-        // background: $section-reservation-bg-color;
         background: linear-gradient(rgba($on-primary-color, 0.7), rgba($on-primary-color, 0.7)),
-            url('../assets/img/bg/main-bg.jpg') 50% / cover no-repeat;
+            url('../assets/img/bg/main-bg.webp') 50% / cover no-repeat;
         background-attachment: fixed;
         color: $color-white;
 
