@@ -516,242 +516,6 @@
                     </div>
                 </div>
             </section>
-            <section id="Reservation" class="section section--reservation">
-                <div class="section__container">
-                    <header class="section__header">
-                        <h2 class="section__title">Rezerwacje</h2>
-                        <p class="section__subtitle">Umów się na wizytę</p>
-                    </header>
-                    <div class="content-wrapper">
-                        <div class="content-wrapper__child section__text">
-                            <h3>Drogi kliencie!</h3>
-                            <p>
-                                Potrzebujesz naszej pomocy? Twoje auto przestało współpracować tak jak to było kiedyś?
-                            </p>
-                            <p>
-                                Nie czekaj ani chwili dłużej tylko napisz do nas! Wypełnij ten krótki formularz i pozwól
-                                nam zająć się Twoim autem. Dzięki temu odzyskasz spokój i będziesz miał pewność, że Twój
-                                samochód jest w dobrych rękach. Określ nam co możemy dla Ciebie zrobić i podaj jaki
-                                termin byłby dla Ciebie najdogodniejszy. Sprawdzimy nasz grafik i jeśli wybrany termin
-                                będzie wolny to zarezewujemy go specjalnie dla Ciebie!
-                            </p>
-                            <p>
-                                Pamiętaj też o zostawieniu swoich danych kontaktowych, żebyśmy mogli się z Tobą łatwo
-                                skomunikować.
-                            </p>
-                        </div>
-                        <div class="content-wrapper__child section__form">
-                            <form id="ReservationForm" class="form" method="post" action="./php/send-scripts.php">
-                                <fieldset class="form__fieldset">
-                                    <div class="form__status">
-                                        <p class="status__error-text">
-                                            Upps! Coś poszło nie tak.<br />Za chwilę spróbuj wysłać to zapytanie jeszcze
-                                            raz.
-                                        </p>
-                                    </div>
-                                    <div class="form__control form__control--hidden">
-                                        <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
-                                        <input type="text" name="honey" />
-                                    </div>
-                                    <div class="form__control">
-                                        <label for="ClientName" class="form__label"
-                                            >Imię i nazwisko:
-                                            <strong
-                                                ><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong
-                                            ></label
-                                        >
-                                        <input
-                                            name="res_user_name"
-                                            id="ClientName"
-                                            class="form__field form__field--input"
-                                            type="text"
-                                            required
-                                            pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻźŹ\s]+"
-                                            placeholder="np. Jan Kowalski"
-                                        />
-                                        <span class="form__error-text" aria-hidden="true"
-                                            >Podaj swoje imię i nazwisko</span
-                                        >
-                                    </div>
-                                    <div class="form__control">
-                                        <label for="ClientPhoneNo" class="form__label"
-                                            >Nr telefonu:
-                                            <strong
-                                                ><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong
-                                            ></label
-                                        >
-                                        <input
-                                            name="res_user_phoneno"
-                                            id="ClientPhoneNo"
-                                            class="form__field form__field--input"
-                                            type="tel"
-                                            required
-                                            pattern="(^[+][0-9]\d{1}[ |-]*\d{3}[ |-]*\d{3}[ |-]*\d{3}$)|(^[+][0-9]\d{1}[ ]*\d{3}[ |-]*\d{3}[ |-]*\d{2}[ |-]*\d{2}$)"
-                                            placeholder="np. +48 999-999-999"
-                                        />
-                                        <span class="form__error-text" aria-hidden="true"
-                                            >Podaj prawidłowy nr telefonu</span
-                                        >
-                                    </div>
-                                    <div class="form__control">
-                                        <label for="ClientEmail" class="form__label">Email:</label>
-                                        <input
-                                            name="res_user_email"
-                                            id="ClientEmail"
-                                            class="form__field form__field--input"
-                                            type="email"
-                                            pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b"
-                                            placeholder="np. jan.kowalski@domena.pl"
-                                        />
-                                        <span class="form__error-text" aria-hidden="true"
-                                            >Podaj prawidłowy adres email</span
-                                        >
-                                    </div>
-                                    <div class="form__control">
-                                        <label for="Services" class="form__label"
-                                            >Rodzaj usługi:
-                                            <strong><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong>
-                                        </label>
-                                        <select
-                                            name="res_services"
-                                            id="Services"
-                                            class="form__field form__field--select not-touched"
-                                            required
-                                        >
-                                            <option value="">-- wybierz rodzaj usługi --</option>
-                                            <option value="Holowanie">Holowanie</option>
-                                            <option value="Naprawa mechaniki">Naprawa mechaniki</option>
-                                            <option value="Naprawa elektryki lub elektroniki"
-                                                >Naprawa elektryki lub elektroniki</option
-                                            >
-                                            <option value="Serwis klimatyzacji">Serwis klimatyzacji</option>
-                                            <option value="Naprawa klimatyzacji">Naprawa klimatyzacji</option>
-                                            <option value="Serwis opon">Serwis opon</option>
-                                            <option value="Geometria kół">Geometria kół</option>
-                                            <option value="Przegląd auta przed zakupem"
-                                                >Przegląd auta przed zakupem</option
-                                            >
-                                            <option value="Inne">Inne</option>
-                                        </select>
-                                        <span class="form__error-text" aria-hidden="true">Wybierz rodzaj usługi</span>
-                                    </div>
-                                    <div class="form__control" data-hidden-field="hidden">
-                                        <label for="TowingFrom" class="form__label"
-                                            >Skąd
-                                            <abbr
-                                                class="form__more-info"
-                                                title="Wpisz dokładny adres skąd będzie holowane auto"
-                                            >
-                                                <svg class="icon icon--more-info" aria-hidden="true" focusable="false">
-                                                    <use
-                                                        xlink:href="./assets/icons/svg/symbol-defs.svg#icon-question-circle"
-                                                    ></use>
-                                                </svg> </abbr
-                                            >:
-                                        </label>
-                                        <input
-                                            name="res_towing-from"
-                                            id="TowingFrom"
-                                            class="form__field form__field--input"
-                                            type="text"
-                                            placeholder="np. miasto, kod-pocztowy, ulica, nr ulicy"
-                                        />
-                                    </div>
-                                    <div class="form__control" data-hidden-field="hidden">
-                                        <label for="TowingTo" class="form__label"
-                                            >Dokąd
-                                            <abbr
-                                                class="form__more-info"
-                                                title="Wpisz dokładny adres dokąd będzie holowane auto"
-                                            >
-                                                <svg class="icon icon--more-info" aria-hidden="true" focusable="false">
-                                                    <use
-                                                        xlink:href="./assets/icons/svg/symbol-defs.svg#icon-question-circle"
-                                                    ></use>
-                                                </svg> </abbr
-                                            >:
-                                        </label>
-                                        <input
-                                            name="res_towing-to"
-                                            id="TowingTo"
-                                            class="form__field form__field--input"
-                                            type="text"
-                                            placeholder="np. miasto, kod-pocztowy, ulica, nr ulicy"
-                                        />
-                                    </div>
-                                    <div class="form__control">
-                                        <label for="Date" class="form__label">Preferowany termin: </label>
-                                        <input
-                                            name="res_date"
-                                            id="Date"
-                                            class="form__field form__field--input"
-                                            type="date"
-                                        />
-                                        <span class="form__error-text" aria-hidden="true">Podaj prawidłową datę</span>
-                                    </div>
-                                    <div class="form__control">
-                                        <label for="TypeOfFault" class="form__label">Opis usterki:</label>
-                                        <textarea
-                                            name="res_fault"
-                                            id="TypeOfFault"
-                                            class="form__field form__field--textarea"
-                                            placeholder="np. brak zasilania, lub urwane koło"
-                                        ></textarea>
-                                    </div>
-                                    <div class="form__control">
-                                        <input
-                                            name="res_consent"
-                                            id="Consent"
-                                            class="form__field form__field--checkbox"
-                                            type="checkbox"
-                                            required
-                                        />
-                                        <label for="Consent" class="form__label"
-                                            >Zgadzam się na przetwarzanie moich danych osobowych przez CarLife Piotr
-                                            Cygulski, z siedzibą w Łodzi ul. Mielizny 12, lok. 4, w celu odpowiedzi na
-                                            moją wiadomość, drogą telefoniczną lub poprzez e-mail.<strong
-                                                ><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong
-                                            >
-                                        </label>
-                                        <span class="form__error-text" aria-hidden="true"
-                                            >Potrzebujemy Twojej zgody na przetwarzanie danych</span
-                                        >
-                                    </div>
-                                    <div class="form__control">
-                                        <p>
-                                            <abbr class="form__asterix" title="Pole wymagane">*</abbr> - Pola wymagne do
-                                            uzupełnienia!
-                                        </p>
-                                    </div>
-                                    <div class="form__control">
-                                        <button
-                                            class="button button--submit form__button form__button--submit"
-                                            type="submit"
-                                        >
-                                            <svg class="icon icon--paper-plane" aria-hidden="true" focusable="false">
-                                                <use
-                                                    xlink:href="./assets/icons/svg/symbol-defs.svg#icon-paper-plane"
-                                                ></use></svg
-                                            >wyślij
-                                        </button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                            <div class="form-success-msg">
-                                <p>
-                                    Dziękujemy za wysłanie zapytania, wkrótce skontaktujemy się z Tobą w celu ustalenia
-                                    szczegółów!
-                                </p>
-                                <button id="NextReservation" class="button" aria-controls="ReservationForm">
-                                    <svg class="icon icon--sync-alt" aria-hidden="true" focusable="false">
-                                        <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-sync-alt"></use></svg
-                                    ><span>Umów kolejną wizytę</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section id="Gallery" class="section section--gallery">
                 <div class="section__container">
                     <header class="section__header">
@@ -1290,6 +1054,242 @@
                                         <button class="swiper-button-next"></button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="Reservation" class="section section--reservation">
+                <div class="section__container">
+                    <header class="section__header">
+                        <h2 class="section__title">Rezerwacje</h2>
+                        <p class="section__subtitle">Umów się na wizytę</p>
+                    </header>
+                    <div class="content-wrapper">
+                        <div class="content-wrapper__child section__text">
+                            <h3>Drogi kliencie!</h3>
+                            <p>
+                                Potrzebujesz naszej pomocy? Twoje auto przestało współpracować tak jak to było kiedyś?
+                            </p>
+                            <p>
+                                Nie czekaj ani chwili dłużej tylko napisz do nas! Wypełnij ten krótki formularz i pozwól
+                                nam zająć się Twoim autem. Dzięki temu odzyskasz spokój i będziesz miał pewność, że Twój
+                                samochód jest w dobrych rękach. Określ nam co możemy dla Ciebie zrobić i podaj jaki
+                                termin byłby dla Ciebie najdogodniejszy. Sprawdzimy nasz grafik i jeśli wybrany termin
+                                będzie wolny to zarezewujemy go specjalnie dla Ciebie!
+                            </p>
+                            <p>
+                                Pamiętaj też o zostawieniu swoich danych kontaktowych, żebyśmy mogli się z Tobą łatwo
+                                skomunikować.
+                            </p>
+                        </div>
+                        <div class="content-wrapper__child section__form">
+                            <form id="ReservationForm" class="form" method="post" action="./php/send-scripts.php">
+                                <fieldset class="form__fieldset">
+                                    <div class="form__status">
+                                        <p class="status__error-text">
+                                            Upps! Coś poszło nie tak.<br />Za chwilę spróbuj wysłać to zapytanie jeszcze
+                                            raz.
+                                        </p>
+                                    </div>
+                                    <div class="form__control form__control--hidden">
+                                        <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
+                                        <input type="text" name="honey" />
+                                    </div>
+                                    <div class="form__control">
+                                        <label for="ClientName" class="form__label"
+                                            >Imię i nazwisko:
+                                            <strong
+                                                ><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong
+                                            ></label
+                                        >
+                                        <input
+                                            name="res_user_name"
+                                            id="ClientName"
+                                            class="form__field form__field--input"
+                                            type="text"
+                                            required
+                                            pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻźŹ\s]+"
+                                            placeholder="np. Jan Kowalski"
+                                        />
+                                        <span class="form__error-text" aria-hidden="true"
+                                            >Podaj swoje imię i nazwisko</span
+                                        >
+                                    </div>
+                                    <div class="form__control">
+                                        <label for="ClientPhoneNo" class="form__label"
+                                            >Nr telefonu:
+                                            <strong
+                                                ><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong
+                                            ></label
+                                        >
+                                        <input
+                                            name="res_user_phoneno"
+                                            id="ClientPhoneNo"
+                                            class="form__field form__field--input"
+                                            type="tel"
+                                            required
+                                            pattern="(^[+][0-9]\d{1}[ |-]*\d{3}[ |-]*\d{3}[ |-]*\d{3}$)|(^[+][0-9]\d{1}[ ]*\d{3}[ |-]*\d{3}[ |-]*\d{2}[ |-]*\d{2}$)"
+                                            placeholder="np. +48 999-999-999"
+                                        />
+                                        <span class="form__error-text" aria-hidden="true"
+                                            >Podaj prawidłowy nr telefonu</span
+                                        >
+                                    </div>
+                                    <div class="form__control">
+                                        <label for="ClientEmail" class="form__label">Email:</label>
+                                        <input
+                                            name="res_user_email"
+                                            id="ClientEmail"
+                                            class="form__field form__field--input"
+                                            type="email"
+                                            pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b"
+                                            placeholder="np. jan.kowalski@domena.pl"
+                                        />
+                                        <span class="form__error-text" aria-hidden="true"
+                                            >Podaj prawidłowy adres email</span
+                                        >
+                                    </div>
+                                    <div class="form__control">
+                                        <label for="Services" class="form__label"
+                                            >Rodzaj usługi:
+                                            <strong><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong>
+                                        </label>
+                                        <select
+                                            name="res_services"
+                                            id="Services"
+                                            class="form__field form__field--select not-touched"
+                                            required
+                                        >
+                                            <option value="">-- wybierz rodzaj usługi --</option>
+                                            <option value="Holowanie">Holowanie</option>
+                                            <option value="Naprawa mechaniki">Naprawa mechaniki</option>
+                                            <option value="Naprawa elektryki lub elektroniki"
+                                                >Naprawa elektryki lub elektroniki</option
+                                            >
+                                            <option value="Serwis klimatyzacji">Serwis klimatyzacji</option>
+                                            <option value="Naprawa klimatyzacji">Naprawa klimatyzacji</option>
+                                            <option value="Serwis opon">Serwis opon</option>
+                                            <option value="Geometria kół">Geometria kół</option>
+                                            <option value="Przegląd auta przed zakupem"
+                                                >Przegląd auta przed zakupem</option
+                                            >
+                                            <option value="Inne">Inne</option>
+                                        </select>
+                                        <span class="form__error-text" aria-hidden="true">Wybierz rodzaj usługi</span>
+                                    </div>
+                                    <div class="form__control" data-hidden-field="hidden">
+                                        <label for="TowingFrom" class="form__label"
+                                            >Skąd
+                                            <abbr
+                                                class="form__more-info"
+                                                title="Wpisz dokładny adres skąd będzie holowane auto"
+                                            >
+                                                <svg class="icon icon--more-info" aria-hidden="true" focusable="false">
+                                                    <use
+                                                        xlink:href="./assets/icons/svg/symbol-defs.svg#icon-question-circle"
+                                                    ></use>
+                                                </svg> </abbr
+                                            >:
+                                        </label>
+                                        <input
+                                            name="res_towing-from"
+                                            id="TowingFrom"
+                                            class="form__field form__field--input"
+                                            type="text"
+                                            placeholder="np. miasto, kod-pocztowy, ulica, nr ulicy"
+                                        />
+                                    </div>
+                                    <div class="form__control" data-hidden-field="hidden">
+                                        <label for="TowingTo" class="form__label"
+                                            >Dokąd
+                                            <abbr
+                                                class="form__more-info"
+                                                title="Wpisz dokładny adres dokąd będzie holowane auto"
+                                            >
+                                                <svg class="icon icon--more-info" aria-hidden="true" focusable="false">
+                                                    <use
+                                                        xlink:href="./assets/icons/svg/symbol-defs.svg#icon-question-circle"
+                                                    ></use>
+                                                </svg> </abbr
+                                            >:
+                                        </label>
+                                        <input
+                                            name="res_towing-to"
+                                            id="TowingTo"
+                                            class="form__field form__field--input"
+                                            type="text"
+                                            placeholder="np. miasto, kod-pocztowy, ulica, nr ulicy"
+                                        />
+                                    </div>
+                                    <div class="form__control">
+                                        <label for="Date" class="form__label">Preferowany termin: </label>
+                                        <input
+                                            name="res_date"
+                                            id="Date"
+                                            class="form__field form__field--input"
+                                            type="date"
+                                        />
+                                        <span class="form__error-text" aria-hidden="true">Podaj prawidłową datę</span>
+                                    </div>
+                                    <div class="form__control">
+                                        <label for="TypeOfFault" class="form__label">Opis usterki:</label>
+                                        <textarea
+                                            name="res_fault"
+                                            id="TypeOfFault"
+                                            class="form__field form__field--textarea"
+                                            placeholder="np. brak zasilania, lub urwane koło"
+                                        ></textarea>
+                                    </div>
+                                    <div class="form__control">
+                                        <input
+                                            name="res_consent"
+                                            id="Consent"
+                                            class="form__field form__field--checkbox"
+                                            type="checkbox"
+                                            required
+                                        />
+                                        <label for="Consent" class="form__label"
+                                            >Zgadzam się na przetwarzanie moich danych osobowych przez CarLife Piotr
+                                            Cygulski, z siedzibą w Łodzi ul. Mielizny 12, lok. 4, w celu odpowiedzi na
+                                            moją wiadomość, drogą telefoniczną lub poprzez e-mail.<strong
+                                                ><abbr class="form__asterix" title="Pole wymagane">*</abbr></strong
+                                            >
+                                        </label>
+                                        <span class="form__error-text" aria-hidden="true"
+                                            >Potrzebujemy Twojej zgody na przetwarzanie danych</span
+                                        >
+                                    </div>
+                                    <div class="form__control">
+                                        <p>
+                                            <abbr class="form__asterix" title="Pole wymagane">*</abbr> - Pola wymagne do
+                                            uzupełnienia!
+                                        </p>
+                                    </div>
+                                    <div class="form__control">
+                                        <button
+                                            class="button button--submit form__button form__button--submit"
+                                            type="submit"
+                                        >
+                                            <svg class="icon icon--paper-plane" aria-hidden="true" focusable="false">
+                                                <use
+                                                    xlink:href="./assets/icons/svg/symbol-defs.svg#icon-paper-plane"
+                                                ></use></svg
+                                            >wyślij
+                                        </button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="form-success-msg">
+                                <p>
+                                    Dziękujemy za wysłanie zapytania, wkrótce skontaktujemy się z Tobą w celu ustalenia
+                                    szczegółów!
+                                </p>
+                                <button id="NextReservation" class="button" aria-controls="ReservationForm">
+                                    <svg class="icon icon--sync-alt" aria-hidden="true" focusable="false">
+                                        <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-sync-alt"></use></svg
+                                    ><span>Umów kolejną wizytę</span>
+                                </button>
                             </div>
                         </div>
                     </div>
