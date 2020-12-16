@@ -36,23 +36,14 @@
                         <picture class="navbar__logo">
                             <source
                                 type="image/webp"
-                                srcset="
-                                    ./assets/img/logo-carlife.webp    1x,
-                                    ./assets/img/logo-carlife@2x.webp 2x
-                                "
+                                srcset="./assets/img/logo-carlife.webp 1x, ./assets/img/logo-carlife@2x.webp 2x"
                             />
                             <source
                                 type="image/jpeg"
-                                srcset="
-                                    ./assets/img/logo-carlife.jpg    1x,
-                                    ./assets/img/logo-carlife@2x.jpg 2x
-                                "
+                                srcset="./assets/img/logo-carlife.jpg 1x, ./assets/img/logo-carlife@2x.jpg 2x"
                             />
                             <img
-                                srcset="
-                                    ./assets/img/logo-carlife.png    1x,
-                                    ./assets/img/logo-carlife@2x.png 2x
-                                "
+                                srcset="./assets/img/logo-carlife.png 1x, ./assets/img/logo-carlife@2x.png 2x"
                                 src="./assets/img/logo-carlife.png"
                                 alt="Logo firmy Car Life Piotr Cygulski"
                                 loading="lazy"
@@ -197,7 +188,7 @@
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">Oferta</h2>
-                        <p class="section__subtitle">Sprawdź nasze usługi</p>
+                        <p class="section__subtitle">Sprawdź co mogę dla Ciebie zrobić</p>
                     </header>
                     <div class="grid-container">
                         <div class="offer-card">
@@ -518,14 +509,15 @@
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">Galeria</h2>
-                        <p class="section__subtitle">Lorem ipsum</p>
+                        <!-- <p class="section__subtitle">Lorem ipsum</p> -->
                     </header>
                     <div id="MainGallery" class="gallery">
-                        <div
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="0"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -554,12 +546,13 @@
                             </picture>
                             <span class="gallery-item__title">Mercedes Sprinter 906</span>
                             <span class="gallery-item__text">lewy bok</span>
-                        </div>
-                        <div
+                        </a>
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="1"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -588,12 +581,13 @@
                             </picture>
                             <span class="gallery-item__title">Mercedes Sprinter 906</span>
                             <span class="gallery-item__text">prawy bok</span>
-                        </div>
-                        <div
+                        </a>
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="2"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -622,12 +616,13 @@
                             </picture>
                             <span class="gallery-item__title">Mercedes Sprinter 906</span>
                             <span class="gallery-item__text">tył z najazdem</span>
-                        </div>
-                        <div
+                        </a>
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="3"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -656,12 +651,13 @@
                             </picture>
                             <span class="gallery-item__title">Holowanie</span>
                             <span class="gallery-item__text">Opel Astra III GTC</span>
-                        </div>
-                        <div
+                        </a>
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="4"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -690,12 +686,13 @@
                             </picture>
                             <span class="gallery-item__title">Holowanie</span>
                             <span class="gallery-item__text">Alfa Romeo Giulietta</span>
-                        </div>
-                        <div
+                        </a>
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="5"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -724,12 +721,13 @@
                             </picture>
                             <span class="gallery-item__title">Holowanie</span>
                             <span class="gallery-item__text">BMW E46</span>
-                        </div>
-                        <div
+                        </a>
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="6"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -758,12 +756,13 @@
                             </picture>
                             <span class="gallery-item__title">Mercedes Sprinter 906</span>
                             <span class="gallery-item__text">tył auta</span>
-                        </div>
-                        <div
+                        </a>
+                        <a
                             class="gallery-item gallery-item--show"
                             aria-controls="GalleryDialog"
                             data-dialog="dialog"
                             data-dialog-index="7"
+                            href="#"
                         >
                             <picture class="gallery-item__image">
                                 <source
@@ -792,7 +791,7 @@
                             </picture>
                             <span class="gallery-item__title">Holowanie</span>
                             <span class="gallery-item__text">Opel Astra III GTC</span>
-                        </div>
+                        </a>
                     </div>
                     <button id="GalleryShowMore" class="button">
                         <span class="more button__label button__label--show"
@@ -1061,7 +1060,7 @@
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">Rezerwacje</h2>
-                        <p class="section__subtitle">Umów się na wizytę</p>
+                        <p class="section__subtitle">Umów dogodny termin</p>
                     </header>
                     <div class="content-wrapper">
                         <div class="content-wrapper__child section__text">
@@ -1297,7 +1296,7 @@
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">Referencje</h2>
-                        <p class="section__subtitle">Co mówią ludzie?</p>
+                        <p class="section__subtitle">Co o mnie mówią klienci</p>
                     </header>
                     <div class="grid-container">
                         <div id="RecommendationContainer" class="recommendation-container swiper-container">
@@ -1360,7 +1359,7 @@
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">FAQ</h2>
-                        <p class="section__subtitle">Najczęściej zadawane pytania</p>
+                        <p class="section__subtitle">Najczęściej zadawane pytania od klientów</p>
                     </header>
                     <div class="grid-container">
                         <div class="accordion-wrapper">
@@ -1378,7 +1377,8 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+                                        Oprócz kierowcy lawety, w jej kabinie mogą jechać jeszcze
+                                        <strong>2 dodatkowe osoby</strong>.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1393,13 +1393,17 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Obecnie posiadam lawetę <strong>Mercedes Sprinter 906</strong> z najazdami i
+                                        wyciągarką, dlatego też niezbędna jest możliwość wjazdu pojazdu
+                                        <strong>na własnych kołach</strong>. Jeśli auto jest uszkodzone lub rozbite, ale
+                                        ma sprawne koła to nie ma przeszkód, żebym mógł je odholować do umówionego
+                                        miejsca.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" />
-                                    <label class="tab__label" for="Acc1Tab2"
-                                        >Item 3
+                                    <input class="tab__input" type="radio" id="Acc1Tab3" name="Acc1Tab" />
+                                    <label class="tab__label" for="Acc1Tab3"
+                                        >Czy firma posiada ubezpieczenie?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1408,13 +1412,13 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Tak posiadam ubezpieczenie do kwoty...
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" />
-                                    <label class="tab__label" for="Acc1Tab2"
-                                        >Item 4
+                                    <input class="tab__input" type="radio" id="Acc1Tab4" name="Acc1Tab" />
+                                    <label class="tab__label" for="Acc1Tab4"
+                                        >Czy jest możliwość przewiezienia auta na lawecie z pkt A do pkt B?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1423,37 +1427,10 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
-                                    </div>
-                                </div>
-                                <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" />
-                                    <label class="tab__label" for="Acc1Tab2"
-                                        >Item 5
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                            <use
-                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
-                                            ></use>
-                                        </svg>
-                                        <span class="access-label">sprawdź odpowiedź</span>
-                                    </label>
-                                    <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
-                                    </div>
-                                </div>
-                                <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" />
-                                    <label class="tab__label" for="Acc1Tab2"
-                                        >Item 6
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                            <use
-                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
-                                            ></use>
-                                        </svg>
-                                        <span class="access-label">sprawdź odpowiedź</span>
-                                    </label>
-                                    <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Świadczę również tego typu usługi. W takim wypadku zalecam umówienie terminu
+                                        poprzez wcześniejszy <a href="tel:+48505962251">kontakt telefoniczny</a> lub
+                                        przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1482,13 +1459,18 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+                                        Najlepiej zgodnie z interwałem. Najczęściej zaleca się wymianę oleju co
+                                        <strong>10-15 tys. km</strong> lub <strong>raz na rok</strong>. Przy czym wraz z
+                                        wymianą samego oleju i <strong>filtra oleju</strong> polecam przy okazji wymianę
+                                        pozostałych filtrów tj. <strong>filtr kabiny</strong> czy
+                                        <strong>filtr powietrza</strong>. Koszt jest stosunkowo niewielki, ale poprawia
+                                        się znaczenie wydajność wydmuchu oraz jakość powietrza wewnątrz pojazdu.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab2" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab2"
-                                        >Jak często zaleca sie wymianę płynu hamulcowego?
+                                        >Czy poza wymianą oleju i filtra trzeba wymieniać inne płyny w aucie?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1497,13 +1479,20 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Jak najbardziej <strong>TAK</strong>.
+                                        <strong>Płyny do układu hamulcowego</strong> jak i
+                                        <strong>chłodniczego</strong> wymieniamy zgodnie z harmonogramem producenta
+                                        dołączonym do instrukcji obsługi pojazdu, ale warto skontrolować ich parametry
+                                        przy każdym przeglądzie. Natomiast o <strong>płyn do spryskiwaczy</strong> warto
+                                        przede wszystkim zadabać w okresie jesienno-zimowym, kiedy na drogach panują
+                                        cięższe warunki i temperatura zaczyna oscylować w okolicy 0 stopni. Warto wtedy
+                                        za wczasu wlać płyn zimowy, aby ciecz nie zamarzała w zbiorniku czy przewodach.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab3" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab3"
-                                        >Jak często zaleca sie wymianę płynu chłodniczego?
+                                        >Czy po wymianie turbiny trzeba wymienić olej?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1512,7 +1501,11 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Przede wszystkim jest to zabieg <strong>konieczny</strong> ze względu na
+                                        zachowanie gwarancji producenta turbiny. W razie jakiejś ukrytej wady fabrycznej
+                                        tego elementu warto zachować tego typu gwaranację, aby nie ponosić dodatkowych
+                                        kosztów. Zatem zawsze wraz z wymianą <strong>turbiny</strong> zalecam klientom
+                                        <strong>wymianę oleju</strong>.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1527,37 +1520,13 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
-                                    </div>
-                                </div>
-                                <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc2Tab5" name="Acc2Tab" />
-                                    <label class="tab__label" for="Acc2Tab5"
-                                        >Czy po wymianie turbiny trzeba wymienić olej?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                            <use
-                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
-                                            ></use>
-                                        </svg>
-                                        <span class="access-label">sprawdź odpowiedź</span>
-                                    </label>
-                                    <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
-                                    </div>
-                                </div>
-                                <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc2Tab6" name="Acc2Tab" />
-                                    <label class="tab__label" for="Acc2Tab6"
-                                        >Czy po wymianie wtrysków trzeba wymienić filtr paliwa?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                            <use
-                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
-                                            ></use>
-                                        </svg>
-                                        <span class="access-label">sprawdź odpowiedź</span>
-                                    </label>
-                                    <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Każde auto posiada swoje własne wytyczne, ale przyjmuje się że
+                                        <strong>świece zapłonowe</strong> powinno się wymieniać przynajmniej raz na ok.
+                                        <strong>30 tys.</strong> przejechanych km. Oczywiście żywotność tego elementu
+                                        zależy również od warunków w jakich auto jest eksploatowane, a także jakości
+                                        zastosowanych świec czy też innych usterek w układzie zapłonowym. Przyjmuje się
+                                        również że w autach z <strong>instalacjami LPG</strong> należy te świece
+                                        wymienić nieco częściej.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1770,7 +1739,7 @@
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">Kontakt</h2>
-                        <p class="section__subtitle">Lorem ipsum</p>
+                        <p class="section__subtitle">Dane teleadresowe firmy</p>
                     </header>
                     <div class="grid-container">
                         <address class="contact-info">
