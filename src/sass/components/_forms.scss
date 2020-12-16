@@ -71,7 +71,7 @@ $form-control-border-color: $primary-dark-color;
             }
 
             .form__field--checkbox + .form__label {
-                color: $color-white;
+                color: $on-primary-color;
             }
         }
 
@@ -108,7 +108,7 @@ $form-control-border-color: $primary-dark-color;
         width: 100%;
 
         &:focus {
-            outline: 2px solid $primary-color;
+            outline: 2px solid $on-primary-color;
         }
 
         &--textarea {
@@ -178,7 +178,7 @@ $form-control-border-color: $primary-dark-color;
             }
 
             &:focus + label::before {
-                outline: 2px solid $primary-color;
+                outline: 2px solid $on-primary-color;
             }
 
             &:checked + label::after {
