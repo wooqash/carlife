@@ -372,6 +372,17 @@ body {
         }
     }
 
+    &--faq {
+        .grid-container {
+            grid-gap: 0;
+        }
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-gap: 20px;
+            }
+        }
+    }
+
     &--gallery {
         background: linear-gradient(rgba($on-primary-color, 0.8), rgba($on-primary-color, 0.85)),
             url('../assets/img/bg/reservation_org.webp') 50% / cover no-repeat;
@@ -593,11 +604,13 @@ body {
     outline: 0;
     padding: 12px 16px 10px;
     position: relative;
+    text-decoration: none;
 
     &:focus,
     &:hover {
         color: $button-active-font-color;
         text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
+        
     }
 
     &::before,
