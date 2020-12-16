@@ -1,4 +1,4 @@
-$dialog-overlay-bg-color: $primary-color;
+$dialog-overlay-bg-color: $on-primary-color;
 $dialog-content-bg-color: $surface-color;
 $dialog-content-font-color: $on-surface-color;
 $dialog-close-btn-color: $primary-dark-color;
@@ -51,6 +51,10 @@ $dialog-close-btn-color-hover: $primary-color;
         max-width: calc(100% - 40px); //600px;
         position: relative;
         transition: box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+        @include media-query(netbook) {
+            max-width: 1100px;
+        }
     }
 
     &__content-header {
