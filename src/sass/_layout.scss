@@ -1,14 +1,14 @@
 $body-bg-color: $background-color;
 $body-font-color: $on-background-color;
 
-$header-bg-color: $primary-color;
-$header-font-color: $on-primary-color;
+$header-bg-color: $on-primary-dark-color;
+$header-font-color: $surface-color;
 
 $section-about-bg-color: $primary-color;
 $section-about-font-color: $on-primary-color;
 
 $button-bg-color: $primary-dark-color;
-$button-active-bg-color: $primary-color;
+$button-active-bg-color: $on-primary-color;
 $button-font-color: $on-primary-dark-color;
 $button-active-font-color: $primary-color;
 
@@ -55,7 +55,7 @@ body {
 }
 
 .header {
-    background-color: $header-bg-color;
+    background-color: rgba($header-bg-color, 0.8);
     box-shadow: 1px 2px 4px rgba($on-primary-color, 0.3);
     color: $header-font-color;
     position: fixed;

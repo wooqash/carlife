@@ -2,35 +2,42 @@
 $menu-link-active-bg-color: $primary-dark-color;
 $menu-link-active-font-color: $on-primary-dark-color;
 $menu-link-active-hover-font-color: $on-primary-dark-color;
-$menu-link-hover-font-color: $primary-dark-color;
+$menu-link-hover-font-color: $primary-color;
 
 .navbar {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: px2rem(10);
+    
     width: 100%;
 
     &__logo {
         display: flex;
+        padding: px2rem(10);
     }
 
     &__toggler {
         display: flex;
+        margin: px2rem(10);
     }
 
     &__menu-wrapper {
         align-items: center;
         flex-basis: 100%;
         flex-grow: 1;
-        height: 214px;
+        height: 246px;
         overflow: hidden;
         transition: height 0.35s ease;
     }
 
     &__menu-wrapper--collapse:not(.show) {
         height: 0;
+    }
+
+    a:focus,
+    button:focus {
+        outline: 2px solid $primary-color;
     }
 
     @include media-query(netbook) {
@@ -80,9 +87,14 @@ $menu-link-hover-font-color: $primary-dark-color;
 
     &__link {
         display: block;
+        text-decoration: none;
 
         &:hover {
             color: $menu-link-hover-font-color;
+        }
+
+        @include media-query(netbook) {
+            font-weight: 900;
         }
     }
 
