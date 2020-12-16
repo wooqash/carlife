@@ -1,17 +1,20 @@
-$accordion-tab-bg: $primary-dark-color;
+$accordion-header-tab-bg: $primary-dark-color;
+$accordion-header-tab-border-color: $primary-color;
+$accordion-tab-bg: $background-color;
 $accordion-tab-bg-hover: $primary-color;
-$accordion-tab-border-color: $primary-color;
-$accordion-tab-close-bg: $primary-color;
+$accordion-tab-border-color: $primary-dark-color;
+$accordion-tab-close-bg: $background-color;
+$accordion-tab-close-bg-hover: $primary-color;
 
 /* Accordion styles */
 
 .accordion {
-    box-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
+    border: 1px solid $accordion-tab-border-color;
     overflow: hidden;
 
     &__title {
-        background: $accordion-tab-bg;
-        border-bottom: 1px solid $accordion-tab-border-color;
+        background: $accordion-header-tab-bg;
+        border-bottom: 1px solid $accordion-header-tab-border-color;
         padding: 20px 10px;
         text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
         width: 100%;
@@ -20,6 +23,13 @@ $accordion-tab-close-bg: $primary-color;
     &__tab {
         overflow: hidden;
         width: 100%;
+    }
+
+    @include media-query(tablet) {
+        .accordion {
+            border: 0;
+            box-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
+        }
     }
 }
 
@@ -35,6 +45,7 @@ $accordion-tab-close-bg: $primary-color;
         display: flex;
         font-weight: bold;
         justify-content: space-between;
+        min-height: 82px;
         padding: 20px;
         text-align: left;
         /* Icon */
@@ -48,6 +59,8 @@ $accordion-tab-close-bg: $primary-color;
     }
 
     &__content {
+        background-color: $accordion-tab-bg-hover;
+        
         max-height: 0;
         padding: 0 20px;
         text-align: left;
@@ -73,6 +86,10 @@ $accordion-tab-close-bg: $primary-color;
             font-size: 1.4rem;
             margin-left: 10px;
         }
+
+        &:hover {
+            background: $accordion-tab-close-bg-hover;
+        }
     }
 }
 
@@ -92,6 +109,7 @@ $accordion-tab-close-bg: $primary-color;
         }
 
         ~ .tab__content {
+            border-bottom: 1px solid $accordion-tab-border-color;
             max-height: 100vh;
             padding: 20px;
         }
