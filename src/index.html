@@ -79,8 +79,10 @@
             <section id="Home" class="section section--start">
                 <div class="section__container">
                     <div class="section__header">
-                        <h1 class="section__title">Lead Title <span class="title__mark">Lead title mark</span></h1>
-                        <p class="section__subtitle">
+                        <h1 id="MainTitle" class="section__title">
+                            Lead Title <span class="title__mark">Lead title mark</span>
+                        </h1>
+                        <p id="MainSubTitle" class="section__subtitle">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel
                             tempus metus gravida at.
                         </p>
@@ -172,13 +174,13 @@
                                 <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-file-invoice-dollar"></use>
                                 </svg>
-                                Wystawiamy faktury VAT
+                                Wystawiam faktury VAT
                             </li>
                             <li class="list-item">
                                 <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-wallet"></use>
                                 </svg>
-                                Przyjmujemy płatności gotówką oraz kartą
+                                Przyjmuję płatności gotówką oraz kartą
                             </li>
                         </ul>
                     </div>
@@ -201,8 +203,11 @@
                             </div>
                             <h3 class="offer-card__title">Holowanie</h3>
                             <p class="offer-card__intro">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
-                                vel tempus metus gravida at.
+                                Zapewniam bezpieczną i niezawodną usługę holowania <strong>24 godziny na dobę</strong>,
+                                <strong>7 dni w tygodniu</strong>. Nie ma znaczenia, czy znajdujesz się w Łodzi,
+                                Świnoujściu czy Przemyślu, w <strong>CarLife</strong> zapewniam kierowcom szybkie
+                                szacowanie czasu dotarcia, przejrzyste ceny i profesjonalną obsługę w
+                                <strong>całym kraju</strong>.
                             </p>
                             <button class="button button--more" aria-controls="Towing" data-dialog="dialog">
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
@@ -226,14 +231,36 @@
                                         </div>
                                         <div class="dialog__content-main">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
-                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
-                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
-                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
-                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
-                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
-                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
-                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                                Standardowo oferuję swoją pomoc w przypadku
+                                                <strong>holowania</strong> czy <strong>wymiany kół</strong>. Ale mogę Ci
+                                                również pomóc jeśli Twoje auto z jakichś przyczyn znalazło się
+                                                <strong>w przydrożnym rowie</strong> lub gdy zapomniałeś
+                                                <strong>zatankować</strong> i skończyło Ci się <strong>paliwo</strong>.
+                                            </p>
+                                            <p>
+                                                Zdarza się, że Klienci korzystają również z mojej pomocy jeśli
+                                                potrzebują przewieźć swoje pojazd z jednego punktu do drugiego, gdy na
+                                                przykład auto <strong>nie jest w pełni sprawne</strong> lub nie posiada
+                                                odpowiednich <strong>dokumentów</strong> dopuszczających go do ruchu.
+                                            </p>
+
+                                            <p>
+                                                Zamawiając lawetę w <strong>CarLife</strong>, oczywiście sam wybierasz
+                                                miejsce lub zakład, do którego chcesz <strong></strong>odholować swój
+                                                pojazd. Dla Twojej wygody jestem w stanie zaproponować Ci skorzystanie z
+                                                opcji naprawy Twojego auta bezpośrednio w moim warsztacie.
+                                                <strong>CarLife</strong> świadczy także profesjonalne usługi z zakresu
+                                                <strong>mechaniki pojazdów</strong>.
+                                            </p>
+                                            <p>
+                                                Jeśli zatem Twoje auto odmówiło posłuszeństwa, miałeś stłuczkę lub
+                                                utknąłeś gdzieś na trasie i nie masz jak się stamtąd wydostać
+                                                <a href="tel:+48505962251">dzwoń do CarLife</a> lub wypełnij
+                                                <a href="#ReservationForm" title="formularz rezerwacji"
+                                                    >formularz rezerwacji</a
+                                                >
+                                                znajdujący się poniżej na stronie. W <a href="#FAQ">FAQ</a> znajdziesz
+                                                najczęściej zadawane pytania od Klientów i odpowiedzi do nich.
                                             </p>
                                         </div>
                                     </div>
@@ -250,8 +277,12 @@
                             </div>
                             <h3 class="offer-card__title">Naprawa mechaniki</h3>
                             <p class="offer-card__intro">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
-                                vel tempus metus gravida at.
+                                Jako doświadczony i wykwalifikowany mechanik zajmuję się kompleksową naprawą wszystkich
+                                elementów mechanicznych w <strong>samochodach osobowych</strong> rozpoczynając od
+                                najważniejszych, czyli <strong>silników</strong> poprzez układy –
+                                <strong>hamulcowe</strong>, <strong>napędowe</strong> czy też
+                                <strong>wydechowe</strong>, a kończąc na elementach
+                                <strong>układów zawieszenia</strong>.
                             </p>
                             <button class="button button--more" aria-controls="RepairOfMechanics" data-dialog="dialog">
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
@@ -281,14 +312,65 @@
                                         </div>
                                         <div class="dialog__content-main">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
-                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
-                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
-                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
-                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
-                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
-                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
-                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                                W środowisku motoryzacyjnym funkcjonuje slogan, że
+                                                <strong>silnik</strong> to serce każdego pojazdu. Tak jak o własne serce
+                                                każdy, kto darzy swój samochód choćby najmniejszym uczuciem wie, że
+                                                warto o ten element szczególnie dbać i go pielęgnować. Regularne
+                                                <strong>przeglądy</strong> oraz <strong>serwis oleju i filtrów</strong>,
+                                                zdecydowanie przedłużają żywot tych na pozór niedelikatnych jednostek.
+                                                Oczywiście poza tak oczywistymi i standardowymi rzeczami jak filtry i
+                                                olej najczęściej Klienci zgłaszają się do mnie w celu
+                                                <strong>wymiany paska klinowego</strong>,
+                                                <strong>uszczelki pod głowicą</strong>, <strong>pompy paliwa</strong>,
+                                                czy całego nawet <strong>rozrządu</strong>. Niekiedy zdarza się, że
+                                                potrzebna jest bardziej dogłębna analiza usterki i wtedy wspomagam się
+                                                użyciem specjalistycznego oprogramowania. Co pewien czas zdarza się
+                                                również, że wymiana całego silnika jest bardziej opłacalna niż naprawa
+                                                jego poszczególnych elementów. Rzeczywisty zakres naprawy tego
+                                                podzespołu, często uzależniony jest od stanu faktycznego, w jakim
+                                                znajdują się elementy silnika danego pojazdu. Ale tego typu diagnoz mogę
+                                                się podjąć tylko i wyłącznie po wnikliwym sprawdzeniu auta.
+                                            </p>
+                                            <p>
+                                                Poza serwisem i naprawą silników dbam również o
+                                                <strong>układy hamulcowe</strong> swoich Klientów, które są jednymi z
+                                                ważniejszych pod względem bezpieczeństwa elementów pojazdu. Jakiekolwiek
+                                                ich zaniedbanie może doprowadzić do poważnych uszkodzeń, którego
+                                                następstwem może być śmiertelne zagrożenie dla kierowcy, jego bliskich
+                                                lub osób postronnych. Dlatego też, na życzenie Klientów jestem gotowy na
+                                                sprawdzenie i ewentualną wymianę m.in. takich podstawowych elementów
+                                                jak: <strong>tarcze</strong>, <strong>klocki</strong> oraz
+                                                <strong>szczęki hamulcowe</strong>,
+                                                <strong>pompy</strong>
+                                                czy też <strong>czujniki ABS</strong>. Nie zapominając oczywiście o
+                                                kontroli i wymianie <strong>płynu hamulcowego</strong>!
+                                            </p>
+                                            <p>
+                                                Oprócz tego zawodowo eliminuje również usterki w
+                                                <strong>układach napędowych i wydechowych</strong> oraz w
+                                                <strong>elementach układu zawieszenia</strong>. Jeśli w trakcie jazdy w
+                                                aucie zaczyna być słychać jakieś niepokojące odgłosy lub samochód zaczął
+                                                odmawiać płynnej jazdy "ściągając" np. na lewą lub prawą stronę to
+                                                prawdopodobnie to już najwyższy czas, aby przyjrzeć się dokładniej takim
+                                                elementom jak: <strong>wahacze</strong>,
+                                                <strong>drążki układu kierowniczego</strong>,
+                                                <strong>sworznie</strong> i <strong>łożyska</strong> czy też sprawdzić
+                                                stan <strong>amortyzatorów</strong>. Może się także zdarzyć, że Twój
+                                                samochód zaczął "pożerać" większe ilości paliwa niż dotychczas, albo
+                                                dźwięk z wydechu bardziej przypomina traktor niż samochód osobowy. To
+                                                wyraźny znak, że to już najwyższa pora, aby zadbać o odpowiednią
+                                                diagnozę i ewentualną korektę problemu, zanim zmieni się on w
+                                                poważniejszą usterkę.
+                                            </p>
+                                            <p>
+                                                Zapraszam zatem serdecznie w skromne progi warsztatu
+                                                <strong>CarLife</strong>. Na wizytę najwygodniej umówisz się poprzez
+                                                <a href="tel:+48505962251">kontakt telefoniczny</a> lub poniższy
+                                                <a href="#ReservationForm" title="formularz rezerwacji"
+                                                    >formularz rezerwacji</a
+                                                >. Jeśli masz jeszcze jakieś pytania to koniecznie sprawdź sekcję
+                                                <a href="#FAQ">najczęściej zadawanych pytań</a>, a być może znajdzie się
+                                                odpowiedź na to co Cię interesuje.
                                             </p>
                                         </div>
                                     </div>
@@ -462,8 +544,11 @@
                             </div>
                             <h3 class="offer-card__title">Przegląd aut przed zakupem</h3>
                             <p class="offer-card__intro">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh,
-                                vel tempus metus gravida at.
+                                Wybór <strong>właściwego</strong> auta to nie jest prosta sprawa. Ilość egzemplarzy na
+                                rynku może przysporzyć niemałego bólu głowy. Jak to zwykle bywa
+                                <strong>ilość</strong> nie idzie w parze z <strong>jakością</strong>, przez co łatwo
+                                nabrać się na tzw. <strong>"okazję"</strong>. Aby tego uniknąć, sprawdź jak mogę Cię
+                                przed tym uchronić!
                             </p>
                             <button class="button button--more" aria-controls="CarAudit" data-dialog="dialog">
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
@@ -488,14 +573,57 @@
                                         </div>
                                         <div class="dialog__content-main">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum
-                                                ultrices nibh, vel tempus metus gravida at. Ut consectetur purus non dui
-                                                porttitor interdum. Donec feugiat euismod diam eu consectetur.
-                                                Pellentesque luctus, metus vel gravida malesuada, urna lacus laoreet
-                                                ipsum, venenatis gravida enim lectus nec sem. Etiam nisl massa,
-                                                scelerisque ut neque quis, eleifend iaculis lectus. Proin congue aliquet
-                                                turpis a sagittis. Integer nec malesuada nulla. Cras hendrerit quam
-                                                mattis justo placerat auctor. Sed malesuada vulputate varius.
+                                                Jako doświadczony już mechanik wiem czego i gdzie należy szukać. Pozwól,
+                                                że pomogę Ci wybrać Twój
+                                                <strong>wymarzony egzemplarz</strong> samochodu, który mam nadzieję
+                                                posłuży Ci jeszcze przez wiele lat. Dla Twojej wygody udam się po
+                                                wskazany adres umówiony ze sprzedawcą/właścicielem pojazdu, aby dokonać
+                                                <strong>oględzin</strong> wytypowanego przez Ciebie samochodu. Na
+                                                miejscu przeprowadzę standardową procedurę, która obejmuje m.in.
+                                                kontrolę: <strong>płynów</strong>, ogólnego stanu
+                                                <strong>blacharsko-lakierniczego</strong> nadwozia,
+                                                <strong>sprawności hamulców</strong>,
+                                                <strong>układu chłodzenia</strong>,
+                                                <strong>układu kierowniczego</strong>,
+                                                <strong>elementów zawieszenia</strong> oraz
+                                                <strong>stanu zużycia opon</strong>. Dysponuje również komputerem
+                                                przenośnym ze specjalistycznym oprogramowaniem do analizy, którym możemy
+                                                sprawdzić potencjalne usterki lub kody błędów niewidoczne na pierwszy
+                                                rzut oka. W razie potrzeby możemy również użyć przenośnego
+                                                nisko-profilowego podnośnika hydraulicznego tzw. "żaby" do podniesienia
+                                                i oględzin spodniej części auta. W celach dokumentacji chętnie zrobię
+                                                również zdjęcia z zewnątrz jak i wnętrza pojazdu.
+                                            </p>
+                                            <p>
+                                                Jeśli nie ma przeciwwskazań formalnych i sprzedawca/właściciel wyrazi
+                                                zgodę przeprowadzam <strong>jazdę próbną</strong> pojazdem. Jeżeli nie
+                                                zostanie mi udzielone pozwolenie na jazdę próbną lub jej wykonanie z
+                                                jakiejś przyczyny okaże się nie możliwe, przegląd zostanie zakończony
+                                                bez części drogowej.
+                                            </p>
+                                            <p>
+                                                Zatem jeżeli szukasz auta dla siebie bądź swoich bliskich, a Twoja
+                                                wiedza na temat motoryzacji jest dość pobieżna, to zapraszam gorąco do
+                                                skorzystania z oferty <strong>CarLife</strong>. Na Twoje życzenie jestem
+                                                w stanie wykonać dość szczegółowych oględzin i pomóc Ci wyborze Twojego
+                                                wyśnionego auta. Dzięki mojej wiedzy i doświadczeniu (prawie 20 lat
+                                                pracy w zawodzie) jestem w stanie wychwycić wiele potencjalnych
+                                                problemów i zaoszczędzić Ci niepotrzebnych nerwów oraz zakupu
+                                                przysłowiowego "kota w worku". Dzięki temu zaoszczędzisz sobie
+                                                <strong>stresu</strong>, <strong>czasu</strong> i bardzo możliwe, że
+                                                <strong>niepotrzebnie wydanych pieniędzy</strong> na zakup jakiegoś
+                                                "taniego bubla". Posiadam w zasadzie wszystkie narzędzia i wiedzę, która
+                                                jest niezbędna do przeprowadzenia profesjonalnego przeglądu przed
+                                                zakupowego, tak aby skutecznie chronić moich Klientów przed
+                                                niewłaściwymi zakupami lub dostarczając im argumenty do negocjacji ceny.
+                                                Nie czekaj do ostatniej chwili, tylko już dziś skontaktuj się
+                                                <a href="tel:+48505962251">dzwoniąc</a> lub wypełniając
+                                                <a href="#ReservationForm" title="formularz rezerwacji"
+                                                    >formularz rezerwacji terminu</a
+                                                >
+                                                znajdujący się poniżej na stronie. Jeszcze więcej informacji znajdziesz
+                                                niżej na stronie w sekcji
+                                                <a href="#FAQ">najczęściej zadawanych pytań</a>.
                                             </p>
                                         </div>
                                     </div>
@@ -1066,18 +1194,25 @@
                         <div class="content-wrapper__child section__text">
                             <h3>Drogi kliencie!</h3>
                             <p>
-                                Potrzebujesz naszej pomocy? Twoje auto przestało współpracować tak jak to było kiedyś?
+                                Jeżeli Twoje auto przestało nagle współpracować tak, jak było to dawniej. Miałeś jakąś
+                                kolizję, lub po prostu w trakcie jazdy samochód zaczął się dziwnie zachowywać? A może
+                                dopiero szukasz swojego wymarzonego auta? To nie zwlekaj już ani chwili dłużej tylko
+                                zadzwoń lub napisz do <strong>CarLife</strong>!
                             </p>
                             <p>
-                                Nie czekaj ani chwili dłużej tylko napisz do nas! Wypełnij ten krótki formularz i pozwól
-                                nam zająć się Twoim autem. Dzięki temu odzyskasz spokój i będziesz miał pewność, że Twój
-                                samochód jest w dobrych rękach. Określ nam co możemy dla Ciebie zrobić i podaj jaki
-                                termin byłby dla Ciebie najdogodniejszy. Sprawdzimy nasz grafik i jeśli wybrany termin
-                                będzie wolny to zarezewujemy go specjalnie dla Ciebie!
+                                Jeżeli potrzebujesz <strong>natychmiastowej</strong> pomocy to raczej użyj
+                                <a href="tel:+48505962251">telefonu</a>. A jeśli Twoja sprawa NIE jest na
+                                <strong>“wczoraj”</strong>, to na spokojnie wypełnij ten formularz starając się podać mi
+                                jak najwięcej szczegółów.
                             </p>
                             <p>
-                                Pamiętaj też o zostawieniu swoich danych kontaktowych, żebyśmy mogli się z Tobą łatwo
-                                skomunikować.
+                                Po otrzymaniu Twojego zgłoszenia to <strong>JA</strong>, skontaktuję się z
+                                <strong>Tobą</strong> i wspólnie zaplanujemy Twoją wizytę w <strong>CarLife</strong> w
+                                możliwie najdogodniejszym dla Ciebie terminie!
+                            </p>
+                            <p>
+                                Tylko pamiętaj proszę o zostawieniu swoich namiarów, tak abym sprawnie mógł
+                                przeprowadzić proces rezerwacji od początku do końca.
                             </p>
                         </div>
                         <div class="content-wrapper__child section__form">
@@ -1384,7 +1519,7 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" />
                                     <label class="tab__label" for="Acc1Tab2"
-                                        >Czy mogę holować auta powypadkowe?
+                                        >Czy laweta CarLife może holować auta powypadkowe?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1396,14 +1531,14 @@
                                         Obecnie posiadam lawetę <strong>Mercedes Sprinter 906</strong> z najazdami i
                                         wyciągarką, dlatego też niezbędna jest możliwość wjazdu pojazdu
                                         <strong>na własnych kołach</strong>. Jeśli auto jest uszkodzone lub rozbite, ale
-                                        ma sprawne koła to nie ma przeszkód, żebym mógł je odholować do umówionego
+                                        ma sprawne koła to nie ma przeszkód, żebym mógł je odholować do ustalonego
                                         miejsca.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc1Tab3" name="Acc1Tab" />
                                     <label class="tab__label" for="Acc1Tab3"
-                                        >Czy firma posiada ubezpieczenie?
+                                        >Czy firma CarLife posiada ubezpieczenie?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1418,7 +1553,7 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc1Tab4" name="Acc1Tab" />
                                     <label class="tab__label" for="Acc1Tab4"
-                                        >Czy jest możliwość przewiezienia auta na lawecie z pkt A do pkt B?
+                                        >Czy istnieje możliwość przewiezienia auta na lawecie z pkt A do pkt B?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1427,9 +1562,9 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Świadczę również tego typu usługi. W takim wypadku zalecam umówienie terminu
-                                        poprzez wcześniejszy <a href="tel:+48505962251">kontakt telefoniczny</a> lub
-                                        przez
+                                        Oczywiście, że <strong>TAK</strong>! Jak najbardziej świadczę również tego typu
+                                        usługi. W takim wypadku zalecam klientom umówienie terminu poprzez wcześniejszy
+                                        <a href="tel:+48505962251">kontakt telefoniczny</a> lub przez
                                         <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
                                     </div>
                                 </div>
@@ -1450,7 +1585,7 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab1" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab1"
-                                        >Jak często zaleca się wymianę oleju?
+                                        >Jak często zalecam klientom wymianę oleju w silniku?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1484,9 +1619,9 @@
                                         <strong>chłodniczego</strong> wymieniamy zgodnie z harmonogramem producenta
                                         dołączonym do instrukcji obsługi pojazdu, ale warto skontrolować ich parametry
                                         przy każdym przeglądzie. Natomiast o <strong>płyn do spryskiwaczy</strong> warto
-                                        przede wszystkim zadabać w okresie jesienno-zimowym, kiedy na drogach panują
+                                        przede wszystkim zadbać w okresie jesienno-zimowym, kiedy na drogach panują
                                         cięższe warunki i temperatura zaczyna oscylować w okolicy 0 stopni. Warto wtedy
-                                        za wczasu wlać płyn zimowy, aby ciecz nie zamarzała w zbiorniku czy przewodach.
+                                        zawczasu wlać płyn zimowy, aby ciecz nie zamarzała w zbiorniku czy przewodach.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1503,7 +1638,7 @@
                                     <div class="tab__content">
                                         Przede wszystkim jest to zabieg <strong>konieczny</strong> ze względu na
                                         zachowanie gwarancji producenta turbiny. W razie jakiejś ukrytej wady fabrycznej
-                                        tego elementu warto zachować tego typu gwaranację, aby nie ponosić dodatkowych
+                                        tego elementu warto zachować tego typu gwarancję, aby nie ponosić dodatkowych
                                         kosztów. Zatem zawsze wraz z wymianą <strong>turbiny</strong> zalecam klientom
                                         <strong>wymianę oleju</strong>.
                                     </div>
@@ -1511,7 +1646,7 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc2Tab4" name="Acc2Tab" />
                                     <label class="tab__label" for="Acc2Tab4"
-                                        >Jak często zaleca się wymianę świec zapłonowych?
+                                        >W naprawie jakich marek aut firma CarLife się specjalizuje?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1520,13 +1655,16 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Każde auto posiada swoje własne wytyczne, ale przyjmuje się że
-                                        <strong>świece zapłonowe</strong> powinno się wymieniać przynajmniej raz na ok.
-                                        <strong>30 tys.</strong> przejechanych km. Oczywiście żywotność tego elementu
-                                        zależy również od warunków w jakich auto jest eksploatowane, a także jakości
-                                        zastosowanych świec czy też innych usterek w układzie zapłonowym. Przyjmuje się
-                                        również że w autach z <strong>instalacjami LPG</strong> należy te świece
-                                        wymienić nieco częściej.
+                                        W zasadzie nie mam konkretnej marki, w której się specjalizuję. Na przestrzeni
+                                        lat pracowałem przy bardzo wielu samochodach przeróżnych marek i modeli.
+                                        Oczywiście najczęściej tych najbardziej popularnych w Polsce tj.
+                                        <strong>VW</strong>, <strong>Opel</strong>, <strong>Ford</strong>,
+                                        <strong>Audi</strong>, <strong>Toyota</strong>, <strong>Skoda</strong>,
+                                        <strong>BMW</strong>, <strong>Renault</strong>, <strong>Fiat</strong> czy
+                                        <strong>Seat</strong>. Ale zdarza mi się również pracować przy autach typu
+                                        <strong>Volvo</strong> czy <strong>Porsche</strong>. Najważniejsze wg. mnie jest
+                                        jednak uczciwe podejście do klienta, więc jeśli wiem, że nie będę w stanie
+                                        czegoś zrobić to klient z góry o tym wie!
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1546,7 +1684,7 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc3Tab1" name="Acc3Tab" />
                                     <label class="tab__label" for="Acc3Tab1"
-                                        >Item 1
+                                        >Na jakie kontrolki na desce rozdzielczej powinno zwrócić się szczególną uwagę?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1555,13 +1693,24 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+                                        W znakomitej większości modeli aut kontrolki wymagające szczególnej uwagi to
+                                        kontrolki oznaczone kolorem <strong>czerwonym</strong>. Są to tzw. kontrolki
+                                        <strong>ostrzegawcze</strong>, których zignorowanie może przysporzyć kierowcy
+                                        wielu kłopotów. Wśród nich jedną z najpopularniejszych jest kontrolka
+                                        <strong>niskiego poziomu oleju</strong>, której zapalenie w zasadzie wyklucza
+                                        dalszą jazdę! Oprócz tego występują jeszcze kontrolki oznaczone kolorem
+                                        <strong>żółtym</strong>, czyli tzw. kontrolki
+                                        <strong>informacyjno-ostrzegawcze</strong> sygnalizujące bieżące działanie
+                                        niektórych urządzeń lub informujące o awariach, które nie stanowią
+                                        bezpośredniego zagrożenia dla pojazdu. Oraz kontrolki <strong>zielone</strong>,
+                                        czyli kontrolki stricte <strong>informacyjne</strong> i nie sygnalizują żadnej
+                                        awarii.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc3Tab2" name="Acc3Tab" />
                                     <label class="tab__label" for="Acc3Tab2"
-                                        >Item 2
+                                        >Jak często zalecam klientom wymianę akumulatora na nowy?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1570,7 +1719,56 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Często przy tego typu pytaniach odpowiedź brzmi: "To zależy!". Bo tak naprawdę
+                                        to jak często użytkując pojazd będzie trzeba wymieniać mu baterię, czyli
+                                        <strong>akumulator</strong>, będzie zależało od kilku ważnych czynników. M.in.
+                                        takich, jak choćby <strong>intensywność użytkowania</strong> (pojazd rodzinny
+                                        czy np. jako taksówka), realne
+                                        <strong>zapotrzebowanie na pobór mocy auta</strong> (ilość urządzeń zasilanych
+                                        prądem takich jak klimatyzacja czy odbiorniki audio-video, itp.)
+                                        <strong>warunki</strong>, w jakich pojazd jest/będzie eksploatowany (góry,
+                                        miasto), czy też <strong>jakość</strong> zastosowanej jednostki.
+                                    </div>
+                                </div>
+                                <div class="accordion__tab">
+                                    <input class="tab__input" type="radio" id="Acc3Tab3" name="Acc3Tab" />
+                                    <label class="tab__label" for="Acc3Tab3"
+                                        >Czy firma CarLife posiada diagnostykę komputerową?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
+                                    <div class="tab__content">
+                                        Z uwagi na to, że w dzisiejszych czasach bardzo duża liczba aut posiada mniej
+                                        lub bardziej zaawansowane systemy. Dlatego też w wielu przypadkach do
+                                        prawidłowej <strong>diagnostyki</strong> auta komputer stał się elementem
+                                        niezbędnym. Aby wyjść naprzeciw oczekiwaniom klientów i móc w rzetelny i uczciwy
+                                        sposób diagnozować problemy ich aut, moja firma posiada dostęp do tego typu
+                                        urządzenia i świadczę również tego typu usługi.
+                                    </div>
+                                </div>
+                                <div class="accordion__tab">
+                                    <input class="tab__input" type="radio" id="Acc3Tab4" name="Acc3Tab" />
+                                    <label class="tab__label" for="Acc3Tab4"
+                                        >Jak często zalecam swoim klientom wymianę świec zapłonowych?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
+                                    <div class="tab__content">
+                                        Każde auto posiada swoje własne wytyczne, ale przyjmuje się, że
+                                        <strong>świece zapłonowe</strong> powinno się wymieniać przynajmniej raz na ok.
+                                        <strong>30 tys.</strong> przejechanych km. Oczywiście żywotność tego elementu
+                                        zależy również od warunków, w jakich auto jest eksploatowane, a także jakości
+                                        zastosowanych świec czy też innych usterek w układzie zapłonowym. Przyjmuje się
+                                        również że w autach z <strong>instalacjami LPG</strong> należy te świece
+                                        wymienić nieco częściej.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1599,7 +1797,20 @@
                                         <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+                                        Oczywiście to zależy m.in. od intensywności używania klimatyzacji, jak i
+                                        warunków jej użytkowania. W naszym klimacie, gdzie najczęściej klimatyzacja
+                                        używana jest w okresach <strong>letnich (do schładzania)</strong> oraz
+                                        <strong>zimowych (do odparowywania szyb)</strong> więc to zużycie będzie
+                                        okresowe. Standardowo zalecam przynajmniej <strong>raz w roku</strong> sprawdzić
+                                        ilość <strong>czynnika chłodzącego</strong>, aby kompresor pracował w swoich
+                                        odpowiednich parametrach. Najlepiej zrobić to <strong>wiosną</strong>, kiedy
+                                        okres największej wilgoci powietrza jest już za nami, a najgorętszy okres pracy
+                                        klimatyzatora dopiero przed nami. Tak, aby np. w drodze na wakacje nie pozbawić
+                                        się jazdy w bardziej komfortowych warunkach. Zachęcam do wcześniejszego
+                                        umówienie terminu poprzez
+                                        <a href="tel:+48505962251">kontakt telefoniczny</a> lub przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a
+                                        >.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1614,13 +1825,24 @@
                                         <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Jak powszechnie wiadomo klimatyzacje to idealne środowisko do rozwoju wszelkich
+                                        bakterii, wirusów i grzybów. Chyba nikogo nie trzeba specjalnie przekonywać, że
+                                        warto dbać o zdrowie swoje i swoich najbliższych. Dlatego też standardową
+                                        procedurę <strong>odgrzybiania</strong> zalecam wykonać
+                                        <strong>raz na 12 m-cy</strong>, najlepiej zaraz na początku wiosny, np. podczas
+                                        <strong>okresowej kontroli poziomu czynnika chłodzącego</strong>. Jest jeden
+                                        mały wyjątek od tej reguły! Jeśli w kabinie podczas pracy wentylacji zaczyna być
+                                        mocno czuć <strong>nieprzyjemny zapach</strong>, wtedy również rekomenduję
+                                        umówienie wizyty poprzez <a href="tel:+48505962251">kontakt telefoniczny</a> lub
+                                        przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
+                                        w celu przeprowadzenia <strong>"nadprogramowego" odgrzybiania</strong>.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc4Tab3" name="Acc4Tab" />
                                     <label class="tab__label" for="Acc4Tab3"
-                                        >Czy po wymianie kompresora klimatyzacji należy wypłukać układ klimatyzacji?
+                                        >Z czym wiąże się usterka kompresora w klimatyzacji?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1629,7 +1851,44 @@
                                         <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Dość powszechną przyczyną wymiany kompresora klimatyzacji jest jego tzw.
+                                        "zatarcie". Aby naprawa czy też wymiana kompresora przyniosła spodziewany efekt
+                                        w postaci chłodzenia należy podjąć szereg czynności, które wyeliminują usterkę,
+                                        m.in. <strong>przepłukanie przewodów ciśnieniowych</strong>,
+                                        <strong>sprawdzenie szczelności systemu</strong>,
+                                        <strong>sprawdzenie pozostałych elementów</strong> wg. zaleceń producenta, być
+                                        może wymianę niektórych <strong>innych elementów</strong> całego systemu. Jeśli
+                                        z Twoją klimatyzacją zaczyna się "coś" dziać lub całkowicie odmówiła współpracy
+                                        to zapraszam do <a href="tel:+48505962251">kontaktu telefonicznego</a> lub przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a
+                                        >.
+                                    </div>
+                                </div>
+                                <div class="accordion__tab">
+                                    <input class="tab__input" type="radio" id="Acc4Tab4" name="Acc4Tab" />
+                                    <label class="tab__label" for="Acc4Tab4"
+                                        >Czy warto używać klimatyzacji również w okresie jesienno-zimowym?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span></label
+                                    >
+                                    <div class="tab__content">
+                                        Jak najbardziej <strong>TAK</strong>! Po pierwsze w okresach
+                                        <strong>jesienno-zimowych</strong> dużo szybciej i częściej
+                                        <strong>parują nam szyby</strong> w autach. Dzięki klimatyzacji możemy w dość
+                                        szybkim tempie je odparować. Drugą zaletą użycia klimatyzacji w tym okresie jest
+                                        fakt, że ten układ <strong>NIE</strong> pozostaje na dłużej bez ruch. Ma to
+                                        ogromne znaczenie dla jego <strong>żywotności</strong> oraz
+                                        <strong>zmniejsza tempo</strong> rozwoju drobnoustrojów w układzie. Jeżeli
+                                        będziesz potrzebował serwisu lub twoja klimatyzacja po prostu obniży swoją
+                                        wydajność to serdecznie zapraszam do warsztatu CarLife umawiając uprzednio
+                                        wizytę poprzez <a href="tel:+48505962251">kontakt telefoniczny</a> lub
+                                        korzystając z
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularza rezerwacji</a
+                                        >.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -1650,7 +1909,7 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc5Tab1" name="Acc5Tab" />
                                     <label class="tab__label" for="Acc5Tab1"
-                                        >Kiedy warto zmienić opony?
+                                        >Kiedy warto zmienić opony letnie na zimowe?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1659,12 +1918,48 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+                                        Opony letnie należy wymienić na zimowe, gdy
+                                        <strong>średnia dobowa temperatura spadnie i pozostanie poniżej 7° C</strong>.
+                                        Nie polecam czekać do tzw. "ostatniej chwili", gdyż ryzykujemy wtedy obniżeniem
+                                        przyczepności kół swojego auta co w następstwie może doprowadzić do kolizji lub
+                                        poważniejszego wypadku. Im później zdecydujemy się na zmianę opon, tym większa
+                                        szansa, że kolejka oczekujących klientów znacząco się wydłuży. Dlatego też
+                                        gorąco zachęcam do wcześniejszego zaplanowania wizyty w
+                                        <strong>CarLife</strong> poprzez
+                                        <a href="tel:+48505962251">kontakt telefoniczny</a> lub przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a
+                                        >.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc5Tab2" name="Acc5Tab" />
                                     <label class="tab__label" for="Acc5Tab2"
+                                        >Kiedy warto zmienić opony zimowe na letnie?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
+                                    <div class="tab__content">
+                                        Z kolei opony zimowe wymieniamy na letnie, z założenia powinno się wymienić gdy
+                                        <strong>średnia dobowa temperatura będzie niż 7° C</strong>. Przestrzegam jednak
+                                        w tym wypadku nad hura optymizmem i nie zalecam wymiany od razu po kilku
+                                        pierwszych dniach dodatnich temperatur. Okres przełomu zimy i wiosny
+                                        charakteryzuje się dużymi wahaniami temperatur i ogólną zmiennością pogody,
+                                        dlatego warto przeczekać ten pierwszy "cieplejszy" okres do ustabilizowania się
+                                        pogody. Oczywiście nie oznacza to, że z decyzją o wymianie opon na letnie mamy
+                                        czekać do samego lata. Obserwuj uważnie pogodę i zaplanuj z wyprzedzeniem swoją
+                                        wizytę w <strong>CarLife</strong> poprzez
+                                        <a href="tel:+48505962251">kontakt telefoniczny</a> lub przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
+                                        unikając długich kolejek.
+                                    </div>
+                                </div>
+                                <div class="accordion__tab">
+                                    <input class="tab__input" type="radio" id="Acc5Tab3" name="Acc5Tab" />
+                                    <label class="tab__label" for="Acc5Tab3"
                                         >Kiedy należy wymienić opony na nowe (przy jakich uszkodzeniach)?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
@@ -1674,12 +1969,52 @@
                                         <span class="access-label">sprawdź odpowiedź</span></label
                                     >
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Pomijając takie sytuacje jak uszkodzenia mechaniczne typu przetarta czy też
+                                        pęknięta opona, absolutnie minimalna głębokość bieżnika opony w Europie to
+                                        <strong>1,6 mm</strong>. Tyle mówią przepisy. Natomiast eksperci od opon
+                                        przyjmują, że bezpieczną graniczną wartością dla
+                                        <strong>opon letnich</strong> są <strong>3 mm</strong>, dla
+                                        <strong>opon zimowych</strong> są to <strong>4 mm</strong>. Dodatkowo nie zaleca
+                                        się użytkowania opon starszych niż <strong>10 lat</strong>, z uwagi na naturalne
+                                        "starzenie" się ogumienia. W rezultacie znacząco obniża się bezpieczeństwo
+                                        użytkowników tego typu opon (mniejsza przyczepność w zakrętach, dłuższa droga
+                                        hamowania itd.). Jeśli właśnie nadszedł moment graniczny dla Twoich opon,
+                                        zachęcam do <a href="tel:+48505962251">kontaktu telefonicznego</a> lub poprzez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
+                                        celem ustalenia terminu wymiany.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc5Tab3" name="Acc5Tab" />
-                                    <label for="Acc5Tab3" class="tab__close"
+                                    <input class="tab__input" type="radio" id="Acc5Tab4" name="Acc5Tab" />
+                                    <label class="tab__label" for="Acc5Tab4"
+                                        >Czy warto kupować opony całoroczne?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span></label
+                                    >
+                                    <div class="tab__content">
+                                        Eksperci od opon wyraźnie mówią, że tego typu <strong>opony</strong> to zawsze
+                                        jest <strong>kompromis</strong>. Kupując
+                                        <strong>opony całoroczne</strong> rezygnujemy z części parametrów letnich, ale
+                                        też niestety z części osiągów zimowych. Przez co opony tego typu nie są ani
+                                        lepsze od opon letnich, ani zimowych. Generalnie odradza się zakup
+                                        <strong>opon całorocznych</strong>, chyba że jest to małe auto użytkowane w
+                                        mieście z bardzo umiarkowanymi przebiegami. Każdy kierowca wie w jakich
+                                        warunkach będzie eksploatował swoje auto, dlatego też powinien sam podjąć
+                                        decyzję mając na uwadze to, co jest najcenniejsze, czyli życie swoje i swoich
+                                        bliskich. Jeżeli chcesz zakupić i czym prędzej założyć swoje nowe opony to
+                                        gorąco zapraszam do <a href="tel:+48505962251">kontaktu telefonicznego</a> lub
+                                        poprzez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a
+                                        >, aby wybrać dogodny termin tej usługi w <strong>CarLife</strong>.
+                                    </div>
+                                </div>
+                                <div class="accordion__tab">
+                                    <input class="tab__input" type="radio" id="Acc5Tab0" name="Acc5Tab" />
+                                    <label for="Acc5Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji <span>OPONY I KOŁA</span>
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
@@ -1694,7 +2029,7 @@
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc6Tab1" name="Acc6Tab" />
                                     <label class="tab__label" for="Acc6Tab1"
-                                        >Item 1
+                                        >Na co warto zwrócić uwagę zanim wybierzemy się na przegląd auta przed zakupem?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1703,13 +2038,28 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+                                        Dwie podstawowe kwestie to weryfikacja <strong>numeru VIN</strong> oraz
+                                        <strong>książki serwisowej</strong>. W internecie jest dostępnych co najmniej
+                                        kilka witryn, które pomogą nam zweryfikować <strong>VIN pojazdu</strong>, często
+                                        przy okazji dostarczając nam nieco więcej informacji na temat
+                                        <strong>historii pojazdu</strong>, który zamierzamy nabyć.
+                                        <strong>Książkę serwisową</strong> najlepiej skontrolować poprzez weryfikację
+                                        chociażby 1-2 serwisów, które są w niej uwzględnione. W miarę łatwo można
+                                        sprawdzić, czy taki <strong>"wbity w książkę"</strong> serwis rzeczywiście
+                                        fizycznie istnieje oraz np. przedzwonić tam i zapytać czy to konkretne auto było
+                                        w tym serwisie w dniu, który figuruje ww. dokumencie. W ten sposób, przy okazji,
+                                        zrewidujemy czy "handlarz" podchodzi do całej transakcji uczciwie, czy niczego
+                                        nie próbuje przed nami ukryć. Jeżeli nie czujesz się na siłach i potrzebujesz
+                                        fachowej porady przy wyborze auta to zapraszam do
+                                        <a href="tel:+48505962251">kontaktu telefonicznego</a> lub poprzez
+                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
+                                        w celu ustalenia wymagań i szczegółów z <strong>CarLife</strong>.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc6Tab2" name="Acc6Tab" />
                                     <label class="tab__label" for="Acc6Tab2"
-                                        >Item 2
+                                        >Gdzie najlepiej kupić używane auto?
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
@@ -1718,12 +2068,95 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+                                        Dawniej najprężniej działającymi rynkami zbytu
+                                        <strong>aut używanych</strong> były organizowane dość cyklicznie tzw.
+                                        <strong>"giełdy samochodowe"</strong>. Na szczęście te czasy są już za nami i
+                                        dzisiaj handel tego <strong>typu pojazdami</strong> odbywa się niemal
+                                        <strong>24h na dobę przez 365 dni w roku</strong>. Rzecz jasna duża w tym
+                                        zasługa internetu i powstających w nim serwisów oferujących auta z
+                                        <strong>"drugiej ręki"</strong>. Ale oprócz
+                                        <strong>serwisów internetowych</strong> w wielu miastach Polski nadal prężnie
+                                        działają <strong>stacjonarne komisy</strong>, które często specjalizują się w
+                                        sprzedaży <strong>aut używanych</strong> głównie od naszych zachodnich sąsiadów.
+                                        Tylko gdzie kupić, żeby było dla nas najbezpieczniej i najkorzystniej? Tutaj
+                                        sprawa nie jest już taka oczywista! Teoretycznie <strong>komisy</strong> i
+                                        <strong>tzw. handlarze</strong> wystawiają faktury (często faktury VAT marża),
+                                        dzięki czemu unikamy <strong>dodatkowej opłaty</strong> w Urzędzie Skarbowym
+                                        (podatek PPC - 2% od wartości auta). Dodatkowo taki dokument może wpływać na
+                                        <strong>wiarygodność</strong> sprzedającego. Niestety jak to często życie
+                                        pokazywało nie zawsze tak musi być. Z kolei od tzw.
+                                        <strong>osób prywatnych</strong>, które chcą sprzedać swój pojazd zazwyczaj nie
+                                        uświadczymy rachunku (tylko <strong>umowę kupna-sprzedaży pojazdu</strong>), ani
+                                        faktury (chyba że prowadzą działalność, w której ten pojazd był wprowadzony jako
+                                        środek trwały), przez co najprawdopodobniej kupujący nie uniknie ww. podatku. W
+                                        zamian dość często zdarza się znaleźć pojazdy
+                                        <strong>w dużo lepszym stanie technicznym i wizualnym</strong> niż np. te, które
+                                        <strong>"Niemiec płakał jak sprzedawał"</strong>. Jak mawiał tow. Stalin:
+                                        <strong>"Kontrola najwyższą formą zaufania"</strong>, więc jeśli sam nie czujesz
+                                        się na siłach i potrzebujesz pomocy przy weryfikacji auta przed zakupem śmiało i
+                                        bezzwłocznie zapraszam do
+                                        <a href="tel:+48505962251">kontaktu telefonicznego</a> lub poprzez
+                                        <a href="#ReservationForm" title="formularz rezerwacji"
+                                            >formularz rezerwacji CarLife</a
+                                        >
+                                        w celu ustalenia Twoich wymagań co do "przyszłego" zakupu.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc6Tab3" name="Acc6Tab" />
-                                    <label for="Acc6Tab3" class="tab__close"
+                                    <label class="tab__label" for="Acc6Tab3"
+                                        >Jakiej marki używane auto najlepiej kupić?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
+                                    <div class="tab__content">
+                                        Niestety na to pytanie nie ma w zasadzie <strong>żadnej</strong> poprawnej
+                                        odpowiedzi. Kupując auto z tzw. <strong>"drugiej ręki"</strong> nigdy nie
+                                        będziemy w stanie w <strong>100%</strong> określić jak dany pojazd był
+                                        użytkowany i jakie potencjalne problemy mogą nas spotkać po zakupie. Możemy
+                                        jedynie <strong>minimalizować</strong> ryzyko poprzez fachowe oględziny auta
+                                        przed zakupem. Niekiedy zdarza się jednak tak, że auta posiadają różnego rodzaju
+                                        <strong>wady ukryte</strong>. Co więcej, tego typu sytuacje zdarzają się również
+                                        w <strong>fabrycznie nowych modelach</strong> i wtedy nawet najwybitniejszy
+                                        specjalista nie będzie w stanie pomóc. Nie warto jednak z góry zakładać
+                                        najgorszych scenariuszy! Ale zdecydowanie opłaca się solidnie przygotować do
+                                        zakupu <strong>używanego</strong> pojazdu. Dlatego też serdecznie zapraszam do
+                                        skorzystania z mojej pomocy i umówienia się na konkretny termin oględzin auta
+                                        poprzez <a href="tel:+48505962251">kontakt telefoniczny</a> lub poprzez
+                                        <a href="#ReservationForm" title="formularz rezerwacji"
+                                            >formularz rezerwacji CarLife</a
+                                        >.
+                                    </div>
+                                </div>
+                                <div class="accordion__tab">
+                                    <input class="tab__input" type="radio" id="Acc6Tab4" name="Acc6Tab" />
+                                    <label class="tab__label" for="Acc6Tab4"
+                                        >Czy CarLife pomaga również w rejestracji pojazdów?
+                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                        <span class="access-label">sprawdź odpowiedź</span>
+                                    </label>
+                                    <div class="tab__content">
+                                        Na ten moment nie prowadzimy tego typu usług. Być może w przyszłości rozszerzymy
+                                        swoją ofertę, dlatego gorąco zachęcam do częstego odwiedzania strony
+                                        <a href="https://carlifecygulski.pl/">CarLife</a> oraz śledzenia profilu w
+                                        <a
+                                            href="https://www.facebook.com/carlife.cygulski"
+                                            rel="noopener noreferrer nofollow"
+                                            >mediach społecznościowych</a
+                                        >.
+                                    </div>
+                                </div>
+                                <div class="accordion__tab">
+                                    <input class="tab__input" type="radio" id="Acc6Tab0" name="Acc6Tab" />
+                                    <label for="Acc6Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji <span>POMOC PRZY ZAKUPIE</span>
                                         <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
@@ -1804,7 +2237,7 @@
                         </address>
                         <div class="contact-map">
                             <div class="contact-map__map">
-                                <iframe
+                                <!-- <iframe
                                     width="100%"
                                     height="350px"
                                     frameborder="0"
@@ -1812,6 +2245,15 @@
                                     marginheight="0"
                                     marginwidth="0"
                                     src="https://www.openstreetmap.org/export/embed.html?bbox=19.41989600658417%2C51.709507132386946%2C19.43041026592255%2C51.71228263334073&amp;layer=mapnik&amp;marker=51.710896566129136%2C19.425153136253357"
+                                ></iframe> -->
+                                <iframe
+                                    width="100%"
+                                    height="350"
+                                    frameborder="0"
+                                    scrolling="no"
+                                    marginheight="0"
+                                    marginwidth="0"
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=19.41991746425629%2C51.70950380833162%2C19.42904233932495%2C51.71227930948934&amp;layer=mapnik"
                                 ></iframe>
                             </div>
                             <a
