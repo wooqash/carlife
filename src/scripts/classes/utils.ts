@@ -1,6 +1,6 @@
 declare global {
     interface Window {
-        opera: any;
+        opera: never;
     }
 }
 
@@ -25,6 +25,14 @@ export default class Utils {
 
             element.className = classes.join(' ');
         }
+    }
+
+    static addClasses(el: HTMLElement, classNames: string[]): void {
+        if (!el || !classNames) {
+            return;
+        }
+
+        classNames.forEach((className: string) => Utils.addClass(el, className));
     }
 
     static removeClass(el: HTMLElement, className: string): void {

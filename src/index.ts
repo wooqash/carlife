@@ -1,16 +1,20 @@
+/* eslint-disable func-names */
 import './sass/styles.scss';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
+import 'animate.css/animate.min.css';
 
 import { Swiper, Navigation, Pagination } from 'swiper';
 import Modernizr from 'modernizr';
+
 import handleView from './scripts/spy-menu';
 
 import Utils from './scripts/classes/utils';
 import Dialog from './scripts/classes/dialog';
 import Form from './scripts/classes/form';
 import Gallery from './scripts/classes/gallery';
+import UIAnimations from './scripts/classes/ui-animation';
 
 Swiper.use([Navigation, Pagination]);
 
@@ -63,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('no-webp');
         }
     });
-    console.log(recommendation);
 
     const emailAddressElem = document.getElementById('EmailAddress');
 
@@ -139,6 +142,76 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggler.addEventListener('click', toggleMainMenu);
 
     window.addEventListener('scroll', showHideElementsOnScroll);
+
+    // Animations
+    if (mainTitleElem) {
+        const mainTitleElemAnimation = new UIAnimations(mainTitleElem, 'fadeInDown', '', '100%');
+        mainTitleElemAnimation.mount();
+    }
+    if (mainSubTitleElem) {
+        const mainSubTitleElemAnimation = new UIAnimations(mainSubTitleElem, 'fadeInUp', '1s', '100%');
+        mainSubTitleElemAnimation.mount();
+    }
+    if (towCarElem) {
+        const towCarElemAnimation = new UIAnimations(towCarElem, 'slideInLeft', '2s', '100%');
+        towCarElemAnimation.mount();
+    }
+    if (aboutTextElem) {
+        const aboutTextElemAnimation = new UIAnimations(aboutTextElem, 'fadeInLeft', '', '100%');
+        aboutTextElemAnimation.mount();
+    }
+    if (aboutListElem) {
+        const aboutListElemAnimation = new UIAnimations(aboutListElem, 'fadeInLeft', '1s', '100%');
+        aboutListElemAnimation.mount();
+    }
+    if (aboutImgElem) {
+        const aboutImgElemAnimation = new UIAnimations(aboutImgElem, 'fadeInRight', '2s', '100%');
+        aboutImgElemAnimation.mount();
+    }
+    [...offerCardsElem].forEach((offerCardElem, index) => {
+        if (offerCardElem) {
+            const offerCardElemAnimation = new UIAnimations(
+                offerCardElem as HTMLElement,
+                'zoomIn',
+                `${index}s`,
+                '100%',
+            );
+            offerCardElemAnimation.mount();
+        }
+    });
+    [...galleryImagesElem].forEach((galleryImageElem) => {
+        if (galleryImageElem) {
+            const galleryImageElemAnimation = new UIAnimations(
+                galleryImageElem as HTMLElement,
+                'flipInX',
+                '1s',
+                '100%',
+            );
+            galleryImageElemAnimation.mount();
+        }
+    });
+    if (reservationTextElem) {
+        const reservationTextElemAnimation = new UIAnimations(reservationTextElem, 'slideInLeft', '', '100%');
+        reservationTextElemAnimation.mount();
+    }
+    if (reservationFormElem) {
+        const reservationFormElemAnimation = new UIAnimations(reservationFormElem, 'fadeInRight', '1s', '100%');
+        reservationFormElemAnimation.mount();
+    }
+    [...faqItemsElem].forEach((faqItemElem, index) => {
+        if (faqItemElem) {
+            const faqItemElemAnimation = new UIAnimations(faqItemElem as HTMLElement, 'zoomIn', `${index}s`, '100%');
+            faqItemElemAnimation.mount();
+        }
+    });
+    if (contactMapElem) {
+        const contactMapElemAnimation = new UIAnimations(contactMapElem, 'zoomIn', '', '100%');
+        contactMapElemAnimation.mount();
+    }
+    if (contactInfoElem) {
+        const contactMapElemAnimation = new UIAnimations(contactInfoElem, 'fadeInRight', '1s', '100%');
+        contactMapElemAnimation.mount();
+    }
 
     // Dialog
     const offerDialog = new Dialog();
