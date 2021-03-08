@@ -97,4 +97,32 @@ export default class Utils {
         })(navigator.userAgent || navigator.vendor || window.opera);
         return check;
     }
+
+    static lockScroll = (element: HTMLElement): void => {
+        if (!element) {
+            return;
+        }
+        Utils.addClass(element, 'no-scroll');
+    };
+
+    static unlockScroll = (element: HTMLElement): void => {
+        if (!element) {
+            return;
+        }
+        Utils.removeClass(element, 'no-scroll');
+    };
+
+    static showHideElementOnScroll = (elementToHide: HTMLElement, prevScrollPos: number): number => {
+        const currentScrollPos = window.pageYOffset;
+        const scrollTopButton = document.getElementById('ScrollTop') as HTMLButtonElement;
+
+        if (prevScrollPos > currentScrollPos) {
+            Utils.removeClass(elementToHide, 'hide');
+            Utils.addClass(scrollTopButton, 'hide');
+        } else {
+            Utils.addClass(elementToHide, 'hide');
+            Utils.removeClass(scrollTopButton, 'hide');
+        }
+        return currentScrollPos;
+    };
 }
