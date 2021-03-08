@@ -4,20 +4,18 @@ import { SerializedObject } from '../types/serialized-obj.interface';
 // import { PageKeys } from '../types/keys.enum';
 
 export default class Form {
-    private formOptions: FormOptions;
+    private formOptions: FormOptions = {
+        controlClass: 'form__control',
+        controlErrorClass: 'form__control--error',
+        errorMsgClass: 'form__error-text',
+        formStatusClass: 'form__status',
+        formClass: 'form',
+        loadingClass: 'loading',
+        successMsgClass: 'form-success-msg',
+    };
 
     constructor(private form: HTMLFormElement, options?: FormOptions) {
-        const defaultOptions: FormOptions = {
-            controlClass: 'form__control',
-            controlErrorClass: 'form__control--error',
-            errorMsgClass: 'form__error-text',
-            formStatusClass: 'form__status',
-            formClass: 'form',
-            loadingClass: 'loading',
-            successMsgClass: 'form-success-msg',
-        };
-
-        this.formOptions = Object.assign(defaultOptions, options);
+        this.formOptions = Object.assign(this.formOptions, options);
 
         this.form.setAttribute('novalidate', 'novalidate');
 
