@@ -1,15 +1,18 @@
 // $navbar-bg-color: $color-rich-black-fogra-39;
 $menu-link-active-bg-color: $primary-dark-color;
 $menu-link-active-font-color: $on-primary-dark-color;
-$menu-link-active-hover-font-color: $on-primary-dark-color;
+// $menu-link-active-hover-font-color: $on-primary-dark-color;
 $menu-link-hover-font-color: $primary-color;
+$menu-link-highlighted-bg-color: $primary-dark-color;
+$menu-link-highlighted-font-color: $on-primary-color;
+$menu-link-highlighted-active-hover-font-color: $background-color;
 
 .navbar {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     width: 100%;
 
     &__logo {
@@ -26,7 +29,7 @@ $menu-link-hover-font-color: $primary-color;
         align-items: center;
         flex-basis: 100%;
         flex-grow: 1;
-        height: 246px;
+        height: 286px;
         overflow: hidden;
         transition: height 0.35s ease;
     }
@@ -38,6 +41,10 @@ $menu-link-hover-font-color: $primary-color;
     a:focus,
     button:focus {
         outline: 2px solid $primary-color;
+    }
+
+    .button--cta:focus {
+        outline: none;
     }
 
     @include media-query(netbook) {
@@ -73,15 +80,16 @@ $menu-link-hover-font-color: $primary-color;
         padding: px2rem(10) px2rem(0);
         text-align: center;
         text-transform: uppercase;
-    }
 
-    &__item.active {
-        background-color: $menu-link-active-bg-color;
-        color: $menu-link-active-font-color;
-        font-weight: bold;
-        
-        .main-nav__link:hover {
-            color: rgba($menu-link-active-hover-font-color, 0.7);
+        &--highlighted {
+            background-color: $menu-link-highlighted-bg-color;
+            color: $menu-link-highlighted-font-color;
+            padding: px2rem(10);
+        }
+
+        &.active {
+            background-color: $menu-link-active-bg-color;
+            color: $menu-link-active-font-color;
         }
     }
 
@@ -89,12 +97,33 @@ $menu-link-hover-font-color: $primary-color;
         display: block;
         text-decoration: none;
 
+        &:focus,
         &:hover {
             color: $menu-link-hover-font-color;
         }
 
         @include media-query(netbook) {
-            font-weight: 900;
+            font-weight: 700;
+        }
+
+        .icon {
+            margin-right: 5px;
+            margin-top: -5px;
+
+            @include media-query(netbook) {
+                margin-top: -3px;
+            }
+        }
+
+        .main-nav__item--highlighted & {
+            &:focus,
+            &:hover {
+                color: $menu-link-highlighted-active-hover-font-color;
+            }
+
+            @include media-query(netbook) {
+                font-weight: 900;
+            }
         }
     }
 
@@ -106,16 +135,21 @@ $menu-link-hover-font-color: $primary-color;
 
         &__item {
             font-family: $third-font-family;
-            font-size: px2rem(10);
-            font-weight: 900;
+            font-size: px2rem(12);
+            font-weight: 700;
             line-height: 1;
             margin: 0 px2rem(5);
             padding: px2rem(5) px2rem(10);
             text-align: left;
-            
+
+            &--highlighted {
+                padding: px2rem(10);
+            }
 
             &.active {
-                border-radius: px2rem(20);
+                background-color: transparent;
+                border-bottom: 3px solid $menu-link-active-bg-color;
+                color: inherit;
             }
         }
     }
