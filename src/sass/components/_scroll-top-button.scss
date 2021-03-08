@@ -1,5 +1,5 @@
 $scroll-to-top-button-bg-color: $primary-dark-color;
-$scroll-to-top-button-hover-bg-color: $primary-light-color;
+$scroll-to-top-button-hover-bg-color: $primary-color;
 
 $scroll-to-top-icon-color: $on-primary-dark-color;
 $scroll-to-top-icon-hover-color: $on-primary-light-color;
@@ -9,8 +9,9 @@ $scroll-to-top-button-size: 30px;
 .scroll-to-top-button {
     align-items: center;
     background-color: $scroll-to-top-button-bg-color;
+    border: 0;
     border-radius: $scroll-to-top-button-size;
-    bottom: 20px;
+    bottom: 90px;
     display: flex;
     height: $scroll-to-top-button-size;
     justify-content: center;
@@ -20,9 +21,11 @@ $scroll-to-top-button-size: 30px;
     transition: all 0.8s;
     visibility: visible;
     width: $scroll-to-top-button-size;
+    z-index: 999;
 
     &:hover {
         background-color: $scroll-to-top-button-hover-bg-color;
+        border: 2px solid $scroll-to-top-button-bg-color;
 
         .icon {
             color: $scroll-to-top-icon-hover-color;
