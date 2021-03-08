@@ -5,246 +5,195 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'animate.css/animate.min.css';
 
-import { Swiper, Navigation, Pagination } from 'swiper';
+import { Swiper, Navigation, Pagination, Autoplay } from 'swiper';
 import Modernizr from 'modernizr';
 
-import handleView from './scripts/spy-menu';
-
 import Utils from './scripts/classes/utils';
-import Dialog from './scripts/classes/dialog';
 import Form from './scripts/classes/form';
-import Gallery from './scripts/classes/gallery';
 import UIAnimations from './scripts/classes/ui-animation';
+// import Cookies from './scripts/classes/cookies';
+import EmailProtector from './scripts/classes/emailProtector';
+import Modal from './scripts/classes/modal';
+import Menu from './scripts/classes/menu';
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 document.addEventListener('DOMContentLoaded', () => {
+    Modernizr.on('webp', (result) => {});
+
     let prevScrollPos = window.pageYOffset;
-    const body = document.body as HTMLBodyElement;
-    const mainMenu = document.getElementById('MainMenu') as HTMLDivElement;
-    const menuToggler = document.getElementById('MainMenuToggler') as HTMLButtonElement;
-    const menuLinks = document.querySelectorAll('.main-nav__link') as NodeListOf<HTMLAnchorElement>;
+    const mainMenuElem = document.getElementById('MainMenu') as HTMLDivElement;
+    const header = document.getElementById('Header') as HTMLHeadingElement;
 
-    const collapseButtons = document.querySelectorAll('[data-toggle="collapse"]') as NodeListOf<HTMLAnchorElement>;
-    const dialogOpenMoreOfferButtons = document.querySelectorAll('.button--more') as NodeListOf<HTMLElement>;
-    const dialogOpenGalleryButtons = document.querySelectorAll('.gallery-item') as NodeListOf<HTMLElement>;
-    const dialogContainers = document.querySelectorAll('.dialog__content') as NodeListOf<HTMLElement>;
-
-    const showMoreGalleryBtn = document.getElementById('GalleryShowMore') as HTMLButtonElement;
-    const mainGalleryElem = document.getElementById('MainGallery') as HTMLElement;
-    const mainGallery = new Gallery(mainGalleryElem, showMoreGalleryBtn);
-
-    const reservationFormElem = document.getElementById('ReservationForm') as HTMLFormElement;
-    const reservationForm = new Form(reservationFormElem);
-
-    const recommendationElem = document.getElementById('RecommendationContainer') as HTMLElement;
-    const recommendation: Swiper | null = recommendationElem
-        ? new Swiper(recommendationElem, {
-              a11y: {
-                  paginationBulletMessage: 'pokaż rekomendację nr {{index}}',
-              },
-              autoHeight: false,
-              cssMode: true,
-              keyboard: {
-                  enabled: true,
-                  onlyInViewport: false,
-                  pageUpDown: true,
-              },
-              loop: true,
-              pagination: {
-                  el: '.swiper-pagination',
-                  clickable: true,
-              },
-          })
-        : null;
-
-    Modernizr.on('webp', (result) => {
-        if (result) {
-            // supported
-            console.log('webp');
-        } else {
-            // not-supported
-            console.log('no-webp');
-        }
+    (() => new Menu(mainMenuElem))();
+    window.addEventListener('scroll', () => {
+        prevScrollPos = Utils.showHideElementOnScroll(header, prevScrollPos);
     });
 
-    const emailAddressElem = document.getElementById('EmailAddress');
+    // --- SECTION HOME ---
+    const mainTitleElem = document.getElementById('MainTitle') as HTMLHeadingElement;
+    const mainSubTitleElem = document.getElementById('MainSubTitle') as HTMLParagraphElement;
+    const mainCtaBtnOfferElem = document.getElementById('MainBtnOffer') as HTMLAnchorElement;
+    const mainCtaBtnReservationElem = document.getElementById('MainBtnReservation') as HTMLAnchorElement;
+    const towCarElem = document.querySelector('.tow-car') as HTMLPictureElement;
 
-    const removeActiveClassFromMenu = (items: HTMLCollection): void => {
-        Array.from(items).forEach((item: Element) => item.classList.remove('active'));
-    };
+    // Section elements animations
+    const mainTitleElemAnimation = new UIAnimations(mainTitleElem, 'fadeInDown', '', '100%');
+    const mainSubTitleElemAnimation = new UIAnimations(mainSubTitleElem, 'fadeInUp', '1s', '100%');
+    const mainCtaBtnOfferAnimation = new UIAnimations(mainCtaBtnOfferElem, 'lightSpeedInLeft', '2s', '100%');
+    const mainCtaBtnReservationAnimation = new UIAnimations(
+        mainCtaBtnReservationElem,
+        'lightSpeedInRight',
+        '2s',
+        '100%',
+    );
+    const towCarElemAnimation = new UIAnimations(towCarElem, 'slideInLeft', '3s', '100%');
 
-    const toggleMainMenu = (): void => {
-        Utils.toggleClass(menuToggler, 'is-active');
-        Utils.toggleClass(mainMenu, 'show');
-    };
+    mainTitleElemAnimation.mount();
+    mainSubTitleElemAnimation.mount();
+    mainCtaBtnOfferAnimation.mount();
+    mainCtaBtnReservationAnimation.mount();
+    towCarElemAnimation.mount();
 
-    const handleMenuLinks = (event: Event): void => {
-        const link = event.target as HTMLAnchorElement;
-        const menuItem = link ? link.parentElement : null;
-        const menuItems = link.parentElement?.parentElement?.children;
+    // --- SECTION ABOUT ---
+    const aboutTextElem = document.querySelector('#About .section__text') as HTMLElement;
+    const aboutListElem = document.querySelector('#About .section__list') as HTMLElement;
+    const aboutImgElem = document.querySelector('#About .section__picture') as HTMLElement;
 
-        if (menuItems) {
-            removeActiveClassFromMenu(menuItems);
-        }
-        if (menuItem) {
-            Utils.addClass(menuItem, 'active');
-        }
+    // Section elements animations
+    const aboutTextElemAnimation = new UIAnimations(aboutTextElem, 'fadeInLeft', '', '100%');
+    const aboutListElemAnimation = new UIAnimations(aboutListElem, 'fadeInLeft', '1s', '100%');
+    const aboutImgElemAnimation = new UIAnimations(aboutImgElem, 'fadeInRight', '2s', '100%');
+    aboutTextElemAnimation.mount();
+    aboutListElemAnimation.mount();
+    aboutImgElemAnimation.mount();
 
-        toggleMainMenu();
-    };
+    // --- SECTION OFFER ---
+    const moreOfferButtons = document.querySelectorAll('.button--more') as NodeListOf<HTMLButtonElement>;
+    const modalCloseTriggers = document.querySelectorAll('[data-close-modal]') as NodeListOf<HTMLButtonElement>;
+    const offerCardsElem = document.querySelectorAll('#Offer .offer-card') as NodeListOf<HTMLDivElement>;
 
-    const showHideElementsOnScroll = (): void => {
-        const currentScrollPos = window.pageYOffset;
-        const header = document.getElementById('Header') as HTMLHeadingElement;
-        const scrollTopButton = document.getElementById('ScrollTop') as HTMLButtonElement;
-
-        if (prevScrollPos > currentScrollPos) {
-            Utils.removeClass(header, 'hide');
-            Utils.addClass(scrollTopButton, 'hide');
-        } else {
-            Utils.addClass(header, 'hide');
-            Utils.removeClass(scrollTopButton, 'hide');
-        }
-        prevScrollPos = currentScrollPos;
-    };
-
-    const handleCollapse = (event: Event): void => {
-        event.preventDefault();
-        const link = event.target as HTMLAnchorElement;
-        const collapseId = link ? link.hash.substr(1) : null;
-        const collapseElem = collapseId ? document.getElementById(collapseId) : null;
-
-        if (collapseElem && collapseElem.style) {
-            collapseElem.style.maxHeight =
-                !collapseElem.style.maxHeight || collapseElem.style.maxHeight === '0px'
-                    ? `${collapseElem.scrollHeight}px`
-                    : '0';
-
-            collapseElem.style.maxWidth =
-                !collapseElem.style.maxWidth || collapseElem.style.maxWidth === '0px' ? '100%' : '0';
-
-            Utils.toggleClass(collapseElem, 'offer-card__details--show');
-        }
-
-        // console.log(event, link);
-    };
-
-    Array.from(menuLinks).forEach((link: HTMLAnchorElement) => {
-        handleView(link);
-        link.addEventListener('click', handleMenuLinks);
+    // Section elements animations
+    [...offerCardsElem].forEach((offerCardElem: HTMLDivElement, index: number) => {
+        const offerCardElemAnimation = new UIAnimations(offerCardElem, 'zoomIn', `${index}s`, '100%');
+        offerCardElemAnimation.mount();
     });
 
-    Array.from(collapseButtons).forEach((link: HTMLAnchorElement) => {
-        link.addEventListener('click', handleCollapse);
+    // Offer modals
+    Array.from(moreOfferButtons).forEach((moreOfferBtn: HTMLButtonElement) => {
+        moreOfferBtn.addEventListener(
+            'click',
+            (e: Event) => {
+                Modal.show(e);
+            },
+            false,
+        );
     });
 
-    menuToggler.addEventListener('click', toggleMainMenu);
-
-    window.addEventListener('scroll', showHideElementsOnScroll);
-
-    // Animations
-    if (mainTitleElem) {
-        const mainTitleElemAnimation = new UIAnimations(mainTitleElem, 'fadeInDown', '', '100%');
-        mainTitleElemAnimation.mount();
-    }
-    if (mainSubTitleElem) {
-        const mainSubTitleElemAnimation = new UIAnimations(mainSubTitleElem, 'fadeInUp', '1s', '100%');
-        mainSubTitleElemAnimation.mount();
-    }
-    if (towCarElem) {
-        const towCarElemAnimation = new UIAnimations(towCarElem, 'slideInLeft', '2s', '100%');
-        towCarElemAnimation.mount();
-    }
-    if (aboutTextElem) {
-        const aboutTextElemAnimation = new UIAnimations(aboutTextElem, 'fadeInLeft', '', '100%');
-        aboutTextElemAnimation.mount();
-    }
-    if (aboutListElem) {
-        const aboutListElemAnimation = new UIAnimations(aboutListElem, 'fadeInLeft', '1s', '100%');
-        aboutListElemAnimation.mount();
-    }
-    if (aboutImgElem) {
-        const aboutImgElemAnimation = new UIAnimations(aboutImgElem, 'fadeInRight', '2s', '100%');
-        aboutImgElemAnimation.mount();
-    }
-    [...offerCardsElem].forEach((offerCardElem, index) => {
-        if (offerCardElem) {
-            const offerCardElemAnimation = new UIAnimations(
-                offerCardElem as HTMLElement,
-                'zoomIn',
-                `${index}s`,
-                '100%',
-            );
-            offerCardElemAnimation.mount();
-        }
-    });
-    [...galleryImagesElem].forEach((galleryImageElem) => {
-        if (galleryImageElem) {
-            const galleryImageElemAnimation = new UIAnimations(
-                galleryImageElem as HTMLElement,
-                'flipInX',
-                '1s',
-                '100%',
-            );
-            galleryImageElemAnimation.mount();
-        }
-    });
-    if (reservationTextElem) {
-        const reservationTextElemAnimation = new UIAnimations(reservationTextElem, 'slideInLeft', '', '100%');
-        reservationTextElemAnimation.mount();
-    }
-    if (reservationFormElem) {
-        const reservationFormElemAnimation = new UIAnimations(reservationFormElem, 'fadeInRight', '1s', '100%');
-        reservationFormElemAnimation.mount();
-    }
-    [...faqItemsElem].forEach((faqItemElem, index) => {
-        if (faqItemElem) {
-            const faqItemElemAnimation = new UIAnimations(faqItemElem as HTMLElement, 'zoomIn', `${index}s`, '100%');
-            faqItemElemAnimation.mount();
-        }
-    });
-    if (contactMapElem) {
-        const contactMapElemAnimation = new UIAnimations(contactMapElem, 'zoomIn', '', '100%');
-        contactMapElemAnimation.mount();
-    }
-    if (contactInfoElem) {
-        const contactMapElemAnimation = new UIAnimations(contactInfoElem, 'fadeInRight', '1s', '100%');
-        contactMapElemAnimation.mount();
-    }
-
-    // Dialog
-    const offerDialog = new Dialog();
-    const galleryDialog = new Dialog();
-    body.addEventListener('click', Dialog.close);
-
-    Array.from(dialogOpenMoreOfferButtons).forEach((link: HTMLElement) => {
-        link.addEventListener('click', offerDialog.open);
+    Array.from(modalCloseTriggers).forEach((modalCloseTrigger: HTMLButtonElement) => {
+        modalCloseTrigger.addEventListener(
+            'click',
+            (e: Event) => {
+                Modal.hide(e);
+            },
+            false,
+        );
     });
 
-    Array.from(dialogOpenGalleryButtons).forEach((picture: HTMLElement, index: number) => {
-        picture.addEventListener('click', (e) => {
-            galleryDialog.open(e);
-            // console.log(index);
-            const slider = mainGallery.getSlider();
-            slider.slideTo(index + 1);
+    // --- SECTION GALLERY ---
+    const thumbnailsElem = document.querySelector('.thumbnails') as HTMLDivElement;
+    const thumbnailLinks = document.querySelectorAll('.thumbnail') as NodeListOf<HTMLAnchorElement>;
+    const galleryElem = document.querySelector('.gallery') as HTMLDivElement;
+
+    // Section elements animations
+    [...thumbnailLinks].forEach((galleryImageElem: HTMLElement) => {
+        const galleryImageElemAnimation = new UIAnimations(galleryImageElem, 'flipInX', '1s', '100%');
+        galleryImageElemAnimation.mount();
+    });
+
+    // Gallery thumbnail slider
+    (() =>
+        new Swiper(thumbnailsElem, {
+            a11y: {
+                prevSlideMessage: 'poprzedni slajd',
+                nextSlideMessage: 'następny slajd',
+                firstSlideMessage: 'pierwszy slajd',
+                lastSlideMessage: 'ostatni slajd',
+                paginationBulletMessage: 'pokaż rekomendację nr {{index}}',
+            },
+            cssMode: true,
+            freeMode: true,
+            grabCursor: true,
+            initialSlide: 0,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+                pageUpDown: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            noSwiping: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+        }))();
+
+    // Gallery slider
+    const gallerySlider = new Swiper(galleryElem, {
+        a11y: {
+            prevSlideMessage: 'poprzedni slajd',
+            nextSlideMessage: 'następny slajd',
+            firstSlideMessage: 'pierwszy slajd',
+            lastSlideMessage: 'ostatni slajd',
+            paginationBulletMessage: 'pokaż rekomendację nr {{index}}',
+        },
+        centeredSlides: true,
+        cssMode: true,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+            pageUpDown: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        noSwiping: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        slidesPerView: 1,
+    });
+
+    Array.from(thumbnailLinks).forEach((thumbnail: HTMLAnchorElement, index: number) => {
+        thumbnail.addEventListener('click', (e: Event) => {
+            console.log(thumbnail, index);
+            Modal.show(e);
+            gallerySlider?.slideTo(index);
         });
     });
 
-    Array.from(dialogContainers).forEach((container: HTMLElement) => {
-        container.addEventListener('click', offerDialog.handleCloseBtn, false);
-    });
+    // --- SECTION RESERVATION ---
+    const reservationFormElem = document.getElementById('ReservationForm') as HTMLFormElement;
+    const reservationTextElem = document.querySelector('#Reservation .section__text') as HTMLDivElement;
+    const reservationForm = new Form(reservationFormElem);
 
-    // Gallery
+    // Section elements animations
+    const reservationTextElemAnimation = new UIAnimations(reservationTextElem, 'slideInLeft', '', '100%');
+    const reservationFormElemAnimation = new UIAnimations(reservationFormElem, 'fadeInRight', '1s', '100%');
+    reservationTextElemAnimation.mount();
+    reservationFormElemAnimation.mount();
 
-    // mainGallery.init();
-
-    showMoreGalleryBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        mainGallery.showMore();
-    });
-
-    // form
+    // Reservation form
     if (reservationForm) {
         const serviceTypeCtrl = document.getElementById('Services');
         const hiddenFields: HTMLElement[] = Array.from(document.querySelectorAll('.form__control--hidden'));
@@ -267,12 +216,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- SECTION RECOMMENDATION ---
+    // Recommendation Slider
+    const recommendationElem = document.getElementById('RecommendationContainer') as HTMLDivElement;
+    (() =>
+        new Swiper(recommendationElem, {
+            a11y: {
+                paginationBulletMessage: 'pokaż rekomendację nr {{index}}',
+            },
+            autoHeight: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            cssMode: true,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+                pageUpDown: true,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        }))();
+
+    // --- SECTION FAQ ---
+    // Section elements animations
+    const faqItemsElem = document.querySelectorAll('#FAQ .accordion-wrapper') as NodeListOf<HTMLDivElement>;
+    [...faqItemsElem].forEach((faqItemElem: HTMLDivElement, index: number) => {
+        const faqItemElemAnimation = new UIAnimations(faqItemElem as HTMLDivElement, 'zoomIn', `${index}s`, '100%');
+        faqItemElemAnimation.mount();
+    });
+
+    // --- SECTION CONTACT ---
     // Email protector
-    const emailUser = 'biuro';
-    const domain = 'carlifecygulski.pl';
-    const emailLink = document.createElement('a');
-    const emailLinkText = document.createTextNode(`${emailUser} at ${domain}`);
-    emailLink.appendChild(emailLinkText);
-    emailLink.setAttribute('href', `mailto:${emailUser}@${domain}`);
-    emailAddressElem?.appendChild(emailLink);
+    const emailAddressElem = document.getElementById('EmailAddress') as HTMLParagraphElement;
+    const email = new EmailProtector(emailAddressElem);
+    email.render('biuro', 'carlifecygulski.pl');
+
+    // Section elements animations
+    const contactMapElem = document.querySelector('#Contact .contact-map') as HTMLDivElement;
+    const contactInfoElem = document.querySelector('#Contact .contact-info') as HTMLElement;
+    const contactMapElemAnimation = new UIAnimations(contactMapElem, 'zoomIn', '', '100%');
+    const contactInfoElemAnimation = new UIAnimations(contactInfoElem, 'fadeInRight', '1s', '100%');
+    contactMapElemAnimation.mount();
+    contactInfoElemAnimation.mount();
+
+    // Cookie bar
+
+    // const consetCookie = new Cookies();
+    // const isConsetCookieExist = consetCookie.isSet('ga_cookie_conset');
 });
