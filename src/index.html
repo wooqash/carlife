@@ -22,7 +22,7 @@
                 rel="stylesheet"
             />
         </noscript>
-        <title>Mechanika pojazdów i pomoc drogowa - Car Life</title>
+        <title>Mechanika pojazdów i pomoc drogowa - CarLife</title>
         <script>
             document.documentElement.classList.remove('no-js');
         </script>
@@ -45,15 +45,14 @@
                             <img
                                 srcset="./assets/img/logo-carlife.png 1x, ./assets/img/logo-carlife@2x.png 2x"
                                 src="./assets/img/logo-carlife.png"
-                                alt="Logo firmy Car Life Piotr Cygulski"
+                                alt="Logo firmy CarLife Piotr Cygulski"
                                 loading="lazy"
                             />
                         </picture>
                     </a>
                     <button
-                        id="MainMenuToggler"
+                        id="MainMenuToggle"
                         class="navbar__toggler hamburger hamburger--spin"
-                        type="button"
                         aria-expanded="false"
                         aria-label="Menu"
                         aria-controls="MainMenu"
@@ -67,25 +66,47 @@
                             <li class="main-nav__item"><a href="#Home" class="main-nav__link">Start</a></li>
                             <li class="main-nav__item"><a href="#About" class="main-nav__link">O firmie</a></li>
                             <li class="main-nav__item"><a href="#Offer" class="main-nav__link">Oferta</a></li>
-                            <li class="main-nav__item"><a href="#Gallery" class="main-nav__link">Galeria</a></li>
-                            <li class="main-nav__item"><a href="#FAQ" class="main-nav__link">FAQ</a></li>
+                            <li class="main-nav__item"><a href="#Faq" class="main-nav__link">FAQ</a></li>
                             <li class="main-nav__item"><a href="#Contact" class="main-nav__link">Kontakt</a></li>
+                            <li class="main-nav__item">
+                                <a class="button button--cta" href="#Reservation">
+                                    <svg class="icon icon--icon-calendar-check-o" aria-hidden="true" focusable="false">
+                                        <use
+                                            xlink:href="./assets/icons/svg/symbol-defs.svg#icon-calendar-check-o"
+                                        ></use>
+                                    </svg>
+                                    <span>Umów wizytę</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </header>
-        <main>
+        <main class="main">
             <section id="Home" class="section section--start">
                 <div class="section__container">
                     <div class="section__header">
                         <h1 id="MainTitle" class="section__title">
-                            Lead Title <span class="title__mark">Lead title mark</span>
+                            Auto serwis<span class="title__mark">Pomoc drogowa</span>
                         </h1>
                         <p id="MainSubTitle" class="section__subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum ultrices nibh, vel
-                            tempus metus gravida at.
+                            Wypadek, kolizja, zepsute auto, a może zwykły standardowy serwis? Świetnie trafiłeś! Sprawdź
+                            ofertę <strong>CarLife</strong> i zarezerwuj sobie wizytę, a na pewno nie pożałujesz swojego
+                            wyboru!
                         </p>
+                        <a id="MainBtnOffer" class="button button--cta" href="#Offer">
+                            <svg class="icon icon--icon-cogs" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-cogs"></use>
+                            </svg>
+                            <span>Sprawdź ofertę</span>
+                        </a>
+                        <a id="MainBtnReservation" class="button button--cta" href="#Reservation">
+                            <svg class="icon icon--icon-calendar-check-o" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-calendar-check-o"></use>
+                            </svg>
+                            <span>Zarezerwuj termin</span>
+                        </a>
                     </div>
                     <picture class="tow-car">
                         <source
@@ -127,7 +148,7 @@
                             <img
                                 srcset="./assets/img/workshop.jpg 1x, ./assets/img/workshop@2x.jpg 2x"
                                 src="./assets/img/workshop.jpg"
-                                alt="Laweta Car Life z załadunkiem"
+                                alt="Laweta CarLife z załadunkiem"
                                 loading="lazy"
                             />
                         </picture>
@@ -229,63 +250,12 @@
                                 szacowanie czasu dotarcia, przejrzyste ceny i profesjonalną obsługę w
                                 <strong>całym kraju</strong>.
                             </p>
-                            <button class="button button--more" aria-controls="Towing" data-dialog="dialog">
+                            <button class="button button--more" aria-controls="TowingModal" data-target="TowingModal">
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
                                 </svg>
                                 <span>pokaż więcej</span>
                             </button>
-                            <div id="Towing" class="dialog" role="presentation" aria-hidden="true">
-                                <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTowing">
-                                        <div class="dialog__content-header">
-                                            <h4 id="DialogTowing" class="dialog__title">Holowanie</h4>
-                                            <button
-                                                class="dialog__close-btn"
-                                                type="button"
-                                                tabindex="0"
-                                                aria-label="zamknij"
-                                            >
-                                                <i class="fas fa-times-circle"></i>
-                                            </button>
-                                        </div>
-                                        <div class="dialog__content-main">
-                                            <p>
-                                                Standardowo oferuję swoją pomoc w przypadku
-                                                <strong>holowania</strong> czy <strong>wymiany kół</strong>. Ale mogę Ci
-                                                również pomóc jeśli Twoje auto z jakichś przyczyn znalazło się
-                                                <strong>w przydrożnym rowie</strong> lub gdy zapomniałeś
-                                                <strong>zatankować</strong> i skończyło Ci się <strong>paliwo</strong>.
-                                            </p>
-                                            <p>
-                                                Zdarza się, że Klienci korzystają również z mojej pomocy jeśli
-                                                potrzebują przewieźć swoje pojazd z jednego punktu do drugiego, gdy na
-                                                przykład auto <strong>nie jest w pełni sprawne</strong> lub nie posiada
-                                                odpowiednich <strong>dokumentów</strong> dopuszczających go do ruchu.
-                                            </p>
-
-                                            <p>
-                                                Zamawiając lawetę w <strong>CarLife</strong>, oczywiście sam wybierasz
-                                                miejsce lub zakład, do którego chcesz <strong></strong>odholować swój
-                                                pojazd. Dla Twojej wygody jestem w stanie zaproponować Ci skorzystanie z
-                                                opcji naprawy Twojego auta bezpośrednio w moim warsztacie.
-                                                <strong>CarLife</strong> świadczy także profesjonalne usługi z zakresu
-                                                <strong>mechaniki pojazdów</strong>.
-                                            </p>
-                                            <p>
-                                                Jeśli zatem Twoje auto odmówiło posłuszeństwa, miałeś stłuczkę lub
-                                                utknąłeś gdzieś na trasie i nie masz jak się stamtąd wydostać
-                                                <a href="tel:+48505962251">dzwoń do CarLife</a> lub wypełnij
-                                                <a href="#ReservationForm" title="formularz rezerwacji"
-                                                    >formularz rezerwacji</a
-                                                >
-                                                znajdujący się poniżej na stronie. W <a href="#FAQ">FAQ</a> znajdziesz
-                                                najczęściej zadawane pytania od Klientów i odpowiedzi do nich.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="offer-card">
                             <div class="offer-card__icon">
@@ -304,98 +274,16 @@
                                 <strong>wydechowe</strong>, a kończąc na elementach
                                 <strong>układów zawieszenia</strong>.
                             </p>
-                            <button class="button button--more" aria-controls="RepairOfMechanics" data-dialog="dialog">
+                            <button
+                                class="button button--more"
+                                aria-controls="RepairOfMechanicsModal"
+                                data-target="RepairOfMechanicsModal"
+                            >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
                                 </svg>
                                 <span>pokaż więcej</span>
                             </button>
-                            <div id="RepairOfMechanics" class="dialog" role="presentation" aria-hidden="true">
-                                <div class="dialog__container">
-                                    <div
-                                        class="dialog__content"
-                                        role="dialog"
-                                        aria-labelledby="DialogRepairOfMechanics"
-                                    >
-                                        <div class="dialog__content-header">
-                                            <h4 id="DialogRepairOfMechanics" class="dialog__title">
-                                                Naprawa mechaniki
-                                            </h4>
-                                            <button
-                                                class="dialog__close-btn"
-                                                type="button"
-                                                tabindex="0"
-                                                aria-label="zamknij"
-                                            >
-                                                <i class="fas fa-times-circle"></i>
-                                            </button>
-                                        </div>
-                                        <div class="dialog__content-main">
-                                            <p>
-                                                W środowisku motoryzacyjnym funkcjonuje slogan, że
-                                                <strong>silnik</strong> to serce każdego pojazdu. Tak jak o własne serce
-                                                każdy, kto darzy swój samochód choćby najmniejszym uczuciem wie, że
-                                                warto o ten element szczególnie dbać i go pielęgnować. Regularne
-                                                <strong>przeglądy</strong> oraz <strong>serwis oleju i filtrów</strong>,
-                                                zdecydowanie przedłużają żywot tych na pozór niedelikatnych jednostek.
-                                                Oczywiście poza tak oczywistymi i standardowymi rzeczami jak filtry i
-                                                olej najczęściej Klienci zgłaszają się do mnie w celu
-                                                <strong>wymiany paska klinowego</strong>,
-                                                <strong>uszczelki pod głowicą</strong>, <strong>pompy paliwa</strong>,
-                                                czy całego nawet <strong>rozrządu</strong>. Niekiedy zdarza się, że
-                                                potrzebna jest bardziej dogłębna analiza usterki i wtedy wspomagam się
-                                                użyciem specjalistycznego oprogramowania. Co pewien czas zdarza się
-                                                również, że wymiana całego silnika jest bardziej opłacalna niż naprawa
-                                                jego poszczególnych elementów. Rzeczywisty zakres naprawy tego
-                                                podzespołu, często uzależniony jest od stanu faktycznego, w jakim
-                                                znajdują się elementy silnika danego pojazdu. Ale tego typu diagnoz mogę
-                                                się podjąć tylko i wyłącznie po wnikliwym sprawdzeniu auta.
-                                            </p>
-                                            <p>
-                                                Poza serwisem i naprawą silników dbam również o
-                                                <strong>układy hamulcowe</strong> swoich Klientów, które są jednymi z
-                                                ważniejszych pod względem bezpieczeństwa elementów pojazdu. Jakiekolwiek
-                                                ich zaniedbanie może doprowadzić do poważnych uszkodzeń, którego
-                                                następstwem może być śmiertelne zagrożenie dla kierowcy, jego bliskich
-                                                lub osób postronnych. Dlatego też, na życzenie Klientów jestem gotowy na
-                                                sprawdzenie i ewentualną wymianę m.in. takich podstawowych elementów
-                                                jak: <strong>tarcze</strong>, <strong>klocki</strong> oraz
-                                                <strong>szczęki hamulcowe</strong>,
-                                                <strong>pompy</strong>
-                                                czy też <strong>czujniki ABS</strong>. Nie zapominając oczywiście o
-                                                kontroli i wymianie <strong>płynu hamulcowego</strong>!
-                                            </p>
-                                            <p>
-                                                Oprócz tego zawodowo eliminuje również usterki w
-                                                <strong>układach napędowych i wydechowych</strong> oraz w
-                                                <strong>elementach układu zawieszenia</strong>. Jeśli w trakcie jazdy w
-                                                aucie zaczyna być słychać jakieś niepokojące odgłosy lub samochód zaczął
-                                                odmawiać płynnej jazdy "ściągając" np. na lewą lub prawą stronę to
-                                                prawdopodobnie to już najwyższy czas, aby przyjrzeć się dokładniej takim
-                                                elementom jak: <strong>wahacze</strong>,
-                                                <strong>drążki układu kierowniczego</strong>,
-                                                <strong>sworznie</strong> i <strong>łożyska</strong> czy też sprawdzić
-                                                stan <strong>amortyzatorów</strong>. Może się także zdarzyć, że Twój
-                                                samochód zaczął "pożerać" większe ilości paliwa niż dotychczas, albo
-                                                dźwięk z wydechu bardziej przypomina traktor niż samochód osobowy. To
-                                                wyraźny znak, że to już najwyższa pora, aby zadbać o odpowiednią
-                                                diagnozę i ewentualną korektę problemu, zanim zmieni się on w
-                                                poważniejszą usterkę.
-                                            </p>
-                                            <p>
-                                                Zapraszam zatem serdecznie w skromne progi warsztatu
-                                                <strong>CarLife</strong>. Na wizytę najwygodniej umówisz się poprzez
-                                                <a href="tel:+48505962251">kontakt telefoniczny</a> lub poniższy
-                                                <a href="#ReservationForm" title="formularz rezerwacji"
-                                                    >formularz rezerwacji</a
-                                                >. Jeśli masz jeszcze jakieś pytania to koniecznie sprawdź sekcję
-                                                <a href="#FAQ">najczęściej zadawanych pytań</a>, a być może znajdzie się
-                                                odpowiedź na to co Cię interesuje.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="offer-card">
                             <div class="offer-card__icon">
@@ -411,61 +299,16 @@
                                 działaniem świateł czy klimatyzacji. Niemal każde nowoczesne auto naszpikowane jest
                                 <strong>elektroniką</strong> i wszelkiej maści <strong>czujnikami</strong>.
                             </p>
-                            <button class="button button--more" aria-controls="RepairOfElectrics" data-dialog="dialog">
+                            <button
+                                class="button button--more"
+                                aria-controls="RepairOfElectricsModal"
+                                data-target="RepairOfElectricsModal"
+                            >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
                                 </svg>
                                 <span>pokaż więcej</span>
                             </button>
-                            <div id="RepairOfElectrics" class="dialog" role="presentation" aria-hidden="true">
-                                <div class="dialog__container">
-                                    <div
-                                        class="dialog__content"
-                                        role="dialog"
-                                        aria-labelledby="DialogRepairOfElectrics"
-                                    >
-                                        <div class="dialog__content-header">
-                                            <h4 id="DialogRepairOfElectrics" class="dialog__title">
-                                                Naprawa elektryki i elektroniki
-                                            </h4>
-                                            <button
-                                                class="dialog__close-btn"
-                                                type="button"
-                                                tabindex="0"
-                                                aria-label="zamknij"
-                                            >
-                                                <i class="fas fa-times-circle"></i>
-                                            </button>
-                                        </div>
-                                        <div class="dialog__content-main">
-                                            <p>
-                                                <strong>Komputery pokładowe</strong>,
-                                                <strong>systemy antypoślizgowe (ABS)</strong>,
-                                                <strong>stabilizacji toru jazdy (ESP)</strong> czy też
-                                                <strong>kontroli trakcji (ASR)</strong> wszystko to wymaga odpowiedniej
-                                                diagnostyki i odpowiedniego działania. Moi klienci najczęściej
-                                                powierzają mi zadania związane naprawą usterek
-                                                <strong>akumulatorów</strong>, <strong>alternatorów</strong>,
-                                                <strong>rozruszników</strong>, <strong>świateł</strong> czy też
-                                                <strong>alarmów</strong>. Ale oprócz tego dysponuje również
-                                                profesjonalnym sprzętem do <strong>diagnostyki komputerowej</strong>,
-                                                dzięki któremu dużo szybciej i łatwiej jestem w stanie namierzyć
-                                                potencjalny problem i postarać się go wyeliminować, oszczędzając przy
-                                                tym <strong>kosztów</strong> i <strong>nerwów</strong> moim Klientom.
-                                            </p>
-                                            <p>
-                                                Jeżeli Twoje auto zaczyna pokazywać jakieś dziwne kontrolki lub sam
-                                                zaobserwowałeś jakieś niepokojące objawy to zapraszam do
-                                                <a href="tel:+48505962251">kontaktu telefonicznego</a> lub poprzez
-                                                poniższy
-                                                <a href="#ReservationForm" title="formularz rezerwacji"
-                                                    >formularz rezerwacji</a
-                                                >. Umów się na wizytę i daj szansę pomóc sobie w rozwiązaniu problemu.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="offer-card">
                             <div class="offer-card__icon">
@@ -483,64 +326,14 @@
                             </p>
                             <button
                                 class="button button--more"
-                                aria-controls="AirConditioningService"
-                                data-dialog="dialog"
+                                aria-controls="AirConditioningServiceModal"
+                                data-target="AirConditioningServiceModal"
                             >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
-                                ><span>pokaż więcej</span>
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
+                                </svg>
+                                <span>pokaż więcej</span>
                             </button>
-                            <div id="AirConditioningService" class="dialog" role="presentation" aria-hidden="true">
-                                <div class="dialog__container">
-                                    <div
-                                        class="dialog__content"
-                                        role="dialog"
-                                        aria-labelledby="DialogAirConditioningService"
-                                    >
-                                        <div class="dialog__content-header">
-                                            <h4 id="DialogAirConditioningService" class="dialog__title">
-                                                Serwis i naprawa klimatyzacji
-                                            </h4>
-                                            <button
-                                                class="dialog__close-btn"
-                                                type="button"
-                                                tabindex="0"
-                                                aria-label="zamknij"
-                                            >
-                                                <i class="fas fa-times-circle"></i>
-                                            </button>
-                                        </div>
-                                        <div class="dialog__content-main">
-                                            <p>
-                                                Oprócz standardowej procedury
-                                                <strong>dezynfekcji (odgrzybiania klimatyzacji)</strong> wykonuję
-                                                również <strong>diagnostykę układu klimatyzacji</strong>,
-                                                <strong>sprawdzenie szczelności układu</strong>,
-                                                <strong>sprawdzenie oraz wymianę filtra przeciwpyłkowego</strong>, a
-                                                także <strong>napełnienie klimatyzacji czynnikiem chłodzącym</strong>.
-                                                Jeżeli diagnostyka wykaże jakieś nieprawidłowości bądź nieszczelności w
-                                                układzie wtedy to Klient podejmuje decyzję czy chcę dalej korzystać z
-                                                klimatyzacji i naprawić usterkę. Warto zadbać, aby
-                                                <strong>przynajmniej raz w roku</strong> wykonać taki serwis, aby
-                                                klimatyzacja w naszych pojazdach działała zawsze sprawnie, nie
-                                                stwarzając zagrożenia dla nas oraz naszych najbliższych.
-                                            </p>
-                                            <p>
-                                                Najczęstszą zalecaną porą do tego typu przeglądów jest wczesna
-                                                <strong>wiosna</strong>, czyli tuż po intensywnym okresie wykorzystania
-                                                klimatyzacji po zimie, a także tuż przed kolejnym gorącym okresem
-                                                użytkowania, czyli <strong>latem</strong>. Nie czekaj zatem na ostatnią
-                                                chwilę, tylko już dziś zarezerwuj termin i umów wizytę w
-                                                <strong>CarLife</strong> <a href="tel:+48505962251">dzwoniąc</a> lub
-                                                wypełniając
-                                                <a href="#ReservationForm" title="formularz rezerwacji"
-                                                    >formularz rezerwacji</a
-                                                >.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="offer-card">
                             <div class="offer-card__icon">
@@ -558,64 +351,16 @@
                                 i są odpowiedzialne m.in. za <strong>przyśpieszenie</strong> oraz
                                 <strong>drogę hamowania</strong>, czy też <strong>kontrolę trakcji</strong>.
                             </p>
-                            <button class="button button--more" aria-controls="TireService" data-dialog="dialog">
+                            <button
+                                class="button button--more"
+                                aria-controls="TireServiceModal"
+                                data-target="TireServiceModal"
+                            >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
-                                ><span>pokaż więcej</span>
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
+                                </svg>
+                                <span>pokaż więcej</span>
                             </button>
-                            <div id="TireService" class="dialog" role="presentation" aria-hidden="true">
-                                <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogTireService">
-                                        <div class="dialog__content-header">
-                                            <h4 id="DialogTireService" class="dialog__title">Serwis opon</h4>
-                                            <button
-                                                class="dialog__close-btn"
-                                                type="button"
-                                                tabindex="0"
-                                                aria-label="zamknij"
-                                            >
-                                                <i class="fas fa-times-circle"></i>
-                                            </button>
-                                        </div>
-                                        <div class="dialog__content-main">
-                                            <p>
-                                                <strong>Opony letnie</strong> oraz <strong>opony zimowe</strong> to
-                                                zupełnie dwie różne rodzaje opon. Różni je przede wszystkim budowa
-                                                bieżnika oraz mieszanka gumy, z których są wyprodukowane. Ta jest
-                                                dobierana pod kątem panujących temperatur. Pozorne oszczędzanie na
-                                                sezonowej wymianie opon może mieć bardzo przykre konsekwencje. Ale nie
-                                                tylko o same opony warto dbać. Nie mniej istotnym czynnikiem jest
-                                                właściwie ustawiona <strong>geometria kół</strong>. Ma ona niebagatelny
-                                                wpływ na właściwości jezdne pojazdów. Dzięki poprawnie ustawionej
-                                                geometrii eliminuje się tzw. <strong>ściąganie na boki</strong> w
-                                                trakcie jazdy oraz niweluje nadmierne i
-                                                <strong>niewłaściwe zużycie opon</strong>,
-                                                <strong>elementów zawieszenia</strong>, a także <strong>paliwa</strong>.
-                                            </p>
-                                            <p>
-                                                Posiadam odpowiednią wiedzę teoretyczną, o czym zaświadczyć może zdobyty
-                                                przeze mnie <strong>certyfikat firmy Bosch</strong>, a także spore
-                                                doświadczenie praktyczne z zakresu wymiany ogumienia i ustawienia
-                                                geometrii wyniesione z lat pracy w Proximie.
-                                                <strong>CarLife</strong> dysponuję odpowiednim sprzętem, dzięki któremu
-                                                w każdej chwili mogę prawidłowo ustawić zbieżność oraz wymienić koła w
-                                                Państwa samochodach.
-                                            </p>
-                                            <p>
-                                                Aby uniknąć niepotrzebnych nerwów i kolejek w trakcie
-                                                <strong>sezonowych wymian opon</strong> zapraszam już dzisiaj do
-                                                kontaktu i umówienia wizyty w <strong>CarLife</strong>. Zawsze mile
-                                                widziany jest wcześniejszy
-                                                <a href="tel:+48505962251">kontakt telefoniczny</a> bądź poprzez
-                                                poniższy
-                                                <a href="#ReservationForm" title="formularz rezerwacji"
-                                                    >formularz rezerwacji</a
-                                                >.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="offer-card">
                             <div class="offer-card__icon">
@@ -633,85 +378,16 @@
                                 nabrać się na tzw. <strong>"okazję"</strong>. Aby tego uniknąć, sprawdź jak mogę Cię
                                 przed tym uchronić!
                             </p>
-                            <button class="button button--more" aria-controls="CarAudit" data-dialog="dialog">
+                            <button
+                                class="button button--more"
+                                aria-controls="CarAuditModal"
+                                data-target="CarAuditModal"
+                            >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use></svg
-                                ><span>pokaż więcej</span>
+                                    <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
+                                </svg>
+                                <span>pokaż więcej</span>
                             </button>
-                            <div id="CarAudit" class="dialog" role="presentation" aria-hidden="true">
-                                <div class="dialog__container">
-                                    <div class="dialog__content" role="dialog" aria-labelledby="DialogCarAudit">
-                                        <div class="dialog__content-header">
-                                            <h4 id="DialogCarAudit" class="dialog__title">
-                                                Przegląd aut przed zakupem
-                                            </h4>
-                                            <button
-                                                class="dialog__close-btn"
-                                                type="button"
-                                                tabindex="0"
-                                                aria-label="zamknij"
-                                            >
-                                                <i class="fas fa-times-circle"></i>
-                                            </button>
-                                        </div>
-                                        <div class="dialog__content-main">
-                                            <p>
-                                                Jako doświadczony już mechanik wiem czego i gdzie należy szukać. Pozwól,
-                                                że pomogę Ci wybrać Twój
-                                                <strong>wymarzony egzemplarz</strong> samochodu, który mam nadzieję
-                                                posłuży Ci jeszcze przez wiele lat. Dla Twojej wygody udam się po
-                                                wskazany adres umówiony ze sprzedawcą/właścicielem pojazdu, aby dokonać
-                                                <strong>oględzin</strong> wytypowanego przez Ciebie samochodu. Na
-                                                miejscu przeprowadzę standardową procedurę, która obejmuje m.in.
-                                                kontrolę: <strong>płynów</strong>, ogólnego stanu
-                                                <strong>blacharsko-lakierniczego</strong> nadwozia,
-                                                <strong>sprawności hamulców</strong>,
-                                                <strong>układu chłodzenia</strong>,
-                                                <strong>układu kierowniczego</strong>,
-                                                <strong>elementów zawieszenia</strong> oraz
-                                                <strong>stanu zużycia opon</strong>. Dysponuje również komputerem
-                                                przenośnym ze specjalistycznym oprogramowaniem do analizy, którym możemy
-                                                sprawdzić potencjalne usterki lub kody błędów niewidoczne na pierwszy
-                                                rzut oka. W razie potrzeby możemy również użyć przenośnego
-                                                nisko-profilowego podnośnika hydraulicznego tzw. "żaby" do podniesienia
-                                                i oględzin spodniej części auta. W celach dokumentacji chętnie zrobię
-                                                również zdjęcia z zewnątrz jak i wnętrza pojazdu.
-                                            </p>
-                                            <p>
-                                                Jeśli nie ma przeciwwskazań formalnych i sprzedawca/właściciel wyrazi
-                                                zgodę przeprowadzam <strong>jazdę próbną</strong> pojazdem. Jeżeli nie
-                                                zostanie mi udzielone pozwolenie na jazdę próbną lub jej wykonanie z
-                                                jakiejś przyczyny okaże się nie możliwe, przegląd zostanie zakończony
-                                                bez części drogowej.
-                                            </p>
-                                            <p>
-                                                Zatem jeżeli szukasz auta dla siebie bądź swoich bliskich, a Twoja
-                                                wiedza na temat motoryzacji jest dość pobieżna, to zapraszam gorąco do
-                                                skorzystania z oferty <strong>CarLife</strong>. Na Twoje życzenie jestem
-                                                w stanie wykonać dość szczegółowych oględzin i pomóc Ci wyborze Twojego
-                                                wyśnionego auta. Dzięki mojej wiedzy i doświadczeniu (prawie 20 lat
-                                                pracy w zawodzie) jestem w stanie wychwycić wiele potencjalnych
-                                                problemów i zaoszczędzić Ci niepotrzebnych nerwów oraz zakupu
-                                                przysłowiowego "kota w worku". Dzięki temu zaoszczędzisz sobie
-                                                <strong>stresu</strong>, <strong>czasu</strong> i bardzo możliwe, że
-                                                <strong>niepotrzebnie wydanych pieniędzy</strong> na zakup jakiegoś
-                                                "taniego bubla". Posiadam w zasadzie wszystkie narzędzia i wiedzę, która
-                                                jest niezbędna do przeprowadzenia profesjonalnego przeglądu przed
-                                                zakupowego, tak aby skutecznie chronić moich Klientów przed
-                                                niewłaściwymi zakupami lub dostarczając im argumenty do negocjacji ceny.
-                                                Nie czekaj do ostatniej chwili, tylko już dziś skontaktuj się
-                                                <a href="tel:+48505962251">dzwoniąc</a> lub wypełniając
-                                                <a href="#ReservationForm" title="formularz rezerwacji"
-                                                    >formularz rezerwacji terminu</a
-                                                >
-                                                znajdujący się poniżej na stronie. Jeszcze więcej informacji znajdziesz
-                                                niżej na stronie w sekcji
-                                                <a href="#FAQ">najczęściej zadawanych pytań</a>.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -720,314 +396,655 @@
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">Galeria</h2>
-                        <!-- <p class="section__subtitle">Lorem ipsum</p> -->
                     </header>
-                    <div id="MainGallery" class="gallery">
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="0"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego przodu auta"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
-                            <span class="gallery-item__text">lewy bok</span>
-                        </a>
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="1"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok prawego przodu auta"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
-                            <span class="gallery-item__text">prawy bok</span>
-                        </a>
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="2"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego tyłu auta"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
-                            <span class="gallery-item__text">tył z najazdem</span>
-                        </a>
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="3"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z boku"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Holowanie</span>
-                            <span class="gallery-item__text">Opel Astra III GTC</span>
-                        </a>
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="4"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life z załadunkiem typu Alfa Romeo Giulietta - widok z boku"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Holowanie</span>
-                            <span class="gallery-item__text">Alfa Romeo Giulietta</span>
-                        </a>
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="5"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life z załadunkiem typu BMW E46 - widok z boku"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Holowanie</span>
-                            <span class="gallery-item__text">BMW E46</span>
-                        </a>
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="6"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok tyłu auta"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Mercedes Sprinter 906</span>
-                            <span class="gallery-item__text">tył auta</span>
-                        </a>
-                        <a
-                            class="gallery-item gallery-item--show"
-                            aria-controls="GalleryDialog"
-                            data-dialog="dialog"
-                            data-dialog-index="7"
-                            href="#"
-                        >
-                            <picture class="gallery-item__image">
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.webp    1x,
-                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.webp 2x
-                                    "
-                                />
-                                <source
-                                    type="image/jpeg"
-                                    srcset="
-                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
-                                    "
-                                />
-                                <img
-                                    srcset="
-                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
-                                        ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
-                                    "
-                                    src="./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg"
-                                    alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z tyłu"
-                                    loading="lazy"
-                                />
-                            </picture>
-                            <span class="gallery-item__title">Holowanie</span>
-                            <span class="gallery-item__text">Opel Astra III GTC</span>
-                        </a>
+                    <div id="MainGallery" class="thumbnails-wrapper">
+                        <div class="thumbnails swiper-container">
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Navigation -->
+                            <a class="swiper-button-next" href="#" title="następne zdjęcie"></a>
+                            <a class="swiper-button-prev" href="#" title="poprzednie zdjęcie"></a>
+                            <div class="swiper-wrapper">
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok lewego przodu auta"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Mercedes Sprinter 906</p>
+                                            <p class="thumbnail__text">laweta CarLife - lewy bok</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok prawego przodu auta"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Mercedes Sprinter 906</p>
+                                            <p class="thumbnail__text">laweta CarLife - prawy bok</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok lewego tyłu auta"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Mercedes Sprinter 906</p>
+                                            <p class="thumbnail__text">laweta CarLife - tył z najazdem</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta-tyl/laweta-tyl__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta-tyl/laweta-tyl__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok tyłu auta"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Mercedes Sprinter 906</p>
+                                            <p class="thumbnail__text">laweta CarLife - tył auta</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta+opel-astra/laweta+opel-astra__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife z załadowanym autem Opel Astra III GTC - widok z boku"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Opel Astra III GTC</p>
+                                            <p class="thumbnail__text">holowanie</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife z załadowanym autem Opel Astra III GTC - widok z tyłu"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Opel Astra III GTC</p>
+                                            <p class="thumbnail__text">holowanie</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+alfa/laweta+alfa__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta+alfa/laweta+alfa__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife z załadowanym autem Alfa Romeo Giulietta - widok z boku"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Alfa Romeo Giulietta</p>
+                                            <p class="thumbnail__text">holowanie</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.webp    1x,
+                                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg    1x,
+                                                    ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46__thumb.jpg"
+                                                alt="Zdjęcie lawety CarLife z załadowanym autem BMW E46 - widok z boku"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">BMW E46</p>
+                                            <p class="thumbnail__text">holowanie</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch__thumb.jpg"
+                                                alt="Dyplom potwierdzający udział w szkoleniu z geometrii zawieszenia pojazdów dla Piotra Cygulskiego - Bosch"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Geometria zawieszenia pojazdów</p>
+                                            <p class="thumbnail__text">Dyplom Bosch</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji__thumb.jpg"
+                                                alt="Certyfikat potwierdzający udział w szkoleniu technicznym z zakresu 'Diagnostyka układów klimatyzacji w pojazdach samochodowych' dla Piotra Cygulskiego - Akademia techniczna Inter-Team'"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">
+                                                Diagnostyka układów klimatyzacji w pojazdach samochodowych
+                                            </p>
+                                            <p class="thumbnail__text">Certyfikat Inter-Team</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team__thumb.jpg"
+                                                alt="Certyfikat potwierdzający udział w szkoleniu technicznym z zakresu 'Badanie elementów instalacji samochodowej za pomocą multimetru i oscyloskopu' dla Piotra Cygulskiego - Inter-Team"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">
+                                                Badanie elementów instalacji samochodowej za pomocą multimetru i
+                                                oscyloskopu
+                                            </p>
+                                            <p class="thumbnail__text">Certyfikat Inter-Team</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch__thumb.jpg"
+                                                alt="Dyplom potwierdzający udział w szkoleniu specjalistycznym z zakresu układów hamulcowych dla Piotra Cygulskiego - Bosch"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Układy hamulcowe</p>
+                                            <p class="thumbnail__text">Dyplom Bosch</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/uklady-hamulcowe__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/uklady-hamulcowe__thumb.jpg"
+                                                alt="Certyfikat potwierdzające udział w kursie na temat 'Układów hamulcowych' dla Piotra Cygulskiego - Brembo"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Układy hamulcowe</p>
+                                            <p class="thumbnail__text">Certyfikat Brembo</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/systemy-alarmowe__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/systemy-alarmowe__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/systemy-alarmowe__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/systemy-alarmowe__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/systemy-alarmowe__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/systemy-alarmowe__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/systemy-alarmowe__thumb.jpg"
+                                                alt="Certyfikat potwierdzający udział w szkoleniu technicznym z zakresu 'Systemy alarmowe, magistrala Can w samochodach i alarmy bezpilotowe - analogwe' dla Piotra Cygulskiego - Digital Systems"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">
+                                                Systemy alarmowe, magistrala Can w samochodach i alarmy bezpilotowe
+                                            </p>
+                                            <p class="thumbnail__text">Certyfikat Digital Systems</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/amortyzatory-sprzegla__thumb.jpg"
+                                                alt="Świadectwo potwierdzające udział w szkoleniu technicznym dla mechaników montujących amortyzatory i sprzęgła Sachs dla Piotra Cygulskiego"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">Amortyzatory i sprzęgła</p>
+                                            <p class="thumbnail__text">Świadectwo Sachs</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a
+                                    class="thumbnail swiper-slide"
+                                    aria-controls="GalleryModal"
+                                    data-target="GalleryModal"
+                                    href="#GalleryModal"
+                                >
+                                    <figure thumbnailclass="thumbnail__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa__thumb.webp    1x,
+                                                    ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa__thumb@2x.webp 2x
+                                                "
+                                            />
+                                            <source
+                                                type="image/jpeg"
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa__thumb@2x.jpg 2x
+                                                "
+                                            />
+                                            <img
+                                                srcset="
+                                                    ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa__thumb.jpg    1x,
+                                                    ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa__thumb@2x.jpg 2x
+                                                "
+                                                src="./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa__thumb.jpg"
+                                                alt="Zaświadczenie potwierdzające udział w kursie na temat 'Praktyka zawodowa - diagnostyka samochodowa' dla Piotra Cygulskiego - Łódzkie Centrum Doskonalenia Nauczycieli i Kształcenia Praktycznego"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <figcaption class="thumbnail__caption">
+                                            <p class="thumbnail__title">
+                                                Praktyka zawodowa - diagnostyka samochodowa
+                                            </p>
+                                            <p class="thumbnail__text">Zaświadczenie od ŁCDNiKP</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <button id="GalleryShowMore" class="button">
-                        <span class="more button__label button__label--show"
-                            ><svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                <use
-                                    xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-circle-down"
-                                ></use></svg
-                            >więcej zdjęć</span
-                        ><span class="less button__label"
-                            ><svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
-                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-circle-up"></use></svg
-                            >mniej zdjęć</span
-                        >
-                    </button>
-                    <div id="GalleryDialog" class="dialog" role="presentation" aria-hidden="true">
-                        <div class="dialog__container">
-                            <div class="dialog__content" role="dialog" aria-labelledby="DialogTitle">
-                                <div class="dialog__content-header">
-                                    <h4 id="DialogTitle" class="dialog__title">Galeria</h4>
-                                    <button class="dialog__close-btn" type="button" tabindex="0" aria-label="zamknij">
-                                        <i class="fas fa-times-circle"></i>
+                    <div id="GalleryModal" class="modal" role="presentation" aria-hidden="true">
+                        <div class="modal__container-wrapper">
+                            <div class="modal__container" role="dialog" aria-labelledby="DialogTitle">
+                                <div class="modal__header">
+                                    <h4 class="modal__title">Galeria</h4>
+                                    <button
+                                        class="modal__close-btn"
+                                        tabindex="0"
+                                        aria-label="zamknij popup"
+                                        data-close-modal="GalleryModal"
+                                    >
+                                        <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                            <use
+                                                xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"
+                                            ></use>
+                                        </svg>
                                     </button>
                                 </div>
-                                <div class="dialog__content-main">
-                                    <div class="gallery-slider swiper-container">
+                                <div class="modal__content">
+                                    <div class="gallery swiper-container">
                                         <!-- Additional required wrapper -->
                                         <div class="swiper-wrapper">
                                             <!-- Slides -->
@@ -1053,11 +1070,13 @@
                                                             ./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod@2x.jpg 2x
                                                         "
                                                         src="./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod.jpg"
-                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego przodu auta"
+                                                        alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok lewego przodu auta"
+                                                        width="960"
+                                                        height="716"
                                                     />
                                                 </picture>
                                                 <figcaption class="slide-caption">
-                                                    Mercedes Sprinter 906 - lewy bok
+                                                    <strong>Mercedes Sprinter 906</strong>lewy bok
                                                 </figcaption>
                                             </figure>
                                             <figure class="swiper-slide">
@@ -1082,12 +1101,14 @@
                                                             ./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod@2x.jpg 2x
                                                         "
                                                         src="./assets/img/gallery/laweta-prawy-przod/laweta-prawy-przod.jpg"
-                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok prawego przodu auta"
+                                                        alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok prawego przodu auta"
                                                         loading="lazy"
+                                                        width="960"
+                                                        height="646"
                                                     />
                                                 </picture>
                                                 <figcaption class="slide-caption">
-                                                    Mercedes Sprinter 906 - prawy bok
+                                                    <strong>Mercedes Sprinter 906</strong>prawy bok
                                                 </figcaption>
                                             </figure>
                                             <figure class="swiper-slide">
@@ -1112,86 +1133,14 @@
                                                             ./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl@2x.jpg 2x
                                                         "
                                                         src="./assets/img/gallery/laweta-lewy-tyl/laweta-lewy-tyl.jpg"
-                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok lewego tyłu auta"
+                                                        alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok lewego tyłu auta"
                                                         loading="lazy"
+                                                        width="960"
+                                                        height="614"
                                                     />
                                                 </picture>
                                                 <figcaption class="slide-caption">
-                                                    Mercedes Sprinter 906 - tył z najazdem
-                                                </figcaption>
-                                            </figure>
-                                            <figure class="swiper-slide">
-                                                <picture>
-                                                    <source
-                                                        type="image/webp"
-                                                        srcset="
-                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.webp    1x,
-                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.webp 2x
-                                                        "
-                                                    />
-                                                    <source
-                                                        type="image/jpeg"
-                                                        srcset="
-                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg    1x,
-                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.jpg 2x
-                                                        "
-                                                    />
-                                                    <img
-                                                        srcset="
-                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg    1x,
-                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.jpg 2x
-                                                        "
-                                                        src="./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg"
-                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z boku"
-                                                        loading="lazy"
-                                                    />
-                                                </picture>
-                                                <figcaption class="slide-caption">
-                                                    Holowanie - Opel Astra III GTC
-                                                </figcaption>
-                                            </figure>
-                                            <figure class="swiper-slide">
-                                                <picture class="swiper-slide">
-                                                    <source
-                                                        type="image/webp"
-                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.webp 1x"
-                                                    />
-                                                    <source
-                                                        type="image/jpeg"
-                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg 1x"
-                                                    />
-                                                    <img
-                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg 1x"
-                                                        src="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg"
-                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu Alfa Romeo Giulietta - widok z boku"
-                                                        loading="lazy"
-                                                    />
-                                                </picture>
-                                                <figcaption class="slide-caption">
-                                                    Holowanie - Alfa Romeo Giulietta
-                                                </figcaption>
-                                            </figure>
-                                            <figure class="swiper-slide">
-                                                <picture>
-                                                    <source
-                                                        type="image/webp"
-                                                        srcset="
-                                                            ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.webp 1x
-                                                        "
-                                                    />
-                                                    <source
-                                                        type="image/jpeg"
-                                                        srcset="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg 1x"
-                                                    />
-                                                    <img
-                                                        srcset="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg 1x"
-                                                        src="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg"
-                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu BMW E46 - widok z boku"
-                                                        loading="lazy"
-                                                    />
-                                                </picture>
-                                                <figcaption class="slide-caption">
-                                                    Holowanie - BMW E46
+                                                    <strong>Mercedes Sprinter 906</strong>tył z najazdem
                                                 </figcaption>
                                             </figure>
                                             <figure class="swiper-slide">
@@ -1216,12 +1165,46 @@
                                                             ./assets/img/gallery/laweta-tyl/laweta-tyl@2x.jpg 2x
                                                         "
                                                         src="./assets/img/gallery/laweta-tyl/laweta-tyl.jpg"
-                                                        alt="Zdjęcie lawety Car Life marki Mercedes Sprinter 906 - widok tyłu auta"
+                                                        alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok tyłu auta"
                                                         loading="lazy"
+                                                        width="527"
+                                                        height="580"
                                                     />
                                                 </picture>
                                                 <figcaption class="slide-caption">
-                                                    Mercedes Sprinter 906 - tył auta
+                                                    <strong>Mercedes Sprinter 906</strong>tył auta
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.webp    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg    1x,
+                                                            ./assets/img/gallery/laweta+opel-astra/laweta+opel-astra@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/laweta+opel-astra/laweta+opel-astra.jpg"
+                                                        alt="Zdjęcie lawety CarLife z załadunkiem typu Opel Astra III GTC - widok z boku"
+                                                        loading="lazy"
+                                                        width="960"
+                                                        height="680"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>Opel Astra III GTC</strong>holowanie
                                                 </figcaption>
                                             </figure>
                                             <figure class="swiper-slide">
@@ -1246,12 +1229,328 @@
                                                             ./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra@2x.jpg 2x
                                                         "
                                                         src="./assets/img/gallery/laweta+opel-astra/laweta-tyl+opel-astra.jpg"
-                                                        alt="Zdjęcie lawety Car Life z załadunkiem typu Opel Astra III GTC - widok z tyłu"
+                                                        alt="Zdjęcie lawety CarLife z załadunkiem typu Opel Astra III GTC - widok z tyłu"
                                                         loading="lazy"
+                                                        width="516"
+                                                        height="580"
                                                     />
                                                 </picture>
                                                 <figcaption class="slide-caption">
-                                                    Holowanie - Opel Astra III GTC
+                                                    <strong>Opel Astra III GTC</strong>holowanie
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.webp 1x"
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg 1x"
+                                                    />
+                                                    <img
+                                                        srcset="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg 1x"
+                                                        src="./assets/img/gallery/laweta+alfa/laweta+alfa.jpg"
+                                                        alt="Zdjęcie lawety CarLife z załadunkiem typu Alfa Romeo Giulietta - widok z boku"
+                                                        loading="lazy"
+                                                        width="898"
+                                                        height="609"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>Alfa Romeo Giulietta</strong>holowanie
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.webp 1x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg 1x"
+                                                    />
+                                                    <img
+                                                        srcset="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg 1x"
+                                                        src="./assets/img/gallery/laweta+bmwe46/laweta+bmwe46.jpg"
+                                                        alt="Zdjęcie lawety CarLife z załadunkiem typu BMW E46 - widok z boku"
+                                                        loading="lazy"
+                                                        width="980"
+                                                        height="594"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>BMW E46</strong>holowanie
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/geometria-zawieszenia-bosch.jpg"
+                                                        alt="Dyplom potwierdzający udział w szkoleniu z geometrii zawieszenia pojazdów dla Piotra Cygulskiego - Bosch"
+                                                        loading="lazy"
+                                                        width="385"
+                                                        height="550"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>Geometria zawieszenia pojazdów</strong>dyplom Bosch
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/diagnostyka-ukladow-klimatyzacji.jpg"
+                                                        alt="Certyfikat potwierdzający udział w szkoleniu technicznym z zakresu 'Diagnostyka układów klimatyzacji w pojazdach samochodowych' dla Piotra Cygulskiego - Akademia techniczna Inter-Team'"
+                                                        loading="lazy"
+                                                        width="411"
+                                                        height="580"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong
+                                                        >Diagnostyka układów klimatyzacji w pojazdach
+                                                        samochodowych</strong
+                                                    >certyfikat Inter-Team
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/badanie-instalacji-samochodowej-inter-team.jpg"
+                                                        alt="Certyfikat potwierdzający udział w szkoleniu technicznym z zakresu 'Badanie elementów instalacji samochodowej za pomocą multimetru i oscyloskopu' dla Piotra Cygulskiego - Inter-Team"
+                                                        loading="lazy"
+                                                        width="390"
+                                                        height="550"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong
+                                                        >Badanie elementów instalacji samochodowej za pomocą multimetru
+                                                        i oscyloskopu</strong
+                                                    >certyfikat Inter-Team
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/uklady-hamulcowe-bosch.jpg"
+                                                        alt="Dyplom potwierdzający udział w szkoleniu specjalistycznym z zakresu układów hamulcowych dla Piotra Cygulskiego - Bosch"
+                                                        loading="lazy"
+                                                        width="387"
+                                                        height="550"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>Układy hamulcowe</strong>dyplom Bosch
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/uklady-hamulcowe@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/uklady-hamulcowe.jpg"
+                                                        alt="Certyfikat potwierdzające udział w kursie na temat 'Układów hamulcowych' dla Piotra Cygulskiego - Brembo"
+                                                        loading="lazy"
+                                                        width="392"
+                                                        height="550"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>Układy hamulcowe</strong>certyfikat Brembo
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/systemy-alarmowe.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/systemy-alarmowe@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/systemy-alarmowe.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/systemy-alarmowe@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/systemy-alarmowe.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/systemy-alarmowe@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/systemy-alarmowe.jpg"
+                                                        alt="Certyfikat potwierdzający udział w szkoleniu technicznym z zakresu 'Systemy alarmowe, magistrala Can w samochodach i alarmy bezpilotowe' dla Piotra Cygulskiego - Digital system'"
+                                                        loading="lazy"
+                                                        width="411"
+                                                        height="580"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong
+                                                        >Systemy alarmowe, magistrala Can w samochodach i alarmy
+                                                        bezpilotowe</strong
+                                                    >certyfikat Digital System
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/amortyzatory-sprzegla@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/amortyzatory-sprzegla.jpg"
+                                                        alt="Świadectwo potwierdzające udział w szkoleniu technicznym dla mechaników montujących amortyzatory i sprzęgła Sachs dla Piotra Cygulskiego"
+                                                        loading="lazy"
+                                                        width="392"
+                                                        height="550"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>Amortyzatory i sprzęgła</strong>świadectwo Sachs
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="swiper-slide">
+                                                <picture>
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa.webp    1x,
+                                                            ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa@2x.webp 2x
+                                                        "
+                                                    />
+                                                    <source
+                                                        type="image/jpeg"
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa@2x.jpg 2x
+                                                        "
+                                                    />
+                                                    <img
+                                                        srcset="
+                                                            ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa.jpg    1x,
+                                                            ./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa@2x.jpg 2x
+                                                        "
+                                                        src="./assets/img/gallery/certyfikaty/zaswiadczenie-praktyka-zawodowa.jpg"
+                                                        alt="Zaświadczenie potwierdzające udział w kursie na temat 'Praktyka zawodowa - diagnostyka samochodowa' dla Piotra Cygulskiego - Łódzkie Centrum Doskonalenia Nauczycieli i Kształcenia Praktycznego"
+                                                        loading="lazy"
+                                                        width="395"
+                                                        height="550"
+                                                    />
+                                                </picture>
+                                                <figcaption class="slide-caption">
+                                                    <strong>Praktyka zawodowa - diagnostyka samochodowa</strong
+                                                    >zaświadczenie ŁCDNiKP
                                                 </figcaption>
                                             </figure>
                                         </div>
@@ -1308,8 +1607,8 @@
                                         </p>
                                     </div>
                                     <div class="form__control form__control--hidden">
-                                        <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
-                                        <input type="text" name="honey" />
+                                        <label for="Honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
+                                        <input type="text" id="Honey" name="honey" />
                                     </div>
                                     <div class="form__control">
                                         <label for="ClientName" class="form__label"
@@ -1550,8 +1849,8 @@
                                             wyeliminował usterkę, czym zyskał moją sympatię i zaufanie. Od tamtego
                                             momentu regularnie odwiedzam jego warsztat przy okazji sezonowych wymian
                                             opon czy też cyklicznej wymiany filtrów i oleju. Póki co jestem bardzo
-                                            zadowolona z naszej współpracy i mogę polecić CarLife jako firmę godną
-                                            zaufania.
+                                            zadowolona z naszej współpracy i mogę polecić <strong>CarLife</strong> jako
+                                            firmę godną zaufania.
                                         </p>
                                     </div>
                                 </div>
@@ -1574,6 +1873,28 @@
                                         </p>
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div class="recommendation">
+                                        <h3 class="recommendation-author">
+                                            Leszek
+                                            <span class="recommendation-author__internship">3 lata współpracy</span>
+                                        </h3>
+                                        <p class="recommendation-text">
+                                            Z usług Piotra Cygulskiego, korzystam już od 3 lat i jestem bardzo
+                                            zadowolony i zawsze będę wszystkim serdecznie polecał usługi oferowane przez
+                                            <strong>CarLife</strong>. Uważam go za świetnego fachowca, ale przede
+                                            wszystkim za dobrego człowieka, który zawsze służy pomocą. Nigdy nie miałem
+                                            żadnych zastrzeżeń co do wykonanej pracy, a serwisuje w
+                                            <strong>CarLife</strong> dwa pojazdy. Ceny za usługi, biorąc pod uwagę
+                                            jakość wykonanych prac, nie zrujnują żadnej kieszeni. Piotr zawsze
+                                            konsultuje wszelkie wydatki z właścicielem auta i jest niezwykle uczciwym
+                                            człowiekiem. Biorąc pod uwagę moje nieudane kontakty z innymi mechanikami w
+                                            Łodzi, jestem szczęśliwy, że poznałem Piotra, któremu jestem wierny i wiem,
+                                            że zawsze mogę na niego liczyć. Taki mechanik to skarb, jeżeli ktoś ma
+                                            wątpliwości to zapraszam do niego, na pewno się nie zawiedzie.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="swiper-pagination"></div>
@@ -1581,7 +1902,7 @@
                     </div>
                 </div>
             </section>
-            <section id="FAQ" class="section section--faq">
+            <section id="Faq" class="section section--faq">
                 <div class="section__container">
                     <header class="section__header">
                         <h2 class="section__title">FAQ</h2>
@@ -1638,7 +1959,7 @@
                                         <span class="access-label">sprawdź odpowiedź</span>
                                     </label>
                                     <div class="tab__content">
-                                        Tak posiadam ubezpieczenie do kwoty...
+                                        Tak posiadam ubezpieczenie do kwoty <strong>200 tys. PLN</strong>.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
@@ -2268,7 +2589,7 @@
                     <div class="grid-container">
                         <address class="contact-info">
                             <div class="contact-info__box">
-                                <h3 class="contact-info__title">
+                                <p class="contact-info__title">
                                     <svg
                                         class="contact-info__icon icon icon--map-marker-alt"
                                         aria-hidden="true"
@@ -2278,15 +2599,15 @@
                                             xlink:href="./assets/icons/svg/symbol-defs.svg#icon-map-marker-alt"
                                         ></use></svg
                                     >Adres
-                                </h3>
+                                </p>
                                 <p class="contact-info__text">
-                                    <strong>Car Life Piotr Cygulski</strong><br />
+                                    <strong>CarLife Piotr Cygulski</strong><br />
                                     ul. Mielizny 12, lok. 4 <br />
                                     93-491 Łódź, Polska
                                 </p>
                             </div>
                             <div class="contact-info__box">
-                                <h3 class="contact-info__title">
+                                <p class="contact-info__title">
                                     <svg
                                         class="contact-info__icon icon icon--phone-alt"
                                         aria-hidden="true"
@@ -2294,11 +2615,11 @@
                                     >
                                         <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-phone-alt"></use></svg
                                     >Telefon
-                                </h3>
+                                </p>
                                 <p class="contact-info__text"><a href="tel:+48505962251">+48 505-962-251</a></p>
                             </div>
                             <div class="contact-info__box">
-                                <h3 class="contact-info__title">
+                                <p class="contact-info__title">
                                     <svg
                                         class="contact-info__icon icon icon--envelope"
                                         aria-hidden="true"
@@ -2306,13 +2627,13 @@
                                     >
                                         <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-envelope"></use></svg
                                     >Email
-                                </h3>
+                                </p>
                                 <p id="EmailAddress" class="contact-info__text">
                                     <noscript>put image of email address here</noscript>
                                 </p>
                             </div>
                             <div class="contact-info__box">
-                                <h3 class="contact-info__title">
+                                <p class="contact-info__title">
                                     <svg
                                         class="contact-info__icon icon icon--money-check"
                                         aria-hidden="true"
@@ -2322,7 +2643,7 @@
                                             xlink:href="./assets/icons/svg/symbol-defs.svg#icon-money-check"
                                         ></use></svg
                                     >Nip / Regon
-                                </h3>
+                                </p>
                                 <p class="contact-info__text">727-258-17-82 / 386-15-90-23</p>
                             </div>
                         </address>
@@ -2338,12 +2659,7 @@
                                     src="https://www.openstreetmap.org/export/embed.html?bbox=19.41989600658417%2C51.709507132386946%2C19.43041026592255%2C51.71228263334073&amp;layer=mapnik&amp;marker=51.710896566129136%2C19.425153136253357"
                                 ></iframe> -->
                                 <iframe
-                                    width="100%"
                                     height="350"
-                                    frameborder="0"
-                                    scrolling="no"
-                                    marginheight="0"
-                                    marginwidth="0"
                                     src="https://www.openstreetmap.org/export/embed.html?bbox=19.41991746425629%2C51.70950380833162%2C19.42904233932495%2C51.71227930948934&amp;layer=mapnik"
                                 ></iframe>
                             </div>
@@ -2368,9 +2684,451 @@
             </a>
         </main>
         <footer></footer>
+        <div id="TowingModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
+            <div class="modal__container-wrapper">
+                <div class="modal__container" role="dialog" aria-labelledby="DialogTowing">
+                    <div class="modal__header">
+                        <h4 class="modal__title">Holowanie</h4>
+                        <button class="modal__close-btn" aria-label="zamknij popup" data-close-modal="TowingModal">
+                            <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__content">
+                        <p>
+                            Standardowo oferuję swoją pomoc w przypadku
+                            <strong>holowania</strong> czy <strong>wymiany kół</strong>. Ale mogę Ci również pomóc jeśli
+                            Twoje auto z jakichś przyczyn znalazło się <strong>w przydrożnym rowie</strong> lub gdy
+                            zapomniałeś <strong>zatankować</strong> i skończyło Ci się <strong>paliwo</strong>.
+                        </p>
+                        <p>
+                            Zdarza się, że Klienci korzystają również z mojej pomocy jeśli potrzebują przewieźć swoje
+                            pojazd z jednego punktu do drugiego, gdy na przykład auto
+                            <strong>nie jest w pełni sprawne</strong> lub nie posiada odpowiednich
+                            <strong>dokumentów</strong> dopuszczających go do ruchu.
+                        </p>
+
+                        <p>
+                            Zamawiając lawetę w <strong>CarLife</strong>, oczywiście sam wybierasz miejsce lub zakład,
+                            do którego chcesz <strong></strong>odholować swój pojazd. Dla Twojej wygody jestem w stanie
+                            zaproponować Ci skorzystanie z opcji naprawy Twojego auta bezpośrednio w moim warsztacie.
+                            <strong>CarLife</strong> świadczy także profesjonalne usługi z zakresu
+                            <strong>mechaniki pojazdów</strong>.
+                        </p>
+                        <p>
+                            Jeśli zatem Twoje auto odmówiło posłuszeństwa, miałeś stłuczkę lub utknąłeś gdzieś na trasie
+                            i nie masz jak się stamtąd wydostać
+                            <a href="tel:+48505962251" data-close-modal="TowingModal">dzwoń do CarLife</a> lub wypełnij
+                            <a href="#ReservationForm" title="formularz rezerwacji" data-close-modal="TowingModal"
+                                >formularz rezerwacji</a
+                            >
+                            znajdujący się poniżej na stronie. W
+                            <a href="#Faq" data-close-modal="TowingModal">FAQ</a> znajdziesz najczęściej zadawane
+                            pytania od Klientów i odpowiedzi do nich.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="RepairOfMechanicsModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
+            <div class="modal__container-wrapper">
+                <div class="modal__container" role="dialog" aria-labelledby="DialogRepairOfMechanics">
+                    <div class="modal__header">
+                        <h4 class="modal__title">
+                            Naprawa mechaniki
+                        </h4>
+                        <button
+                            class="modal__close-btn"
+                            aria-label="zamknij popup"
+                            data-close-modal="RepairOfMechanicsModal"
+                        >
+                            <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__content">
+                        <p>
+                            W środowisku motoryzacyjnym funkcjonuje slogan, że
+                            <strong>silnik</strong> to serce każdego pojazdu. Tak jak o własne serce każdy, kto darzy
+                            swój samochód choćby najmniejszym uczuciem wie, że warto o ten element szczególnie dbać i go
+                            pielęgnować. Regularne <strong>przeglądy</strong> oraz
+                            <strong>serwis oleju i filtrów</strong>, zdecydowanie przedłużają żywot tych na pozór
+                            niedelikatnych jednostek. Oczywiście poza tak oczywistymi i standardowymi rzeczami jak
+                            filtry i olej najczęściej Klienci zgłaszają się do mnie w celu
+                            <strong>wymiany paska klinowego</strong>, <strong>uszczelki pod głowicą</strong>,
+                            <strong>pompy paliwa</strong>, czy całego nawet <strong>rozrządu</strong>. Niekiedy zdarza
+                            się, że potrzebna jest bardziej dogłębna analiza usterki i wtedy wspomagam się użyciem
+                            specjalistycznego oprogramowania. Co pewien czas zdarza się również, że wymiana całego
+                            silnika jest bardziej opłacalna niż naprawa jego poszczególnych elementów. Rzeczywisty
+                            zakres naprawy tego podzespołu, często uzależniony jest od stanu faktycznego, w jakim
+                            znajdują się elementy silnika danego pojazdu. Ale tego typu diagnoz mogę się podjąć tylko i
+                            wyłącznie po wnikliwym sprawdzeniu auta.
+                        </p>
+                        <p>
+                            Poza serwisem i naprawą silników dbam również o
+                            <strong>układy hamulcowe</strong> swoich Klientów, które są jednymi z ważniejszych pod
+                            względem bezpieczeństwa elementów pojazdu. Jakiekolwiek ich zaniedbanie może doprowadzić do
+                            poważnych uszkodzeń, którego następstwem może być śmiertelne zagrożenie dla kierowcy, jego
+                            bliskich lub osób postronnych. Dlatego też, na życzenie Klientów jestem gotowy na
+                            sprawdzenie i ewentualną wymianę m.in. takich podstawowych elementów jak:
+                            <strong>tarcze</strong>, <strong>klocki</strong> oraz <strong>szczęki hamulcowe</strong>,
+                            <strong>pompy</strong>
+                            czy też <strong>czujniki ABS</strong>. Nie zapominając oczywiście o kontroli i wymianie
+                            <strong>płynu hamulcowego</strong>!
+                        </p>
+                        <p>
+                            Oprócz tego zawodowo eliminuje również usterki w
+                            <strong>układach napędowych i wydechowych</strong> oraz w
+                            <strong>elementach układu zawieszenia</strong>. Jeśli w trakcie jazdy w aucie zaczyna być
+                            słychać jakieś niepokojące odgłosy lub samochód zaczął odmawiać płynnej jazdy "ściągając"
+                            np. na lewą lub prawą stronę to prawdopodobnie to już najwyższy czas, aby przyjrzeć się
+                            dokładniej takim elementom jak: <strong>wahacze</strong>,
+                            <strong>drążki układu kierowniczego</strong>, <strong>sworznie</strong> i
+                            <strong>łożyska</strong> czy też sprawdzić stan <strong>amortyzatorów</strong>. Może się
+                            także zdarzyć, że Twój samochód zaczął "pożerać" większe ilości paliwa niż dotychczas, albo
+                            dźwięk z wydechu bardziej przypomina traktor niż samochód osobowy. To wyraźny znak, że to
+                            już najwyższa pora, aby zadbać o odpowiednią diagnozę i ewentualną korektę problemu, zanim
+                            zmieni się on w poważniejszą usterkę.
+                        </p>
+                        <p>
+                            Zapraszam zatem serdecznie w skromne progi warsztatu
+                            <strong>CarLife</strong>. Na wizytę najwygodniej umówisz się poprzez
+                            <a href="tel:+48505962251" data-close-modal="RepairOfMechanicsModal"
+                                >kontakt telefoniczny</a
+                            >
+                            lub poniższy
+                            <a
+                                href="#ReservationForm"
+                                title="formularz rezerwacji"
+                                data-close-modal="RepairOfMechanicsModal"
+                                >formularz rezerwacji</a
+                            >. Jeśli masz jeszcze jakieś pytania to koniecznie sprawdź sekcję
+                            <a href="#Faq" data-close-modal="RepairOfMechanicsModal">najczęściej zadawanych pytań</a>, a
+                            być może znajdzie się odpowiedź na to co Cię interesuje.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="RepairOfElectricsModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
+            <div class="modal__container-wrapper">
+                <div class="modal__container" role="dialog" aria-labelledby="DialogRepairOfElectrics">
+                    <div class="modal__header">
+                        <h4 class="modal__title">
+                            Naprawa elektryki i elektroniki
+                        </h4>
+                        <button
+                            class="modal__close-btn"
+                            aria-label="zamknij popup"
+                            data-close-modal="RepairOfElectricsModal"
+                        >
+                            <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__content">
+                        <p>
+                            <strong>Komputery pokładowe</strong>, <strong>systemy antypoślizgowe (ABS)</strong>,
+                            <strong>stabilizacji toru jazdy (ESP)</strong> czy też
+                            <strong>kontroli trakcji (ASR)</strong> wszystko to wymaga odpowiedniej diagnostyki i
+                            odpowiedniego działania. Moi klienci najczęściej powierzają mi zadania związane naprawą
+                            usterek <strong>akumulatorów</strong>, <strong>alternatorów</strong>,
+                            <strong>rozruszników</strong>, <strong>świateł</strong> czy też <strong>alarmów</strong>.
+                            Ale oprócz tego dysponuje również profesjonalnym sprzętem do
+                            <strong>diagnostyki komputerowej</strong>, dzięki któremu dużo szybciej i łatwiej jestem w
+                            stanie namierzyć potencjalny problem i postarać się go wyeliminować, oszczędzając przy tym
+                            <strong>kosztów</strong> i <strong>nerwów</strong> moim Klientom.
+                        </p>
+                        <p>
+                            Jeżeli Twoje auto zaczyna pokazywać jakieś dziwne kontrolki lub sam zaobserwowałeś jakieś
+                            niepokojące objawy to zapraszam do
+                            <a href="tel:+48505962251" data-close-modal="RepairOfElectricsModal"
+                                >kontaktu telefonicznego</a
+                            >
+                            lub poprzez poniższy
+                            <a
+                                href="#ReservationForm"
+                                title="formularz rezerwacji"
+                                data-close-modal="RepairOfElectricsModal"
+                                >formularz rezerwacji</a
+                            >. Umów się na wizytę i daj szansę pomóc sobie w rozwiązaniu problemu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="AirConditioningServiceModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
+            <div class="modal__container-wrapper">
+                <div class="modal__container" role="dialog" aria-labelledby="DialogAirConditioningService">
+                    <div class="modal__header">
+                        <h4 class="modal__title">
+                            Serwis i naprawa klimatyzacji
+                        </h4>
+                        <button
+                            class="modal__close-btn"
+                            aria-label="zamknij popup"
+                            data-close-modal="AirConditioningServiceModal"
+                        >
+                            <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__content">
+                        <p>
+                            Oprócz standardowej procedury
+                            <strong>dezynfekcji (odgrzybiania klimatyzacji)</strong> wykonuję również
+                            <strong>diagnostykę układu klimatyzacji</strong>,
+                            <strong>sprawdzenie szczelności układu</strong>,
+                            <strong>sprawdzenie oraz wymianę filtra przeciwpyłkowego</strong>, a także
+                            <strong>napełnienie klimatyzacji czynnikiem chłodzącym</strong>. Jeżeli diagnostyka wykaże
+                            jakieś nieprawidłowości bądź nieszczelności w układzie wtedy to Klient podejmuje decyzję czy
+                            chcę dalej korzystać z klimatyzacji i naprawić usterkę. Warto zadbać, aby
+                            <strong>przynajmniej raz w roku</strong> wykonać taki serwis, aby klimatyzacja w naszych
+                            pojazdach działała zawsze sprawnie, nie stwarzając zagrożenia dla nas oraz naszych
+                            najbliższych.
+                        </p>
+                        <p>
+                            Najczęstszą zalecaną porą do tego typu przeglądów jest wczesna
+                            <strong>wiosna</strong>, czyli tuż po intensywnym okresie wykorzystania klimatyzacji po
+                            zimie, a także tuż przed kolejnym gorącym okresem użytkowania, czyli <strong>latem</strong>.
+                            Nie czekaj zatem na ostatnią chwilę, tylko już dziś zarezerwuj termin i umów wizytę w
+                            <strong>CarLife</strong>
+                            <a href="tel:+48505962251" data-close-modal="AirConditioningServiceModal">dzwoniąc</a> lub
+                            wypełniając
+                            <a
+                                href="#ReservationForm"
+                                title="formularz rezerwacji"
+                                data-close-modal="AirConditioningServiceModal"
+                                >formularz rezerwacji</a
+                            >.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="TireServiceModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
+            <div class="modal__container-wrapper">
+                <div class="modal__container" role="dialog" aria-labelledby="DialogTireService">
+                    <div class="modal__header">
+                        <h4 class="modal__title">Serwis opon</h4>
+                        <button class="modal__close-btn" aria-label="zamknij popup" data-close-modal="TireServiceModal">
+                            <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__content">
+                        <p>
+                            <strong>Opony letnie</strong> oraz <strong>opony zimowe</strong> to zupełnie dwie różne
+                            rodzaje opon. Różni je przede wszystkim budowa bieżnika oraz mieszanka gumy, z których są
+                            wyprodukowane. Ta jest dobierana pod kątem panujących temperatur. Pozorne oszczędzanie na
+                            sezonowej wymianie opon może mieć bardzo przykre konsekwencje. Ale nie tylko o same opony
+                            warto dbać. Nie mniej istotnym czynnikiem jest właściwie ustawiona
+                            <strong>geometria kół</strong>. Ma ona niebagatelny wpływ na właściwości jezdne pojazdów.
+                            Dzięki poprawnie ustawionej geometrii eliminuje się tzw.
+                            <strong>ściąganie na boki</strong> w trakcie jazdy oraz niweluje nadmierne i
+                            <strong>niewłaściwe zużycie opon</strong>, <strong>elementów zawieszenia</strong>, a także
+                            <strong>paliwa</strong>.
+                        </p>
+                        <p>
+                            Posiadam odpowiednią wiedzę teoretyczną, o czym zaświadczyć może zdobyty przeze mnie
+                            <strong>certyfikat firmy Bosch</strong>, a także spore doświadczenie praktyczne z zakresu
+                            wymiany ogumienia i ustawienia geometrii wyniesione z lat pracy w Proximie.
+                            <strong>CarLife</strong> dysponuję odpowiednim sprzętem, dzięki któremu w każdej chwili mogę
+                            prawidłowo ustawić zbieżność oraz wymienić koła w Państwa samochodach.
+                        </p>
+                        <p>
+                            Aby uniknąć niepotrzebnych nerwów i kolejek w trakcie
+                            <strong>sezonowych wymian opon</strong> zapraszam już dzisiaj do kontaktu i umówienia wizyty
+                            w <strong>CarLife</strong>. Zawsze mile widziany jest wcześniejszy
+                            <a href="tel:+48505962251" data-close-modal="TireServiceModal">kontakt telefoniczny</a> bądź
+                            poprzez poniższy
+                            <a href="#ReservationForm" title="formularz rezerwacji" data-close-modal="TireServiceModal"
+                                >formularz rezerwacji</a
+                            >.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CarAuditModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
+            <div class="modal__container-wrapper">
+                <div class="modal__container" role="dialog" aria-labelledby="DialogCarAudit">
+                    <div class="modal__header">
+                        <h4 class="modal__title">
+                            Przegląd aut przed zakupem
+                        </h4>
+                        <button class="modal__close-btn" aria-label="zamknij popup" data-close-modal="CarAuditModal">
+                            <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__content">
+                        <p>
+                            Jako doświadczony już mechanik wiem czego i gdzie należy szukać. Pozwól, że pomogę Ci wybrać
+                            Twój
+                            <strong>wymarzony egzemplarz</strong> samochodu, który mam nadzieję posłuży Ci jeszcze przez
+                            wiele lat. Dla Twojej wygody udam się po wskazany adres umówiony ze sprzedawcą/właścicielem
+                            pojazdu, aby dokonać <strong>oględzin</strong> wytypowanego przez Ciebie samochodu. Na
+                            miejscu przeprowadzę standardową procedurę, która obejmuje m.in. kontrolę:
+                            <strong>płynów</strong>, ogólnego stanu <strong>blacharsko-lakierniczego</strong> nadwozia,
+                            <strong>sprawności hamulców</strong>, <strong>układu chłodzenia</strong>,
+                            <strong>układu kierowniczego</strong>, <strong>elementów zawieszenia</strong> oraz
+                            <strong>stanu zużycia opon</strong>. Dysponuje również komputerem przenośnym ze
+                            specjalistycznym oprogramowaniem do analizy, którym możemy sprawdzić potencjalne usterki lub
+                            kody błędów niewidoczne na pierwszy rzut oka. W razie potrzeby możemy również użyć
+                            przenośnego nisko-profilowego podnośnika hydraulicznego tzw. "żaby" do podniesienia i
+                            oględzin spodniej części auta. W celach dokumentacji chętnie zrobię również zdjęcia z
+                            zewnątrz jak i wnętrza pojazdu.
+                        </p>
+                        <p>
+                            Jeśli nie ma przeciwwskazań formalnych i sprzedawca/właściciel wyrazi zgodę przeprowadzam
+                            <strong>jazdę próbną</strong> pojazdem. Jeżeli nie zostanie mi udzielone pozwolenie na jazdę
+                            próbną lub jej wykonanie z jakiejś przyczyny okaże się nie możliwe, przegląd zostanie
+                            zakończony bez części drogowej.
+                        </p>
+                        <p>
+                            Zatem jeżeli szukasz auta dla siebie bądź swoich bliskich, a Twoja wiedza na temat
+                            motoryzacji jest dość pobieżna, to zapraszam gorąco do skorzystania z oferty
+                            <strong>CarLife</strong>. Na Twoje życzenie jestem w stanie wykonać dość szczegółowych
+                            oględzin i pomóc Ci wyborze Twojego wyśnionego auta. Dzięki mojej wiedzy i doświadczeniu
+                            (prawie 20 lat pracy w zawodzie) jestem w stanie wychwycić wiele potencjalnych problemów i
+                            zaoszczędzić Ci niepotrzebnych nerwów oraz zakupu przysłowiowego "kota w worku". Dzięki temu
+                            zaoszczędzisz sobie <strong>stresu</strong>, <strong>czasu</strong> i bardzo możliwe, że
+                            <strong>niepotrzebnie wydanych pieniędzy</strong> na zakup jakiegoś "taniego bubla".
+                            Posiadam w zasadzie wszystkie narzędzia i wiedzę, która jest niezbędna do przeprowadzenia
+                            profesjonalnego przeglądu przed zakupowego, tak aby skutecznie chronić moich Klientów przed
+                            niewłaściwymi zakupami lub dostarczając im argumenty do negocjacji ceny. Nie czekaj do
+                            ostatniej chwili, tylko już dziś skontaktuj się
+                            <a href="tel:+48505962251" data-close-modal="CarAuditModal">dzwoniąc</a> lub wypełniając
+                            <a href="#ReservationForm" title="formularz rezerwacji" data-close-modal="CarAuditModal"
+                                >formularz rezerwacji terminu</a
+                            >
+                            znajdujący się poniżej na stronie. Jeszcze więcej informacji znajdziesz niżej na stronie w
+                            sekcji
+                            <a href="#Faq" data-close-modal="CarAuditModal">najczęściej zadawanych pytań</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CookiesPolicyBar" class="cookies-policy">
+            <div class="cookies-policy__content">
+                <p class="cookies-policy__statement">
+                    Strona wykorzystuje pliki cookies w celu prawidłowego jego działania oraz korzystania z narzędzi
+                    analitycznych (Google Analytics, Google Tag Manager). Szczegóły znajdziesz w
+                    <a href="polityka-prywatnosci">polityce prywatności</a>. Jeżeli wyrażasz zgodę na wykorzystywanie
+                    plików cookies, kliknij w przycisk "Rozumiem i akceptuję". Jeżeli chcesz edytować ustawienia plików
+                    cookies, kliknij w przycisk "Ustawienia".
+                </p>
+                <button id="CookiesSettingsButton" class="button button--cookie-settings">Ustawienia</button>
+                <button id="AcceptSettingsButton" class="button button--cookie-accept">Rozumiem i akceptuję</button>
+            </div>
+        </div>
+        <div id="CookiesSettingsModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
+            <div class="modal__container-wrapper">
+                <div class="modal__container" role="dialog" aria-labelledby="DialogCookiesSettings">
+                    <div class="modal__header">
+                        <h4 class="modal__title">
+                            Polityka cookies
+                        </h4>
+                        <button class="modal__close-btn" aria-label="zamknij popup" data-close-modal="true">
+                            <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__content">
+                        <p>Dzień dobry!</p>
+                        <p>
+                            Nazywam się Piotr Cygulski i jestem administratorem strony carlifecygulski.pl. Przygotowałem
+                            dla Ciebie krótki przegląd stosowanych w ramach mojej strony plików cookies wraz z
+                            możliwością wyłączenia niektórych z nich.
+                        </p>
+                        <table class="cookies-policy__table">
+                            <thead>
+                                <tr>
+                                    <td>Usługa</td>
+                                    <td>Cel użycia</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cookies funkcyjne</td>
+                                    <td>
+                                        Nie możesz wyłączyć tych plików cookies, ponieważ są one niezbędne by strona
+                                        działała prawidłowo. W ramach tych plików cookies zapisywane są również
+                                        zdefiniowane przez Ciebie ustawienia cookies.
+                                    </td>
+                                    <td>
+                                        <div class="toggle checkcross">
+                                            <input
+                                                id="checkcross"
+                                                class="checkcross-input"
+                                                type="checkbox"
+                                                checked="checked"
+                                                disabled="disabled"
+                                            />
+                                            <label class="toggle-item" for="checkcross">
+                                                <div class="check disabled"></div>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Google Analytics</td>
+                                    <td>
+                                        Narzędzie Google Analytics służy do analizowania ruchu na blogu. W ramach tego
+                                        narzędzia nie są gromadzone jakiekolwiek dane pozwalające Cię bezpośrednio
+                                        zidentyfikować. Informacje, do jakich dostęp posiadam, to, w szczególności: czas
+                                        spędzony na stronie, przejścia pomiędzy poszczególnymi podstronami, źródło
+                                        ruchu. Jeżeli wyłączysz Google Analytics, pozbawisz mnie możliwości prowadzenia
+                                        skutecznych działań analitycznych.
+                                    </td>
+                                    <td>
+                                        <div class="toggle checkcross">
+                                            <input
+                                                id="checkcross2"
+                                                class="checkcross-input"
+                                                checked="checked"
+                                                type="checkbox"
+                                            />
+                                            <label class="toggle-item" for="checkcross2">
+                                                <div class="check"></div>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            Ze swojej strony mogę zapewnić Cię, że nie wykorzystuję plików cookies w celu Twojej
+                            identyfikacji. Informacje, do jakich mam dostęp w związku z korzystaniem z opisanych powyżej
+                            narzędzi, nie pozwalają na Twoją bezpośrednią identyfikację. Nie mam jednak wpływu na to, w
+                            jaki sposób z plików cookies korzystają podmioty trzecie i czy nie zestawiają gromadzonych
+                            informacji z innymi informacjami na Twój temat, które pozwalają im Ciebie zidentyfikować.
+                            Nie uczestniczę jednak w tym procesie i nie mam na niego wpływu. W tym zakresie odsyłam Cię
+                            do lektury dokumentów poświęconych prywatności udostępnianych przez poszczególnych
+                            usługodawców. Zachęcam Cię również do zapoznania się z
+                            <a href="polityka-prywatnosci">polityką prywatności</a> tej strony.
+                        </p>
+                        <button id="SaveSettingsButton" class="button button--cookie-accept">
+                            Zatwierdzam ustawienia
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script
             src="https://www.google.com/recaptcha/api.js?render=6Lfu4doZAAAAAJ48ZrWc0x8mBZ9KkZaASfJFxmSg"
             defer
+            crossorigin="anonymous"
         ></script>
     </body>
 </html>
