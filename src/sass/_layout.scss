@@ -11,6 +11,8 @@ $button-bg-color: $primary-dark-color;
 $button-active-bg-color: $on-primary-color;
 $button-font-color: $on-primary-dark-color;
 $button-active-font-color: $primary-color;
+$button-cta-active-border-color: $color-white;
+$button-cta-active-font-color: $color-white;
 
 $section-reservation-bg-color: $color-erie-black;
 
@@ -82,6 +84,10 @@ body {
     @include media-query(netbook) {
         background-color: rgba($header-bg-color, 0.5);
     }
+}
+
+.main {
+    overflow: hidden;
 }
 
 .section {
@@ -199,11 +205,12 @@ body {
             }
 
             @include media-query(netbook) {
-                margin-top: -140px;
+                margin-top: -220px;
+                max-width: 900px;
             }
 
             @include media-query(desktop) {
-                margin-top: -180px;
+                max-width: 1100px;
             }
         }
 
@@ -216,7 +223,7 @@ body {
                 }
             }
             line-height: 1.2;
-            margin-bottom: px2rem(20);
+            margin-bottom: 0;
             text-shadow: 4px 4px 10px rgba($primary-color, 0.5);
 
             .title__mark {
@@ -232,11 +239,18 @@ body {
 
         .section__subtitle {
             color: $color-white;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             line-height: 1.2;
-            margin: 0 auto;
-            max-width: 60%;
+            margin: px2rem(20) auto;
+            max-width: 560px;
             text-transform: none;
+            @include media-query(tablet) {
+                font-size: 1.6rem;
+            }
+        }
+
+        .button--cta {
+            min-width: 195px;
         }
 
         .tow-car {
@@ -322,6 +336,12 @@ body {
             margin: 0 auto px2rem(20);
             text-align: center;
         }
+
+        .offer-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
 
     &--reservation {
@@ -388,6 +408,7 @@ body {
             url('../assets/img/bg/reservation_org.webp') 50% / cover no-repeat;
         background-attachment: fixed;
         color: $color-white;
+        min-height: 70vh;
 
         .button {
             align-items: center;
@@ -397,10 +418,12 @@ body {
             margin-right: auto;
         }
 
-        @include media-query(desktop) {
-            .section__container {
-                max-width: 1400px;
-            }
+        .section__container {
+            max-width: 100%;
+        }
+
+        .dialog .dialog__container {
+            height: 80%;
         }
     }
 
@@ -463,6 +486,7 @@ body {
 
                 iframe {
                     border: 10px solid $primary-dark-color;
+                    width: 100%;
                 }
             }
         }
@@ -610,7 +634,6 @@ body {
     &:hover {
         color: $button-active-font-color;
         text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
-        
     }
 
     &::before,
@@ -652,6 +675,23 @@ body {
         padding: 12px 16px 12px 12px;
     }
 
+    &--cta {
+        padding: 12px 16px 12px 12px;
+        text-transform: none;
+
+        &:focus::before,
+        &:focus::after,
+        &:hover::before,
+        &:hover::after {
+            border-color: $button-cta-active-border-color;
+        }
+
+        &:focus,
+        &:hover {
+            color: $button-cta-active-font-color;
+        }
+    }
+
     &__label {
         display: none;
 
@@ -687,6 +727,10 @@ body {
     position: absolute !important;
     white-space: nowrap !important;
     width: 1px !important;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 /********* Loading ************/

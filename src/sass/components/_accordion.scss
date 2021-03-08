@@ -60,7 +60,7 @@ $accordion-tab-close-bg-hover: $primary-color;
 
     &__content {
         background-color: $accordion-tab-bg-hover;
-        
+
         max-height: 0;
         padding: 0 20px;
         text-align: left;
@@ -110,7 +110,7 @@ $accordion-tab-close-bg-hover: $primary-color;
 
         ~ .tab__content {
             border-bottom: 1px solid $accordion-tab-border-color;
-            max-height: 100vh;
+            max-height: 100%;
             padding: 20px;
         }
     }
