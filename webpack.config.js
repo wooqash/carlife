@@ -19,6 +19,7 @@ const config = {
     entry: {
         app: './src/index.ts',
         coming: './src/coming.ts',
+        privacy: './src/privacy.ts',
     },
     devServer: {
         contentBase: BUILD_DIR,
@@ -135,6 +136,11 @@ const config = {
             filename: 'coming-soon.html',
             template: path.resolve(__dirname, 'src', 'coming-soon.html'),
             chunks: ['coming'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'polityka-prywatnosci.html',
+            template: path.resolve(__dirname, 'src', 'polityka-prywatnosci.html'),
+            chunks: ['privacy'],
         }),
         new ScriptExtHtmlWebpackPlugin({
             defer: ['app', 'coming'],

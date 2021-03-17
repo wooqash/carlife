@@ -1,0 +1,49 @@
+.privacy-policy {
+    text-align: left;
+
+    h4,
+    .answer__title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1.5;
+        text-transform: none;
+    }
+
+    .answer__subtitle {
+        font-size: 1.6rem;
+        text-decoration: underline;
+        text-transform: none;
+    }
+
+    p {
+        margin: 10px auto;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    ul {
+        list-style: outside;
+    }
+
+    ol,
+    ul {
+        margin: 20px;
+        padding: 0 20px;
+
+        li {
+            padding-left: 10px;
+
+            &::marker {
+                font-weight: bold;
+            }
+        }
+    }
+
+    // &__answers {
+    //     // li.answer::marker {
+    //     //     font-size: 1.8rem;
+    //     // }
+    // }
+}
