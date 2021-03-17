@@ -112,9 +112,9 @@ $gallery-item-focus-outline-color: $primary-color;
     clip: rect(0 0 0 0);
     cursor: pointer;
     display: flex;
+    max-width: 360px;
     overflow: hidden;
     position: relative;
-    width: 360px;
 
     &__caption {
         clip: rect(0 0 0 0);

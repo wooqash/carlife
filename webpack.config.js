@@ -18,7 +18,7 @@ const BUILD_DIR = path.resolve(__dirname, './dist');
 const config = {
     entry: {
         app: './src/index.ts',
-        coming: './src/coming.ts',
+        // coming: './src/coming.ts',
         privacy: './src/privacy.ts',
     },
     devServer: {
@@ -66,6 +66,7 @@ const config = {
                         },
                     },
                 ],
+                sideEffects: true,
             },
             {
                 test: /\.(woff\d*|eot|ttf|otf)$/,
@@ -117,6 +118,9 @@ const config = {
                 },
             },
         },
+        // minimizer: [
+        //     new TerserPlugin({...})
+        //    ]
     },
     resolve: {
         alias: {
@@ -131,12 +135,13 @@ const config = {
             filename: 'index.html',
             template: path.resolve(__dirname, 'src', 'index.html'),
             chunks: ['app'],
+            inject: 'head',
         }),
-        new HtmlWebpackPlugin({
-            filename: 'coming-soon.html',
-            template: path.resolve(__dirname, 'src', 'coming-soon.html'),
-            chunks: ['coming'],
-        }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'coming-soon.html',
+        //     template: path.resolve(__dirname, 'src', 'coming-soon.html'),
+        //     chunks: ['coming'],
+        // }),
         new HtmlWebpackPlugin({
             filename: 'polityka-prywatnosci.html',
             template: path.resolve(__dirname, 'src', 'polityka-prywatnosci.html'),
