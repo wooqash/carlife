@@ -35,7 +35,6 @@ export default class Form {
         const result: Array<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement> = [];
 
         inputs.forEach((input: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => {
-            // console.log(input.willValidate);
             if (input.willValidate) {
                 result.push(input);
             }
@@ -100,7 +99,8 @@ export default class Form {
         const today: Date = new Date();
 
         dateInputs.forEach((input: HTMLInputElement) => {
-            input.setAttribute('min', `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`);
+            const month = today.getMonth() < 10 ? `0${today.getMonth() + 1}` : today.getMonth() + 1;
+            input.setAttribute('min', `${today.getFullYear()}-${month}-${today.getDate()}`);
         });
     };
 
@@ -134,7 +134,6 @@ export default class Form {
                 if (['checkbox', 'radio'].indexOf(field.type) > -1 && !(field as HTMLInputElement).checked) return;
                 obj[field.name] = field.value;
             });
-        // console.log(obj);
         return obj;
     };
 
@@ -189,7 +188,6 @@ export default class Form {
                 const elements: Array<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement> = this.getFields();
 
                 elements.forEach((element: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => {
-                    // console.log(!element.checkValidity());
                     this.markFieldAsError(element, !element.checkValidity());
                 });
             }
@@ -200,7 +198,6 @@ export default class Form {
         const button = document.getElementById('NextReservation') as HTMLElement;
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log(e);
             this.refreshForm();
         });
     };
