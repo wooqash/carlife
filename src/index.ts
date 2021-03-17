@@ -21,6 +21,9 @@ Swiper.use([Navigation, Pagination, Autoplay]);
 document.addEventListener('DOMContentLoaded', () => {
     Modernizr.on('webp', (result) => {});
 
+    const presentYearElem = document.querySelector('.copyrights__year') as HTMLSpanElement;
+    presentYearElem.innerText = `${new Date().getFullYear()}`;
+
     let prevScrollPos = window.pageYOffset;
     const mainMenuElem = document.getElementById('MainMenu') as HTMLDivElement;
     const header = document.getElementById('Header') as HTMLHeadingElement;
