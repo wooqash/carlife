@@ -4,7 +4,7 @@ $body-font-color: $on-background-color;
 $header-bg-color: $on-primary-dark-color;
 $header-font-color: $surface-color;
 
-$section-about-bg-color: $primary-color;
+$section-about-bg-color: $primary-dark-color;
 $section-about-font-color: $on-primary-color;
 
 $button-bg-color: $primary-dark-color;
@@ -15,6 +15,9 @@ $button-cta-active-border-color: $color-white;
 $button-cta-active-font-color: $color-white;
 
 $section-reservation-bg-color: $color-erie-black;
+
+$footer-bg-color: $primary-dark-color;
+$footer-font-color: $on-primary-dark-color;
 
 $container-max-width: (
     netbook: 960px,
@@ -86,6 +89,42 @@ body {
     }
 }
 
+.footer {
+    align-items: center;
+    background-color: rgba($footer-bg-color, 1);
+    color: $footer-font-color;
+    display: flex;
+    flex-direction: column;
+    // font-family: $third-font-family;
+    justify-content: center;
+    padding: 20px;
+
+    &__copyrights {
+        font-size: 1.5rem;
+    }
+
+    &__creator {
+        font-size: 1.2rem;
+    }
+
+    &__social-media {
+        font-size: 2rem;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+        color: $primary-color;
+    }
+}
+
 .main {
     overflow: hidden;
 }
@@ -151,7 +190,7 @@ body {
         overflow: hidden;
 
         .list-item {
-            border-bottom: 1px solid $primary-dark-color;
+            border-bottom: 1px solid $on-primary-dark-color;
             letter-spacing: 1px;
             overflow: hidden;
             padding: 15px 5px;
@@ -190,10 +229,11 @@ body {
         background: linear-gradient(rgba($on-primary-color, 0.25), rgba($on-primary-color, 0.25)),
             url('../assets/img/bg/main-bg.webp') 50% / cover no-repeat;
         background-attachment: fixed;
+        min-height: 90vh;
         position: relative;
 
         @include media-query(netbook) {
-            min-height: 961px;
+            min-height: 881px;
         }
 
         .section__header {
@@ -205,7 +245,7 @@ body {
             }
 
             @include media-query(netbook) {
-                margin-top: -220px;
+                margin-top: -310px;
                 max-width: 900px;
             }
 
@@ -254,13 +294,13 @@ body {
         }
 
         .tow-car {
-            bottom: -60px;
+            bottom: -80px;
             display: flex;
             justify-content: center;
             position: absolute;
 
             &__image {
-                max-width: 90%;
+                max-width: 100%;
             }
 
             @include media-query(tablet) {
@@ -268,10 +308,16 @@ body {
             }
 
             @include media-query(netbook) {
-                bottom: -180px;
+                &__image {
+                    max-width: 90%;
+                }
             }
             @include media-query(desktop) {
-                bottom: -200px;
+                bottom: -230px;
+
+                &__image {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -289,6 +335,10 @@ body {
 
         .section__picture {
             display: none;
+        }
+
+        .section__title::after {
+            background-color: $primary-color;
         }
 
         @include media-query(tablet) {
@@ -312,10 +362,9 @@ body {
                 border-radius: 300px;
                 display: block;
                 float: right;
-                margin-left: 40px;
+                margin-left: 80px;
                 max-width: 440px;
-                shape-margin: 40px;
-                shape-outside: circle(221px at 258px 220px);
+                shape-outside: circle(211px at 238px 220px);
 
                 img {
                     border: 10px solid $primary-dark-color;
@@ -731,6 +780,10 @@ body {
 
 .no-scroll {
     overflow: hidden;
+}
+
+.noscript__image {
+    vertical-align: middle;
 }
 
 /********* Loading ************/
