@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="pl" class="no-js">
+<html lang="pl" class="no-js" dir="ltr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="robots" content="noindex" />
         <meta
             name="description"
-            content="Auto holowanie oraz naprawa mechaniki, elektryki i elektroniki samochodów osobowych. Serwisujemy klimatyzacje samochodowe oraz ustawiamy geometrię zawieszania."
+            content="Oferuję auto holowanie oraz naprawę mechaniki, elektryki i elektroniki, serwis klimatyzacji oraz geometrii zawieszania. Doradzam przy zakupie aut."
         />
+        <meta property="og:url" content="https://carlifecygulski.pl" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="pl_PL" />
+        <meta property="og:title" content="Auto serwis - pomoc drogowa - CarLife" />
+        <meta
+            property="og:description"
+            content="Oferuję auto holowanie oraz naprawę mechaniki, elektryki i elektroniki, serwis klimatyzacji oraz geometrii zawieszania. Doradzam przy zakupie aut."
+        />
+        <meta property="og:image" content="./assets/fb_image.jpg" />
         <link
             rel="preload"
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&family=Roboto:wght@300;400;700;900&family=Lato:wght@300;400;500;700;900&display=swap"
@@ -22,7 +30,8 @@
                 rel="stylesheet"
             />
         </noscript>
-        <title>Mechanika pojazdów i pomoc drogowa - CarLife</title>
+        <link rel="canonical" href="https://carlifecygulski.pl" />
+        <title>Auto serwis - pomoc drogowa - CarLife</title>
         <script>
             document.documentElement.classList.remove('no-js');
         </script>
@@ -32,21 +41,22 @@
         <header id="Header" class="header">
             <div class="header__container">
                 <nav class="navbar">
-                    <a class="navbar__logo-link" href="#">
+                    <a class="navbar__logo-link" href="#" tabindex="0">
                         <picture class="navbar__logo">
                             <source
                                 type="image/webp"
                                 srcset="./assets/img/logo-carlife.webp 1x, ./assets/img/logo-carlife@2x.webp 2x"
                             />
                             <source
-                                type="image/jpeg"
-                                srcset="./assets/img/logo-carlife.jpg 1x, ./assets/img/logo-carlife@2x.jpg 2x"
+                                type="image/png"
+                                srcset="./assets/img/logo-carlife.png 1x, ./assets/img/logo-carlife@2x.png 2x"
                             />
                             <img
                                 srcset="./assets/img/logo-carlife.png 1x, ./assets/img/logo-carlife@2x.png 2x"
                                 src="./assets/img/logo-carlife.png"
-                                alt="Logo firmy CarLife Piotr Cygulski"
-                                loading="lazy"
+                                alt="Logo CarLife"
+                                width="111"
+                                height="70"
                             />
                         </picture>
                     </a>
@@ -56,6 +66,7 @@
                         aria-expanded="false"
                         aria-label="Menu"
                         aria-controls="MainMenu"
+                        tabindex="0"
                     >
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
@@ -63,13 +74,21 @@
                     </button>
                     <div id="MainMenu" class="navbar__menu-wrapper navbar__menu-wrapper--collapse">
                         <ul class="main-nav">
-                            <li class="main-nav__item"><a href="#Home" class="main-nav__link">Start</a></li>
-                            <li class="main-nav__item"><a href="#About" class="main-nav__link">O firmie</a></li>
-                            <li class="main-nav__item"><a href="#Offer" class="main-nav__link">Oferta</a></li>
-                            <li class="main-nav__item"><a href="#Faq" class="main-nav__link">FAQ</a></li>
-                            <li class="main-nav__item"><a href="#Contact" class="main-nav__link">Kontakt</a></li>
                             <li class="main-nav__item">
-                                <a class="button button--cta" href="#Reservation">
+                                <a href="#Home" class="main-nav__link" tabindex="0">Start</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#About" class="main-nav__link" tabindex="0">O firmie</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#Offer" class="main-nav__link" tabindex="0">Oferta</a>
+                            </li>
+                            <li class="main-nav__item"><a href="#Faq" class="main-nav__link" tabindex="0">FAQ</a></li>
+                            <li class="main-nav__item">
+                                <a href="#Contact" class="main-nav__link" tabindex="0">Kontakt</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="button button--cta" href="#Reservation" tabindex="0">
                                     <svg class="icon icon--icon-calendar-check-o" aria-hidden="true" focusable="false">
                                         <use
                                             xlink:href="./assets/icons/svg/symbol-defs.svg#icon-calendar-check-o"
@@ -92,16 +111,15 @@
                         </h1>
                         <p id="MainSubTitle" class="section__subtitle">
                             Wypadek, kolizja, zepsute auto, a może zwykły standardowy serwis? Świetnie trafiłeś! Sprawdź
-                            ofertę <strong>CarLife</strong> i zarezerwuj sobie wizytę, a na pewno nie pożałujesz swojego
-                            wyboru!
+                            ofertę <strong>CarLife</strong> i zarezerwuj sobie wizytę, a nie pożałujesz swojego wyboru!
                         </p>
-                        <a id="MainBtnOffer" class="button button--cta" href="#Offer">
+                        <a id="MainBtnOffer" class="button button--cta" href="#Offer" tabindex="0">
                             <svg class="icon icon--icon-cogs" aria-hidden="true" focusable="false">
                                 <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-cogs"></use>
                             </svg>
                             <span>Sprawdź ofertę</span>
                         </a>
-                        <a id="MainBtnReservation" class="button button--cta" href="#Reservation">
+                        <a id="MainBtnReservation" class="button button--cta" href="#Reservation" tabindex="0">
                             <svg class="icon icon--icon-calendar-check-o" aria-hidden="true" focusable="false">
                                 <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-calendar-check-o"></use>
                             </svg>
@@ -110,20 +128,44 @@
                     </div>
                     <picture class="tow-car">
                         <source
+                            media="(max-width: 767px)"
                             type="image/webp"
                             srcset="
-                                ./assets/img/main-bg-tow-car-alt.webp    1x,
-                                ./assets/img/main-bg-tow-car-alt@2x.webp 2x
+                                ./assets/img/small/main-bg-tow-car-alt.webp    1x,
+                                ./assets/img/small/main-bg-tow-car-alt@2x.webp 2x
                             "
                         />
                         <source
+                            media="(max-width: 767px)"
                             type="image/png"
-                            srcset="./assets/img/main-bg-tow-car-alt.png 1x, ./assets/img/main-bg-tow-car-alt@2x.png 2x"
+                            srcset="
+                                ./assets/img/small/main-bg-tow-car-alt.png    1x,
+                                ./assets/img/small/main-bg-tow-car-alt@2x.png 2x
+                            "
+                        />
+                        <source
+                            media="(max-width: 1199px)"
+                            type="image/webp"
+                            srcset="
+                                ./assets/img/medium/main-bg-tow-car-alt.webp    1x,
+                                ./assets/img/medium/main-bg-tow-car-alt@2x.webp 2x
+                            "
+                        />
+                        <source
+                            media="(max-width: 1199px)"
+                            type="image/png"
+                            srcset="
+                                ./assets/img/medium/main-bg-tow-car-alt.png    1x,
+                                ./assets/img/medium/main-bg-tow-car-alt@2x.png 2x
+                            "
                         />
                         <img
                             class="tow-car__image"
-                            srcset="./assets/img/main-bg-tow-car-alt.png 1x, ./assets/img/main-bg-tow-car-alt@2x.png 2x"
-                            src="./assets/img/main-bg-tow-car-alt.png"
+                            srcset="
+                                ./assets/img/large/main-bg-tow-car-alt.png    1x,
+                                ./assets/img/large/main-bg-tow-car-alt@2x.png 2x
+                            "
+                            src="./assets/img/large/main-bg-tow-car-alt.png"
                             alt="Laweta CarLife"
                         />
                     </picture>
@@ -132,7 +174,12 @@
             <section id="About" class="section section--about">
                 <div class="section__container">
                     <header class="section__header">
-                        <h2 class="section__title">O firmie</h2>
+                        <h2 class="section__title">
+                            O firmie
+                            <svg class="icon icon--info-circle" aria-hidden="true" focusable="false">
+                                <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-info-circle"></use>
+                            </svg>
+                        </h2>
                         <p class="section__subtitle">I o mnie słów kilka...</p>
                     </header>
                     <div class="section__content-wrapper">
@@ -171,54 +218,56 @@
                             wybrałem studia zaoczne na kierunku
                             <strong>"Mechanika i budowa maszyn" na Politechnice Łódzkiej</strong>. Brałem również udział
                             w warsztatach oraz szkoleniach zawodowych. Kilka moich dyplomów można zobaczyć w
-                            <a href="#Gallery">galerii poniżej</a>. W 2019 roku właścicielka Proximy odeszła na
-                            zasłużoną emeryturę, a firma została sprzedana. Wtedy zdecydowałem, że to najlepszy moment
-                            na zmianę i na przejście na tzw. <strong>własny rachunek</strong>. Tak zrodził się pomysł na
-                            markę <strong>CarLife</strong>. Moim celem jest prowadzenie <strong>uczciwego</strong> i
-                            <strong>wiarygodnego</strong> warsztatu, który swoim <strong>doświadczeniem</strong>,
-                            <strong>pracowitością</strong> i <strong>otwartością na klienta</strong> będzie służył
-                            kolejnym pokoleniom rodziny motoryzacyjnej. Już dziś zapraszam do zapoznania się z
-                            <a href="#Offer">ofertą</a> i <a href="#Reservation">umówienia na wizytę</a>.
+                            <a href="#Gallery" tabindex="0">galerii poniżej</a>. W 2019 roku właścicielka Proximy
+                            odeszła na zasłużoną emeryturę, a firma została sprzedana. Wtedy zdecydowałem, że to
+                            najlepszy moment na zmianę i na przejście na tzw. <strong>własny rachunek</strong>. Tak
+                            zrodził się pomysł na markę <strong>CarLife</strong>. Moim celem jest prowadzenie
+                            <strong>uczciwego</strong> i <strong>wiarygodnego</strong> warsztatu, który swoim
+                            <strong>doświadczeniem</strong>, <strong>pracowitością</strong> i
+                            <strong>otwartością na klienta</strong> będzie służył kolejnym pokoleniom rodziny
+                            motoryzacyjnej. Już dziś zapraszam do zapoznania się z
+                            <a href="#Offer" tabindex="0">ofertą</a> i
+                            <a href="#Reservation" tabindex="0">umówienia na wizytę</a>.
                         </p>
                         <ul class="section__list">
                             <li class="list-item">
-                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                <svg class="icon icon--stopwatch-20" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-stopwatch-20"></use>
                                 </svg>
                                 20 lat doświadczenia na rynku w zakresie mechaniki
                             </li>
                             <li class="list-item">
-                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                <svg class="icon icon--hands-helping" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-hands-helping"></use>
                                 </svg>
                                 Indywiduwalne podejście do klienta
                             </li>
                             <li class="list-item">
-                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                <svg class="icon icon--people-carry" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-people-carry"></use>
                                 </svg>
                                 Rzetelność, sumienność i zaangażowanie
                             </li>
                             <li class="list-item">
-                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                <svg class="icon icon--coins" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-coins"></use>
                                 </svg>
                                 Konkurencyjne ceny
                             </li>
                             <li class="list-item">
-                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                <svg class="icon icon--shield-alt" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-shield-alt"></use>
                                 </svg>
                                 Ubezpieczenie OC warsztatu i mienia holowanego
                             </li>
                             <li class="list-item">
-                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                <svg class="icon icon--file-invoice-dollar" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-file-invoice-dollar"></use>
                                 </svg>
                                 Wystawiam faktury VAT
                             </li>
                             <li class="list-item">
-                                <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
+                                <svg class="icon icon--wallet" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-wallet"></use>
                                 </svg>
                                 Przyjmuję płatności gotówką oraz kartą
@@ -250,7 +299,12 @@
                                 szacowanie czasu dotarcia, przejrzyste ceny i profesjonalną obsługę w
                                 <strong>całym kraju</strong>.
                             </p>
-                            <button class="button button--more" aria-controls="TowingModal" data-target="TowingModal">
+                            <button
+                                class="button button--more"
+                                aria-controls="TowingModal"
+                                data-target="TowingModal"
+                                tabindex="0"
+                            >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
                                 </svg>
@@ -277,6 +331,7 @@
                                 class="button button--more"
                                 aria-controls="RepairOfMechanicsModal"
                                 data-target="RepairOfMechanicsModal"
+                                tabindex="0"
                             >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
@@ -302,6 +357,7 @@
                                 class="button button--more"
                                 aria-controls="RepairOfElectricsModal"
                                 data-target="RepairOfElectricsModal"
+                                tabindex="0"
                             >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
@@ -327,6 +383,7 @@
                                 class="button button--more"
                                 aria-controls="AirConditioningServiceModal"
                                 data-target="AirConditioningServiceModal"
+                                tabindex="0"
                             >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
@@ -354,6 +411,7 @@
                                 class="button button--more"
                                 aria-controls="TireServiceModal"
                                 data-target="TireServiceModal"
+                                tabindex="0"
                             >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
@@ -381,6 +439,7 @@
                                 class="button button--more"
                                 aria-controls="CarAuditModal"
                                 data-target="CarAuditModal"
+                                tabindex="0"
                             >
                                 <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-plus-circle"></use>
@@ -401,16 +460,17 @@
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
                             <!-- Navigation -->
-                            <a class="swiper-button-next" href="#" title="następne zdjęcie"></a>
-                            <a class="swiper-button-prev" href="#" title="poprzednie zdjęcie"></a>
+                            <a class="swiper-button-next" href="#" title="następne zdjęcie" tabindex="0"></a>
+                            <a class="swiper-button-prev" href="#" title="poprzednie zdjęcie" tabindex="0"></a>
                             <div class="swiper-wrapper">
                                 <a
                                     class="thumbnail swiper-slide"
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -447,8 +507,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -485,8 +546,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -523,8 +585,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -561,8 +624,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -599,8 +663,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -637,8 +702,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -675,8 +741,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -751,8 +818,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -791,8 +859,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -832,8 +901,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -870,8 +940,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -908,8 +979,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -948,8 +1020,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -986,8 +1059,9 @@
                                     aria-controls="GalleryModal"
                                     data-target="GalleryModal"
                                     href="#GalleryModal"
+                                    tabindex="0"
                                 >
-                                    <figure thumbnailclass="thumbnail__image">
+                                    <figure class="thumbnail__image">
                                         <picture>
                                             <source
                                                 type="image/webp"
@@ -1026,14 +1100,14 @@
                     </div>
                     <div id="GalleryModal" class="modal" role="presentation" aria-hidden="true">
                         <div class="modal__container-wrapper">
-                            <div class="modal__container" role="dialog" aria-labelledby="DialogTitle">
+                            <div class="modal__container" role="dialog" aria-labelledby="GalleryModal">
                                 <div class="modal__header">
                                     <h4 class="modal__title">Galeria</h4>
                                     <button
                                         class="modal__close-btn"
-                                        tabindex="0"
                                         aria-label="zamknij popup"
                                         data-close-modal="GalleryModal"
+                                        tabindex="0"
                                     >
                                         <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
                                             <use
@@ -1070,6 +1144,7 @@
                                                         "
                                                         src="./assets/img/gallery/laweta-lewy-przod/laweta-lewy-przod.jpg"
                                                         alt="Zdjęcie lawety CarLife marki Mercedes Sprinter 906 - widok lewego przodu auta"
+                                                        loading="lazy"
                                                         width="960"
                                                         height="716"
                                                     />
@@ -1556,8 +1631,8 @@
                                         <!-- If we need pagination -->
                                         <div class="swiper-pagination"></div>
                                         <!-- If we need navigation buttons -->
-                                        <button class="swiper-button-prev"></button>
-                                        <button class="swiper-button-next"></button>
+                                        <button class="swiper-button-prev" tabindex="0"></button>
+                                        <button class="swiper-button-next" tabindex="0"></button>
                                     </div>
                                 </div>
                             </div>
@@ -1597,7 +1672,13 @@
                             </p>
                         </div>
                         <div class="content-wrapper__child section__form">
-                            <form id="ReservationForm" class="form" method="post" action="./php/send-scripts.php">
+                            <form
+                                id="ReservationForm"
+                                class="form"
+                                method="post"
+                                action="./php/send-scripts.php"
+                                tabindex="0"
+                            >
                                 <fieldset class="form__fieldset">
                                     <div class="form__status">
                                         <p class="status__error-text">
@@ -1607,7 +1688,7 @@
                                     </div>
                                     <div class="form__control form__control--hidden">
                                         <label for="Honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
-                                        <input type="text" id="Honey" name="honey" />
+                                        <input type="text" id="Honey" name="honey" tabindex="-1" />
                                     </div>
                                     <div class="form__control">
                                         <label for="ClientName" class="form__label"
@@ -1624,6 +1705,7 @@
                                             required
                                             pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻźŹ\s]+"
                                             placeholder="np. Jan Kowalski"
+                                            tabindex="0"
                                         />
                                         <span class="form__error-text" aria-hidden="true"
                                             >Podaj swoje imię i nazwisko</span
@@ -1644,6 +1726,7 @@
                                             required
                                             pattern="(^[+][0-9]\d{1}[ |-]*\d{3}[ |-]*\d{3}[ |-]*\d{3}$)|(^[+][0-9]\d{1}[ ]*\d{3}[ |-]*\d{3}[ |-]*\d{2}[ |-]*\d{2}$)"
                                             placeholder="np. +48 999-999-999"
+                                            tabindex="0"
                                         />
                                         <span class="form__error-text" aria-hidden="true"
                                             >Podaj prawidłowy nr telefonu</span
@@ -1658,6 +1741,7 @@
                                             type="email"
                                             pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b"
                                             placeholder="np. jan.kowalski@domena.pl"
+                                            tabindex="0"
                                         />
                                         <span class="form__error-text" aria-hidden="true"
                                             >Podaj prawidłowy adres email</span
@@ -1673,6 +1757,7 @@
                                             id="Services"
                                             class="form__field form__field--select not-touched"
                                             required
+                                            tabindex="0"
                                         >
                                             <option value="">-- wybierz rodzaj usługi --</option>
                                             <option value="Holowanie">Holowanie</option>
@@ -1711,6 +1796,7 @@
                                             class="form__field form__field--input"
                                             type="text"
                                             placeholder="np. miasto, kod-pocztowy, ulica, nr ulicy"
+                                            tabindex="0"
                                         />
                                     </div>
                                     <div class="form__control" data-hidden-field="hidden">
@@ -1733,6 +1819,7 @@
                                             class="form__field form__field--input"
                                             type="text"
                                             placeholder="np. miasto, kod-pocztowy, ulica, nr ulicy"
+                                            tabindex="0"
                                         />
                                     </div>
                                     <div class="form__control">
@@ -1742,6 +1829,7 @@
                                             id="Date"
                                             class="form__field form__field--input"
                                             type="date"
+                                            tabindex="0"
                                         />
                                         <span class="form__error-text" aria-hidden="true">Podaj prawidłową datę</span>
                                     </div>
@@ -1752,6 +1840,7 @@
                                             id="TypeOfFault"
                                             class="form__field form__field--textarea"
                                             placeholder="np. brak zasilania, lub urwane koło"
+                                            tabindex="0"
                                         ></textarea>
                                     </div>
                                     <div class="form__control">
@@ -1761,6 +1850,7 @@
                                             class="form__field form__field--checkbox"
                                             type="checkbox"
                                             required
+                                            tabindex="0"
                                         />
                                         <label for="Consent" class="form__label"
                                             >Zgadzam się na przetwarzanie moich danych osobowych przez CarLife Piotr
@@ -1783,6 +1873,7 @@
                                         <button
                                             class="button button--submit form__button form__button--submit"
                                             type="submit"
+                                            tabindex="0"
                                         >
                                             <svg class="icon icon--paper-plane" aria-hidden="true" focusable="false">
                                                 <use
@@ -1798,7 +1889,12 @@
                                     Dziękujemy za wysłanie zapytania, wkrótce skontaktujemy się z Tobą w celu ustalenia
                                     szczegółów!
                                 </p>
-                                <button id="NextReservation" class="button" aria-controls="ReservationForm">
+                                <button
+                                    id="NextReservation"
+                                    class="button"
+                                    aria-controls="ReservationForm"
+                                    tabindex="0"
+                                >
                                     <svg class="icon icon--sync-alt" aria-hidden="true" focusable="false">
                                         <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-sync-alt"></use></svg
                                     ><span>Umów kolejną wizytę</span>
@@ -1910,7 +2006,7 @@
                     <div class="grid-container">
                         <div class="accordion-wrapper">
                             <div class="accordion">
-                                <h4 class="accordion__title">Holowanie</h4>
+                                <h3 class="accordion__title">Holowanie</h3>
                                 <div class="accordion__tab">
                                     <input class="tab__input" type="radio" id="Acc1Tab1" name="Acc1Tab" />
                                     <label class="tab__label" for="Acc1Tab1"
@@ -1928,10 +2024,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" />
-                                    <label class="tab__label" for="Acc1Tab2"
+                                    <input class="tab__input" type="radio" id="Acc1Tab2" name="Acc1Tab" tabindex="0" />
+                                    <label class="tab__label" for="Acc1Tab2" tabindex="0"
                                         >Czy laweta CarLife może holować auta powypadkowe?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -1940,17 +2036,17 @@
                                     </label>
                                     <div class="tab__content">
                                         Obecnie posiadam lawetę <strong>Mercedes Sprinter 906</strong> z najazdami i
-                                        wyciągarką, dlatego też niezbędna jest możliwość wjazdu pojazdu
+                                        wyciągarką, dlatego też niezbędna jest możliwość wjazdu samochodu
                                         <strong>na własnych kołach</strong>. Jeśli auto jest uszkodzone lub rozbite, ale
                                         ma sprawne koła to nie ma przeszkód, żebym mógł je odholować do ustalonego
                                         miejsca.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab3" name="Acc1Tab" />
+                                    <input class="tab__input" type="radio" id="Acc1Tab3" name="Acc1Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc1Tab3"
                                         >Czy firma CarLife posiada ubezpieczenie?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -1962,10 +2058,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab4" name="Acc1Tab" />
+                                    <input class="tab__input" type="radio" id="Acc1Tab4" name="Acc1Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc1Tab4"
                                         >Czy istnieje możliwość przewiezienia auta na lawecie z pkt A do pkt B?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -1975,15 +2071,17 @@
                                     <div class="tab__content">
                                         Oczywiście, że <strong>TAK</strong>! Jak najbardziej świadczę również tego typu
                                         usługi. W takim wypadku zalecam klientom umówienie terminu poprzez wcześniejszy
-                                        <a href="tel:+48505962251">kontakt telefoniczny</a> lub przez
-                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
+                                        <a href="tel:+48505962251" tabindex="0">kontakt telefoniczny</a> lub przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji" tabindex="0"
+                                            >formularz rezerwacji</a
+                                        >
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc1Tab0" name="Acc1Tab" />
+                                    <input class="tab__input" type="radio" id="Acc1Tab0" name="Acc1Tab" tabindex="0" />
                                     <label for="Acc1Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji <span>HOLOWANIE</span>
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
                                         </svg>
                                     </label>
@@ -1992,12 +2090,12 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="accordion">
-                                <h4 class="accordion__title">Mechanika</h4>
+                                <h3 class="accordion__title">Mechanika</h3>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc2Tab1" name="Acc2Tab" />
+                                    <input class="tab__input" type="radio" id="Acc2Tab1" name="Acc2Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc2Tab1"
                                         >Jak często zalecam klientom wymianę oleju w silniku?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2007,17 +2105,17 @@
                                     <div class="tab__content">
                                         Najlepiej zgodnie z interwałem. Najczęściej zaleca się wymianę oleju co
                                         <strong>10-15 tys. km</strong> lub <strong>raz na rok</strong>. Przy czym wraz z
-                                        wymianą samego oleju i <strong>filtra oleju</strong> polecam przy okazji wymianę
-                                        pozostałych filtrów tj. <strong>filtr kabiny</strong> czy
-                                        <strong>filtr powietrza</strong>. Koszt jest stosunkowo niewielki, ale poprawia
-                                        się znaczenie wydajność wydmuchu oraz jakość powietrza wewnątrz pojazdu.
+                                        wymianą samego oleju i <strong>filtra oleju</strong> polecam wymianę pozostałych
+                                        filtrów tj. <strong>filtr kabiny</strong> czy <strong>filtr powietrza</strong>.
+                                        Koszt jest stosunkowo niewielki, ale znacznie poprawia się wydajność wydmuchu
+                                        oraz jakość powietrza wewnątrz pojazdu.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc2Tab2" name="Acc2Tab" />
+                                    <input class="tab__input" type="radio" id="Acc2Tab2" name="Acc2Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc2Tab2"
                                         >Czy poza wymianą oleju i filtra trzeba wymieniać inne płyny w aucie?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2036,10 +2134,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc2Tab3" name="Acc2Tab" />
+                                    <input class="tab__input" type="radio" id="Acc2Tab3" name="Acc2Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc2Tab3"
                                         >Czy po wymianie turbiny trzeba wymienić olej?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2055,10 +2153,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc2Tab4" name="Acc2Tab" />
+                                    <input class="tab__input" type="radio" id="Acc2Tab4" name="Acc2Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc2Tab4"
                                         >W naprawie jakich marek aut firma CarLife się specjalizuje?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2079,10 +2177,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc2Tab0" name="Acc2Tab" />
+                                    <input class="tab__input" type="radio" id="Acc2Tab0" name="Acc2Tab" tabindex="0" />
                                     <label for="Acc2Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji <span>MECHANIKA</span>
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--clear" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
                                         </svg>
                                     </label>
@@ -2091,12 +2189,12 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="accordion">
-                                <h4 class="accordion__title">Elektryka i elektronika</h4>
+                                <h3 class="accordion__title">Elektryka i elektronika</h3>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc3Tab1" name="Acc3Tab" />
+                                    <input class="tab__input" type="radio" id="Acc3Tab1" name="Acc3Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc3Tab1"
                                         >Na jakie kontrolki na desce rozdzielczej powinno zwrócić się szczególną uwagę?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2119,10 +2217,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc3Tab2" name="Acc3Tab" />
+                                    <input class="tab__input" type="radio" id="Acc3Tab2" name="Acc3Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc3Tab2"
                                         >Jak często zalecam klientom wymianę akumulatora na nowy?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2142,10 +2240,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc3Tab3" name="Acc3Tab" />
+                                    <input class="tab__input" type="radio" id="Acc3Tab3" name="Acc3Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc3Tab3"
                                         >Czy firma CarLife posiada diagnostykę komputerową?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2162,10 +2260,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc3Tab4" name="Acc3Tab" />
+                                    <input class="tab__input" type="radio" id="Acc3Tab4" name="Acc3Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc3Tab4"
                                         >Jak często zalecam swoim klientom wymianę świec zapłonowych?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2183,10 +2281,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc3Tab0" name="Acc3Tab" />
+                                    <input class="tab__input" type="radio" id="Acc3Tab0" name="Acc3Tab" tabindex="0" />
                                     <label for="Acc3Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji <span>ELEKTRYKA I ELEKTRONIKA</span>
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
                                         </svg>
                                     </label>
@@ -2195,12 +2293,12 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="accordion">
-                                <h4 class="accordion__title">Klimatyzacja</h4>
+                                <h3 class="accordion__title">Klimatyzacja</h3>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc4Tab1" name="Acc4Tab" />
+                                    <input class="tab__input" type="radio" id="Acc4Tab1" name="Acc4Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc4Tab1"
                                         >Jak często zaleca się serwis klimatyzacji?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2225,10 +2323,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc4Tab2" name="Acc4Tab" />
+                                    <input class="tab__input" type="radio" id="Acc4Tab2" name="Acc4Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc4Tab2"
                                         >Jak często zaleca się odgrzybianie klimatyzacji?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2270,16 +2368,18 @@
                                         <strong>sprawdzenie pozostałych elementów</strong> wg. zaleceń producenta, być
                                         może wymianę niektórych <strong>innych elementów</strong> całego systemu. Jeśli
                                         z Twoją klimatyzacją zaczyna się "coś" dziać lub całkowicie odmówiła współpracy
-                                        to zapraszam do <a href="tel:+48505962251">kontaktu telefonicznego</a> lub przez
-                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a
+                                        to zapraszam do
+                                        <a href="tel:+48505962251" tabindex="0">kontaktu telefonicznego</a> lub przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji" tabindex="0"
+                                            >formularz rezerwacji</a
                                         >.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc4Tab4" name="Acc4Tab" />
+                                    <input class="tab__input" type="radio" id="Acc4Tab4" name="Acc4Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc4Tab4"
                                         >Czy warto używać klimatyzacji również w okresie jesienno-zimowym?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2289,25 +2389,27 @@
                                     <div class="tab__content">
                                         Jak najbardziej <strong>TAK</strong>! Po pierwsze w okresach
                                         <strong>jesienno-zimowych</strong> dużo szybciej i częściej
-                                        <strong>parują nam szyby</strong> w autach. Dzięki klimatyzacji możemy w dość
+                                        <strong>parują nam szyby</strong> w autach, a dzięki klimatyzacji możemy w dość
                                         szybkim tempie je odparować. Drugą zaletą użycia klimatyzacji w tym okresie jest
-                                        fakt, że ten układ <strong>NIE</strong> pozostaje na dłużej bez ruch. Ma to
+                                        fakt, że ten układ <strong>NIE</strong> pozostaje na dłużej bez ruchu, ma to
                                         ogromne znaczenie dla jego <strong>żywotności</strong> oraz
                                         <strong>zmniejsza tempo</strong> rozwoju drobnoustrojów w układzie. Jeżeli
-                                        będziesz potrzebował serwisu lub twoja klimatyzacja po prostu obniży swoją
+                                        będziesz potrzebował serwisu lub Twoja klimatyzacja po prostu obniży swoją
                                         wydajność to serdecznie zapraszam do warsztatu CarLife umawiając uprzednio
-                                        wizytę poprzez <a href="tel:+48505962251">kontakt telefoniczny</a> lub
-                                        korzystając z
-                                        <a href="#ReservationForm" title="formularz rezerwacji">formularza rezerwacji</a
+                                        wizytę poprzez
+                                        <a href="tel:+48505962251" tabindex="0">kontakt telefoniczny</a> lub korzystając
+                                        z
+                                        <a href="#ReservationForm" title="formularz rezerwacji" tabindex="0"
+                                            >formularza rezerwacji</a
                                         >.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc4Tab0" name="Acc4Tab" />
+                                    <input class="tab__input" type="radio" id="Acc4Tab0" name="Acc4Tab" tabindex="0" />
                                     <label for="Acc4Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji
                                         <span>KLIMATYZACJA</span>
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
                                         </svg>
                                     </label>
@@ -2316,12 +2418,12 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="accordion">
-                                <h4 class="accordion__title">Opony i koła</h4>
+                                <h3 class="accordion__title">Opony i koła</h3>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc5Tab1" name="Acc5Tab" />
+                                    <input class="tab__input" type="radio" id="Acc5Tab1" name="Acc5Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc5Tab1"
                                         >Kiedy warto zmienić opony letnie na zimowe?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2337,16 +2439,17 @@
                                         szansa, że kolejka oczekujących klientów znacząco się wydłuży. Dlatego też
                                         gorąco zachęcam do wcześniejszego zaplanowania wizyty w
                                         <strong>CarLife</strong> poprzez
-                                        <a href="tel:+48505962251">kontakt telefoniczny</a> lub przez
-                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a
+                                        <a href="tel:+48505962251" tabindex="0">kontakt telefoniczny</a> lub przez
+                                        <a href="#ReservationForm" title="formularz rezerwacji" tabindex="0"
+                                            >formularz rezerwacji</a
                                         >.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc5Tab2" name="Acc5Tab" />
+                                    <input class="tab__input" type="radio" id="Acc5Tab2" name="Acc5Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc5Tab2"
                                         >Kiedy warto zmienić opony zimowe na letnie?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2369,10 +2472,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc5Tab3" name="Acc5Tab" />
+                                    <input class="tab__input" type="radio" id="Acc5Tab3" name="Acc5Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc5Tab3"
                                         >Kiedy należy wymienić opony na nowe (przy jakich uszkodzeniach)?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2390,16 +2493,19 @@
                                         "starzenie" się ogumienia. W rezultacie znacząco obniża się bezpieczeństwo
                                         użytkowników tego typu opon (mniejsza przyczepność w zakrętach, dłuższa droga
                                         hamowania itd.). Jeśli właśnie nadszedł moment graniczny dla Twoich opon,
-                                        zachęcam do <a href="tel:+48505962251">kontaktu telefonicznego</a> lub poprzez
-                                        <a href="#ReservationForm" title="formularz rezerwacji">formularz rezerwacji</a>
+                                        zachęcam do
+                                        <a href="tel:+48505962251" tabindex="0">kontaktu telefonicznego</a> lub poprzez
+                                        <a href="#ReservationForm" title="formularz rezerwacji" tabindex="0"
+                                            >formularz rezerwacji</a
+                                        >
                                         celem ustalenia terminu wymiany.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc5Tab4" name="Acc5Tab" />
+                                    <input class="tab__input" type="radio" id="Acc5Tab4" name="Acc5Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc5Tab4"
                                         >Czy warto kupować opony całoroczne?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2424,10 +2530,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc5Tab0" name="Acc5Tab" />
+                                    <input class="tab__input" type="radio" id="Acc5Tab0" name="Acc5Tab" tabindex="0" />
                                     <label for="Acc5Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji <span>OPONY I KOŁA</span>
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--clear" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
                                         </svg>
                                     </label>
@@ -2436,12 +2542,12 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="accordion">
-                                <h4 class="accordion__title">Pomoc przy zakupie</h4>
+                                <h3 class="accordion__title">Pomoc przy zakupie</h3>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc6Tab1" name="Acc6Tab" />
+                                    <input class="tab__input" type="radio" id="Acc6Tab1" name="Acc6Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc6Tab1"
                                         >Na co warto zwrócić uwagę zanim wybierzemy się na przegląd auta przed zakupem?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2468,10 +2574,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc6Tab2" name="Acc6Tab" />
+                                    <input class="tab__input" type="radio" id="Acc6Tab2" name="Acc6Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc6Tab2"
                                         >Gdzie najlepiej kupić używane auto?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2514,10 +2620,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc6Tab3" name="Acc6Tab" />
+                                    <input class="tab__input" type="radio" id="Acc6Tab3" name="Acc6Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc6Tab3"
                                         >Jakiej marki używane auto najlepiej kupić?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2544,10 +2650,10 @@
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc6Tab4" name="Acc6Tab" />
+                                    <input class="tab__input" type="radio" id="Acc6Tab4" name="Acc6Tab" tabindex="0" />
                                     <label class="tab__label" for="Acc6Tab4"
                                         >Czy CarLife pomaga również w rejestracji pojazdów?
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--chevron-right" aria-hidden="true" focusable="false">
                                             <use
                                                 xlink:href="./assets/icons/svg/symbol-defs.svg#icon-chevron-right"
                                             ></use>
@@ -2557,19 +2663,21 @@
                                     <div class="tab__content">
                                         Na ten moment nie prowadzimy tego typu usług. Być może w przyszłości rozszerzymy
                                         swoją ofertę, dlatego gorąco zachęcam do częstego odwiedzania strony
-                                        <a href="https://carlifecygulski.pl/">CarLife</a> oraz śledzenia profilu w
+                                        <a href="https://carlifecygulski.pl/" tabindex="0">CarLife</a> oraz śledzenia
+                                        profilu w
                                         <a
                                             href="https://www.facebook.com/carlife.cygulski"
                                             rel="noopener noreferrer nofollow"
+                                            tabindex="0"
                                             >mediach społecznościowych</a
                                         >.
                                     </div>
                                 </div>
                                 <div class="accordion__tab">
-                                    <input class="tab__input" type="radio" id="Acc6Tab0" name="Acc6Tab" />
+                                    <input class="tab__input" type="radio" id="Acc6Tab0" name="Acc6Tab" tabindex="0" />
                                     <label for="Acc6Tab0" class="tab__close"
                                         >zwiń wszystko z sekcji <span>POMOC PRZY ZAKUPIE</span>
-                                        <svg class="icon icon--plus-circle" aria-hidden="true" focusable="false">
+                                        <svg class="icon icon--clear" aria-hidden="true" focusable="false">
                                             <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-clear"></use>
                                         </svg>
                                     </label>
@@ -2628,7 +2736,29 @@
                                     >Email
                                 </p>
                                 <p id="EmailAddress" class="contact-info__text">
-                                    <noscript>put image of email address here</noscript>
+                                    <noscript
+                                        ><img
+                                            src="./assets/biuro-email.jpg"
+                                            class="noscript__image"
+                                            alt="Adres email: biuro@carlifecygulski.pl"
+                                    /></noscript>
+                                </p>
+                            </div>
+                            <div class="contact-info__box">
+                                <p class="contact-info__title">
+                                    <svg class="contact-info__icon icon icon--facebook-square" focusable="true">
+                                        <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-facebook-square"></use>
+                                    </svg>
+                                    Facebook
+                                </p>
+                                <p id="FacebookProfile" class="contact-info__text">
+                                    <a
+                                        href="https://www.facebook.com/carlife.cygulski"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        tabindex="0"
+                                        >CarLife Cygulski</a
+                                    >
                                 </p>
                             </div>
                             <div class="contact-info__box">
@@ -2648,23 +2778,19 @@
                         </address>
                         <div class="contact-map">
                             <div class="contact-map__map">
-                                <!-- <iframe
-                                    width="100%"
-                                    height="350px"
-                                    frameborder="0"
-                                    scrolling="no"
-                                    marginheight="0"
-                                    marginwidth="0"
-                                    src="https://www.openstreetmap.org/export/embed.html?bbox=19.41989600658417%2C51.709507132386946%2C19.43041026592255%2C51.71228263334073&amp;layer=mapnik&amp;marker=51.710896566129136%2C19.425153136253357"
-                                ></iframe> -->
                                 <iframe
                                     height="350"
-                                    src="https://www.openstreetmap.org/export/embed.html?bbox=19.41991746425629%2C51.70950380833162%2C19.42904233932495%2C51.71227930948934&amp;layer=mapnik"
+                                    title="Mapa poglądowa położenia warsztatu CarLife, Łódź 93-491 ul. Mielizny 12 lok. 4"
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=19.414901733398438%2C51.70773870044244%2C19.435930252075195%2C51.71366865807736&amp;layer=mapnik&amp;marker=51.71070377643756%2C19.425415992736816"
+                                    tabindex="0"
                                 ></iframe>
                             </div>
                             <a
-                                href="https://www.openstreetmap.org/?mlat=51.71090&amp;mlon=19.42515#map=18/51.71089/19.42515"
+                                href="https://www.openstreetmap.org/?mlat=51.71070&amp;mlon=19.42542#map=17/51.71070/19.42542"
                                 class="button contact-map__button"
+                                tabindex="0"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <svg class="icon icon--search-plus" aria-hidden="true" focusable="false">
                                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-search-plus"></use>
@@ -2675,7 +2801,7 @@
                     </div>
                 </div>
             </section>
-            <a id="ScrollTop" class="scroll-to-top-button" href="#Home">
+            <a id="ScrollTop" class="scroll-to-top-button" href="#Home" tabindex="0">
                 <svg class="icon icon--car-check-2" aria-hidden="true" focusable="false">
                     <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-angle-up"></use>
                 </svg>
@@ -2685,7 +2811,7 @@
         <footer></footer>
         <div id="TowingModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
             <div class="modal__container-wrapper">
-                <div class="modal__container" role="dialog" aria-labelledby="DialogTowing">
+                <div class="modal__container" role="dialog" aria-labelledby="TowingModal">
                     <div class="modal__header">
                         <h4 class="modal__title">Holowanie</h4>
                         <button class="modal__close-btn" aria-label="zamknij popup" data-close-modal="TowingModal">
@@ -2732,7 +2858,7 @@
         </div>
         <div id="RepairOfMechanicsModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
             <div class="modal__container-wrapper">
-                <div class="modal__container" role="dialog" aria-labelledby="DialogRepairOfMechanics">
+                <div class="modal__container" role="dialog" aria-labelledby="RepairOfMechanicsModal">
                     <div class="modal__header">
                         <h4 class="modal__title">
                             Naprawa mechaniki
@@ -2803,7 +2929,7 @@
                                 title="formularz rezerwacji"
                                 data-close-modal="RepairOfMechanicsModal"
                                 >formularz rezerwacji</a
-                            >. Jeśli masz jeszcze jakieś pytania to koniecznie sprawdź sekcję
+                            >. Jeśli masz jakieś pytania to koniecznie sprawdź sekcję
                             <a href="#Faq" data-close-modal="RepairOfMechanicsModal">najczęściej zadawanych pytań</a>, a
                             być może znajdzie się odpowiedź na to co Cię interesuje.
                         </p>
@@ -2813,7 +2939,7 @@
         </div>
         <div id="RepairOfElectricsModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
             <div class="modal__container-wrapper">
-                <div class="modal__container" role="dialog" aria-labelledby="DialogRepairOfElectrics">
+                <div class="modal__container" role="dialog" aria-labelledby="RepairOfElectricsModal">
                     <div class="modal__header">
                         <h4 class="modal__title">
                             Naprawa elektryki i elektroniki
@@ -2861,7 +2987,7 @@
         </div>
         <div id="AirConditioningServiceModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
             <div class="modal__container-wrapper">
-                <div class="modal__container" role="dialog" aria-labelledby="DialogAirConditioningService">
+                <div class="modal__container" role="dialog" aria-labelledby="AirConditioningServiceModal">
                     <div class="modal__header">
                         <h4 class="modal__title">
                             Serwis i naprawa klimatyzacji
@@ -2911,7 +3037,7 @@
         </div>
         <div id="TireServiceModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
             <div class="modal__container-wrapper">
-                <div class="modal__container" role="dialog" aria-labelledby="DialogTireService">
+                <div class="modal__container" role="dialog" aria-labelledby="TireServiceModal">
                     <div class="modal__header">
                         <h4 class="modal__title">Serwis opon</h4>
                         <button class="modal__close-btn" aria-label="zamknij popup" data-close-modal="TireServiceModal">
@@ -2956,7 +3082,7 @@
         </div>
         <div id="CarAuditModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
             <div class="modal__container-wrapper">
-                <div class="modal__container" role="dialog" aria-labelledby="DialogCarAudit">
+                <div class="modal__container" role="dialog" aria-labelledby="CarAuditModal">
                     <div class="modal__header">
                         <h4 class="modal__title">
                             Przegląd aut przed zakupem
@@ -3148,7 +3274,6 @@
         <script
             src="https://www.google.com/recaptcha/api.js?render=6Lfu4doZAAAAAJ48ZrWc0x8mBZ9KkZaASfJFxmSg"
             defer
-            crossorigin="anonymous"
         ></script>
     </body>
 </html>
