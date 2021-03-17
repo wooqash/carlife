@@ -15,9 +15,14 @@ $accordion-tab-close-bg-hover: $primary-color;
     &__title {
         background: $accordion-header-tab-bg;
         border-bottom: 1px solid $accordion-header-tab-border-color;
+        font-size: 1.9rem;
         padding: 20px 10px;
         text-shadow: 1px 1px 3px rgba($on-primary-color, 0.5);
         width: 100%;
+
+        @include media-query(tablet) {
+            font-size: 2.2rem;
+        }
     }
 
     &__tab {
