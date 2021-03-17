@@ -216,9 +216,11 @@ $form-control-border-color: $primary-dark-color;
     &-success-msg {
         background-color: $primary-color;
         font-weight: bold;
+        left: 50%;
         opacity: 0;
         padding: 15px;
         position: absolute;
+        transform: translateX(-50%);
         transition: visibility 0s linear 0.33s, opacity 0.33s linear;
         visibility: hidden;
 
