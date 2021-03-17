@@ -11,9 +11,11 @@ const handleView = (item: HTMLAnchorElement): void => {
         bottom: offsetHeight,
     });
 
-    inView(item.hash)
-        .on('enter', () => menuItem.classList.add('active'))
-        .on('exit', () => menuItem.classList.remove('active'));
+    if (item.hash) {
+        inView(item.hash)
+            .on('enter', () => menuItem.classList.add('active'))
+            .on('exit', () => menuItem.classList.remove('active'));
+    }
 };
 
 export default handleView;
