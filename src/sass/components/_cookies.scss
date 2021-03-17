@@ -1,0 +1,148 @@
+$cookies-policy-bg-color: rgba($primary-color, 0.9);
+$cookies-policy-font-color: $on-primary-color;
+
+$toggle-approve-bg-color: $primary-dark-color;
+$toggle-reject-bg-color: $error-color;
+
+$table-border-color: $primary-dark-color;
+
+.cookies-policy {
+    background-color: $cookies-policy-bg-color;
+    bottom: 0;
+    color: $cookies-policy-font-color;
+    font-size: 14px;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    visibility: visible;
+    width: 100%;
+    z-index: 998;
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__content {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    &__statement {
+        padding: 20px;
+
+        a:hover {
+            color: $cookies-policy-font-color;
+        }
+    }
+
+    @include media-query(netbook) {
+        &__content {
+            max-width: 60%;
+        }
+    }
+}
+
+.cookies-policy__table {
+    border-collapse: collapse;
+    margin: 20px 0;
+
+    thead {
+        font-weight: bold;
+    }
+
+    td {
+        border: 3px solid $table-border-color;
+        padding: 20px;
+        vertical-align: middle;
+    }
+}
+
+.toggle {
+    display: inline-block;
+    position: relative;
+}
+
+.toggle-item {
+    background: #2e394d;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    height: 2em;
+    position: relative;
+    transform-origin: 20% center;
+    transition: all 0.3s ease;
+    width: 3.5em;
+}
+
+.checkcross {
+    .check {
+        background: $toggle-reject-bg-color;
+        border-radius: 50%;
+        height: 1.5em;
+        position: absolute;
+        right: 23px;
+        top: 3px;
+        transition: 0.4s ease;
+        width: 1.5em;
+
+        &::before,
+        &::after {
+            background: #fff;
+            border-radius: 10px;
+            content: '';
+            height: 3px;
+            left: -5px;
+            position: absolute;
+            top: -12px;
+            transition: 0.4s ease;
+        }
+
+        &::before {
+            transform: rotate(-45deg) translate(-9px, 20px);
+            width: 15px;
+        }
+
+        &::after {
+            transform: rotate(45deg) translate(20px, 9px);
+            width: 15px;
+        }
+
+        &.disabled {
+            opacity: 0.6;
+        }
+    }
+
+    .toggle-item::before {
+        content: none;
+    }
+}
+
+.checkcross-input {
+    left: 20px;
+    position: absolute;
+
+    &:checked + label .check {
+        background: $toggle-approve-bg-color;
+        right: 3.5px;
+        transform: rotate(360deg);
+
+        &::before {
+            transform: rotate(-45deg) translate(-7px, 24px);
+            width: 12px;
+        }
+
+        &::after {
+            transform: rotate(45deg) translate(22px, 11px);
+            width: 8px;
+        }
+    }
+}
+
+.button--cookie-settings-save {
+    display: flex;
+    margin: 15px auto;
+}

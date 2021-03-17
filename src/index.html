@@ -3016,27 +3016,41 @@
                 </div>
             </div>
         </div>
-        <div id="CookiesPolicyBar" class="cookies-policy">
+        <div id="CookiesPolicyBar" class="cookies-policy hide">
             <div class="cookies-policy__content">
                 <p class="cookies-policy__statement">
                     Strona wykorzystuje pliki cookies w celu prawidłowego jego działania oraz korzystania z narzędzi
                     analitycznych (Google Analytics, Google Tag Manager). Szczegóły znajdziesz w
-                    <a href="polityka-prywatnosci">polityce prywatności</a>. Jeżeli wyrażasz zgodę na wykorzystywanie
-                    plików cookies, kliknij w przycisk "Rozumiem i akceptuję". Jeżeli chcesz edytować ustawienia plików
-                    cookies, kliknij w przycisk "Ustawienia".
+                    <a href="polityka-prywatnosci.html" tabindex="0">polityce prywatności</a>. Jeżeli wyrażasz zgodę na
+                    wykorzystywanie plików cookies, kliknij w przycisk "Rozumiem i akceptuję". Jeżeli chcesz edytować
+                    ustawienia plików cookies, kliknij w przycisk "Ustawienia".
                 </p>
-                <button id="CookiesSettingsButton" class="button button--cookie-settings">Ustawienia</button>
-                <button id="AcceptSettingsButton" class="button button--cookie-accept">Rozumiem i akceptuję</button>
+                <button
+                    id="CookiesSettingsButton"
+                    class="button button--cookie-settings-open"
+                    aria-controls="CookiesSettingsModal"
+                    data-target="CookiesSettingsModal"
+                    tabindex="0"
+                >
+                    Ustawienia
+                </button>
+                <button id="AcceptCookiesButton" class="button button--cookie-settings-accept" tabindex="0">
+                    Rozumiem i akceptuję
+                </button>
             </div>
         </div>
         <div id="CookiesSettingsModal" class="modal" role="presentation" aria-hidden="true" tabindex="-1">
             <div class="modal__container-wrapper">
-                <div class="modal__container" role="dialog" aria-labelledby="DialogCookiesSettings">
+                <div class="modal__container" role="dialog" aria-labelledby="CookiesSettingsModal">
                     <div class="modal__header">
                         <h4 class="modal__title">
                             Polityka cookies
                         </h4>
-                        <button class="modal__close-btn" aria-label="zamknij popup" data-close-modal="true">
+                        <button
+                            class="modal__close-btn"
+                            aria-label="zamknij popup"
+                            data-close-modal="CookiesSettingsModal"
+                        >
                             <svg class="icon icon--times-circle" aria-hidden="true" focusable="false">
                                 <use xlink:href="./assets/icons/svg/symbol-defs.svg#icon-times-circle"></use>
                             </svg>
@@ -3068,14 +3082,14 @@
                                     <td>
                                         <div class="toggle checkcross">
                                             <input
-                                                id="checkcross"
+                                                id="NecessaryCookie"
                                                 class="checkcross-input"
                                                 type="checkbox"
                                                 checked="checked"
                                                 disabled="disabled"
                                             />
-                                            <label class="toggle-item" for="checkcross">
-                                                <div class="check disabled"></div>
+                                            <label class="toggle-item" for="NecessaryCookie">
+                                                <span class="check disabled"></span>
                                             </label>
                                         </div>
                                     </td>
@@ -3083,8 +3097,8 @@
                                 <tr>
                                     <td>Google Analytics</td>
                                     <td>
-                                        Narzędzie Google Analytics służy do analizowania ruchu na blogu. W ramach tego
-                                        narzędzia nie są gromadzone jakiekolwiek dane pozwalające Cię bezpośrednio
+                                        Narzędzie Google Analytics służy do analizowania ruchu na tej stronie. W ramach
+                                        tego narzędzia nie są gromadzone jakiekolwiek dane pozwalające Cię bezpośrednio
                                         zidentyfikować. Informacje, do jakich dostęp posiadam, to, w szczególności: czas
                                         spędzony na stronie, przejścia pomiędzy poszczególnymi podstronami, źródło
                                         ruchu. Jeżeli wyłączysz Google Analytics, pozbawisz mnie możliwości prowadzenia
@@ -3093,13 +3107,13 @@
                                     <td>
                                         <div class="toggle checkcross">
                                             <input
-                                                id="checkcross2"
+                                                id="GACookie"
                                                 class="checkcross-input"
                                                 checked="checked"
                                                 type="checkbox"
                                             />
-                                            <label class="toggle-item" for="checkcross2">
-                                                <div class="check"></div>
+                                            <label class="toggle-item" for="GACookie">
+                                                <span class="check"></span>
                                             </label>
                                         </div>
                                     </td>
@@ -3115,9 +3129,16 @@
                             Nie uczestniczę jednak w tym procesie i nie mam na niego wpływu. W tym zakresie odsyłam Cię
                             do lektury dokumentów poświęconych prywatności udostępnianych przez poszczególnych
                             usługodawców. Zachęcam Cię również do zapoznania się z
-                            <a href="polityka-prywatnosci">polityką prywatności</a> tej strony.
+                            <a href="polityka-prywatnosci.html" data-close-modal="CookiesSettingsModal"
+                                >polityką prywatności</a
+                            >
+                            tej strony.
                         </p>
-                        <button id="SaveSettingsButton" class="button button--cookie-accept">
+                        <button
+                            id="SaveSettingsButton"
+                            class="button button--cookie-settings-save"
+                            data-close-modal="CookiesSettingsModal"
+                        >
                             Zatwierdzam ustawienia
                         </button>
                     </div>

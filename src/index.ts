@@ -11,10 +11,10 @@ import Modernizr from 'modernizr';
 import Utils from './scripts/classes/utils';
 import Form from './scripts/classes/form';
 import UIAnimations from './scripts/classes/ui-animation';
-// import Cookies from './scripts/classes/cookies';
 import EmailProtector from './scripts/classes/emailProtector';
 import Modal from './scripts/classes/modal';
 import Menu from './scripts/classes/menu';
+import CookieBar from './scripts/classes/cookieBar';
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 
@@ -265,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
     contactInfoElemAnimation.mount();
 
     // Cookie bar
-
-    // const consetCookie = new Cookies();
-    // const isConsetCookieExist = consetCookie.isSet('ga_cookie_conset');
+    const cookieBarElem = document.getElementById('CookiesPolicyBar') as HTMLDivElement;
+    (() => new CookieBar(cookieBarElem))();
 });
