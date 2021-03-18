@@ -85,6 +85,7 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 	# Media
 	ExpiresByType audio/ogg                             "access plus 3 month"
 	ExpiresByType image/gif                             "access plus 3 month"
+	ExpiresByType image/webp                            "access plus 3 month"
 	ExpiresByType image/jpeg                            "access plus 3 month"
 	ExpiresByType image/png                             "access plus 3 month"
 	ExpiresByType video/mp4                             "access plus 3 month"
@@ -108,7 +109,7 @@ Header set Connection keep-alive
 <filesmatch "\.(ico|flv|swf)$">
 	Header set Cache-Control "max-age=5184000‬, public"
 </filesmatch>
-<filesmatch "\.(jpg|jpeg|png|gif)$">
+<filesmatch "\.(jpg|jpeg|png|gif|webp)$">
 	Header set Cache-Control "max-age=31536000, public"
 </filesmatch>
 <filesmatch "\.(eot|woff|woff2|otf|ttf|svg)$">
