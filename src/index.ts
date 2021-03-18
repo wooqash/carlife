@@ -15,6 +15,7 @@ import EmailProtector from './scripts/classes/emailProtector';
 import Modal from './scripts/classes/modal';
 import Menu from './scripts/classes/menu';
 import CookieBar from './scripts/classes/cookieBar';
+import initGoogleRecaptcha from './scripts/recaptcha';
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 
@@ -189,6 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const reservationFormElem = document.getElementById('ReservationForm') as HTMLFormElement;
     const reservationTextElem = document.querySelector('#Reservation .section__text') as HTMLDivElement;
     const reservationForm = new Form(reservationFormElem);
+    const forms = document.querySelectorAll('form') as NodeListOf<HTMLFormElement>;
+    initGoogleRecaptcha(forms);
 
     // Section elements animations
     const reservationTextElemAnimation = new UIAnimations(reservationTextElem, 'slideInLeft', '', '100%');

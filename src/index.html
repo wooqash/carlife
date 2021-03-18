@@ -2174,7 +2174,7 @@
                                             raz.
                                         </p>
                                     </div>
-                                    <div class="form__control form__control--hidden">
+                                    <div class="form__control form__control--hidden" aria-hidden="true">
                                         <label for="Honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
                                         <input type="text" id="Honey" name="honey" tabindex="-1" />
                                     </div>
@@ -2369,6 +2369,23 @@
                                                 ></use></svg
                                             >wyślij
                                         </button>
+                                    </div>
+                                    <div class="form__recaptcha-info">
+                                        Ta strona jest chroniona przez usługę Google reCAPTCHA
+                                        <a
+                                            href="https://policies.google.com/privacy"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >Polityka prywatności</a
+                                        >
+                                        and
+                                        <a
+                                            href="https://policies.google.com/terms"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >Warunki</a
+                                        >
+                                        apply.
                                     </div>
                                 </fieldset>
                             </form>
@@ -3810,8 +3827,8 @@
             </div>
         </div>
         <script
-            src="https://www.google.com/recaptcha/api.js?render=6Lfu4doZAAAAAJ48ZrWc0x8mBZ9KkZaASfJFxmSg"
-            defer
+            id="ReCaptcha"
+            data-src="https://www.google.com/recaptcha/api.js?render=6Lfu4doZAAAAAJ48ZrWc0x8mBZ9KkZaASfJFxmSg"
         ></script>
     </body>
 </html>

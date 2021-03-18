@@ -786,6 +786,10 @@ body {
     vertical-align: middle;
 }
 
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
 /********* Loading ************/
 .loading {
     opacity: 0.5;

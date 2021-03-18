@@ -80,6 +80,11 @@ $form-control-border-color: $primary-dark-color;
         }
     }
 
+    &__recaptcha-info {
+        font-size: 0.8em;
+        text-align: left;
+    }
+
     &__label {
         display: inline-block;
         font-weight: 700;
