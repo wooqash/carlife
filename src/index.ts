@@ -42,22 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const towCarElem = document.querySelector('.tow-car') as HTMLPictureElement;
 
     // Section elements animations
-    const mainTitleElemAnimation = new UIAnimations(mainTitleElem, 'fadeInDown', '', '100%');
-    const mainSubTitleElemAnimation = new UIAnimations(mainSubTitleElem, 'fadeInUp', '1s', '100%');
-    const mainCtaBtnOfferAnimation = new UIAnimations(mainCtaBtnOfferElem, 'lightSpeedInLeft', '2s', '100%');
-    const mainCtaBtnReservationAnimation = new UIAnimations(
-        mainCtaBtnReservationElem,
-        'lightSpeedInRight',
-        '2s',
-        '100%',
-    );
-    const towCarElemAnimation = new UIAnimations(towCarElem, 'slideInLeft', '3s', '100%');
+    if (!Utils.isMobile()) {
+        const mainTitleElemAnimation = new UIAnimations(mainTitleElem, 'fadeInDown', '', '100%');
+        const mainSubTitleElemAnimation = new UIAnimations(mainSubTitleElem, 'fadeInUp', '1s', '100%');
+        const mainCtaBtnOfferAnimation = new UIAnimations(mainCtaBtnOfferElem, 'lightSpeedInLeft', '2s', '100%');
+        const mainCtaBtnReservationAnimation = new UIAnimations(
+            mainCtaBtnReservationElem,
+            'lightSpeedInRight',
+            '2s',
+            '100%',
+        );
+        const towCarElemAnimation = new UIAnimations(towCarElem, 'slideInLeft', '3s', '100%');
 
-    mainTitleElemAnimation.mount();
-    mainSubTitleElemAnimation.mount();
-    mainCtaBtnOfferAnimation.mount();
-    mainCtaBtnReservationAnimation.mount();
-    towCarElemAnimation.mount();
+        mainTitleElemAnimation.mount();
+        mainSubTitleElemAnimation.mount();
+        mainCtaBtnOfferAnimation.mount();
+        mainCtaBtnReservationAnimation.mount();
+        towCarElemAnimation.mount();
+    }
 
     // --- SECTION ABOUT ---
     const aboutTextElem = document.querySelector('#About .section__text') as HTMLElement;
@@ -65,12 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutImgElem = document.querySelector('#About .section__picture') as HTMLElement;
 
     // Section elements animations
-    const aboutTextElemAnimation = new UIAnimations(aboutTextElem, 'fadeInLeft', '', '100%');
-    const aboutListElemAnimation = new UIAnimations(aboutListElem, 'fadeInLeft', '1s', '100%');
-    const aboutImgElemAnimation = new UIAnimations(aboutImgElem, 'fadeInRight', '2s', '100%');
-    aboutTextElemAnimation.mount();
-    aboutListElemAnimation.mount();
-    aboutImgElemAnimation.mount();
+    if (!Utils.isMobile()) {
+        const aboutTextElemAnimation = new UIAnimations(aboutTextElem, 'fadeInLeft', '', '100%');
+        const aboutListElemAnimation = new UIAnimations(aboutListElem, 'fadeInLeft', '1s', '100%');
+        const aboutImgElemAnimation = new UIAnimations(aboutImgElem, 'fadeInRight', '2s', '100%');
+        aboutTextElemAnimation.mount();
+        aboutListElemAnimation.mount();
+        aboutImgElemAnimation.mount();
+    }
 
     // --- SECTION OFFER ---
     const moreOfferButtons = document.querySelectorAll('.button--more') as NodeListOf<HTMLButtonElement>;
@@ -78,10 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const offerCardsElem = document.querySelectorAll('#Offer .offer-card') as NodeListOf<HTMLDivElement>;
 
     // Section elements animations
-    [...offerCardsElem].forEach((offerCardElem: HTMLDivElement, index: number) => {
-        const offerCardElemAnimation = new UIAnimations(offerCardElem, 'zoomIn', `${index}s`, '100%');
-        offerCardElemAnimation.mount();
-    });
+    if (!Utils.isMobile()) {
+        [...offerCardsElem].forEach((offerCardElem: HTMLDivElement, index: number) => {
+            const offerCardElemAnimation = new UIAnimations(offerCardElem, 'zoomIn', `${index}s`, '100%');
+            offerCardElemAnimation.mount();
+        });
+    }
 
     // Offer modals
     Array.from(moreOfferButtons).forEach((moreOfferBtn: HTMLButtonElement) => {
@@ -110,10 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryElem = document.querySelector('.gallery') as HTMLDivElement;
 
     // Section elements animations
-    [...thumbnailLinks].forEach((galleryImageElem: HTMLElement) => {
-        const galleryImageElemAnimation = new UIAnimations(galleryImageElem, 'flipInX', '1s', '100%');
-        galleryImageElemAnimation.mount();
-    });
+    if (!Utils.isMobile()) {
+        [...thumbnailLinks].forEach((galleryImageElem: HTMLElement) => {
+            const galleryImageElemAnimation = new UIAnimations(galleryImageElem, 'flipInX', '1s', '100%');
+            galleryImageElemAnimation.mount();
+        });
+    }
 
     // Gallery thumbnail slider
     (() =>
@@ -194,10 +202,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initGoogleRecaptcha(forms);
 
     // Section elements animations
-    const reservationTextElemAnimation = new UIAnimations(reservationTextElem, 'slideInLeft', '', '100%');
-    const reservationFormElemAnimation = new UIAnimations(reservationFormElem, 'fadeInRight', '1s', '100%');
-    reservationTextElemAnimation.mount();
-    reservationFormElemAnimation.mount();
+    if (!Utils.isMobile()) {
+        const reservationTextElemAnimation = new UIAnimations(reservationTextElem, 'slideInLeft', '', '100%');
+        const reservationFormElemAnimation = new UIAnimations(reservationFormElem, 'fadeInRight', '1s', '100%');
+        reservationTextElemAnimation.mount();
+        reservationFormElemAnimation.mount();
+    }
 
     // Reservation form
     if (reservationForm) {
@@ -250,11 +260,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- SECTION FAQ ---
     // Section elements animations
-    const faqItemsElem = document.querySelectorAll('#FAQ .accordion-wrapper') as NodeListOf<HTMLDivElement>;
-    [...faqItemsElem].forEach((faqItemElem: HTMLDivElement, index: number) => {
-        const faqItemElemAnimation = new UIAnimations(faqItemElem as HTMLDivElement, 'zoomIn', `${index}s`, '100%');
-        faqItemElemAnimation.mount();
-    });
+    if (!Utils.isMobile()) {
+        const faqItemsElem = document.querySelectorAll('#FAQ .accordion-wrapper') as NodeListOf<HTMLDivElement>;
+        [...faqItemsElem].forEach((faqItemElem: HTMLDivElement, index: number) => {
+            const faqItemElemAnimation = new UIAnimations(faqItemElem as HTMLDivElement, 'zoomIn', `${index}s`, '100%');
+            faqItemElemAnimation.mount();
+        });
+    }
 
     // --- SECTION CONTACT ---
     // Email protector
@@ -263,12 +275,14 @@ document.addEventListener('DOMContentLoaded', () => {
     email.render('biuro', 'carlifecygulski.pl');
 
     // Section elements animations
-    const contactMapElem = document.querySelector('#Contact .contact-map') as HTMLDivElement;
-    const contactInfoElem = document.querySelector('#Contact .contact-info') as HTMLElement;
-    const contactMapElemAnimation = new UIAnimations(contactMapElem, 'zoomIn', '', '100%');
-    const contactInfoElemAnimation = new UIAnimations(contactInfoElem, 'fadeInRight', '1s', '100%');
-    contactMapElemAnimation.mount();
-    contactInfoElemAnimation.mount();
+    if (!Utils.isMobile()) {
+        const contactMapElem = document.querySelector('#Contact .contact-map') as HTMLDivElement;
+        const contactInfoElem = document.querySelector('#Contact .contact-info') as HTMLElement;
+        const contactMapElemAnimation = new UIAnimations(contactMapElem, 'zoomIn', '', '100%');
+        const contactInfoElemAnimation = new UIAnimations(contactInfoElem, 'fadeInRight', '1s', '100%');
+        contactMapElemAnimation.mount();
+        contactInfoElemAnimation.mount();
+    }
 
     // Cookie bar
     const cookieBarElem = document.getElementById('CookiesPolicyBar') as HTMLDivElement;
